@@ -50,7 +50,8 @@ end ALU;
 architecture Behavioral of ALU is
 
 constant ADD : std_logic_vector(3 DOWNTO 0):="0000"; -- Add opcode
-constant SUB : std_logic_vector(3 DOWNTO 0):="0001"; -- Subtract opcode 
+constant SUB : std_logic_vector(3 DOWNTO 0):="0001"; -- Subtract opcode
+constant MULTIPLY : std_logic_vector(3 DOWNTO 0):="0010"; -- Subtract opcode 
 
 signal ALU_Result : std_logic_vector (7 downto 0); -- Buffer signal for output
 signal tmp : std_logic_vector (8 downto 0); -- Buffer for carry flag output
@@ -78,12 +79,7 @@ begin
 							o_ALU_overflow_flag <= '0';
 						end if;
 					end if;
-					if(i_A < i_B) then
-						o_ALU_negative_flag <= '1';
-					else
-						o_ALU_negative_flag <= '0';
-					end if;
-				when "0010" => -- Multiply
+				when MULTIPLY => -- Multiply
 					ALU_result <= std_logic_vector(to_unsigned(to_integer(unsigned(i_A)) * to_integer(unsigned(i_B)),8));
 				when "0011" => -- Divide
 					ALU_result <= std_logic_vector(to_unsigned(to_integer(unsigned(i_A)) / to_integer(unsigned(i_B)),8));
@@ -120,6 +116,13 @@ begin
 				-- 14 out of 16 possible ALU function slots used (4-bit -> 16 possible select signals)
 			end case;
 			
+			
+			if (signed(unsigned(ALU_result)) < 0) then
+				o_ALU_negative_flag <= '1';
+			else
+				o_ALU_negative_flag <= '0';
+			end if;
+			
 			if (ALU_result="00000000") then 
 				o_ALU_zero_flag <= '1'; 
 			else 
@@ -132,4 +135,5 @@ begin
 		tmp <= ('0' & i_A) + ('0' & i_B); -- Sum of inputs assigned to tmp
 		o_ALU_carry_flag <= tmp(8); -- MSB of tmp assigned to carry flag
 end Behavioral;
+
 
