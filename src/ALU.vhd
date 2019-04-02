@@ -25,33 +25,28 @@ use IEEE.std_logic_UNSIGNED.ALL;
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity ALU is
 	generic ( 
      constant N: natural := 1  -- number of shifted or rotated bits
     );
 	 
     Port ( i_CLK : in  std_logic;
-			  i_A : in  std_logic_vector (7 downto 0); -- 8-bit input
+	   i_A : in  std_logic_vector (7 downto 0); -- 8-bit input
            i_B : in  std_logic_vector (7 downto 0); -- 8-bit input
            i_ALU_sel : in  std_logic_vector (3 downto 0); -- 4-bit function select input
            o_ALU_out : out  std_logic_vector (7 downto 0); -- 8-bit output
            o_ALU_carry_flag : out  std_logic; -- output carry flag
-			  o_ALU_overflow_flag : out  std_logic;
-			  o_ALU_negative_flag : out  std_logic;
-			  o_ALU_zero_flag : out  std_logic
-			  ); -- output overflow flag
+	   o_ALU_overflow_flag : out  std_logic; -- output overflow flag
+	   o_ALU_negative_flag : out  std_logic; -- output negative flag
+	   o_ALU_zero_flag : out  std_logic -- output zero flag
+	); 
 end ALU;
 
 architecture Behavioral of ALU is
 
 constant ADD : std_logic_vector(3 DOWNTO 0):="0000"; -- Add opcode
 constant SUB : std_logic_vector(3 DOWNTO 0):="0001"; -- Subtract opcode
-constant MULTIPLY : std_logic_vector(3 DOWNTO 0):="0010"; -- Subtract opcode 
+constant MULTIPLY : std_logic_vector(3 DOWNTO 0):="0010"; -- Multiply opcode 
 
 signal ALU_Result : std_logic_vector (7 downto 0); -- Buffer signal for output
 signal tmp : std_logic_vector (8 downto 0); -- Buffer for carry flag output
@@ -117,13 +112,13 @@ begin
 			end case;
 			
 			
-			if (signed(unsigned(ALU_result)) < 0) then
+			if (signed(unsigned(ALU_result)) < 0) then -- Test for negative flag
 				o_ALU_negative_flag <= '1';
 			else
 				o_ALU_negative_flag <= '0';
 			end if;
 			
-			if (ALU_result="00000000") then 
+			if (ALU_result="00000000") then -- Test for zero flag
 				o_ALU_zero_flag <= '1'; 
 			else 
 				o_ALU_zero_flag <= '0';
