@@ -30,7 +30,7 @@ entity ALU is
      constant N: natural := 1  -- number of shifted or rotated bits
     );
 	 
-    Port ( 	i_ALU_CLK : in  std_logic;
+    Port ( 	i_ALU_clk : in  std_logic;
 	   		i_A : in  std_logic_vector (7 downto 0); -- 8-bit input
         	i_B : in  std_logic_vector (7 downto 0); -- 8-bit input
            	i_ALU_sel : in  std_logic_vector (3 downto 0); -- 4-bit function select input
@@ -52,9 +52,9 @@ signal ALU_Result : std_logic_vector (7 downto 0); -- Buffer signal for output
 signal tmp : std_logic_vector (8 downto 0); -- Buffer for carry flag output
 
 begin
-	process(i_ALU_CLK, i_A, i_B, i_ALU_Sel)
+	process(i_ALU_clk, i_A, i_B, i_ALU_Sel)
 	begin
-		if(rising_edge(i_ALU_CLK)) then
+		if(rising_edge(i_ALU_clk)) then
 			case(i_ALU_Sel) is
 				when ADD => -- Add
 					ALU_result <= std_logic_vector(unsigned(i_A) + unsigned(i_B));

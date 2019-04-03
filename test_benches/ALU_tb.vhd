@@ -41,7 +41,7 @@ ARCHITECTURE behavior OF ALU_tb IS
  
     COMPONENT ALU
     PORT(
-         i_ALU_CLK : IN  std_logic;
+         i_ALU_clk : IN  std_logic;
          i_A : IN  std_logic_vector(7 downto 0);
          i_B : IN  std_logic_vector(7 downto 0);
          i_ALU_sel : IN  std_logic_vector(3 downto 0);
@@ -55,7 +55,7 @@ ARCHITECTURE behavior OF ALU_tb IS
     
 
    --Inputs
-   signal i_ALU_CLK : std_logic := '0';
+   signal i_ALU_clk : std_logic := '0';
    signal i_A : std_logic_vector(7 downto 0) := (others => '0');
    signal i_B : std_logic_vector(7 downto 0) := (others => '0');
    signal i_ALU_sel : std_logic_vector(3 downto 0) := (others => '0');
@@ -68,13 +68,13 @@ ARCHITECTURE behavior OF ALU_tb IS
    signal o_ALU_zero_flag : std_logic;
 
    -- Clock period definitions
-   constant i_ALU_CLK_period : time := 10 ns;
+   constant i_ALU_clk_period : time := 10 ns;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: ALU PORT MAP (
-          i_ALU_CLK => i_ALU_CLK,
+          i_ALU_clk => i_ALU_clk,
           i_A => i_A,
           i_B => i_B,
           i_ALU_sel => i_ALU_sel,
@@ -86,12 +86,12 @@ BEGIN
         );
 
    -- Clock process definitions
-   i_ALU_CLK_process :process
+   i_ALU_clk_process :process
    begin
-		i_ALU_CLK <= '0';
-		wait for i_ALU_CLK_period/2;
-		i_ALU_CLK <= '1';
-		wait for i_ALU_CLK_period/2;
+		i_ALU_clk <= '0';
+		wait for i_ALU_clk_period/2;
+		i_ALU_clk <= '1';
+		wait for i_ALU_clk_period/2;
    end process;
  
 
@@ -108,7 +108,7 @@ BEGIN
 		
 		for i in 0 to 15 loop
 			i_ALU_sel <= std_logic_vector(unsigned(i_ALU_sel) + 1);
-			wait for i_ALU_CLK_period*10;
+			wait for i_ALU_clk_period*10;
 		end loop;
 		
 		i_A <= x"F9";
@@ -116,7 +116,7 @@ BEGIN
 		
 		for i in 0 to 15 loop
 			i_ALU_sel <= std_logic_vector(unsigned(i_ALU_sel) + 1);
-			wait for i_ALU_CLK_period*10;
+			wait for i_ALU_clk_period*10;
 		end loop;
       wait;
    end process;
