@@ -22,24 +22,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+-- use IEEE.NUMERIC_STD.ALL;
 
 entity branch_control is
-    Port ( i_CLK : in  STD_LOGIC;
-           i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
-			  i_ZERO_FLAG : in  STD_LOGIC;
-           i_OVERFLOW_FLAG : in  STD_LOGIC;
-           i_NEGATIVE_FLAG : in  STD_LOGIC;
-           i_CARRY_FLAG : in  STD_LOGIC;
-           i_ADDRESS : in  STD_LOGIC_VECTOR (15 downto 0);
-           o_ADDRESS : out  STD_LOGIC_VECTOR (15 downto 0);
-           o_PC_LOAD : out  STD_LOGIC
-           );
+    Port ( 	i_CLK : in  STD_LOGIC;
+           	i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
+			i_ZERO_FLAG : in  STD_LOGIC;
+           	i_OVERFLOW_FLAG : in  STD_LOGIC;
+           	i_NEGATIVE_FLAG : in  STD_LOGIC;
+           	i_CARRY_FLAG : in  STD_LOGIC;
+           	i_ADDRESS : in  STD_LOGIC_VECTOR (15 downto 0);
+           	o_ADDRESS : out  STD_LOGIC_VECTOR (15 downto 0);
+           	o_PC_LOAD : out  STD_LOGIC
+           	);
 end branch_control;
 
 architecture Behavioral of branch_control is
@@ -89,5 +84,6 @@ begin
 		end if;
 		
 	end process;
+
 end Behavioral;
 
