@@ -30,16 +30,16 @@ entity ALU is
      constant N: natural := 1  -- number of shifted or rotated bits
     );
 	 
-    Port ( i_CLK : in  std_logic;
-	   i_A : in  std_logic_vector (7 downto 0); -- 8-bit input
-           i_B : in  std_logic_vector (7 downto 0); -- 8-bit input
-           i_ALU_sel : in  std_logic_vector (3 downto 0); -- 4-bit function select input
-           o_ALU_out : out  std_logic_vector (7 downto 0); -- 8-bit output
-           o_ALU_carry_flag : out  std_logic; -- output carry flag
-	   o_ALU_overflow_flag : out  std_logic; -- output overflow flag
-	   o_ALU_negative_flag : out  std_logic; -- output negative flag
-	   o_ALU_zero_flag : out  std_logic -- output zero flag
-	); 
+    Port ( 	i_ALU_CLK : in  std_logic;
+	   		i_A : in  std_logic_vector (7 downto 0); -- 8-bit input
+        	i_B : in  std_logic_vector (7 downto 0); -- 8-bit input
+           	i_ALU_sel : in  std_logic_vector (3 downto 0); -- 4-bit function select input
+           	o_ALU_out : out  std_logic_vector (7 downto 0); -- 8-bit output
+           	o_ALU_carry_flag : out  std_logic; -- output carry flag
+	   		o_ALU_overflow_flag : out  std_logic; -- output overflow flag
+	   		o_ALU_negative_flag : out  std_logic; -- output negative flag
+	   		o_ALU_zero_flag : out  std_logic -- output zero flag
+		); 
 end ALU;
 
 architecture Behavioral of ALU is
@@ -52,9 +52,9 @@ signal ALU_Result : std_logic_vector (7 downto 0); -- Buffer signal for output
 signal tmp : std_logic_vector (8 downto 0); -- Buffer for carry flag output
 
 begin
-	process(i_CLK, i_A, i_B, i_ALU_Sel)
+	process(i_ALU_CLK, i_A, i_B, i_ALU_Sel)
 	begin
-		if(rising_edge(i_CLK)) then
+		if(rising_edge(i_ALU_CLK)) then
 			case(i_ALU_Sel) is
 				when ADD => -- Add
 					ALU_result <= std_logic_vector(unsigned(i_A) + unsigned(i_B));
