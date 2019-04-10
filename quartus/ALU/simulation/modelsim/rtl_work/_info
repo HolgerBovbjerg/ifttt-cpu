@@ -1,0 +1,121 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\ALU\simulation\modelsim
+Ealu
+Z1 w1554885773
+Z2 DPx4 work 9 constants 0 22 BcDd?KkJ0mhe8X0CW=iYk1
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\ALU\simulation\modelsim
+Z9 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/ALU.vhd
+Z10 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/ALU.vhd
+l0
+L22
+VUSI^oMVg1F<D3C2FhCo243
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1554885792.074000
+Z13 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/ALU.vhd|
+Z14 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/ALU.vhd|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 YjN84z3e9Fz?5Q0Z:>I@M3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 3 alu 0 22 USI^oMVg1F<D3C2FhCo243
+l47
+L37
+VQ]BXQ=j44hK<AQeKll_AM1
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 YICVe>T6G15m10SzaL3:33
+!i10b 1
+Ealu_tb
+Z17 w1554884337
+R3
+R6
+R7
+R8
+Z18 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ALU/../../test_benches/ALU_tb.vhd
+Z19 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ALU/../../test_benches/ALU_tb.vhd
+l0
+L34
+VICNFWd6<Y599M1VIBT><22
+!s100 =dK<g>JmFI7c?neNP=lHP1
+R11
+31
+!i10b 1
+Z20 !s108 1554885792.222000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ALU/../../test_benches/ALU_tb.vhd|
+Z22 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ALU/../../test_benches/ALU_tb.vhd|
+R15
+R16
+Abehavior
+R3
+R6
+R7
+DEx4 work 6 alu_tb 0 22 ICNFWd6<Y599M1VIBT><22
+l76
+L37
+V1R;e6GK6PN>_HLijPd5083
+!s100 <7484l`0NH03^Yj7;Eh5^0
+R11
+31
+!i10b 1
+R20
+R21
+R22
+R15
+R16
+Pconstants
+R6
+R7
+Z23 w1554885726
+R8
+Z24 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd
+Z25 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd
+l0
+L10
+VBcDd?KkJ0mhe8X0CW=iYk1
+R11
+31
+Z26 !s108 1554885791.884000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd|
+Z28 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd|
+R15
+R16
+!s100 kghH?;UeV6n1;^VlLg>763
+!i10b 1
+Bbody
+R2
+R6
+R7
+l0
+L45
+V_d;4FMe?djMg5nTnmVbCk2
+R11
+31
+R26
+R27
+R28
+R15
+R16
+nbody
+!s100 TFGJU2VmUVcC`EiUJ[MXA2
+!i10b 1
