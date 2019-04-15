@@ -12,7 +12,7 @@ ARCHITECTURE behavior OF instruction_decoder_tb IS
 		i_CLK : in  STD_LOGIC; -- Clock input
 		i_ENABLE : in  STD_LOGIC; -- Enable input
 		i_INSTRUCTION : in  STD_LOGIC_VECTOR (31 downto 0); -- Instruction input 
-		o_ALU_OP_SEL : out  STD_LOGIC_VECTOR (3 downto 0); -- Opcode output
+		o_OPCODE : out  STD_LOGIC_VECTOR (3 downto 0); -- Opcode output
 		o_REGISTER_A : out  STD_LOGIC_VECTOR (4 downto 0); -- Register A select output
 		o_REGISTER_B : out  STD_LOGIC_VECTOR (4 downto 0); -- Register B select output
 		o_REGISTER_C : out  STD_LOGIC_VECTOR (4 downto 0); -- Register C select output (Write)
@@ -54,7 +54,7 @@ begin
 			i_CLK => i_CLK,
 			i_ENABLE => i_ENABLE,
 			i_INSTRUCTION => i_INSTRUCTION, 
-			o_ALU_OP_SEL => o_OPCODE,
+			o_OPCODE => o_OPCODE,
 			o_REGISTER_A => o_REGISTER_A,
 			o_REGISTER_B => o_REGISTER_B,
 			o_REGISTER_C => o_REGISTER_C,

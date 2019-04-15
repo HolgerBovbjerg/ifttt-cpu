@@ -7,8 +7,8 @@
 -- Module Name:    ALU - Behavioral 
 
 -- Additional Comments: 
---	ALU with three inputs, and five output.
--- Two inputs are for 8-bit data and one input is a 4-bit value for operation selection
+--	ALU with four inputs, and five output.
+-- Two inputs are for 8-bit data, one input is a 4-bit value for operation selection and one is for selecting signed/unsigned artihmetic
 -- One output is the 8-bit ALU result and four are 1-bit ALU flags for carry, overflow, negative and zero.
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -31,7 +31,7 @@ entity ALU is
 				o_ALU_overflow_flag : out  std_logic; -- output overflow flag
 				o_ALU_negative_flag : out  std_logic; -- output negative flag
 				o_ALU_zero_flag : out  std_logic -- output zero flag
-			 ); -- output overflow flag
+			 ); 
 end ALU;
 
 architecture Behavioral of ALU is

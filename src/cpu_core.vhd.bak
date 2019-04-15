@@ -1,0 +1,12 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+library work;
+use work.constants.all;
+
+entity cpu_core is
+    Port ( 	i_CORE_CLK : in  STD_LOGIC;
+				i_CORE_RESET : in  STD_LOGIC;
+				i_CORE_HALT : in  STD_LOGIC;
+			);
+end core;

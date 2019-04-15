@@ -15,7 +15,8 @@ ARCHITECTURE Register32x8_tb_arch OF Register32x8_tb IS
   SIGNAL i_GPR_data   :  std_logic_vector (7 downto 0)  ; 
   SIGNAL o_GPR_ALU_data_B   :  std_logic_vector (7 downto 0)  ; 
   SIGNAL i_GPR_address_A   :  std_logic_vector (4 downto 0)  ; 
-  SIGNAL i_GPR_clk   :  STD_LOGIC  ; 
+	SIGNAL i_GPR_clk   :  STD_LOGIC  ; 
+	SIGNAL i_GPR_enable   :  STD_LOGIC  ;
   SIGNAL i_GPR_address_B   :  std_logic_vector (4 downto 0)  ; 
   COMPONENT register32x8  
     PORT ( 
@@ -24,13 +25,15 @@ ARCHITECTURE Register32x8_tb_arch OF Register32x8_tb IS
       o_GPR_ALU_data_A  : out std_logic_vector (7 downto 0) ; 
       i_GPR_data  : in std_logic_vector (7 downto 0) ; 
       o_GPR_ALU_data_B  : out std_logic_vector (7 downto 0) ; 
-      i_GPR_address_A  : in std_logic_vector (4 downto 0) ; 
+			i_GPR_address_A  : in std_logic_vector (4 downto 0) ; 
+			i_GPR_enable			: in STD_LOGIC;
       i_GPR_clk  : in STD_LOGIC ; 
       i_GPR_address_B  : in std_logic_vector (4 downto 0) ); 
   END COMPONENT ; 
 BEGIN
   DUT  : register32x8  
     PORT MAP ( 
+			i_GPR_enable => i_GPR_enable,
       i_GPR_write_address   => i_GPR_write_address  ,
       i_GPR_write_enable   => i_GPR_write_enable  ,
       o_GPR_ALU_data_A   => o_GPR_ALU_data_A  ,
@@ -72,6 +75,7 @@ BEGIN
 -- Start Time = 0 ns, End Time = 1 us, Period = 0 ns
   Process
 	Begin
+	i_GPR_enable <= '1';
 	wait for 100 ns ;
 	 i_gpr_address_a  <= "00000"  ;
 	wait for 100 ns ;
