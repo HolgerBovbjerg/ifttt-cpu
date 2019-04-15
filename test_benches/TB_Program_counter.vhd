@@ -8,136 +8,64 @@ USE std.textio.all  ;
 ENTITY TB_Program_counter  IS 
 END ; 
  
-ARCHITECTURE TB_Program_counter_arch OF TB_Program_counter IS
-  SIGNAL i_PC_address   :  std_logic_vector (15 downto 0)  ; 
-  SIGNAL i_PC_clk   :  STD_LOGIC  ; 
-  SIGNAL i_PC_OP   :  std_logic_vector (1 downto 0)  ; 
-  SIGNAL o_PC_FLASH_PM_data   :  std_logic_vector (15 downto 0)  ; 
-  SIGNAL i_PC_write_enable   :  STD_LOGIC  ; 
+ARCHITECTURE TB_Program_counter_arch OF TB_Program_counter IS 
   COMPONENT Program_counter  
     PORT ( 
-      i_PC_address  : in std_logic_vector (15 downto 0) ; 
-      i_PC_clk  : in STD_LOGIC ; 
-      i_PC_OP  : in std_logic_vector (1 downto 0) ; 
-      o_PC_FLASH_PM_data  : out std_logic_vector (15 downto 0) ; 
-      i_PC_write_enable  : in STD_LOGIC ); 
+			i_PC_clk : in STD_LOGIC;
+			i_PC_enable : in STD_LOGIC;
+			i_PC_write_enable : in STD_LOGIC;
+			i_PC_address : in STD_LOGIC_VECTOR (9 DOWNTO 0);
+			i_PC_reset : in STD_LOGIC;
+			o_PC_PM_address : out STD_LOGIC_VECTOR (9 DOWNTO 0)
+			);
   END COMPONENT ; 
+	
+	
+	-- Input
+  	SIGNAL i_PC_address   		:  STD_LOGIC_VECTOR (9 downto 0) := (others => '0'); 
+	SIGNAL i_PC_clk   			:  STD_LOGIC := '0';
+	SIGNAL i_PC_enable   		:  STD_LOGIC := '0'; 
+	SIGNAL i_PC_reset   			:  STD_LOGIC := '0'; 
+	SIGNAL i_PC_write_enable	:  STD_LOGIC := '0';
+	
+	-- Output
+	SIGNAL o_PC_PM_address   	:  STD_LOGIC_VECTOR (9 downto 0); 
+	
+	-- Clock period definitions
+   constant c_clk_period : time := 10 ns;
+  
 BEGIN
-  DUT  : Program_counter  
-    PORT MAP ( 
-      i_PC_address   => i_PC_address  ,
-      i_PC_clk   => i_PC_clk  ,
-      i_PC_OP   => i_PC_OP  ,
-      o_PC_FLASH_PM_data   => o_PC_FLASH_PM_data  ,
-      i_PC_write_enable   => i_PC_write_enable   ) ; 
+		DUT  : Program_counter  PORT MAP ( 
+			i_PC_address   		=> i_PC_address,
+			i_PC_clk   				=> i_PC_clk,
+			i_PC_reset   			=> i_PC_reset,
+			i_PC_enable 			=> i_PC_enable,
+			i_PC_write_enable   	=> i_PC_write_enable,
+			o_PC_PM_address   	=> o_PC_PM_address
+		); 
 
-
-
--- "Clock Pattern" : dutyCycle = 50
--- Start Time = 0 ns, End Time = 2 us, Period = 100 ns
-  Process
-	Begin
-	 i_pc_clk  <= '0'  ;
-	wait for 50 ns ;
--- 50 ns, single loop till start period.
-	for Z in 1 to 9
-	loop
-	    i_pc_clk  <= '1'  ;
-	   wait for 50 ns ;
-	    i_pc_clk  <= '0'  ;
-	   wait for 50 ns ;
--- 950 ns, repeat pattern in loop.
-	end  loop;
-	 i_pc_clk  <= '1'  ;
-	wait for 50 ns ;
--- dumped values till 1 us
-	wait;
- End Process;
-
-
--- "Constant Pattern"
--- Start Time = 0 ns, End Time = 1 us, Period = 0 ns
-  Process
-	Begin
-	 i_pc_write_enable  <= '0'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '1'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '0'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '1'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '0'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '1'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '0'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '1'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '0'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '1'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '0'  ;
-	wait for 50 ns ;
-	 i_pc_write_enable  <= '1'  ;
-	wait for 50 ns ;
--- dumped values till 1 us
-	wait;
- End Process;
-
-
--- "Constant Pattern"
--- Start Time = 0 ns, End Time = 1 us, Period = 0 ns
-  Process
-	Begin
-	 i_pc_address  <= "0000000000000000"  ;
-	wait for 50 ns ;
-	 i_pc_address  <= "0000000000001111"  ;
-	wait for 50 ns ;
-	 i_pc_address  <= "0000000011110000"  ;
-	wait for 50 ns ;
-	 i_pc_address  <= "0000111100000000"  ;
-	wait for 50 ns ;
-	 i_pc_address  <= "1111000000000000"  ;
-	wait for 50 ns ;
-	 i_pc_address  <= "1111111100000000"  ;
-	wait for 50 ns ;
-	 i_pc_address  <= "0000000011111111"  ;
-	wait for 50 ns ;
-	 i_pc_address  <= "1111111111111111"  ;
-	wait for 50 ns ;
--- dumped values till 1 us
-	wait;
- End Process;
-
-
--- "Constant Pattern"
--- Start Time = 0 ns, End Time = 1 us, Period = 0 ns
-  Process
-	Begin
-	 i_pc_op  <= "00"  ;
-	wait for 150 ns ;
-	i_pc_op  <= "01"  ;
-	wait for 100 ns ;
-	i_pc_op  <= "10"  ;
-	wait for 100 ns ;
-	i_pc_op  <= "11"  ;
-	wait for 100 ns ;
--- dumped values till 1 us
-	wait;
- End Process;
-
-
--- "Constant Pattern"
--- Start Time = 0 ns, End Time = 1 us, Period = 0 ns
-  Process
-	Begin
-	 if o_pc_flash_pm_data  /= ("0000000000000000"  ) then 
-		report " test case failed" severity error; end if;
-	wait for 50 ns ;
--- dumped values till 1 us
-	wait;
- End Process;
+	-- Clock process definitions
+   clk_process :process
+   begin
+		i_PC_clk <= '0';
+		wait for c_clk_period/2;
+		i_PC_clk <= '1';
+		wait for c_clk_period/2;
+   end process;
+	
+	-- Stimulus process
+	stimu_process :process
+   begin
+		-- Reset state
+		i_PC_reset <= '1';
+		wait for c_clk_period*10;
+		i_PC_reset <= '0';
+		i_PC_enable <= '1';
+		i_PC_address <= "0110011001";
+		wait for c_clk_period*10;
+		i_PC_write_enable <= '1';
+		wait for c_clk_period*10;
+		i_PC_reset <= '1';
+		wait;
+   end process;
 END;

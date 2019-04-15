@@ -34,7 +34,7 @@ begin
 			 i_PROG_ADDRESS => r_PROG_ADDRESS
         );
 	-- Clock process definitions
-   i_clk_process :process
+   clk_process :process
    begin
 		i_clk <= '0';
 		wait for c_clk_period/2;
@@ -43,7 +43,7 @@ begin
    end process;
 	
 	-- Stimulus process
-	i_stimu_process :process
+	stimu_process :process
    begin
 		r_PROG_ADDRESS <= STD_LOGIC_VECTOR(unsigned(r_PROG_ADDRESS) + 1);
 		wait for c_clk_period*5;
