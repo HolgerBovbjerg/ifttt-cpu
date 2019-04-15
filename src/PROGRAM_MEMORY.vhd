@@ -6,7 +6,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- 256x32 PROGRAM_MEMORY in VHDL
 entity PROGRAM_MEMORY is
 port(
- i_FLASH_PM_address: in std_logic_vector(7 downto 0); -- Address to read in memory 
+ i_FLASH_PM_address: in std_logic_vector(9 downto 0); -- Address to read in memory 
  i_FLASH_PM_clk: in std_logic; -- clock input for FLASH_PM
  o_FLASH_PM_IR_data: out std_logic_vector(31 downto 0) -- Data output of FLASH_PM
 );
@@ -14,12 +14,11 @@ end PROGRAM_MEMORY;
 
 architecture Behavioral of PROGRAM_MEMORY is
  
-type RAM_ARRAY is array (0 to 255) of std_logic_vector (31 downto 0);
+type RAM_ARRAY is array (0 to 1023) of std_logic_vector (31 downto 0);
 
 
 signal RAM: RAM_ARRAY :=(
--- Input in HEXADECIMAL
-
+	-- Input in HEXADECIMAL
  	x"0200880C",x"0200880F",x"30000604",x"0200880C",-- memory location 1 to 4
 	x"000F0000",x"0000F000",x"0F0F0000",x"FF000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
@@ -83,7 +82,8 @@ signal RAM: RAM_ARRAY :=(
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
-	x"00000000",x"00000000",x"00000000",x"00000000"
+	x"00000000",x"00000000",x"00000000",x"00000000", 
+	others => x"00000000"
 	); 
 
 begin

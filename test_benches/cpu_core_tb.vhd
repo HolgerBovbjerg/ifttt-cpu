@@ -12,15 +12,16 @@ ARCHITECTURE behavior OF cpu_core_tb IS
 		 Port ( 	i_CORE_CLK : in  STD_LOGIC;
 					i_CORE_RESET : in  STD_LOGIC;
 					i_CORE_HALT : in  STD_LOGIC;
-					i_PROG_ADDRESS : in STD_LOGIC_VECTOR(7 downto 0)
+					o_DATA : out STD_LOGIC_VECTOR(7 downto 0)
 				);
 	end COMPONENT;
 	
-	--Inputs
+	-- Inputs
    signal i_clk : std_logic := '0';
 	signal i_reset : std_logic := '0';
-	signal r_PROG_ADDRESS : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 	
+	-- Outputs 
+	signal o_DATA  : STD_LOGIC_VECTOR(7 downto 0) := "00000000";
 	-- Clock period definitions
    constant c_clk_period : time := 10 ns;
 	
@@ -31,7 +32,7 @@ begin
           i_CORE_CLK => i_CLK,
           i_CORE_RESET => i_reset,
 			 i_CORE_HALT => '0',
-			 i_PROG_ADDRESS => r_PROG_ADDRESS
+			 o_DATA  => o_DATA 
         );
 	-- Clock process definitions
    clk_process :process
@@ -45,8 +46,7 @@ begin
 	-- Stimulus process
 	stimu_process :process
    begin
-		r_PROG_ADDRESS <= STD_LOGIC_VECTOR(unsigned(r_PROG_ADDRESS) + 1);
-		wait for c_clk_period*5;
+	   wait;
    end process;
 	
 end;
