@@ -30,8 +30,8 @@ constant OPCODE_LOAD:    	std_logic_vector(3 downto 0) :=  "1000";	-- Load
 constant OPCODE_COMPARE:   std_logic_vector(3 downto 0) :=  "1001";	-- Compare 
 constant OPCODE_BSL:   		std_logic_vector(3 downto 0) :=  "1010";	-- Bitshift Left 
 constant OPCODE_BSR:  		std_logic_vector(3 downto 0) :=  "1011";	-- Bitshift Right 
-constant OPCODE_BRANCH:   	std_logic_vector(3 downto 0) :=  "1100";	-- Jump 
-constant OPCODE_JUMPEQ:    std_logic_vector(3 downto 0) :=  "1101";	-- Branch 
+constant OPCODE_BRANCH:   	std_logic_vector(3 downto 0) :=  "1100";	-- Branch 
+constant OPCODE_JUMPEQ:    std_logic_vector(3 downto 0) :=  "1101";	-- Jumpeq 
 constant OPCODE_SPECIAL:   std_logic_vector(3 downto 0) :=  "1110";	-- Special 
 
 -- Declare functions and procedure
