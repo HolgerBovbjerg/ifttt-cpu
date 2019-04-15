@@ -14,7 +14,7 @@ entity instruction_decoder is
     Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
 				i_ENABLE : in  STD_LOGIC; -- Enable input
 				i_INSTRUCTION : in  STD_LOGIC_VECTOR (31 downto 0); -- Instruction input 
-				o_ALU_OP_SEL : out  STD_LOGIC_VECTOR (3 downto 0); -- Opcode output
+				o_OPCODE : out  STD_LOGIC_VECTOR (3 downto 0); -- Opcode output
 				o_REGISTER_A : out  STD_LOGIC_VECTOR (4 downto 0); -- Register A select output
 				o_REGISTER_B : out  STD_LOGIC_VECTOR (4 downto 0); -- Register B select output
 				o_REGISTER_C : out  STD_LOGIC_VECTOR (4 downto 0); -- Register C select output (Write)
@@ -37,7 +37,7 @@ begin
 	
 		if (rising_edge(i_CLK) and i_ENABLE = '1') then
 			-- Opcode			  
-			o_ALU_OP_SEL <= i_INSTRUCTION(31 downto 28);
+			o_OPCODE <= i_INSTRUCTION(31 downto 28);
 			-- Register selection
 			o_REGISTER_A <= i_INSTRUCTION(19 downto 15);
 			o_REGISTER_B <= i_INSTRUCTION(14 downto 10);

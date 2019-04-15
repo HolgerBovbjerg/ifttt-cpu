@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Apr 15 11:50:48 2019
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
+Revision Name : B_imm_multiplexer
+Top-level Entity Name : B_imm_multiplexer
+Family : Cyclone III
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

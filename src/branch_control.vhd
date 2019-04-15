@@ -1,22 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date:    17:14:23 04/01/2019 
--- Design Name: 
--- Module Name:    branch_control - Behavioral 
--- Project Name: 
--- Target Devices: 
--- Tool versions: 
--- Description: 
---
--- Dependencies: 
---
--- Revision: 
--- Revision 0.01 - File Created
--- Additional Comments: 
---
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -27,7 +8,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity branch_control is
     Port ( 	i_CLK : in  STD_LOGIC;
            	i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
-			i_ZERO_FLAG : in  STD_LOGIC;
+				i_ZERO_FLAG : in  STD_LOGIC;
            	i_OVERFLOW_FLAG : in  STD_LOGIC;
            	i_NEGATIVE_FLAG : in  STD_LOGIC;
            	i_CARRY_FLAG : in  STD_LOGIC;
