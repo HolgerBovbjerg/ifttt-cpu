@@ -32,7 +32,7 @@ begin
 
 process(i_GPR_clk, i_GPR_enable)
 	begin
-		if(rising_edge(i_GPR_clk) and i_GPR_enable) then
+		if(rising_edge(i_GPR_clk) and i_GPR_enable = '1') then
 			
 			if(i_GPR_write_enable = '1') then
 				r_REGISTER(to_integer(unsigned(i_GPR_write_address))) <= i_GPR_data;

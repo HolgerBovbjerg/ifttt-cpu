@@ -17,7 +17,7 @@ begin
 
 	process(i_IR_clk, i_IR_enable)
 	begin
-		if(rising_edge(i_IR_clk) and i_IR_enable) then
+		if(rising_edge(i_IR_clk) and i_IR_enable = '1') then
 			r_register <= i_IR_data;
 		end if;
 	end process;
