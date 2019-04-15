@@ -6,27 +6,38 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- 256x32 PROGRAM_MEMORY in VHDL
 entity PROGRAM_MEMORY is
 port(
- i_FLASH_PM_address: in std_logic_vector(9 downto 0); -- Address to read in memory 
- i_FLASH_PM_clk: in std_logic; -- clock input for FLASH_PM
- o_FLASH_PM_IR_data: out std_logic_vector(31 downto 0) -- Data output of FLASH_PM
+	 i_FLASH_PM_address: in std_logic_vector(9 downto 0); -- Address to read in memory 
+	 i_FLASH_PM_clk: in std_logic; -- clock input for FLASH_PM
+	 o_FLASH_PM_IR_data: out std_logic_vector(31 downto 0) := x"00000000" -- Data output of FLASH_PM
 );
 end PROGRAM_MEMORY;
 
 architecture Behavioral of PROGRAM_MEMORY is
  
-type RAM_ARRAY is array (0 to 1023) of std_logic_vector (31 downto 0);
+	type RAM_ARRAY is array (0 to 1023) of std_logic_vector (31 downto 0);
 
 
-signal RAM: RAM_ARRAY :=(
+	signal RAM: RAM_ARRAY :=(
 	-- Input in HEXADECIMAL
- 	x"0200880C",x"0200880F",x"30000604",x"0200880C",-- memory location 1 to 4
+	
+	"01100000000000000000001000000001", -- Address 0
+	"01100000100000000000011011100001", -- Address 1
+	"00000001000000000010000000000000", -- Address 2
+	"00010001100011000001111111100011", -- Address 3
+	"11000000000000000000000000000100", -- Address 4
+	"00000000000000000000000000000000", -- Address 5
+	"00000000000000000000000000000000", -- Address 6
+	"00000000000000000000000000000000", -- Address 7
+	"00000000000000000000000000000000", -- Address 8
+	"00000000000000000000000000000000", -- Address 9 
+	x"0200880C",x"0200880F",x"30000604",x"0200880C",-- memory location 11 to 14
 	x"000F0000",x"0000F000",x"0F0F0000",x"FF000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
-	x"00000000",x"00000000",x"00000000",x"00000000",-- memory location 28 to 32
+	x"00000000",x"00000000",x"00000000",x"00000000",-- memory location 38 to 41
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
@@ -88,12 +99,10 @@ signal RAM: RAM_ARRAY :=(
 
 begin
 process(i_FLASH_PM_clk)
-begin
- if(rising_edge(i_FLASH_PM_clk)) then
- o_FLASH_PM_IR_data <= RAM(to_integer(unsigned(i_FLASH_PM_address)));
-end if;
- 
-end process;
- 
+	begin
+		if(rising_edge(i_FLASH_PM_clk)) then
+			o_FLASH_PM_IR_data <= RAM(to_integer(unsigned(i_FLASH_PM_address)));
+		end if;
+	end process;
 end Behavioral;
 

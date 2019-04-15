@@ -46,6 +46,9 @@ begin
 	-- Stimulus process
 	stimu_process :process
    begin
+		i_RESET <= '1';
+		wait for c_clk_period*10;
+		i_RESET <= '0';
 	   wait;
    end process;
 	
