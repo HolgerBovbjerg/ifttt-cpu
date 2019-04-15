@@ -73,7 +73,7 @@ begin
 				when OPCODE_READ => -- Read
 					r_ALU_Result <= r_ALU_Result;
 				when OPCODE_WRITE => -- Write
-					r_ALU_Result <= r_ALU_Result;
+					r_ALU_Result <= i_ALU_A;
 				when OPCODE_LOAD => -- Load
 					r_ALU_Result <= r_ALU_Result;
 				when OPCODE_COMPARE => -- Compare
