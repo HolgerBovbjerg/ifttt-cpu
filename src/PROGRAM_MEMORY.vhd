@@ -20,7 +20,7 @@ type RAM_ARRAY is array (0 to 255) of std_logic_vector (31 downto 0);
 signal RAM: RAM_ARRAY :=(
 -- Input in HEXADECIMAL
 
- 	x"F0000000",x"0F000000",x"00F00000",x"000F0000",-- memory location 1 to 4
+ 	x"0200880C",x"0200880F",x"30000604",x"0200880C",-- memory location 1 to 4
 	x"000F0000",x"0000F000",x"0F0F0000",x"FF000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
@@ -84,8 +84,6 @@ signal RAM: RAM_ARRAY :=(
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000",
 	x"00000000",x"00000000",x"00000000",x"00000000"
-	
-	
 	); 
 
 begin
