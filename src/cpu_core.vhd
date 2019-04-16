@@ -78,7 +78,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	end COMPONENT;
 	
 	COMPONENT B_imm_multiplexer 
-	Port (	i_CLK : in STD_LOGIC;
+	Port (	-- i_CLK : in STD_LOGIC;
 				i_B_imm_sel : in STD_LOGIC;
 				i_DATA_B : in STD_LOGIC_VECTOR(7 downto 0);
 				i_DATA_Imm : in STD_LOGIC_VECTOR(7 downto 0);
@@ -237,7 +237,7 @@ begin
 	);
 		
 	INST_B_imm_multiplexer : B_imm_multiplexer PORT MAP (
-			i_CLK 							=> i_CORE_CLK,
+			--i_CLK 							=> i_CORE_CLK,
 			i_B_imm_sel 					=> w_IMM_enable,
 			i_DATA_B 						=> w_GPR_data_B,
 			i_DATA_Imm 						=> w_DATA_IMM,
@@ -273,7 +273,7 @@ begin
 	INST_Program_counter : Program_counter PORT MAP( 
 			i_PC_clk 						=> i_CORE_CLK,
 			i_PC_enable 					=> r_enable_register_write,
-			i_PC_write_enable 			=> w_PC_LOAD,
+			i_PC_write_enable 				=> w_PC_LOAD,
 			i_PC_address 					=> w_BRANCH_ADDRESS,
 			i_PC_reset 						=> i_CORE_RESET,
 			o_PC_PM_address 				=> w_PC_PM_address
