@@ -4,7 +4,6 @@ i_CORE_CLK => InstrucReg:INST_InstrucReg.i_IR_clk
 i_CORE_CLK => instruction_decoder:INST_instruction_decoder.i_CLK
 i_CORE_CLK => control_unit:INST_control_unit.i_CLK
 i_CORE_CLK => register32x8:INST_GPR.i_GPR_clk
-i_CORE_CLK => B_imm_multiplexer:INST_B_imm_multiplexer.i_CLK
 i_CORE_CLK => ALU:INST_ALU.i_CLK
 i_CORE_CLK => branch_control:INST_branch_control.i_CLK
 i_CORE_CLK => Program_counter:INST_Program_counter.i_PC_clk
@@ -619,14 +618,6 @@ i_GPR_write_enable => r_REGISTER.DATAB
 
 
 |cpu_core|B_imm_multiplexer:INST_B_imm_multiplexer
-i_CLK => o_DATA[0]~reg0.CLK
-i_CLK => o_DATA[1]~reg0.CLK
-i_CLK => o_DATA[2]~reg0.CLK
-i_CLK => o_DATA[3]~reg0.CLK
-i_CLK => o_DATA[4]~reg0.CLK
-i_CLK => o_DATA[5]~reg0.CLK
-i_CLK => o_DATA[6]~reg0.CLK
-i_CLK => o_DATA[7]~reg0.CLK
 i_B_imm_sel => o_DATA.OUTPUTSELECT
 i_B_imm_sel => o_DATA.OUTPUTSELECT
 i_B_imm_sel => o_DATA.OUTPUTSELECT
@@ -651,14 +642,14 @@ i_DATA_Imm[4] => o_DATA.DATAB
 i_DATA_Imm[5] => o_DATA.DATAB
 i_DATA_Imm[6] => o_DATA.DATAB
 i_DATA_Imm[7] => o_DATA.DATAB
-o_DATA[0] <= o_DATA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-o_DATA[1] <= o_DATA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-o_DATA[2] <= o_DATA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-o_DATA[3] <= o_DATA[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-o_DATA[4] <= o_DATA[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-o_DATA[5] <= o_DATA[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-o_DATA[6] <= o_DATA[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-o_DATA[7] <= o_DATA[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[0] <= o_DATA.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[1] <= o_DATA.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[2] <= o_DATA.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[3] <= o_DATA.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[4] <= o_DATA.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[5] <= o_DATA.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[6] <= o_DATA.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[7] <= o_DATA.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cpu_core|ALU:INST_ALU

@@ -135,29 +135,12 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 135 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_ALU
-run
-run
-run
-run
-run
-run
-run
-run
-run
 add wave -position insertpoint sim:/cpu_core_tb/uut/*
 restart
 run
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 135 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_ALU
-run
-run
-run
-run
-run
 run
 run
 run
