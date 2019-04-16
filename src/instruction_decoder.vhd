@@ -1,14 +1,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx primitives in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library work;
+use work.constants.all;
 
 entity instruction_decoder is
     Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
@@ -39,15 +33,15 @@ begin
 			-- Opcode			  
 			o_OPCODE <= i_INSTRUCTION(31 downto 28);
 			-- Register selection
-			o_REGISTER_A <= i_INSTRUCTION(19 downto 15);
-			o_REGISTER_B <= i_INSTRUCTION(14 downto 10);
+			o_REGISTER_A <= i_INSTRUCTION(22 downto 18);
+			o_REGISTER_B <= i_INSTRUCTION(17 downto 13);
 			o_REGISTER_C <= i_INSTRUCTION(27 downto 23);
 			-- Immidiate data 
-			o_DATA_IMM <= i_INSTRUCTION(9 downto 2);
+			o_DATA_IMM <= i_INSTRUCTION(12 downto 5);
 			-- Signed bit
 			o_Signed <= i_INSTRUCTION(1);
 			-- Program memory address
-			o_Address_prog <= i_INSTRUCTION(9 downto 0);
+			o_Address_prog <= i_INSTRUCTION(12 downto 3);
 			-- Memory space address
 			o_Address_mem <= i_INSTRUCTION(15 downto 0);
 			-- Immidiate enable
@@ -56,13 +50,13 @@ begin
 			
 			-- Case for resolving whether write enable for register should be asserted or not
 			case i_INSTRUCTION(31 downto 28) is
-				when "1000" => -- Write
+				when OPCODE_WRITE => -- Write
 					o_REGISTER_C_WRITE_ENABLE <= '0';
 					o_BRANCH_CONTROL <= "000";
-				when "1100" => -- Branch
+				when OPCODE_BRANCH => -- Branch
 					o_REGISTER_C_WRITE_ENABLE <= '0';
 					o_BRANCH_CONTROL <= i_INSTRUCTION(2 downto 0);
-				when "1101" => -- Jumpeq
+				when OPCODE_JUMPEQ => -- Jumpeq
 					o_REGISTER_C_WRITE_ENABLE <= '0';
 					o_BRANCH_CONTROL <= "010";
 				when others =>

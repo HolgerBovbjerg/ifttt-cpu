@@ -27,14 +27,14 @@ begin
 				r_state <= "0000001"; -- Reset state
 			else
 				case r_state is -- Check current state
-					when "0000001" => -- fetch state
+					when "0000001" => -- Fetch state
 								r_state <= "0000010"; -- Set state to "decode" state
-					when "0000010" => -- decode
-						r_state <= "0000100"; -- Set state to "regread" state
-					when "0000100" => -- regread
+					when "0000010" => -- Decode state
+						r_state <= "0000100"; -- Set state to "Register read" state
+					when "0000100" => -- Register read state
 						r_state <= "0001000"; -- Set state to execute state
-					when "0001000" => -- execute
-						if (i_OPCODE(3 downto 0) = "1100" or i_OPCODE(3 downto 0) = "1101") then -- Check if a memory has to be accessed, 
+					when "0001000" => -- Execute State
+						if (i_OPCODE(3 downto 0) = "1000" or i_OPCODE(3 downto 0) = "0111") then -- Check if a memory has to be accessed, 
 														--Write opcode							--Read opcode
 							r_state <= "0010000"; --  Set state to "memory" state
 						else -- If memory does not have to be accessed 

@@ -8,14 +8,14 @@ entity cpu_core is
     Port ( 	i_CORE_CLK : in  STD_LOGIC;
 				i_CORE_RESET : in  STD_LOGIC;
 				i_CORE_HALT : in  STD_LOGIC;
-				i_PROG_ADDRESS : in STD_LOGIC_VECTOR(7 downto 0) -- Should be removed when PC is added
+				o_DATA : out STD_LOGIC_VECTOR(7 downto 0)
 			);
 end cpu_core;
 
 ARCHITECTURE behavior OF cpu_core IS
 
 	COMPONENT PROGRAM_MEMORY 
-	Port (	i_FLASH_PM_address: in std_logic_vector(7 downto 0); -- Address to read in memory 
+	Port (	i_FLASH_PM_address: in std_logic_vector(9 downto 0); -- Address to read in memory 
 				i_FLASH_PM_clk: in std_logic; -- clock input for FLASH_PM
 				o_FLASH_PM_IR_data: out std_logic_vector(31 downto 0) -- Data output of FLASH_PM
 				);
@@ -114,6 +114,16 @@ ARCHITECTURE behavior OF cpu_core IS
 				);
 	end COMPONENT;
 	
+	COMPONENT Program_counter 
+	Port ( 	i_PC_clk : in STD_LOGIC;
+				i_PC_enable : in STD_LOGIC;
+				i_PC_write_enable : in STD_LOGIC;
+				i_PC_address : in STD_LOGIC_VECTOR (9 DOWNTO 0);
+				i_PC_reset : in STD_LOGIC;
+				o_PC_PM_address : out STD_LOGIC_VECTOR (9 DOWNTO 0)
+				);
+	end COMPONENT;
+	
 	-- Program memory outputs
 	signal w_FLASH_PM_IR_data		: std_logic_vector(31 downto 0); -- Data output of FLASH_PM
 	
@@ -161,26 +171,38 @@ ARCHITECTURE behavior OF cpu_core IS
 	
 	
 	-- Program counter outputs
+	signal w_PC_PM_address : STD_LOGIC_VECTOR(9 downto 0);
 	
+	-- Misc. signals
+	signal r_register_enable : std_logic := '0';
+	signal r_register_write_enable : std_logic := '0';
+	
+	signal r_enable_fetch  : std_logic := '0';
+	signal r_enable_decode  : std_logic := '0';
+	signal r_enable_register_read  : std_logic := '0';
+	signal r_enable_alu  : std_logic := '0';
+	signal r_enable_memory  : std_logic := '0';
+	signal r_enable_register_write  : std_logic := '0';
+	signal r_enable_stall  : std_logic := '0';
 	
 begin
 
 	INST_PROGRAM_MEMORY : PROGRAM_MEMORY PORT MAP (
-			i_FLASH_PM_address 			=> i_PROG_ADDRESS,
+			i_FLASH_PM_address 			=> w_PC_PM_address,
 			i_FLASH_PM_clk 				=> i_CORE_CLK,
 			o_FLASH_PM_IR_data 			=> w_FLASH_PM_IR_data 
 	);
 
 	INST_InstrucReg : InstrucReg PORT MAP (	
 			i_IR_clk 						=> i_CORE_CLK,
-			i_IR_enable 					=> w_STATE(0),
+			i_IR_enable 					=> r_enable_fetch,
 			i_IR_data						=> w_FLASH_PM_IR_data,
-			o_IR_instruction => w_IR_instruction
+			o_IR_instruction 				=> w_IR_instruction
 	);
 	
 	INST_instruction_decoder : instruction_decoder PORT MAP (
 			i_CLK 							=> i_CORE_CLK,
-			i_ENABLE 						=> w_STATE(1),
+			i_ENABLE 						=> r_enable_decode,
 			i_INSTRUCTION 					=> w_IR_instruction, 
 			o_OPCODE 						=> w_OPCODE,
 			o_REGISTER_A 					=> w_REGISTER_A,
@@ -204,12 +226,12 @@ begin
 	
 	INST_GPR : register32x8 PORT MAP (
 			i_GPR_clk 						=> i_CORE_CLK,
-			i_GPR_enable					=> w_STATE(2),
+			i_GPR_enable					=> r_register_enable,
 			i_GPR_address_A 				=> w_REGISTER_A,
 			i_GPR_address_B 				=> w_REGISTER_B,
 			i_GPR_data						=> w_ALU_out, -- Change when data bus is added
 			i_GPR_write_address			=> w_REGISTER_C,
-			i_GPR_write_enable			=> w_REGISTER_C_WRITE_ENABLE, 
+			i_GPR_write_enable			=> r_register_write_enable, 
 			o_GPR_ALU_data_A 				=> w_GPR_data_A,
 			o_GPR_ALU_data_B 				=> w_GPR_data_B
 	);
@@ -224,7 +246,7 @@ begin
 
 	INST_ALU : ALU PORT MAP (
          i_CLK 							=> i_CORE_CLK,
-			i_ENABLE 						=> w_STATE(3),
+			i_ENABLE 						=> r_enable_alu,
          i_ALU_A 							=> w_GPR_data_A,
          i_ALU_B 							=> w_DATA_B_Imm,
          i_ALU_sel 						=> w_OPCODE,
@@ -248,8 +270,26 @@ begin
 			o_PC_LOAD 						=> w_PC_LOAD
 	);
 	
+	INST_Program_counter : Program_counter PORT MAP( 
+			i_PC_clk 						=> i_CORE_CLK,
+			i_PC_enable 					=> r_enable_register_write,
+			i_PC_write_enable 			=> w_PC_LOAD,
+			i_PC_address 					=> w_BRANCH_ADDRESS,
+			i_PC_reset 						=> i_CORE_RESET,
+			o_PC_PM_address 				=> w_PC_PM_address
+	);
 	
-	-- w_STATE(4) enable input for memory controller
-	-- w_STATE(5) writeback state
+	r_register_enable <= r_enable_register_read or r_enable_register_write;
+	r_register_write_enable <= w_REGISTER_C_WRITE_ENABLE and r_enable_register_write;
+	
+	r_enable_fetch <= w_STATE(0);
+	r_enable_decode <= w_STATE(1);
+	r_enable_register_read <= w_STATE(2);
+	r_enable_alu <= w_STATE(3);
+	r_enable_memory <= w_STATE(4);
+	r_enable_register_write <= w_STATE(5);
+	r_enable_stall <= w_STATE(6);
+	
+	o_DATA <= w_ALU_out;
 	
 end;

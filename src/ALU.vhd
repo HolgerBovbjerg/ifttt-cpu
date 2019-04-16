@@ -75,7 +75,7 @@ begin
 				when OPCODE_WRITE => -- Write
 					r_ALU_Result <= i_ALU_A;
 				when OPCODE_LOAD => -- Load
-					r_ALU_Result <= r_ALU_Result;
+					r_ALU_Result <= i_ALU_B;
 				when OPCODE_COMPARE => -- Compare
 					if(i_ALU_A = i_ALU_B) then
 						r_ALU_Result(7) <= '1';
