@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="c3c04f5ca84bd4619cd6"/>
+    <hash md5_digest_80b="60bc73ed274e8b969963"/>
   </project>
   <file_info>
     <file device="EP3C16F256C6" path="cpu_core.sof" usercode="0xFFFFFFFF"/>

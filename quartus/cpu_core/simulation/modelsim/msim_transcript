@@ -25,16 +25,6 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity register32x8
 # -- Compiling architecture behaviour of register32x8
-# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity PROGRAM_MEMORY
-# -- Compiling architecture Behavioral of PROGRAM_MEMORY
 # vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -43,13 +33,6 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Program_counter
 # -- Compiling architecture Behavioral of Program_counter
-# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity instruction_decoder
-# -- Compiling architecture Behavioral of instruction_decoder
 # vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -79,6 +62,23 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity branch_control
 # -- Compiling architecture Behavioral of branch_control
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package constants
+# -- Compiling entity PROGRAM_MEMORY
+# -- Compiling architecture Behavioral of PROGRAM_MEMORY
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package constants
+# -- Compiling entity instruction_decoder
+# -- Compiling architecture Behavioral of instruction_decoder
 # vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/ALU.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -117,14 +117,14 @@
 # Loading work.cpu_core_tb(behavior)
 # Loading work.constants(body)
 # Loading work.cpu_core(behavior)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
 # Loading work.program_memory(behavioral)
 # Loading work.instrucreg(behaviour)
 # Loading work.instruction_decoder(behavioral)
 # Loading work.control_unit(behavioral)
 # Loading work.register32x8(behaviour)
 # Loading work.b_imm_multiplexer(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
 # Loading work.alu(behavioral)
 # Loading work.branch_control(behavioral)
 # Loading work.program_counter(behavioral)
@@ -135,18 +135,32 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
-restart
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 135 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_ALU
+run
+run
+run
+run
+run
+run
+run
+run
+run
 add wave -position insertpoint sim:/cpu_core_tb/uut/*
+restart
 run
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 135 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_ALU
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 185 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_ALU
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 235 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_ALU
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 285 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_ALU
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 285 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_ALU
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_core
-Mon Apr 15 21:30:18 2019
+Tue Apr 16 11:23:25 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -56,18 +56,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 15 21:30:18 2019      ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 16 11:23:25 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; cpu_core                                   ;
 ; Top-level Entity Name              ; cpu_core                                   ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 368                                        ;
-;     Total combinational functions  ; 257                                        ;
-;     Dedicated logic registers      ; 170                                        ;
-; Total registers                    ; 170                                        ;
+; Total logic elements               ; 374                                        ;
+;     Total combinational functions  ; 258                                        ;
+;     Dedicated logic registers      ; 175                                        ;
+; Total registers                    ; 175                                        ;
 ; Total pins                         ; 11                                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 30,208                                     ;
+; Total memory bits                  ; 33,280                                     ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
 ; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
@@ -199,7 +199,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/altsyncram_6bn1.tdf                           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/db/altsyncram_6bn1.tdf                           ;         ;
 ; db/cpu_core.ram0_register32x8_e16f5a94.hdl.mif   ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/db/cpu_core.ram0_register32x8_e16f5a94.hdl.mif   ;         ;
 ; db/altsyncram_sp71.tdf                           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/db/altsyncram_sp71.tdf                           ;         ;
-; db/cpu_core.ram0_program_memory_7409f867.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/db/cpu_core.ram0_program_memory_7409f867.hdl.mif ;         ;
+; db/cpu_core.ram0_PROGRAM_MEMORY_7409f867.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/db/cpu_core.ram0_PROGRAM_MEMORY_7409f867.hdl.mif ;         ;
 +--------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -208,29 +208,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 368              ;
+; Estimated Total logic elements              ; 374              ;
 ;                                             ;                  ;
-; Total combinational functions               ; 257              ;
+; Total combinational functions               ; 258              ;
 ; Logic element usage by number of LUT inputs ;                  ;
 ;     -- 4 input functions                    ; 150              ;
 ;     -- 3 input functions                    ; 83               ;
-;     -- <=2 input functions                  ; 24               ;
+;     -- <=2 input functions                  ; 25               ;
 ;                                             ;                  ;
 ; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 219              ;
+;     -- normal mode                          ; 220              ;
 ;     -- arithmetic mode                      ; 38               ;
 ;                                             ;                  ;
-; Total registers                             ; 170              ;
-;     -- Dedicated logic registers            ; 170              ;
+; Total registers                             ; 175              ;
+;     -- Dedicated logic registers            ; 175              ;
 ;     -- I/O registers                        ; 0                ;
 ;                                             ;                  ;
 ; I/O pins                                    ; 11               ;
-; Total memory bits                           ; 30208            ;
+; Total memory bits                           ; 33280            ;
 ; Embedded Multiplier 9-bit elements          ; 0                ;
 ; Maximum fan-out node                        ; i_CORE_CLK~input ;
-; Maximum fan-out                             ; 215              ;
-; Total fan-out                               ; 1890             ;
-; Average fan-out                             ; 3.83             ;
+; Maximum fan-out                             ; 223              ;
+; Total fan-out                               ; 1940             ;
+; Average fan-out                             ; 3.86             ;
 +---------------------------------------------+------------------+
 
 
@@ -239,17 +239,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
-; |cpu_core                                         ; 257 (0)           ; 170 (0)      ; 30208       ; 0            ; 0       ; 0         ; 11   ; 0            ; |cpu_core                                                                                        ; work         ;
+; |cpu_core                                         ; 258 (1)           ; 175 (0)      ; 33280       ; 0            ; 0       ; 0         ; 11   ; 0            ; |cpu_core                                                                                        ; work         ;
 ;    |ALU:INST_ALU|                                 ; 182 (182)         ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|ALU:INST_ALU                                                                           ; work         ;
 ;    |B_imm_multiplexer:INST_B_imm_multiplexer|     ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|B_imm_multiplexer:INST_B_imm_multiplexer                                               ; work         ;
-;    |InstrucReg:INST_InstrucReg|                   ; 0 (0)             ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|InstrucReg:INST_InstrucReg                                                             ; work         ;
-;    |PROGRAM_MEMORY:INST_PROGRAM_MEMORY|           ; 0 (0)             ; 0 (0)        ; 29696       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY                                                     ; work         ;
-;       |altsyncram:RAM_rtl_0|                      ; 0 (0)             ; 0 (0)        ; 29696       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0                                ; work         ;
-;          |altsyncram_sp71:auto_generated|         ; 0 (0)             ; 0 (0)        ; 29696       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0|altsyncram_sp71:auto_generated ; work         ;
+;    |InstrucReg:INST_InstrucReg|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|InstrucReg:INST_InstrucReg                                                             ; work         ;
+;    |PROGRAM_MEMORY:INST_PROGRAM_MEMORY|           ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY                                                     ; work         ;
+;       |altsyncram:RAM_rtl_0|                      ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0                                ; work         ;
+;          |altsyncram_sp71:auto_generated|         ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0|altsyncram_sp71:auto_generated ; work         ;
 ;    |Program_counter:INST_Program_counter|         ; 20 (20)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|Program_counter:INST_Program_counter                                                   ; work         ;
 ;    |branch_control:INST_branch_control|           ; 3 (3)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|branch_control:INST_branch_control                                                     ; work         ;
 ;    |control_unit:INST_control_unit|               ; 14 (14)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|control_unit:INST_control_unit                                                         ; work         ;
-;    |instruction_decoder:INST_instruction_decoder| ; 5 (5)             ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|instruction_decoder:INST_instruction_decoder                                           ; work         ;
+;    |instruction_decoder:INST_instruction_decoder| ; 5 (5)             ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|instruction_decoder:INST_instruction_decoder                                           ; work         ;
 ;    |register32x8:INST_GPR|                        ; 25 (25)           ; 70 (70)      ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|register32x8:INST_GPR                                                                  ; work         ;
 ;       |altsyncram:r_REGISTER_rtl_0|               ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0                                      ; work         ;
 ;          |altsyncram_6bn1:auto_generated|         ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0|altsyncram_6bn1:auto_generated       ; work         ;
@@ -270,24 +270,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+--------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                          ;
-+----------------------------------------------------------------+----------------------------------------------------------------------------+
-; Register name                                                  ; Reason for Removal                                                         ;
-+----------------------------------------------------------------+----------------------------------------------------------------------------+
-; control_unit:INST_control_unit|r_state[6]                      ; Stuck at GND due to stuck port data_in                                     ;
-; instruction_decoder:INST_instruction_decoder|o_Address_PROG[0] ; Merged with instruction_decoder:INST_instruction_decoder|o_IMM_enable      ;
-; instruction_decoder:INST_instruction_decoder|o_Signed          ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[1] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[0]     ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[2] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[1]     ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[2]     ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[3]     ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[4]     ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[5]     ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6]     ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7]     ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
-; Total Number of Removed Registers = 11                         ;                                                                            ;
-+----------------------------------------------------------------+----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                      ;
++------------------------------------------------------------+----------------------------------------------------------------------------+
+; Register name                                              ; Reason for Removal                                                         ;
++------------------------------------------------------------+----------------------------------------------------------------------------+
+; control_unit:INST_control_unit|r_state[6]                  ; Stuck at GND due to stuck port data_in                                     ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[0] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[2] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[1] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[2] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[3] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[4] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[5] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
+; Total Number of Removed Registers = 9                      ;                                                                            ;
++------------------------------------------------------------+----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -295,12 +293,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 170   ;
+; Total registers                              ; 175   ;
 ; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 93    ;
+; Number of registers using Clock Enable       ; 98    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -318,7 +316,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[22] ; 1       ;
 ; register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[24] ; 1       ;
 ; register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[20] ; 1       ;
-; control_unit:INST_control_unit|r_state[0]         ; 35      ;
+; control_unit:INST_control_unit|r_state[0]         ; 38      ;
 ; register32x8:INST_GPR|r_REGISTER_rtl_1_bypass[12] ; 1       ;
 ; register32x8:INST_GPR|r_REGISTER_rtl_1_bypass[20] ; 1       ;
 ; register32x8:INST_GPR|r_REGISTER_rtl_1_bypass[22] ; 1       ;
@@ -393,15 +391,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------+----------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                                                              ;
-+---------------------------------------------------------------------+----------------------------------------------+------+
-; Register Name                                                       ; Megafunction                                 ; Type ;
-+---------------------------------------------------------------------+----------------------------------------------+------+
-; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[0..4]     ; register32x8:INST_GPR|r_REGISTER_rtl_1       ; RAM  ;
-; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[0..4]     ; register32x8:INST_GPR|r_REGISTER_rtl_1       ; RAM  ;
-; PROGRAM_MEMORY:INST_PROGRAM_MEMORY|o_FLASH_PM_IR_data[0..19,23..31] ; PROGRAM_MEMORY:INST_PROGRAM_MEMORY|RAM_rtl_0 ; RAM  ;
-+---------------------------------------------------------------------+----------------------------------------------+------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                          ;
++-----------------------------------------------------------------+----------------------------------------------+------+
+; Register Name                                                   ; Megafunction                                 ; Type ;
++-----------------------------------------------------------------+----------------------------------------------+------+
+; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[0..4] ; register32x8:INST_GPR|r_REGISTER_rtl_1       ; RAM  ;
+; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[0..4] ; register32x8:INST_GPR|r_REGISTER_rtl_1       ; RAM  ;
+; PROGRAM_MEMORY:INST_PROGRAM_MEMORY|o_FLASH_PM_IR_data[0..31]    ; PROGRAM_MEMORY:INST_PROGRAM_MEMORY|RAM_rtl_0 ; RAM  ;
++-----------------------------------------------------------------+----------------------------------------------+------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -409,7 +407,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |cpu_core|Program_counter:INST_Program_counter|r_PROG_COUNT[3] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |cpu_core|Program_counter:INST_Program_counter|r_PROG_COUNT[0] ;
 ; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; Yes        ; |cpu_core|ALU:INST_ALU|r_ALU_Result[5]                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 
@@ -700,7 +698,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Mon Apr 15 21:30:14 2019
+    Info: Processing started: Tue Apr 16 11:23:22 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_core -c cpu_core
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/src/b_imm_multiplexer.vhd
@@ -747,6 +745,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: cpu_core_tb
 Info (12127): Elaborating entity "cpu_core" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(141): object "w_Address_MEM" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(184): object "r_enable_memory" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(186): object "r_enable_stall" assigned a value but never read
 Info (12128): Elaborating entity "PROGRAM_MEMORY" for hierarchy "PROGRAM_MEMORY:INST_PROGRAM_MEMORY"
 Info (12128): Elaborating entity "InstrucReg" for hierarchy "InstrucReg:INST_InstrucReg"
 Info (12128): Elaborating entity "instruction_decoder" for hierarchy "instruction_decoder:INST_instruction_decoder"
@@ -838,25 +838,20 @@ Info (12133): Instantiated megafunction "PROGRAM_MEMORY:INST_PROGRAM_MEMORY|alts
     Info (12134): Parameter "INIT_FILE" = "db/cpu_core.ram0_PROGRAM_MEMORY_7409f867.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_sp71.tdf
     Info (12023): Found entity 1: altsyncram_sp71
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0|altsyncram_sp71:auto_generated|ram_block1a20"
-        Warning (14320): Synthesized away node "PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0|altsyncram_sp71:auto_generated|ram_block1a21"
-        Warning (14320): Synthesized away node "PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0|altsyncram_sp71:auto_generated|ram_block1a22"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_CORE_HALT"
-Info (21057): Implemented 425 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 434 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 369 logic cells
-    Info (21064): Implemented 45 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Mon Apr 15 21:30:18 2019
-    Info: Elapsed time: 00:00:04
+    Info (21061): Implemented 375 logic cells
+    Info (21064): Implemented 48 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4704 megabytes
+    Info: Processing ended: Tue Apr 16 11:23:25 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 
