@@ -18,8 +18,9 @@ entity instruction_decoder is
 				o_Address_MEM : out STD_LOGIC_VECTOR (15 downto 0); -- Address output for accessing data memory and peripherals
 				o_BRANCH_CONTROL : out  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 				o_Signed : out  STD_LOGIC; -- Bit for signed or unsigned arithmetic
-				o_IMM_enable : out  STD_LOGIC -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
-			  );
+				o_IMM_enable : out  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
+				o_BUS_select : out  STD_LOGIC_VECTOR (1 downto 0) -- BUS select output
+			);
 end instruction_decoder;
 
 architecture Behavioral of instruction_decoder is
@@ -62,6 +63,16 @@ begin
 				when others =>
 					o_REGISTER_C_WRITE_ENABLE <= '1';
 					o_BRANCH_CONTROL <= "000";
+			end case;
+			
+			-- Case for resolving data bus input and output
+			case i_INSTRUCTION(31 downto 28) is
+				when OPCODE_WRITE => -- Write
+					o_BUS_select <= "01";
+				when OPCODE_READ => -- Write
+					o_BUS_select <= "10";
+				when others =>
+					o_BUS_select <= "00";
 			end case;
 			
 		end if;
