@@ -8,7 +8,8 @@ entity cpu_core is
     Port ( 	i_CORE_CLK : in  STD_LOGIC;
 				i_CORE_RESET : in  STD_LOGIC;
 				i_CORE_HALT : in  STD_LOGIC;
-				o_DATA : out STD_LOGIC_VECTOR(7 downto 0)
+				o_DATA : out STD_LOGIC_VECTOR(7 downto 0);
+				o_STATE : out STD_LOGIC_VECTOR(6 downto 0)
 			);
 end cpu_core;
 
@@ -41,7 +42,9 @@ ARCHITECTURE behavior OF cpu_core IS
 				o_DATA_IMM : out STD_LOGIC_VECTOR (7 downto 0); 	-- Immidiate data output
 				o_Address_PROG : out STD_LOGIC_VECTOR (9 downto 0); -- Program memory address output 
 				o_Address_MEM : out STD_LOGIC_VECTOR (15 downto 0); -- Address output for accessing data memory and peripherals
+				o_MEM_write_enable : out  STD_LOGIC; 
 				o_BRANCH_CONTROL : out  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
+				o_carry : out  STD_LOGIC; -- Bit for carry arithmetic
 				o_Signed : out  STD_LOGIC; -- Bit for signed or unsigned arithmetic
 				o_IMM_enable : out  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
 				o_BUS_select : out  STD_LOGIC_VECTOR (1 downto 0) -- BUS select output
@@ -94,6 +97,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_ALU_B : in  std_logic_vector (7 downto 0); -- 8-bit input
 				i_ALU_sel : in  std_logic_vector (3 downto 0); -- 4-bit function select input
 				i_ALU_signed : in std_logic; -- Sign select (1 for signed and 0 for unsigned arithmetic)
+				i_ALU_carry : in std_logic; -- Carry select (1 for carry and 0 for no carry)
 				o_ALU_out : out  std_logic_vector (7 downto 0); -- 8-bit output
 				o_ALU_carry_flag : out  std_logic; -- output carry flag
 				o_ALU_overflow_flag : out  std_logic; -- output overflow flag
@@ -109,7 +113,34 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_ALU  : in  std_logic_vector(7 downto 0);
 				o_MEMORY   : out std_logic_vector(7 downto 0);
 				o_REGISTER   : out std_logic_vector(7 downto 0)
-    );
+				);
+	end COMPONENT;
+	
+	COMPONENT MEMORY_CONTROL is
+	Port ( 	------------------Memory controller inputs--------------------------
+				i_MC_clk : in  std_logic;
+				i_MC_address : in  std_logic_vector (15 downto 0);-- From control unit
+				i_MC_data : in std_logic_vector (7 downto 0); -- From MUX (8 bit data)
+				i_MC_enable : in std_logic; -- From control unit
+				i_MC_write_enable : in std_logic; -- determines if it reads or write
+				------------------RAM (DATA_MEMORY) I/O------------------------------
+				o_MC_RAM_address : out std_logic_vector (13 downto 0); -- 16 bit output to RAM 
+				i_MC_RAM_data : in std_logic_vector (7 downto 0);
+				o_MC_RAM_data : out std_logic_vector (7 downto 0);
+				o_MC_RAM_write_enable : out std_logic;
+				------------------GPIO I/O-------------------------------------------
+				o_MC_GPIO_address : out std_logic_vector (3 downto 0); -- 16 bit output to GPIO
+				i_MC_GPIO_data : in std_logic_vector (7 downto 0);
+				o_MC_GPIO_data : out std_logic_vector (7 downto 0);
+				o_MC_GPIO_write_enable : out std_logic;
+				------------------I2C I/O---------------------------------------------
+				o_MC_I2C_address : out std_logic_vector (3 downto 0); -- 16 bit output to I2C
+				i_MC_I2C_data : in std_logic_vector (7 downto 0);
+				o_MC_I2C_data : out std_logic_vector (7 downto 0);
+				o_MC_I2c_write_enable : out std_logic;
+				------------------Memory controller output to CPU data bus------------
+				o_MC_MUX_data : out std_logic_vector (7 downto 0)
+				);
 	end COMPONENT;
 	
 	COMPONENT branch_control 
@@ -135,6 +166,15 @@ ARCHITECTURE behavior OF cpu_core IS
 				);
 	end COMPONENT;
 	
+	COMPONENT DATA_RAM 
+	Port(		i_RAM_address: in std_logic_vector(13 downto 0); -- Address to write/read RAM
+				i_RAM_data: in std_logic_vector(7 downto 0); -- Data to write to the RAM
+				i_RAM_write_enable: in std_logic; -- Write enable 
+				i_RAM_clk: in std_logic; -- clock input for RAM
+				o_RAM_MC_data: out std_logic_vector(7 downto 0) -- Data output of RAM
+				);
+	end COMPONENT;
+	
 	-- Program memory outputs
 	signal w_FLASH_PM_IR_data		: std_logic_vector(31 downto 0); -- Data output of FLASH_PM
 	
@@ -150,8 +190,10 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_DATA_IMM : STD_LOGIC_VECTOR (7 downto 0); 	-- Immidiate data output
 	signal w_Address_PROG : STD_LOGIC_VECTOR (9 downto 0); -- Program memory address output 
 	signal w_Address_MEM : STD_LOGIC_VECTOR (15 downto 0); -- Address output for accessing data memory and peripherals
+	signal w_MEM_write_enable :  STD_LOGIC;
 	signal w_BRANCH_CONTROL :  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
-	signal w_Signed :  STD_LOGIC; -- Bit for signed or unsigned arithmetic
+	signal w_signed :  STD_LOGIC; -- Bit for signed or unsigned arithmetic
+	signal w_carry : STD_LOGIC;
 	signal w_IMM_enable :  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
 	signal w_BUS_select :  STD_LOGIC_VECTOR (1 downto 0); -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
 	
@@ -182,12 +224,25 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_BUS_register : std_logic_vector (7 downto 0); -- 8-bit output
 	
 	-- Memory controller outputs
-	signal w_MEM_in : std_logic_vector (7 downto 0); 
-	signal w_MEM_out : std_logic_vector (7 downto 0);
-	signal w_MEM_ready : std_logic; 
+	signal w_MC_RAM_address : std_logic_vector (13 downto 0); 
+	signal w_MC_RAM_data : std_logic_vector (7 downto 0);
+	signal w_MC_RAM_write_enable : std_logic;
+
+	signal w_MC_GPIO_address : std_logic_vector (3 downto 0); -- 16 bit output to GPIO
+	signal w_MC_GPIO_data : std_logic_vector (7 downto 0);
+	signal w_MC_GPIO_write_enable : std_logic;
+	
+	signal w_MC_I2C_address :std_logic_vector (3 downto 0); -- 16 bit output to I2C
+	signal w_MC_I2C_data : std_logic_vector (7 downto 0);
+	signal w_MC_I2c_write_enable : std_logic;
+			
+	signal w_MC_MUX_data : std_logic_vector (7 downto 0);
 	
 	-- Program counter outputs
 	signal w_PC_PM_address : STD_LOGIC_VECTOR(9 downto 0);
+	
+	-- Data memory outputs
+	signal w_RAM_MC_data : std_logic_vector (7 downto 0);
 	
 	-- Misc. signals
 	signal r_register_enable : std_logic := '0';
@@ -204,104 +259,139 @@ ARCHITECTURE behavior OF cpu_core IS
 begin
 
 	INST_PROGRAM_MEMORY : PROGRAM_MEMORY PORT MAP (
-			i_FLASH_PM_address 			=> w_PC_PM_address,
-			i_FLASH_PM_clk 				=> i_CORE_CLK,
-			o_FLASH_PM_IR_data 			=> w_FLASH_PM_IR_data 
+		i_FLASH_PM_address 			=> w_PC_PM_address,
+		i_FLASH_PM_clk 				=> i_CORE_CLK,
+		o_FLASH_PM_IR_data 			=> w_FLASH_PM_IR_data 
 	);
 
 	INST_InstrucReg : InstrucReg PORT MAP (	
-			i_IR_clk 						=> i_CORE_CLK,
-			i_IR_enable 					=> r_enable_fetch,
-			i_IR_data						=> w_FLASH_PM_IR_data,
-			o_IR_instruction 				=> w_IR_instruction
+		i_IR_clk 						=> i_CORE_CLK,
+		i_IR_enable 					=> r_enable_fetch,
+		i_IR_data						=> w_FLASH_PM_IR_data,
+		o_IR_instruction 				=> w_IR_instruction
 	);
 	
 	INST_instruction_decoder : instruction_decoder PORT MAP (
-			i_CLK 							=> i_CORE_CLK,
-			i_ENABLE 						=> r_enable_decode,
-			i_INSTRUCTION 					=> w_IR_instruction, 
-			o_OPCODE 						=> w_OPCODE,
-			o_REGISTER_A 					=> w_REGISTER_A,
-			o_REGISTER_B 					=> w_REGISTER_B,
-			o_REGISTER_C 					=> w_REGISTER_C,
-			o_REGISTER_C_WRITE_ENABLE 	=> w_REGISTER_C_WRITE_ENABLE,
-			o_DATA_IMM 						=> w_DATA_IMM,
-			o_Address_PROG 				=> w_Address_PROG,
-			o_Address_MEM 					=> w_Address_MEM,
-			o_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
-			o_Signed 						=> w_Signed,
-			o_IMM_enable 					=> w_IMM_enable,
-			o_BUS_select					=> w_BUS_select
+		i_CLK 							=> i_CORE_CLK,
+		i_ENABLE 						=> r_enable_decode,
+		i_INSTRUCTION 					=> w_IR_instruction, 
+		o_OPCODE 						=> w_OPCODE,
+		o_REGISTER_A 					=> w_REGISTER_A,
+		o_REGISTER_B 					=> w_REGISTER_B,
+		o_REGISTER_C 					=> w_REGISTER_C,
+		o_REGISTER_C_WRITE_ENABLE 	=> w_REGISTER_C_WRITE_ENABLE,
+		o_DATA_IMM 						=> w_DATA_IMM,
+		o_Address_PROG 				=> w_Address_PROG,
+		o_Address_MEM 					=> w_Address_MEM,
+		o_MEM_write_enable			=> w_MEM_write_enable,
+		o_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
+		o_Signed 						=> w_Signed,
+		o_carry							=> w_carry,
+		o_IMM_enable 					=> w_IMM_enable,
+		o_BUS_select					=> w_BUS_select
 	);
 	
 	INST_control_unit : control_unit PORT MAP ( 	
-			i_CLK 							=> i_CORE_CLK,
-			i_RESET 							=> i_CORE_RESET,
-			i_OPCODE 						=> w_OPCODE,
-			o_STATE 							=> w_STATE
+		i_CLK 							=> i_CORE_CLK,
+		i_RESET 							=> i_CORE_RESET,
+		i_OPCODE 						=> w_OPCODE,
+		o_STATE 							=> w_STATE
 	);
 	
 	INST_GPR : register32x8 PORT MAP (
-			i_GPR_clk 						=> i_CORE_CLK,
-			i_GPR_enable					=> r_register_enable,
-			i_GPR_address_A 				=> w_REGISTER_A,
-			i_GPR_address_B 				=> w_REGISTER_B,
-			i_GPR_data						=> w_BUS_register, 
-			i_GPR_write_address			=> w_REGISTER_C,
-			i_GPR_write_enable			=> r_register_write_enable, 
-			o_GPR_ALU_data_A 				=> w_GPR_data_A,
-			o_GPR_ALU_data_B 				=> w_GPR_data_B
+		i_GPR_clk 						=> i_CORE_CLK,
+		i_GPR_enable					=> r_register_enable,
+		i_GPR_address_A 				=> w_REGISTER_A,
+		i_GPR_address_B 				=> w_REGISTER_B,
+		i_GPR_data						=> w_BUS_register, 
+		i_GPR_write_address			=> w_REGISTER_C,
+		i_GPR_write_enable			=> r_register_write_enable, 
+		o_GPR_ALU_data_A 				=> w_GPR_data_A,
+		o_GPR_ALU_data_B 				=> w_GPR_data_B
 	);
 		
 	INST_B_imm_multiplexer : B_imm_multiplexer PORT MAP (
-			--i_CLK 							=> i_CORE_CLK,
-			i_B_imm_sel 					=> w_IMM_enable,
-			i_DATA_B 						=> w_GPR_data_B,
-			i_DATA_Imm 						=> w_DATA_IMM,
-			o_DATA 							=> w_DATA_B_Imm
+		i_B_imm_sel 					=> w_IMM_enable,
+		i_DATA_B 						=> w_GPR_data_B,
+		i_DATA_Imm 						=> w_DATA_IMM,
+		o_DATA 							=> w_DATA_B_Imm
 	);
 
 	INST_ALU : ALU PORT MAP (
-         i_CLK 							=> i_CORE_CLK,
-			i_ENABLE 						=> r_enable_alu,
-         i_ALU_A 							=> w_GPR_data_A,
-         i_ALU_B 							=> w_DATA_B_Imm,
-         i_ALU_sel 						=> w_OPCODE,
-			i_ALU_signed 					=> w_Signed,
-         o_ALU_out 						=> w_ALU_out,
-         o_ALU_carry_flag 				=> w_ALU_carry_flag,
-         o_ALU_overflow_flag 			=> w_ALU_overflow_flag,
-         o_ALU_negative_flag			=> w_ALU_negative_flag,
-         o_ALU_zero_flag 				=> w_ALU_zero_flag
+		i_CLK 							=> i_CORE_CLK,
+		i_ENABLE 						=> r_enable_alu,
+		i_ALU_A 							=> w_GPR_data_A,
+		i_ALU_B 							=> w_DATA_B_Imm,
+		i_ALU_sel 						=> w_OPCODE,
+		i_ALU_signed 					=> w_signed,
+		i_ALU_carry						=> w_carry,
+		o_ALU_out 						=> w_ALU_out,
+		o_ALU_carry_flag 				=> w_ALU_carry_flag,
+		o_ALU_overflow_flag 			=> w_ALU_overflow_flag,
+		o_ALU_negative_flag			=> w_ALU_negative_flag,
+		o_ALU_zero_flag 				=> w_ALU_zero_flag
 	);
 	
 	INST_data_bus : data_bus PORT MAP ( 
 		i_SELECT 							=> w_BUS_select,
 		i_ALU  								=> w_ALU_out,
-		i_MEMORY  							=> w_MEM_out,
+		i_MEMORY  							=> w_MC_MUX_data,
 		o_MEMORY  							=> w_BUS_memory,
 		o_REGISTER  						=> w_BUS_register
-    );
+   );
+	 
+	INST_MEMORY_CONTROL : MEMORY_CONTROL PORT MAP (
+		i_MC_clk => i_CORE_CLK,
+		i_MC_address => w_address_MEM,
+		i_MC_data => w_BUS_memory,
+		i_MC_enable => r_enable_memory,
+		i_MC_write_enable => w_MEM_write_enable,
+		------------------RAM (DATA_MEMORY)---------------------------------
+		o_MC_RAM_address => w_MC_RAM_address,
+		i_MC_RAM_data => w_RAM_MC_data,
+		o_MC_RAM_data => w_MC_RAM_data,
+		o_MC_RAM_write_enable => w_MC_RAM_write_enable,
+		------------------GPIO----------------------------------------------
+		o_MC_GPIO_address =>  w_MC_GPIO_address,
+		i_MC_GPIO_data => x"00",
+		o_MC_GPIO_data => w_MC_GPIO_data,
+		o_MC_GPIO_write_enable => w_MC_GPIO_write_enable,
+		------------------I2C-----------------------------------------------
+		o_MC_I2C_address => w_MC_I2C_address,
+		i_MC_I2C_data => x"00",
+		o_MC_I2C_data => w_MC_I2C_data,
+		o_MC_I2c_write_enable => w_MC_I2C_write_enable,
+		------------------MUX-----------------------------------------------
+		o_MC_MUX_data => w_MC_MUX_data
+	);
 
 	INST_branch_control : branch_control PORT MAP ( 
-			i_CLK 							=> i_CORE_CLK,
-			i_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
-			i_ZERO_FLAG 					=> w_ALU_zero_flag,
-			i_OVERFLOW_FLAG 				=> w_ALU_overflow_flag,
-			i_NEGATIVE_FLAG 				=> w_ALU_negative_flag,
-			i_CARRY_FLAG 					=> w_ALU_carry_flag,
-			i_ADDRESS 						=> w_Address_PROG,
-			o_ADDRESS 						=> w_BRANCH_ADDRESS,
-			o_PC_LOAD 						=> w_PC_LOAD
+		i_CLK 							=> i_CORE_CLK,
+		i_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
+		i_ZERO_FLAG 					=> w_ALU_zero_flag,
+		i_OVERFLOW_FLAG 				=> w_ALU_overflow_flag,
+		i_NEGATIVE_FLAG 				=> w_ALU_negative_flag,
+		i_CARRY_FLAG 					=> w_ALU_carry_flag,
+		i_ADDRESS 						=> w_Address_PROG,
+		o_ADDRESS 						=> w_BRANCH_ADDRESS,
+		o_PC_LOAD 						=> w_PC_LOAD
 	);
 	
 	INST_Program_counter : Program_counter PORT MAP( 
-			i_PC_clk 						=> i_CORE_CLK,
-			i_PC_enable 					=> r_enable_register_write,
-			i_PC_write_enable 				=> w_PC_LOAD,
-			i_PC_address 					=> w_BRANCH_ADDRESS,
-			i_PC_reset 						=> i_CORE_RESET,
-			o_PC_PM_address 				=> w_PC_PM_address
+		i_PC_clk 						=> i_CORE_CLK,
+		i_PC_enable 					=> r_enable_register_write,
+		i_PC_write_enable 			=> w_PC_LOAD,
+		i_PC_address 					=> w_BRANCH_ADDRESS,
+		i_PC_reset 						=> i_CORE_RESET,
+		o_PC_PM_address 				=> w_PC_PM_address
+	);
+	
+	INST_DATA_RAM : DATA_RAM PORT MAP (
+		i_RAM_address 					=> w_MC_RAM_address,
+		i_RAM_data 						=> w_MC_RAM_DATA,
+		i_RAM_write_enable 			=> w_MC_RAM_write_enable,
+		i_RAM_clk 						=> i_CORE_CLK,
+		o_RAM_MC_data					=>	w_RAM_MC_data
 	);
 	
 	r_register_enable <= r_enable_register_read or r_enable_register_write;
@@ -316,5 +406,6 @@ begin
 	r_enable_stall <= w_STATE(6);
 	
 	o_DATA <= w_ALU_out;
+	o_STATE <= w_STATE;
 	
 end;

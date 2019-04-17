@@ -1,4 +1,3 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -27,9 +26,9 @@ entity MEMORY_CONTROL is
 			  o_MC_I2C_data : out std_logic_vector (7 downto 0);
 			  o_MC_I2c_write_enable : out std_logic;
 			  ------------------MUX-----------------------------------------------
-			  o_MC_MUX_address : out std_logic_vector (15 downto 0); -- To MUX
-			  o_MC_MUX_data : out std_logic_vector (7 downto 0);
-			  o_MC_MUX_enable : out std_logic
+			  -- o_MC_MUX_address : out std_logic_vector (15 downto 0); -- To MUX
+			  o_MC_MUX_data : out std_logic_vector (7 downto 0)
+			  -- o_MC_MUX_enable : out std_logic
 			  
 --			  
 			  );
@@ -38,14 +37,14 @@ end MEMORY_CONTROL;
 architecture Behavioral of MEMORY_CONTROL is
 	
 	--signal unsigned_i_MC_address : unsigned(15 downto 0);
-	signal Ram_address : std_logic_vector(15 downto 14) := "01";
-	signal GPIO_address : std_logic_vector(15 downto 14) := "10";
-	signal I2C_address : std_logic_vector(15 downto 14) := "11";
-	--signal MUX_address : std_logic_vector(15 downto 14) := "00";
+	constant Ram_address 	: std_logic_vector(1 downto 0) := "01";
+	constant GPIO_address 	: std_logic_vector(1 downto 0) := "10";
+	constant I2C_address 	: std_logic_vector(1 downto 0) := "11";
+	--signal MUX_address : std_logic_vector(15 downto 14) := "00";  
 	
 begin
 
-	process (i_MC_clk)
+	process (i_MC_clk, i_MC_enable)
 	begin
 			if (rising_edge(i_MC_clk) and i_MC_enable = '1')
 			then
