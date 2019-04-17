@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_core
-Tue Apr 16 14:26:34 2019
+Wed Apr 17 13:23:32 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -14,23 +14,25 @@ Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Registers Added for RAM Pass-Through Logic
- 13. Registers Packed Into Inferred Megafunctions
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0|altsyncram_6bn1:auto_generated
- 16. Source assignments for register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1|altsyncram_6bn1:auto_generated
- 17. Source assignments for PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0|altsyncram_sp71:auto_generated
- 18. Parameter Settings for Inferred Entity Instance: register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0
- 19. Parameter Settings for Inferred Entity Instance: register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1
- 20. Parameter Settings for Inferred Entity Instance: PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0
- 21. altsyncram Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "control_unit:INST_control_unit"
- 23. Port Connectivity Checks: "instruction_decoder:INST_instruction_decoder"
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Added for RAM Pass-Through Logic
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0|altsyncram_6bn1:auto_generated
+ 17. Source assignments for register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1|altsyncram_6bn1:auto_generated
+ 18. Source assignments for PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0|altsyncram_sp71:auto_generated
+ 19. Parameter Settings for Inferred Entity Instance: register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0
+ 20. Parameter Settings for Inferred Entity Instance: register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1
+ 21. Parameter Settings for Inferred Entity Instance: PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "data_bus:INST_data_bus"
+ 24. Port Connectivity Checks: "control_unit:INST_control_unit"
+ 25. Port Connectivity Checks: "instruction_decoder:INST_instruction_decoder"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -56,15 +58,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 16 14:26:34 2019      ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 17 13:23:32 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; cpu_core                                   ;
 ; Top-level Entity Name              ; cpu_core                                   ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 378                                        ;
-;     Total combinational functions  ; 262                                        ;
-;     Dedicated logic registers      ; 167                                        ;
-; Total registers                    ; 167                                        ;
+; Total logic elements               ; 379                                        ;
+;     Total combinational functions  ; 271                                        ;
+;     Dedicated logic registers      ; 168                                        ;
+; Total registers                    ; 168                                        ;
 ; Total pins                         ; 11                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 33,280                                     ;
@@ -176,6 +178,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                 ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                              ; Library ;
 +--------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../../src/data_bus.vhd                           ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd                                                  ;         ;
 ; ../../src/B_imm_multiplexer.vhd                  ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/B_imm_multiplexer.vhd                                         ;         ;
 ; ../../src/Register32x8.vhd                       ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd                                              ;         ;
 ; ../../src/PROGRAM_MEMORY.vhd                     ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd                                            ;         ;
@@ -208,29 +211,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 378              ;
+; Estimated Total logic elements              ; 379              ;
 ;                                             ;                  ;
-; Total combinational functions               ; 262              ;
+; Total combinational functions               ; 271              ;
 ; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 154              ;
-;     -- 3 input functions                    ; 84               ;
+;     -- 4 input functions                    ; 155              ;
+;     -- 3 input functions                    ; 92               ;
 ;     -- <=2 input functions                  ; 24               ;
 ;                                             ;                  ;
 ; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 224              ;
+;     -- normal mode                          ; 233              ;
 ;     -- arithmetic mode                      ; 38               ;
 ;                                             ;                  ;
-; Total registers                             ; 167              ;
-;     -- Dedicated logic registers            ; 167              ;
+; Total registers                             ; 168              ;
+;     -- Dedicated logic registers            ; 168              ;
 ;     -- I/O registers                        ; 0                ;
 ;                                             ;                  ;
 ; I/O pins                                    ; 11               ;
 ; Total memory bits                           ; 33280            ;
 ; Embedded Multiplier 9-bit elements          ; 0                ;
 ; Maximum fan-out node                        ; i_CORE_CLK~input ;
-; Maximum fan-out                             ; 215              ;
-; Total fan-out                               ; 1941             ;
-; Average fan-out                             ; 3.89             ;
+; Maximum fan-out                             ; 216              ;
+; Total fan-out                               ; 1972             ;
+; Average fan-out                             ; 3.87             ;
 +---------------------------------------------+------------------+
 
 
@@ -239,7 +242,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                              ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------+--------------+
-; |cpu_core                                         ; 262 (1)           ; 167 (0)      ; 33280       ; 0            ; 0       ; 0         ; 11   ; 0            ; |cpu_core                                                                                        ; work         ;
+; |cpu_core                                         ; 271 (1)           ; 168 (0)      ; 33280       ; 0            ; 0       ; 0         ; 11   ; 0            ; |cpu_core                                                                                        ; work         ;
 ;    |ALU:INST_ALU|                                 ; 186 (186)         ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|ALU:INST_ALU                                                                           ; work         ;
 ;    |B_imm_multiplexer:INST_B_imm_multiplexer|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|B_imm_multiplexer:INST_B_imm_multiplexer                                               ; work         ;
 ;    |InstrucReg:INST_InstrucReg|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|InstrucReg:INST_InstrucReg                                                             ; work         ;
@@ -249,7 +252,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |Program_counter:INST_Program_counter|         ; 20 (20)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|Program_counter:INST_Program_counter                                                   ; work         ;
 ;    |branch_control:INST_branch_control|           ; 3 (3)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|branch_control:INST_branch_control                                                     ; work         ;
 ;    |control_unit:INST_control_unit|               ; 14 (14)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|control_unit:INST_control_unit                                                         ; work         ;
-;    |instruction_decoder:INST_instruction_decoder| ; 5 (5)             ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|instruction_decoder:INST_instruction_decoder                                           ; work         ;
+;    |data_bus:INST_data_bus|                       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|data_bus:INST_data_bus                                                                 ; work         ;
+;    |instruction_decoder:INST_instruction_decoder| ; 6 (6)             ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|instruction_decoder:INST_instruction_decoder                                           ; work         ;
 ;    |register32x8:INST_GPR|                        ; 25 (25)           ; 70 (70)      ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|register32x8:INST_GPR                                                                  ; work         ;
 ;       |altsyncram:r_REGISTER_rtl_0|               ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0                                      ; work         ;
 ;          |altsyncram_6bn1:auto_generated|         ; 0 (0)             ; 0 (0)        ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0|altsyncram_6bn1:auto_generated       ; work         ;
@@ -270,22 +274,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+--------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                      ;
-+------------------------------------------------------------+----------------------------------------------------------------------------+
-; Register name                                              ; Reason for Removal                                                         ;
-+------------------------------------------------------------+----------------------------------------------------------------------------+
-; control_unit:INST_control_unit|r_state[6]                  ; Stuck at GND due to stuck port data_in                                     ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[0] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[2] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[1] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[2] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[3] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[4] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[5] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
-; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7] ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
-; Total Number of Removed Registers = 9                      ;                                                                            ;
-+------------------------------------------------------------+----------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                        ;
++----------------------------------------------------+--------------------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                          ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------------------------------------------+------------------------+
+; data_bus:INST_data_bus|o_REGISTER[0]               ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
+; data_bus:INST_data_bus|o_REGISTER[7]               ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
+; data_bus:INST_data_bus|o_REGISTER[6]               ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
+; data_bus:INST_data_bus|o_REGISTER[5]               ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
+; data_bus:INST_data_bus|o_REGISTER[4]               ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
+; data_bus:INST_data_bus|o_REGISTER[3]               ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
+; data_bus:INST_data_bus|o_REGISTER[2]               ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
+; data_bus:INST_data_bus|o_REGISTER[1]               ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                                                              ;                        ;
++----------------------------------------------------+--------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                        ;
++--------------------------------------------------------------+----------------------------------------------------------------------------+
+; Register name                                                ; Reason for Removal                                                         ;
++--------------------------------------------------------------+----------------------------------------------------------------------------+
+; control_unit:INST_control_unit|r_state[6]                    ; Stuck at GND due to stuck port data_in                                     ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[0]   ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[2] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[1]   ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[2]   ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[3]   ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[4]   ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[5]   ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6]   ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
+; instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7]   ; Merged with instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
+; instruction_decoder:INST_instruction_decoder|o_BUS_select[1] ; Lost fanout                                                                ;
+; Total Number of Removed Registers = 10                       ;                                                                            ;
++--------------------------------------------------------------+----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -293,12 +316,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 167   ;
+; Total registers                              ; 168   ;
 ; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 98    ;
+; Number of registers using Clock Enable       ; 99    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -408,7 +431,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |cpu_core|Program_counter:INST_Program_counter|r_PROG_COUNT[0] ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; Yes        ; |cpu_core|ALU:INST_ALU|r_ALU_Result[5]                         ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; Yes        ; |cpu_core|ALU:INST_ALU|r_ALU_Result[6]                         ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |cpu_core|data_bus:INST_data_bus|Mux13                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 
 
@@ -664,6 +688,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+---------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "data_bus:INST_data_bus"                                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; o_memory ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "control_unit:INST_control_unit"                                                           ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -698,9 +731,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Tue Apr 16 14:26:32 2019
+    Info: Processing started: Wed Apr 17 13:23:29 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_core -c cpu_core
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/src/data_bus.vhd
+    Info (12022): Found design unit 1: data_bus-behaviour
+    Info (12023): Found entity 1: data_bus
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/src/b_imm_multiplexer.vhd
     Info (12022): Found design unit 1: B_imm_multiplexer-Behavioral
     Info (12023): Found entity 1: B_imm_multiplexer
@@ -744,9 +780,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: cpu_core_tb-behavior
     Info (12023): Found entity 1: cpu_core_tb
 Info (12127): Elaborating entity "cpu_core" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(141): object "w_Address_MEM" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(184): object "r_enable_memory" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(186): object "r_enable_stall" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(152): object "w_Address_MEM" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(181): object "w_BUS_memory" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at cpu_core.vhd(186): used implicit default value for signal "w_MEM_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(200): object "r_enable_memory" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at cpu_core.vhd(202): object "r_enable_stall" assigned a value but never read
 Info (12128): Elaborating entity "PROGRAM_MEMORY" for hierarchy "PROGRAM_MEMORY:INST_PROGRAM_MEMORY"
 Info (12128): Elaborating entity "InstrucReg" for hierarchy "InstrucReg:INST_InstrucReg"
 Info (12128): Elaborating entity "instruction_decoder" for hierarchy "instruction_decoder:INST_instruction_decoder"
@@ -754,6 +792,25 @@ Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:INST
 Info (12128): Elaborating entity "register32x8" for hierarchy "register32x8:INST_GPR"
 Info (12128): Elaborating entity "B_imm_multiplexer" for hierarchy "B_imm_multiplexer:INST_B_imm_multiplexer"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:INST_ALU"
+Info (12128): Elaborating entity "data_bus" for hierarchy "data_bus:INST_data_bus"
+Warning (10631): VHDL Process Statement warning at data_bus.vhd(18): inferring latch(es) for signal or variable "o_REGISTER", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at data_bus.vhd(18): inferring latch(es) for signal or variable "o_MEMORY", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "o_MEMORY[0]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_MEMORY[1]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_MEMORY[2]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_MEMORY[3]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_MEMORY[4]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_MEMORY[5]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_MEMORY[6]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_MEMORY[7]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_REGISTER[0]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_REGISTER[1]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_REGISTER[2]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_REGISTER[3]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_REGISTER[4]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_REGISTER[5]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_REGISTER[6]" at data_bus.vhd(18)
+Info (10041): Inferred latch for "o_REGISTER[7]" at data_bus.vhd(18)
 Info (12128): Elaborating entity "branch_control" for hierarchy "branch_control:INST_branch_control"
 Info (12128): Elaborating entity "Program_counter" for hierarchy "Program_counter:INST_Program_counter"
 Warning (276020): Inferred RAM node "register32x8:INST_GPR|r_REGISTER_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
@@ -839,18 +896,19 @@ Info (12133): Instantiated megafunction "PROGRAM_MEMORY:INST_PROGRAM_MEMORY|alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_sp71.tdf
     Info (12023): Found entity 1: altsyncram_sp71
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_CORE_HALT"
-Info (21057): Implemented 438 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 447 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 379 logic cells
+    Info (21061): Implemented 388 logic cells
     Info (21064): Implemented 48 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4704 megabytes
-    Info: Processing ended: Tue Apr 16 14:26:35 2019
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4703 megabytes
+    Info: Processing ended: Wed Apr 17 13:23:32 2019
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

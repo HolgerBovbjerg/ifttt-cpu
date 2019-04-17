@@ -10,14 +10,14 @@ i_CORE_CLK => Program_counter:INST_Program_counter.i_PC_clk
 i_CORE_RESET => control_unit:INST_control_unit.i_RESET
 i_CORE_RESET => Program_counter:INST_Program_counter.i_PC_reset
 i_CORE_HALT => ~NO_FANOUT~
-o_DATA[0] << ALU:INST_ALU.o_ALU_out[0]
-o_DATA[1] << ALU:INST_ALU.o_ALU_out[1]
-o_DATA[2] << ALU:INST_ALU.o_ALU_out[2]
-o_DATA[3] << ALU:INST_ALU.o_ALU_out[3]
-o_DATA[4] << ALU:INST_ALU.o_ALU_out[4]
-o_DATA[5] << ALU:INST_ALU.o_ALU_out[5]
-o_DATA[6] << ALU:INST_ALU.o_ALU_out[6]
-o_DATA[7] << ALU:INST_ALU.o_ALU_out[7]
+o_DATA[0] <= ALU:INST_ALU.o_ALU_out[0]
+o_DATA[1] <= ALU:INST_ALU.o_ALU_out[1]
+o_DATA[2] <= ALU:INST_ALU.o_ALU_out[2]
+o_DATA[3] <= ALU:INST_ALU.o_ALU_out[3]
+o_DATA[4] <= ALU:INST_ALU.o_ALU_out[4]
+o_DATA[5] <= ALU:INST_ALU.o_ALU_out[5]
+o_DATA[6] <= ALU:INST_ALU.o_ALU_out[6]
+o_DATA[7] <= ALU:INST_ALU.o_ALU_out[7]
 
 
 |cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY
@@ -229,6 +229,8 @@ o_IR_instruction[31] <= r_register[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cpu_core|instruction_decoder:INST_instruction_decoder
+i_CLK => o_BUS_select[0]~reg0.CLK
+i_CLK => o_BUS_select[1]~reg0.CLK
 i_CLK => o_BRANCH_CONTROL[0]~reg0.CLK
 i_CLK => o_BRANCH_CONTROL[1]~reg0.CLK
 i_CLK => o_BRANCH_CONTROL[2]~reg0.CLK
@@ -288,6 +290,8 @@ i_CLK => o_OPCODE[0]~reg0.CLK
 i_CLK => o_OPCODE[1]~reg0.CLK
 i_CLK => o_OPCODE[2]~reg0.CLK
 i_CLK => o_OPCODE[3]~reg0.CLK
+i_ENABLE => o_BUS_select[0]~reg0.ENA
+i_ENABLE => o_BUS_select[1]~reg0.ENA
 i_ENABLE => o_BRANCH_CONTROL[0]~reg0.ENA
 i_ENABLE => o_BRANCH_CONTROL[1]~reg0.ENA
 i_ENABLE => o_BRANCH_CONTROL[2]~reg0.ENA
@@ -405,21 +409,29 @@ i_INSTRUCTION[28] => Mux0.IN19
 i_INSTRUCTION[28] => Mux1.IN18
 i_INSTRUCTION[28] => Mux2.IN18
 i_INSTRUCTION[28] => Mux3.IN18
+i_INSTRUCTION[28] => Mux4.IN19
+i_INSTRUCTION[28] => Mux5.IN19
 i_INSTRUCTION[28] => o_OPCODE[0]~reg0.DATAIN
 i_INSTRUCTION[29] => Mux0.IN18
 i_INSTRUCTION[29] => Mux1.IN17
 i_INSTRUCTION[29] => Mux2.IN17
 i_INSTRUCTION[29] => Mux3.IN17
+i_INSTRUCTION[29] => Mux4.IN18
+i_INSTRUCTION[29] => Mux5.IN18
 i_INSTRUCTION[29] => o_OPCODE[1]~reg0.DATAIN
 i_INSTRUCTION[30] => Mux0.IN17
 i_INSTRUCTION[30] => Mux1.IN16
 i_INSTRUCTION[30] => Mux2.IN16
 i_INSTRUCTION[30] => Mux3.IN16
+i_INSTRUCTION[30] => Mux4.IN17
+i_INSTRUCTION[30] => Mux5.IN17
 i_INSTRUCTION[30] => o_OPCODE[2]~reg0.DATAIN
 i_INSTRUCTION[31] => Mux0.IN16
 i_INSTRUCTION[31] => Mux1.IN15
 i_INSTRUCTION[31] => Mux2.IN15
 i_INSTRUCTION[31] => Mux3.IN15
+i_INSTRUCTION[31] => Mux4.IN16
+i_INSTRUCTION[31] => Mux5.IN16
 i_INSTRUCTION[31] => o_OPCODE[3]~reg0.DATAIN
 o_OPCODE[0] <= o_OPCODE[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 o_OPCODE[1] <= o_OPCODE[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -480,6 +492,8 @@ o_BRANCH_CONTROL[1] <= o_BRANCH_CONTROL[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 o_BRANCH_CONTROL[2] <= o_BRANCH_CONTROL[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 o_Signed <= o_Signed~reg0.DB_MAX_OUTPUT_PORT_TYPE
 o_IMM_enable <= o_IMM_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_BUS_select[0] <= o_BUS_select[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_BUS_select[1] <= o_BUS_select[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cpu_core|control_unit:INST_control_unit
@@ -976,6 +990,93 @@ o_ALU_carry_flag <= r_ALU_carry_flag.DB_MAX_OUTPUT_PORT_TYPE
 o_ALU_overflow_flag <= r_ALU_overflow_flag.DB_MAX_OUTPUT_PORT_TYPE
 o_ALU_negative_flag <= r_ALU_negative_flag.DB_MAX_OUTPUT_PORT_TYPE
 o_ALU_zero_flag <= r_ALU_zero_flag.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu_core|data_bus:INST_data_bus
+i_SELECT[0] => Mux0.IN3
+i_SELECT[0] => Mux1.IN3
+i_SELECT[0] => Mux2.IN3
+i_SELECT[0] => Mux3.IN3
+i_SELECT[0] => Mux4.IN3
+i_SELECT[0] => Mux5.IN3
+i_SELECT[0] => Mux6.IN3
+i_SELECT[0] => Mux7.IN3
+i_SELECT[0] => Mux8.IN5
+i_SELECT[0] => Mux9.IN3
+i_SELECT[0] => Mux10.IN3
+i_SELECT[0] => Mux11.IN3
+i_SELECT[0] => Mux12.IN3
+i_SELECT[0] => Mux13.IN3
+i_SELECT[0] => Mux14.IN3
+i_SELECT[0] => Mux15.IN3
+i_SELECT[0] => Mux16.IN3
+i_SELECT[0] => Mux17.IN5
+i_SELECT[1] => Mux0.IN2
+i_SELECT[1] => Mux1.IN2
+i_SELECT[1] => Mux2.IN2
+i_SELECT[1] => Mux3.IN2
+i_SELECT[1] => Mux4.IN2
+i_SELECT[1] => Mux5.IN2
+i_SELECT[1] => Mux6.IN2
+i_SELECT[1] => Mux7.IN2
+i_SELECT[1] => Mux8.IN4
+i_SELECT[1] => Mux9.IN2
+i_SELECT[1] => Mux10.IN2
+i_SELECT[1] => Mux11.IN2
+i_SELECT[1] => Mux12.IN2
+i_SELECT[1] => Mux13.IN2
+i_SELECT[1] => Mux14.IN2
+i_SELECT[1] => Mux15.IN2
+i_SELECT[1] => Mux16.IN2
+i_SELECT[1] => Mux17.IN4
+i_MEMORY[0] => Mux0.IN4
+i_MEMORY[0] => Mux9.IN4
+i_MEMORY[1] => Mux1.IN4
+i_MEMORY[1] => Mux10.IN4
+i_MEMORY[2] => Mux2.IN4
+i_MEMORY[2] => Mux11.IN4
+i_MEMORY[3] => Mux3.IN4
+i_MEMORY[3] => Mux12.IN4
+i_MEMORY[4] => Mux4.IN4
+i_MEMORY[4] => Mux13.IN4
+i_MEMORY[5] => Mux5.IN4
+i_MEMORY[5] => Mux14.IN4
+i_MEMORY[6] => Mux6.IN4
+i_MEMORY[6] => Mux15.IN4
+i_MEMORY[7] => Mux7.IN4
+i_MEMORY[7] => Mux16.IN4
+i_ALU[0] => Mux0.IN5
+i_ALU[0] => Mux9.IN5
+i_ALU[1] => Mux1.IN5
+i_ALU[1] => Mux10.IN5
+i_ALU[2] => Mux2.IN5
+i_ALU[2] => Mux11.IN5
+i_ALU[3] => Mux3.IN5
+i_ALU[3] => Mux12.IN5
+i_ALU[4] => Mux4.IN5
+i_ALU[4] => Mux13.IN5
+i_ALU[5] => Mux5.IN5
+i_ALU[5] => Mux14.IN5
+i_ALU[6] => Mux6.IN5
+i_ALU[6] => Mux15.IN5
+i_ALU[7] => Mux7.IN5
+i_ALU[7] => Mux16.IN5
+o_MEMORY[0] <= o_MEMORY[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_MEMORY[1] <= o_MEMORY[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_MEMORY[2] <= o_MEMORY[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_MEMORY[3] <= o_MEMORY[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_MEMORY[4] <= o_MEMORY[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_MEMORY[5] <= o_MEMORY[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_MEMORY[6] <= o_MEMORY[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_MEMORY[7] <= o_MEMORY[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_REGISTER[0] <= o_REGISTER[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_REGISTER[1] <= o_REGISTER[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_REGISTER[2] <= o_REGISTER[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_REGISTER[3] <= o_REGISTER[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_REGISTER[4] <= o_REGISTER[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_REGISTER[5] <= o_REGISTER[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_REGISTER[6] <= o_REGISTER[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o_REGISTER[7] <= o_REGISTER[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cpu_core|branch_control:INST_branch_control

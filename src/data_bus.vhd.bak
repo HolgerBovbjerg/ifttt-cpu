@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all;
+ 
+entity data_bus is
+  port (
+    i_Select : in  std_logic_vector(1 downto 0);
+    i_A0  : in  std_logic_vector(7 downto 0);
+    i_A1  : in  std_logic_vector(7 downto 0);
+    o_B0   : out std_logic_vector(7 downto 0);
+	 o_B1   : out std_logic_vector(7 downto 0)
+    );
+end entity data_bus;
+
+architecture behaviour of data_bus is
+	
+	signal r_input : std_logic_vector(7 downto 0);
+	signal r_output : std_logic_vector(7 downto 0);
+
+
+begin
+
+ p_Mux: process (i_Select, i_A0, i_A1) is
+  begin
+    case i_Select is
+      when "00" =>
+        r_input <= i_A0;
+		  i_B0 <= r_output;
+      when "01" =>
+        r_input <= i_A0;
+		  i_B1 <= r_output;
+      when "10" =>
+        r_input <= i_A1;
+		  i_B0 <= r_output;
+      when others =>
+        r_input <= i_A1;
+		  i_B0 <= r_output;
+    end case;
+  end process p_Mux;
+  
+  r_output <= r_input
+				
+end architecture behaviour;

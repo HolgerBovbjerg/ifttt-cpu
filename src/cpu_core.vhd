@@ -43,7 +43,8 @@ ARCHITECTURE behavior OF cpu_core IS
 				o_Address_MEM : out STD_LOGIC_VECTOR (15 downto 0); -- Address output for accessing data memory and peripherals
 				o_BRANCH_CONTROL : out  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 				o_Signed : out  STD_LOGIC; -- Bit for signed or unsigned arithmetic
-				o_IMM_enable : out  STD_LOGIC -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
+				o_IMM_enable : out  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
+				o_BUS_select : out  STD_LOGIC_VECTOR (1 downto 0) -- BUS select output
 				);
 	end COMPONENT;
 	
@@ -101,6 +102,16 @@ ARCHITECTURE behavior OF cpu_core IS
 				); 
 	end COMPONENT;	
 	
+	COMPONENT data_bus 
+	PORT (
+				i_SELECT : in  std_logic_vector(1 downto 0);
+				i_MEMORY  : in  std_logic_vector(7 downto 0);
+				i_ALU  : in  std_logic_vector(7 downto 0);
+				o_MEMORY   : out std_logic_vector(7 downto 0);
+				o_REGISTER   : out std_logic_vector(7 downto 0)
+    );
+	end COMPONENT;
+	
 	COMPONENT branch_control 
 	Port ( 	i_CLK : in  STD_LOGIC;
 				i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
@@ -142,6 +153,8 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_BRANCH_CONTROL :  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 	signal w_Signed :  STD_LOGIC; -- Bit for signed or unsigned arithmetic
 	signal w_IMM_enable :  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
+	signal w_BUS_select :  STD_LOGIC_VECTOR (1 downto 0); -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
+	
 
 	-- Control unit outputs
 	signal w_STATE : STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state 
@@ -154,7 +167,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_GPR_data_A 	: STD_LOGIC_VECTOR (7 downto 0);
 	signal w_GPR_data_B	: STD_LOGIC_VECTOR (7 downto 0);
 	
-	-- ALU input multiplexer outputs 
+	-- B/Imm multiplexer outputs 
 	signal w_DATA_B_Imm :  STD_LOGIC_VECTOR(7 downto 0);
 	
 	-- ALU outputs
@@ -165,10 +178,13 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_ALU_zero_flag : std_logic; -- output zero flag
 
 	-- Data bus outputs 
-	
+	signal w_BUS_memory : std_logic_vector (7 downto 0); -- 8-bit output
+	signal w_BUS_register : std_logic_vector (7 downto 0); -- 8-bit output
 	
 	-- Memory controller outputs
-	
+	signal w_MEM_in : std_logic_vector (7 downto 0); 
+	signal w_MEM_out : std_logic_vector (7 downto 0);
+	signal w_MEM_ready : std_logic; 
 	
 	-- Program counter outputs
 	signal w_PC_PM_address : STD_LOGIC_VECTOR(9 downto 0);
@@ -214,7 +230,8 @@ begin
 			o_Address_MEM 					=> w_Address_MEM,
 			o_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
 			o_Signed 						=> w_Signed,
-			o_IMM_enable 					=> w_IMM_enable
+			o_IMM_enable 					=> w_IMM_enable,
+			o_BUS_select					=> w_BUS_select
 	);
 	
 	INST_control_unit : control_unit PORT MAP ( 	
@@ -229,7 +246,7 @@ begin
 			i_GPR_enable					=> r_register_enable,
 			i_GPR_address_A 				=> w_REGISTER_A,
 			i_GPR_address_B 				=> w_REGISTER_B,
-			i_GPR_data						=> w_ALU_out, -- Change when data bus is added
+			i_GPR_data						=> w_BUS_register, 
 			i_GPR_write_address			=> w_REGISTER_C,
 			i_GPR_write_enable			=> r_register_write_enable, 
 			o_GPR_ALU_data_A 				=> w_GPR_data_A,
@@ -257,6 +274,14 @@ begin
          o_ALU_negative_flag			=> w_ALU_negative_flag,
          o_ALU_zero_flag 				=> w_ALU_zero_flag
 	);
+	
+	INST_data_bus : data_bus PORT MAP ( 
+		i_SELECT 							=> w_BUS_select,
+		i_ALU  								=> w_ALU_out,
+		i_MEMORY  							=> w_MEM_out,
+		o_MEMORY  							=> w_BUS_memory,
+		o_REGISTER  						=> w_BUS_register
+    );
 
 	INST_branch_control : branch_control PORT MAP ( 
 			i_CLK 							=> i_CORE_CLK,
