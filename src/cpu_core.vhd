@@ -55,8 +55,7 @@ ARCHITECTURE behavior OF cpu_core IS
     Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
 				i_RESET : in  STD_LOGIC; -- Reset input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
-				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state 
-				i_MEM_ready : in std_logic
+				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0) -- State output used for enabling blocks depending on state 
 				);
 	end COMPONENT;
 	
@@ -126,7 +125,6 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_MC_write_enable : in std_logic; -- determines if it reads or write
 				-- Memory controller outputs
 				o_MC_MUX_data : out std_logic_vector (7 downto 0);
-				o_MC_CU_ready : out std_logic;
 				
 				-- Peripheral device I/O
 				------------------RAM (DATA_MEMORY)---------------------------------
@@ -241,7 +239,6 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_MC_I2c_write_enable : std_logic;
 			
 	signal w_MC_MUX_data : std_logic_vector (7 downto 0);
-	signal w_MC_CU_ready : std_logic;
 	
 	-- Program counter outputs
 	signal w_PC_PM_address : STD_LOGIC_VECTOR(9 downto 0);
@@ -252,6 +249,8 @@ ARCHITECTURE behavior OF cpu_core IS
 	-- Misc. signals
 	signal r_register_enable : std_logic := '0';
 	signal r_register_write_enable : std_logic := '0';
+	
+	signal r_MEM_write_enable : std_logic := '0'; 
 	
 	signal r_enable_fetch  : std_logic := '0';
 	signal r_enable_decode  : std_logic := '0';
@@ -300,8 +299,7 @@ begin
 		i_CLK 							=> i_CORE_CLK,
 		i_RESET 							=> i_CORE_RESET,
 		i_OPCODE 						=> w_OPCODE,
-		o_STATE 							=> w_STATE, 
-		i_MEM_ready						=> w_MC_CU_ready
+		o_STATE 							=> w_STATE
 	);
 	
 	INST_GPR : register32x8 PORT MAP (
@@ -351,8 +349,7 @@ begin
 		i_MC_address => w_address_MEM,
 		i_MC_data => w_BUS_memory,
 		i_MC_enable => r_enable_memory,
-		i_MC_write_enable => w_MEM_write_enable,
-		o_MC_CU_ready => w_MC_CU_ready,
+		i_MC_write_enable => r_MEM_write_enable,
 		------------------RAM (DATA_MEMORY)---------------------------------
 		o_MC_RAM_address => w_MC_RAM_address,
 		i_MC_RAM_data => w_RAM_MC_data,
@@ -403,6 +400,8 @@ begin
 	
 	r_register_enable <= r_enable_register_read or r_enable_register_write;
 	r_register_write_enable <= w_REGISTER_C_WRITE_ENABLE and r_enable_register_write;
+	
+	r_MEM_write_enable <= w_MEM_write_enable and r_enable_memory;
 	
 	r_enable_fetch <= w_STATE(0);
 	r_enable_decode <= w_STATE(1);

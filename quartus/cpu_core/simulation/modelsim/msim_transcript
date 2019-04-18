@@ -163,10 +163,10 @@
 # 
 #           File in use by: holge  Hostname: HSB-XPS15  ProcessID: 31312
 # 
-#           Attempting to use alternate WLF file "./wlft47v0qd".
+#           Attempting to use alternate WLF file "./wlftbrad7g".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft47v0qd
+#           Using alternate file: ./wlftbrad7g
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -257,22 +257,13 @@
 #    Time: 100 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 100 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-add wave -position insertpoint sim:/cpu_core_tb/uut/INST_MEMORY_CONTROL/*
 restart
+add wave -position insertpoint sim:/cpu_core_tb/uut/*
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_core_tb/uut/INST_DATA_RAM
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-run
-run
-run
-run
-run
-run
-run
-run
-run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 5 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -633,55 +624,9 @@ run
 #    Time: 445 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 445 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 450 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 450 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 455 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 455 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 460 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 465 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 465 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 470 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 470 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 475 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 475 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 480 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 480 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 485 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 485 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 490 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 490 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 495 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 495 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 500 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 500 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
 run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 505 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 505 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
+run
+run
 run
 run
 run

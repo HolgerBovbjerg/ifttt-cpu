@@ -82,8 +82,6 @@ begin
 			case i_INSTRUCTION(31 downto 28) is
 				when OPCODE_WRITE => -- Write
 					o_MEM_write_enable <= '1';
-				when OPCODE_READ => -- Write
-					o_MEM_write_enable <= '0';
 				when others =>
 					o_MEM_write_enable <= '0';
 			end case;
