@@ -70,84 +70,84 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
-o_MC_MUX_address[7]          : A3        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
-o_MC_MUX_address[11]         : A5        : output : 2.5 V             :         : 8         : N              
-o_MC_MUX_address[0]          : A6        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
+i_MC_GPIO_data[5]            : A5        : input  : 2.5 V             :         : 8         : N              
+i_MC_GPIO_data[3]            : A6        : input  : 2.5 V             :         : 8         : N              
+o_MC_MUX_data[3]             : A7        : output : 2.5 V             :         : 8         : N              
 GND+                         : A8        :        :                   :         : 8         :                
-GND+                         : A9        :        :                   :         : 7         :                
-o_MC_I2C_address[3]          : A10       : output : 2.5 V             :         : 7         : N              
-i_MC_address[1]              : A11       : input  : 2.5 V             :         : 7         : N              
-o_MC_GPIO_address[0]         : A12       : output : 2.5 V             :         : 7         : N              
-o_MC_GPIO_address[1]         : A13       : output : 2.5 V             :         : 7         : N              
-i_MC_address[5]              : A14       : input  : 2.5 V             :         : 7         : N              
-o_MC_RAM_address[3]          : A15       : output : 2.5 V             :         : 7         : N              
+i_MC_RAM_data[5]             : A9        : input  : 2.5 V             :         : 7         : N              
+i_MC_I2C_data[3]             : A10       : input  : 2.5 V             :         : 7         : N              
+i_MC_address[14]             : A11       : input  : 2.5 V             :         : 7         : N              
+i_MC_RAM_data[3]             : A12       : input  : 2.5 V             :         : 7         : N              
+i_MC_address[15]             : A13       : input  : 2.5 V             :         : 7         : N              
+i_MC_RAM_data[0]             : A14       : input  : 2.5 V             :         : 7         : N              
+i_MC_enable                  : A15       : input  : 2.5 V             :         : 7         : N              
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
-o_MC_MUX_address[9]          : B6        : output : 2.5 V             :         : 8         : N              
-o_MC_RAM_address[11]         : B7        : output : 2.5 V             :         : 8         : N              
+o_MC_I2C_address[2]          : B6        : output : 2.5 V             :         : 8         : N              
+o_MC_MUX_data[1]             : B7        : output : 2.5 V             :         : 8         : N              
 GND+                         : B8        :        :                   :         : 8         :                
-GND+                         : B9        :        :                   :         : 7         :                
-o_MC_GPIO_address[2]         : B10       : output : 2.5 V             :         : 7         : N              
-i_MC_address[3]              : B11       : input  : 2.5 V             :         : 7         : N              
-o_MC_RAM_address[9]          : B12       : output : 2.5 V             :         : 7         : N              
-o_MC_RAM_address[4]          : B13       : output : 2.5 V             :         : 7         : N              
-i_MC_address[11]             : B14       : input  : 2.5 V             :         : 7         : N              
+i_MC_GPIO_data[6]            : B9        : input  : 2.5 V             :         : 7         : N              
+i_MC_GPIO_data[7]            : B10       : input  : 2.5 V             :         : 7         : N              
+i_MC_GPIO_data[0]            : B11       : input  : 2.5 V             :         : 7         : N              
+i_MC_RAM_data[1]             : B12       : input  : 2.5 V             :         : 7         : N              
+o_MC_I2C_data[3]             : B13       : output : 2.5 V             :         : 7         : N              
+i_MC_RAM_data[6]             : B14       : input  : 2.5 V             :         : 7         : N              
 GND                          : B15       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
+i_MC_data[1]                 : B16       : input  : 2.5 V             :         : 6         : N              
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
 VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
+i_MC_I2C_data[2]             : C6        : input  : 2.5 V             :         : 8         : N              
 VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
-o_MC_RAM_address[12]         : C8        : output : 2.5 V             :         : 8         : N              
-o_MC_I2C_address[2]          : C9        : output : 2.5 V             :         : 7         : N              
+o_MC_MUX_data[2]             : C8        : output : 2.5 V             :         : 8         : N              
+o_MC_RAM_write_enable        : C9        : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-i_MC_address[13]             : C11       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
 GND                          : C12       : gnd    :                   :         :           :                
 VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
-i_MC_address[12]             : C14       : input  : 2.5 V             :         : 7         : N              
-o_MC_RAM_address[6]          : C15       : output : 2.5 V             :         : 6         : N              
-i_MC_address[6]              : C16       : input  : 2.5 V             :         : 6         : N              
-o_MC_MUX_address[8]          : D1        : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
+i_MC_GPIO_data[4]            : C15       : input  : 2.5 V             :         : 6         : N              
+i_MC_I2C_data[4]             : C16       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 2.5 V             :         : 1         : N              
-o_MC_MUX_address[2]          : D3        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 8         :                
 VCCD_PLL3                    : D4        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
-o_MC_MUX_address[13]         : D6        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
 GND                          : D7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
-o_MC_I2C_address[1]          : D9        : output : 2.5 V             :         : 7         : N              
+i_MC_I2C_data[0]             : D8        : input  : 2.5 V             :         : 8         : N              
+o_MC_MUX_data[0]             : D9        : output : 2.5 V             :         : 7         : N              
 GND                          : D10       : gnd    :                   :         :           :                
-o_MC_RAM_address[0]          : D11       : output : 2.5 V             :         : 7         : N              
-i_MC_address[4]              : D12       : input  : 2.5 V             :         : 7         : N              
+o_MC_MUX_data[5]             : D11       : output : 2.5 V             :         : 7         : N              
+i_MC_RAM_data[7]             : D12       : input  : 2.5 V             :         : 7         : N              
 VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
-i_MC_address[8]              : D14       : input  : 2.5 V             :         : 7         : N              
-i_MC_address[9]              : D15       : input  : 2.5 V             :         : 6         : N              
-o_MC_RAM_address[8]          : D16       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D16       :        :                   :         : 6         :                
 GND+                         : E1        :        :                   :         : 1         :                
 i_MC_clk                     : E2        : input  : 2.5 V             :         : 1         : N              
 VCCIO1                       : E3        : power  :                   : 2.5V    : 1         :                
 GND                          : E4        : gnd    :                   :         :           :                
 GNDA3                        : E5        : gnd    :                   :         :           :                
-o_MC_MUX_address[14]         : E6        : output : 2.5 V             :         : 8         : N              
-o_MC_MUX_address[10]         : E7        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
-o_MC_I2C_address[0]          : E9        : output : 2.5 V             :         : 7         : N              
-o_MC_RAM_address[5]          : E10       : output : 2.5 V             :         : 7         : N              
-o_MC_GPIO_address[3]         : E11       : output : 2.5 V             :         : 7         : N              
+i_MC_I2C_data[7]             : E6        : input  : 2.5 V             :         : 8         : N              
+i_MC_I2C_data[1]             : E7        : input  : 2.5 V             :         : 8         : N              
+i_MC_I2C_data[5]             : E8        : input  : 2.5 V             :         : 8         : N              
+i_MC_GPIO_data[1]            : E9        : input  : 2.5 V             :         : 7         : N              
+i_MC_RAM_data[4]             : E10       : input  : 2.5 V             :         : 7         : N              
+i_MC_I2C_data[6]             : E11       : input  : 2.5 V             :         : 7         : N              
 GNDA2                        : E12       : gnd    :                   :         :           :                
 GND                          : E13       : gnd    :                   :         :           :                
 VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
-GND+                         : E15       :        :                   :         : 6         :                
-GND+                         : E16       :        :                   :         : 6         :                
+i_MC_data[4]                 : E15       : input  : 2.5 V             :         : 6         : N              
+i_MC_data[3]                 : E16       : input  : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
@@ -155,14 +155,14 @@ nSTATUS                      : F4        :        :                   :         
 VCCA3                        : F5        : power  :                   : 2.5V    :           :                
 GND                          : F6        : gnd    :                   :         :           :                
 VCCINT                       : F7        : power  :                   : 1.2V    :           :                
-o_MC_RAM_address[1]          : F8        : output : 2.5 V             :         : 8         : N              
-i_MC_address[2]              : F9        : input  : 2.5 V             :         : 7         : N              
+i_MC_GPIO_data[2]            : F8        : input  : 2.5 V             :         : 8         : N              
+o_MC_MUX_data[7]             : F9        : output : 2.5 V             :         : 7         : N              
 GND                          : F10       : gnd    :                   :         :           :                
 VCCINT                       : F11       : power  :                   : 1.2V    :           :                
 VCCA2                        : F12       : power  :                   : 2.5V    :           :                
-i_MC_address[7]              : F13       : input  : 2.5 V             :         : 6         : N              
-o_MC_RAM_address[2]          : F14       : output : 2.5 V             :         : 6         : N              
-o_MC_MUX_address[4]          : F15       : output : 2.5 V             :         : 6         : N              
+o_MC_GPIO_data[5]            : F13       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
+o_MC_GPIO_data[7]            : F15       : output : 2.5 V             :         : 6         : N              
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 1         :                
@@ -174,12 +174,12 @@ VCCINT                       : G7        : power  :                   : 1.2V    
 VCCINT                       : G8        : power  :                   : 1.2V    :           :                
 VCCINT                       : G9        : power  :                   : 1.2V    :           :                
 VCCINT                       : G10       : power  :                   : 1.2V    :           :                
-o_MC_RAM_address[13]         : G11       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 6         :                
 MSEL2                        : G12       :        :                   :         : 6         :                
 GND                          : G13       : gnd    :                   :         :           :                
 VCCIO6                       : G14       : power  :                   : 2.5V    : 6         :                
-i_MC_address[10]             : G15       : input  : 2.5 V             :         : 6         : N              
-o_MC_RAM_address[10]         : G16       : output : 2.5 V             :         : 6         : N              
+o_MC_GPIO_write_enable       : G15       : output : 2.5 V             :         : 6         : N              
+o_MC_I2c_write_enable        : G16       : output : 2.5 V             :         : 6         : N              
 ~ALTERA_DCLK~                : H1        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V             :         : 1         : N              
 TCK                          : H3        : input  :                   :         : 1         :                
@@ -194,10 +194,10 @@ VCCINT                       : H11       : power  :                   : 1.2V    
 MSEL1                        : H12       :        :                   :         : 6         :                
 MSEL0                        : H13       :        :                   :         : 6         :                
 CONF_DONE                    : H14       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 6         :                
-o_MC_RAM_address[7]          : H16       : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J1        :        :                   :         : 2         :                
-o_MC_MUX_address[1]          : J2        : output : 2.5 V             :         : 2         : N              
+o_MC_I2C_data[7]             : H15       : output : 2.5 V             :         : 6         : N              
+o_MC_GPIO_data[4]            : H16       : output : 2.5 V             :         : 6         : N              
+o_MC_MUX_data[6]             : J1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J2        :        :                   :         : 2         :                
 nCE                          : J3        :        :                   :         : 1         :                
 TDO                          : J4        : output :                   :         : 1         :                
 TMS                          : J5        : input  :                   :         : 1         :                
@@ -207,120 +207,120 @@ GND                          : J8        : gnd    :                   :         
 GND                          : J9        : gnd    :                   :         :           :                
 GND                          : J10       : gnd    :                   :         :           :                
 GND                          : J11       : gnd    :                   :         :           :                
-o_MC_MUX_address[5]          : J12       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 5         :                
-o_MC_MUX_enable              : J14       : output : 2.5 V             :         : 5         : N              
-o_MC_MUX_data[5]             : J15       : output : 2.5 V             :         : 5         : N              
-o_MC_MUX_address[12]         : J16       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 2         :                
-o_MC_MUX_address[3]          : K2        : output : 2.5 V             :         : 2         : N              
+o_MC_GPIO_data[1]            : J12       : output : 2.5 V             :         : 5         : N              
+o_MC_GPIO_data[3]            : J13       : output : 2.5 V             :         : 5         : N              
+o_MC_GPIO_data[0]            : J14       : output : 2.5 V             :         : 5         : N              
+o_MC_MUX_data[4]             : J15       : output : 2.5 V             :         : 5         : N              
+i_MC_RAM_data[2]             : J16       : input  : 2.5 V             :         : 5         : N              
+o_MC_RAM_address[7]          : K1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 2         :                
 VCCIO2                       : K3        : power  :                   : 2.5V    : 2         :                
 GND                          : K4        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 2         :                
-o_MC_MUX_address[6]          : K6        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K6        :        :                   :         : 2         :                
 VCCINT                       : K7        : power  :                   : 1.2V    :           :                
 GND                          : K8        : gnd    :                   :         :           :                
-o_MC_GPIO_data[6]            : K9        : output : 2.5 V             :         : 4         : N              
-o_MC_MUX_data[7]             : K10       : output : 2.5 V             :         : 4         : N              
+i_MC_address[4]              : K9        : input  : 2.5 V             :         : 4         : N              
+o_MC_I2C_data[2]             : K10       : output : 2.5 V             :         : 4         : N              
 VCCINT                       : K11       : power  :                   : 1.2V    :           :                
-i_MC_RAM_data[6]             : K12       : input  : 2.5 V             :         : 5         : N              
+o_MC_RAM_data[4]             : K12       : output : 2.5 V             :         : 5         : N              
 GND                          : K13       : gnd    :                   :         :           :                
 VCCIO5                       : K14       : power  :                   : 2.5V    : 5         :                
-o_MC_MUX_address[15]         : K15       : output : 2.5 V             :         : 5         : N              
-i_MC_I2C_data[5]             : K16       : input  : 2.5 V             :         : 5         : N              
+o_MC_I2C_data[5]             : K15       : output : 2.5 V             :         : 5         : N              
+o_MC_I2C_data[6]             : K16       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 2         :                
-o_MC_RAM_data[1]             : L3        : output : 2.5 V             :         : 2         : N              
-o_MC_RAM_data[6]             : L4        : output : 2.5 V             :         : 2         : N              
+o_MC_RAM_address[3]          : L2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 2         :                
 VCCA1                        : L5        : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L6        :        :                   :         : 2         :                
-o_MC_RAM_data[7]             : L7        : output : 2.5 V             :         : 3         : N              
-i_MC_data[3]                 : L8        : input  : 2.5 V             :         : 3         : N              
-o_MC_GPIO_data[0]            : L9        : output : 2.5 V             :         : 4         : N              
-i_MC_RAM_data[0]             : L10       : input  : 2.5 V             :         : 4         : N              
-o_MC_MUX_data[0]             : L11       : output : 2.5 V             :         : 4         : N              
+o_MC_RAM_address[9]          : L7        : output : 2.5 V             :         : 3         : N              
+o_MC_RAM_address[12]         : L8        : output : 2.5 V             :         : 3         : N              
+o_MC_RAM_address[2]          : L9        : output : 2.5 V             :         : 4         : N              
+i_MC_address[3]              : L10       : input  : 2.5 V             :         : 4         : N              
+i_MC_address[5]              : L11       : input  : 2.5 V             :         : 4         : N              
 VCCA4                        : L12       : power  :                   : 2.5V    :           :                
-o_MC_I2c_write_enable        : L13       : output : 2.5 V             :         : 5         : N              
-i_MC_GPIO_data[2]            : L14       : input  : 2.5 V             :         : 5         : N              
-i_MC_RAM_data[5]             : L15       : input  : 2.5 V             :         : 5         : N              
-i_MC_I2C_data[0]             : L16       : input  : 2.5 V             :         : 5         : N              
+o_MC_RAM_data[2]             : L13       : output : 2.5 V             :         : 5         : N              
+o_MC_GPIO_data[2]            : L14       : output : 2.5 V             :         : 5         : N              
+i_MC_data[2]                 : L15       : input  : 2.5 V             :         : 5         : N              
+i_MC_data[5]                 : L16       : input  : 2.5 V             :         : 5         : N              
 GND+                         : M1        :        :                   :         : 2         :                
 GND+                         : M2        :        :                   :         : 2         :                
 VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
 GND                          : M4        : gnd    :                   :         :           :                
 GNDA1                        : M5        : gnd    :                   :         :           :                
-o_MC_RAM_data[0]             : M6        : output : 2.5 V             :         : 3         : N              
-o_MC_RAM_data[2]             : M7        : output : 2.5 V             :         : 3         : N              
-o_MC_RAM_data[3]             : M8        : output : 2.5 V             :         : 3         : N              
-i_MC_data[6]                 : M9        : input  : 2.5 V             :         : 4         : N              
-i_MC_address[15]             : M10       : input  : 2.5 V             :         : 4         : N              
-i_MC_I2C_data[6]             : M11       : input  : 2.5 V             :         : 4         : N              
+o_MC_RAM_address[6]          : M6        : output : 2.5 V             :         : 3         : N              
+o_MC_GPIO_address[2]         : M7        : output : 2.5 V             :         : 3         : N              
+o_MC_RAM_data[1]             : M8        : output : 2.5 V             :         : 3         : N              
+o_MC_RAM_address[4]          : M9        : output : 2.5 V             :         : 4         : N              
+o_MC_RAM_data[6]             : M10       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M11       :        :                   :         : 4         :                
 GNDA4                        : M12       : gnd    :                   :         :           :                
 GND                          : M13       : gnd    :                   :         :           :                
 VCCIO5                       : M14       : power  :                   : 2.5V    : 5         :                
-GND+                         : M15       :        :                   :         : 5         :                
-GND+                         : M16       :        :                   :         : 5         :                
-o_MC_GPIO_data[2]            : N1        : output : 2.5 V             :         : 2         : N              
-o_MC_GPIO_data[4]            : N2        : output : 2.5 V             :         : 2         : N              
-o_MC_I2C_data[5]             : N3        : output : 2.5 V             :         : 3         : N              
+i_MC_data[0]                 : M15       : input  : 2.5 V             :         : 5         : N              
+i_MC_address[13]             : M16       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 3         :                
 VCCD_PLL1                    : N4        : power  :                   : 1.2V    :           :                
-i_MC_data[2]                 : N5        : input  : 2.5 V             :         : 3         : N              
-o_MC_I2C_data[2]             : N6        : output : 2.5 V             :         : 3         : N              
+o_MC_I2C_address[1]          : N5        : output : 2.5 V             :         : 3         : N              
+o_MC_I2C_data[0]             : N6        : output : 2.5 V             :         : 3         : N              
 GND                          : N7        : gnd    :                   :         :           :                
-o_MC_I2C_data[4]             : N8        : output : 2.5 V             :         : 3         : N              
-i_MC_data[7]                 : N9        : input  : 2.5 V             :         : 4         : N              
+o_MC_RAM_data[0]             : N8        : output : 2.5 V             :         : 3         : N              
+o_MC_GPIO_address[3]         : N9        : output : 2.5 V             :         : 4         : N              
 GND                          : N10       : gnd    :                   :         :           :                
-i_MC_GPIO_data[1]            : N11       : input  : 2.5 V             :         : 4         : N              
-i_MC_GPIO_data[7]            : N12       : input  : 2.5 V             :         : 4         : N              
+o_MC_RAM_data[5]             : N11       : output : 2.5 V             :         : 4         : N              
+o_MC_RAM_data[7]             : N12       : output : 2.5 V             :         : 4         : N              
 VCCD_PLL4                    : N13       : power  :                   : 1.2V    :           :                
-i_MC_RAM_data[1]             : N14       : input  : 2.5 V             :         : 5         : N              
-o_MC_RAM_write_enable        : N15       : output : 2.5 V             :         : 5         : N              
-o_MC_GPIO_write_enable       : N16       : output : 2.5 V             :         : 5         : N              
-o_MC_MUX_data[2]             : P1        : output : 2.5 V             :         : 2         : N              
-i_MC_RAM_data[4]             : P2        : input  : 2.5 V             :         : 2         : N              
-o_MC_GPIO_data[3]            : P3        : output : 2.5 V             :         : 3         : N              
+o_MC_I2C_data[1]             : N14       : output : 2.5 V             :         : 5         : N              
+o_MC_RAM_address[5]          : N15       : output : 2.5 V             :         : 5         : N              
+o_MC_GPIO_data[6]            : N16       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P3        :        :                   :         : 3         :                
 VCCIO3                       : P4        : power  :                   : 2.5V    : 3         :                
 GND                          : P5        : gnd    :                   :         :           :                
-o_MC_I2C_data[6]             : P6        : output : 2.5 V             :         : 3         : N              
+o_MC_GPIO_address[0]         : P6        : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : P7        : power  :                   : 2.5V    : 3         :                
-i_MC_data[0]                 : P8        : input  : 2.5 V             :         : 3         : N              
-o_MC_MUX_data[1]             : P9        : output : 2.5 V             :         : 4         : N              
+i_MC_address[0]              : P8        : input  : 2.5 V             :         : 3         : N              
+o_MC_RAM_address[1]          : P9        : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : P10       : power  :                   : 2.5V    : 4         :                
-i_MC_GPIO_data[0]            : P11       : input  : 2.5 V             :         : 4         : N              
+i_MC_data[7]                 : P11       : input  : 2.5 V             :         : 4         : N              
 GND                          : P12       : gnd    :                   :         :           :                
 VCCIO4                       : P13       : power  :                   : 2.5V    : 4         :                
-i_MC_GPIO_data[5]            : P14       : input  : 2.5 V             :         : 4         : N              
-i_MC_RAM_data[3]             : P15       : input  : 2.5 V             :         : 5         : N              
-i_MC_write_enable            : P16       : input  : 2.5 V             :         : 5         : N              
-o_MC_GPIO_data[5]            : R1        : output : 2.5 V             :         : 2         : N              
+o_MC_RAM_address[8]          : P14       : output : 2.5 V             :         : 4         : N              
+o_MC_RAM_data[3]             : P15       : output : 2.5 V             :         : 5         : N              
+o_MC_RAM_address[13]         : P16       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
 GND                          : R2        : gnd    :                   :         :           :                
-o_MC_I2C_data[0]             : R3        : output : 2.5 V             :         : 3         : N              
-o_MC_RAM_data[4]             : R4        : output : 2.5 V             :         : 3         : N              
-o_MC_GPIO_data[1]            : R5        : output : 2.5 V             :         : 3         : N              
-i_MC_data[5]                 : R6        : input  : 2.5 V             :         : 3         : N              
-o_MC_I2C_data[1]             : R7        : output : 2.5 V             :         : 3         : N              
-i_MC_I2C_data[7]             : R8        : input  : 2.5 V             :         : 3         : N              
-i_MC_address[0]              : R9        : input  : 2.5 V             :         : 4         : N              
-i_MC_GPIO_data[6]            : R10       : input  : 2.5 V             :         : 4         : N              
-o_MC_MUX_data[6]             : R11       : output : 2.5 V             :         : 4         : N              
-o_MC_MUX_data[4]             : R12       : output : 2.5 V             :         : 4         : N              
-i_MC_I2C_data[3]             : R13       : input  : 2.5 V             :         : 4         : N              
-i_MC_I2C_data[4]             : R14       : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 3         :                
+o_MC_I2C_address[3]          : R5        : output : 2.5 V             :         : 3         : N              
+i_MC_address[6]              : R6        : input  : 2.5 V             :         : 3         : N              
+o_MC_RAM_address[0]          : R7        : output : 2.5 V             :         : 3         : N              
+GND+                         : R8        :        :                   :         : 3         :                
+GND+                         : R9        :        :                   :         : 4         :                
+i_MC_address[11]             : R10       : input  : 2.5 V             :         : 4         : N              
+o_MC_CU_ready                : R11       : output : 2.5 V             :         : 4         : N              
+i_MC_address[12]             : R12       : input  : 2.5 V             :         : 4         : N              
+i_MC_address[10]             : R13       : input  : 2.5 V             :         : 4         : N              
+o_MC_RAM_address[11]         : R14       : output : 2.5 V             :         : 4         : N              
 GND                          : R15       : gnd    :                   :         :           :                
-i_MC_I2C_data[1]             : R16       : input  : 2.5 V             :         : 5         : N              
+i_MC_write_enable            : R16       : input  : 2.5 V             :         : 5         : N              
 VCCIO3                       : T1        : power  :                   : 2.5V    : 3         :                
-o_MC_RAM_data[5]             : T2        : output : 2.5 V             :         : 3         : N              
-o_MC_I2C_data[7]             : T3        : output : 2.5 V             :         : 3         : N              
-i_MC_data[1]                 : T4        : input  : 2.5 V             :         : 3         : N              
-o_MC_GPIO_data[7]            : T5        : output : 2.5 V             :         : 3         : N              
-i_MC_data[4]                 : T6        : input  : 2.5 V             :         : 3         : N              
-o_MC_I2C_data[3]             : T7        : output : 2.5 V             :         : 3         : N              
-i_MC_RAM_data[7]             : T8        : input  : 2.5 V             :         : 3         : N              
-i_MC_address[14]             : T9        : input  : 2.5 V             :         : 4         : N              
-i_MC_GPIO_data[4]            : T10       : input  : 2.5 V             :         : 4         : N              
-o_MC_MUX_data[3]             : T11       : output : 2.5 V             :         : 4         : N              
-i_MC_I2C_data[2]             : T12       : input  : 2.5 V             :         : 4         : N              
-i_MC_enable                  : T13       : input  : 2.5 V             :         : 4         : N              
-i_MC_RAM_data[2]             : T14       : input  : 2.5 V             :         : 4         : N              
-i_MC_GPIO_data[3]            : T15       : input  : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 3         :                
+i_MC_address[8]              : T4        : input  : 2.5 V             :         : 3         : N              
+o_MC_I2C_address[0]          : T5        : output : 2.5 V             :         : 3         : N              
+i_MC_address[7]              : T6        : input  : 2.5 V             :         : 3         : N              
+o_MC_GPIO_address[1]         : T7        : output : 2.5 V             :         : 3         : N              
+GND+                         : T8        :        :                   :         : 3         :                
+GND+                         : T9        :        :                   :         : 4         :                
+i_MC_address[2]              : T10       : input  : 2.5 V             :         : 4         : N              
+i_MC_address[1]              : T11       : input  : 2.5 V             :         : 4         : N              
+o_MC_I2C_data[4]             : T12       : output : 2.5 V             :         : 4         : N              
+i_MC_address[9]              : T13       : input  : 2.5 V             :         : 4         : N              
+o_MC_RAM_address[10]         : T14       : output : 2.5 V             :         : 4         : N              
+i_MC_data[6]                 : T15       : input  : 2.5 V             :         : 4         : N              
 VCCIO4                       : T16       : power  :                   : 2.5V    : 4         :                

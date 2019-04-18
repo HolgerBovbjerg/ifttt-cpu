@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\cpu_core\simulation\modelsim
 Ealu
-Z1 w1555514850
+Z1 w1555584316
 Z2 DPx4 work 9 constants 0 22 BcDd?KkJ0mhe8X0CW=iYk1
 Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
@@ -17,7 +17,7 @@ L21
 VSDo[V_ekTDcD;dmkQQ_eB1
 Z9 OV;C;10.1d;51
 31
-Z10 !s108 1555518181.614000
+Z10 !s108 1555592071.247000
 Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/ALU.vhd|
 Z12 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/ALU.vhd|
 Z13 o-93 -work work -O0
@@ -32,7 +32,7 @@ R5
 DEx4 work 3 alu 0 22 SDo[V_ekTDcD;dmkQQ_eB1
 l48
 L37
-Vg0Y;`F?z1HSzWV[4g0?m]3
+Vm1Yh1PYo?CD^eiY^P2LY:0
 R9
 31
 R10
@@ -40,7 +40,7 @@ R11
 R12
 R13
 R14
-!s100 OciZb:KPX<_^Qa>7e6QzI2
+!s100 dJ;N]e[Tl4CC2z1NA1UYz0
 !i10b 1
 Eb_imm_multiplexer
 Z15 w1555502880
@@ -54,7 +54,7 @@ L4
 V]B2k4iFNfGh;4j4kW7MkD2
 R9
 31
-Z18 !s108 1555518179.632000
+Z18 !s108 1555592070.268000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/B_imm_multiplexer.vhd|
 Z20 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/B_imm_multiplexer.vhd|
 R13
@@ -89,7 +89,7 @@ L4
 VZ<P;hbIHXILz?LOe5IF6[0
 R9
 31
-Z23 !s108 1555518180.976000
+Z23 !s108 1555592070.874000
 Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/branch_control.vhd|
 Z25 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/branch_control.vhd|
 R13
@@ -124,7 +124,7 @@ L10
 VBcDd?KkJ0mhe8X0CW=iYk1
 R9
 31
-Z28 !s108 1555518180.817000
+Z28 !s108 1555592070.775000
 Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd|
 Z30 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd|
 R13
@@ -149,56 +149,58 @@ nbody
 !s100 TFGJU2VmUVcC`EiUJ[MXA2
 !i10b 1
 Econtrol_unit
-R15
-R4
-R5
-R6
-Z31 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd
-Z32 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd
-l0
-L9
-Vm6Q_DgCzHez>iNP^8^LeF1
-R9
-31
-Z33 !s108 1555518180.635000
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd|
-Z35 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd|
-R13
-R14
-!s100 UEghEz=JP11<AHdhj0GMf0
-!i10b 1
-Abehavioral
-R4
-R5
-DEx4 work 12 control_unit 0 22 m6Q_DgCzHez>iNP^8^LeF1
-l21
-L17
-VdkXB<eCM]AW]EFjZS]Mlj2
-R9
-31
-R33
-R34
-R35
-R13
-R14
-!s100 k8ma3kPg=NgCXe8O6N[li1
-!i10b 1
-Ecpu_core
-Z36 w1555516701
+Z31 w1555591942
 R2
 R4
 R5
 R6
-Z37 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/cpu_core.vhd
-Z38 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/cpu_core.vhd
+Z32 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd
+Z33 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd
+l0
+L7
+VfKCj4K]7gGMdo<;`YXhVB1
+R9
+31
+Z34 !s108 1555592071.147000
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd|
+Z36 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd|
+R13
+R14
+!s100 YY?25`DX@0@8G:KZk]zzO1
+!i10b 1
+Abehavioral
+R2
+R4
+R5
+DEx4 work 12 control_unit 0 22 fKCj4K]7gGMdo<;`YXhVB1
+l22
+L18
+VKO_KNHiDjHG9FjckK>eRY1
+R9
+31
+R34
+R35
+R36
+R13
+R14
+!s100 KQ6>^cbMmE5L5=[mVeXGH2
+!i10b 1
+Ecpu_core
+Z37 w1555591299
+R2
+R4
+R5
+R6
+Z38 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/cpu_core.vhd
+Z39 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/cpu_core.vhd
 l0
 L7
 VTfXKG0W1GI:Zj;V2>go6J1
 R9
 31
-Z39 !s108 1555518181.842000
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/cpu_core.vhd|
-Z41 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/cpu_core.vhd|
+Z40 !s108 1555592071.356000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/cpu_core.vhd|
+Z42 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/cpu_core.vhd|
 R13
 R14
 !s100 7POLRz@27?j<8<U1n5:ac1
@@ -208,26 +210,26 @@ R2
 R4
 R5
 DEx4 work 8 cpu_core 0 22 TfXKG0W1GI:Zj;V2>go6J1
-l259
+l264
 L16
-Vk6gofi_1NZ]UBkM[f3C0K3
+V52`PW8?6dgh1WLnLk51UO0
 R9
 31
-R39
 R40
 R41
+R42
 R13
 R14
-!s100 De`aBa@cDh?n2IUD^<QXM3
+!s100 =6PaD3kJ;6DQLko]1dKLB2
 !i10b 1
 Ecpu_core_tb
-Z42 w1555517964
+Z43 w1555517964
 R3
 R4
 R5
 R6
-Z43 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/../../test_benches/cpu_core_tb.vhd
-Z44 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/../../test_benches/cpu_core_tb.vhd
+Z44 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/../../test_benches/cpu_core_tb.vhd
+Z45 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/../../test_benches/cpu_core_tb.vhd
 l0
 L5
 Vi93G_lT:_9z55QTSm<@ol2
@@ -235,9 +237,9 @@ Vi93G_lT:_9z55QTSm<@ol2
 R9
 31
 !i10b 1
-Z45 !s108 1555518182.032000
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/../../test_benches/cpu_core_tb.vhd|
-Z47 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/../../test_benches/cpu_core_tb.vhd|
+Z46 !s108 1555592071.455000
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/../../test_benches/cpu_core_tb.vhd|
+Z48 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/cpu_core/../../test_benches/cpu_core_tb.vhd|
 R13
 R14
 Abehavior
@@ -252,9 +254,9 @@ VMPJdIVY^V8ZIboZUMeYMZ2
 R9
 31
 !i10b 1
-R45
 R46
 R47
+R48
 R13
 R14
 Edata_bus
@@ -262,16 +264,16 @@ R15
 R4
 R5
 R6
-Z48 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd
-Z49 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd
+Z49 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd
+Z50 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd
 l0
 L4
 VnkjbQJ_K:cYh?J9lKHANE3
 R9
 31
-Z50 !s108 1555518179.441000
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd|
-Z52 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd|
+Z51 !s108 1555592070.176000
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd|
+Z53 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/data_bus.vhd|
 R13
 R14
 !s100 QY5^HP`bcd@AgYh:ob<9=0
@@ -285,38 +287,38 @@ L14
 V7Cc6h=`79UAF^lFbM]S7^3
 R9
 31
-R50
 R51
 R52
+R53
 R13
 R14
 !s100 O0lRM9JZ@zQZeRHZH?DNm3
 !i10b 1
 Edata_ram
-Z53 w1555517783
-Z54 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z55 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z54 w1555517783
+Z55 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z56 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 R3
 R4
 R5
 R6
-Z56 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/DATA_RAM.vhd
-Z57 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/DATA_RAM.vhd
+Z57 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/DATA_RAM.vhd
+Z58 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/DATA_RAM.vhd
 l0
 L8
 VcIz@KJ]`=]oe=^cV?b5fL2
 R9
 31
-Z58 !s108 1555518180.403000
-Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/DATA_RAM.vhd|
-Z60 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/DATA_RAM.vhd|
+Z59 !s108 1555592070.671000
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/DATA_RAM.vhd|
+Z61 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/DATA_RAM.vhd|
 R13
 R14
 !s100 LN]9A<L1lCEBMbOE0NkJB0
 !i10b 1
 Abehavioral
-R54
 R55
+R56
 R3
 R4
 R5
@@ -326,9 +328,9 @@ L18
 V8EVi2]TDe5KimQ9KNP8S:3
 R9
 31
-R58
 R59
 R60
+R61
 R13
 R14
 !s100 hf9<hn@ZFkYdPHOJ8F_2]2
@@ -338,16 +340,16 @@ R15
 R4
 R5
 R6
-Z61 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd
-Z62 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd
+Z62 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd
+Z63 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd
 l0
 L4
 V@L7YSzBTm]1Hn5:2z0RNJ3
 R9
 31
-Z63 !s108 1555518180.204000
-Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd|
-Z65 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd|
+Z64 !s108 1555592070.572000
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd|
+Z66 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/InstrucReg.vhd|
 R13
 R14
 !s100 z2Lo6dikj35Me2hV]^FdO3
@@ -361,29 +363,29 @@ L12
 V8nfMP8VC@7LBjWWmSicB;2
 R9
 31
-R63
 R64
 R65
+R66
 R13
 R14
 !s100 5aXQ54E7NJd@zJ:kST3bj1
 !i10b 1
 Einstruction_decoder
-Z66 w1555509590
+Z67 w1555509590
 R2
 R4
 R5
 R6
-Z67 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
-Z68 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
+Z68 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
+Z69 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
 l0
 L7
 VRFK5CfaIW58@P[lW9A2?60
 R9
 31
-Z69 !s108 1555518181.407000
-Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
-Z71 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
+Z70 !s108 1555592071.059000
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
+Z72 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
 R13
 R14
 !s100 `R[hcVLW;a>V`U5;4`16F2
@@ -398,53 +400,53 @@ L28
 VA?dEljGWB]az>@S`UB]AM3
 R9
 31
-R69
 R70
 R71
+R72
 R13
 R14
 !s100 Mz6IXKB7Wk_?nh=1_caQ53
 !i10b 1
 Ememory_control
-Z72 w1555516762
-R54
+Z73 w1555591049
 R55
+R56
 R3
 R4
 R5
 R6
-Z73 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd
-Z74 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd
+Z74 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd
+Z75 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd
 l0
 L7
-Va]R[DE9E5VeiJB^`z7MaU0
+VgLSiGCMn1S^XA2X1IJ1BM2
 R9
 31
-Z75 !s108 1555518179.240000
-Z76 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd|
-Z77 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd|
+Z76 !s108 1555592070.078000
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd|
+Z78 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd|
 R13
 R14
-!s100 R1R`kG8YNSWXhaQjjR]jl1
+!s100 Vh>?MC<BWF@KMSLBK^i<?1
 !i10b 1
 Abehavioral
-R54
 R55
+R56
 R3
 R4
 R5
-DEx4 work 14 memory_control 0 22 a]R[DE9E5VeiJB^`z7MaU0
-l45
+DEx4 work 14 memory_control 0 22 gLSiGCMn1S^XA2X1IJ1BM2
+l46
 L37
-V7DmJ?lf4nNcoPSkJVEnmN3
+VH:e6N_5X[41aoEL[Em:RK0
 R9
 31
-R75
 R76
 R77
+R78
 R13
 R14
-!s100 UD7WYG^XiMF<9kJ9?T6JX1
+!s100 mUbAbdEdmndV`UWPkmHM`0
 !i10b 1
 Eprogram_counter
 R15
@@ -452,16 +454,16 @@ R3
 R4
 R5
 R6
-Z78 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd
-Z79 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd
+Z79 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd
+Z80 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd
 l0
 L7
 VkzCWIdEoQh]]a7UPiRYJc0
 R9
 31
-Z80 !s108 1555518180.009000
-Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd|
-Z82 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd|
+Z81 !s108 1555592070.475000
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd|
+Z83 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd|
 R13
 R14
 !s100 b12Al;N@X6N68D7V_JLUO1
@@ -476,30 +478,30 @@ L17
 VS=Ch5Q5P9Z6CChB1=?Rob0
 R9
 31
-R80
 R81
 R82
+R83
 R13
 R14
 !s100 SbXBjiL:SW^1jSYAYBbeA2
 !i10b 1
 Eprogram_memory
-Z83 w1555517771
+Z84 w1555585121
 R2
 R3
 R4
 R5
 R6
-Z84 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd
-Z85 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd
+Z85 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd
+Z86 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd
 l0
 L9
 V?DQX3?`iKJG5FGNHz;H9a0
 R9
 31
-Z86 !s108 1555518181.180000
-Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd|
-Z88 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd|
+Z87 !s108 1555592070.964000
+Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd|
+Z89 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd|
 R13
 R14
 !s100 iNLePRI>GHZc4gR6hYNW@0
@@ -512,15 +514,15 @@ R5
 DEx4 work 14 program_memory 0 22 ?DQX3?`iKJG5FGNHz;H9a0
 l102
 L17
-VI[WTKYGl<G3h2CcBnjl6P2
+V]d>A7SCM<8[TJ>1m9^zU>0
 R9
 31
-R86
 R87
 R88
+R89
 R13
 R14
-!s100 7X:^FOAJ]l?^<6U0ZhEzZ0
+!s100 @L3Ei<M>>Cl9fZmU^50AA0
 !i10b 1
 Eregister32x8
 R15
@@ -528,16 +530,16 @@ R3
 R4
 R5
 R6
-Z89 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd
-Z90 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd
+Z90 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd
+Z91 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd
 l0
 L5
 Vo1B]S]S@QV8BTX208;`WH1
 R9
 31
-Z91 !s108 1555518179.805000
-Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd|
-Z93 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd|
+Z92 !s108 1555592070.378000
+Z93 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd|
+Z94 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd|
 R13
 R14
 !s100 LSS@T_EeB;FcHEmfVf3e43
@@ -552,9 +554,9 @@ L27
 VcfjX:^gUW`nRc2C:a<XSD3
 R9
 31
-R91
 R92
 R93
+R94
 R13
 R14
 !s100 jNG<?C<Q^_I48gmXM0QT[1

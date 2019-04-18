@@ -36,14 +36,14 @@ end ALU;
 
 architecture Behavioral of ALU is
 
-signal r_ALU_Result : std_logic_vector (7 downto 0); -- Buffer signal for output
-signal r_ALU_carry_flag : std_logic; -- Buffer signal for carry
-signal r_ALU_carry_arithmetic : std_logic_vector(7 downto 0); -- Signal for carry arithmetic
-signal r_ALU_overflow_flag : std_logic; -- Buffer signal for carry
-signal r_ALU_negative_flag : std_logic; -- Buffer signal for carry
-signal r_ALU_zero_flag : std_logic; -- Buffer signal for carry
+signal r_ALU_Result : std_logic_vector (7 downto 0) := x"00"; -- Buffer signal for output
+signal r_ALU_carry_flag : std_logic := '0'; -- Buffer signal for carry
+signal r_ALU_carry_arithmetic : std_logic_vector(7 downto 0) := x"00"; -- Signal for carry arithmetic
+signal r_ALU_overflow_flag : std_logic := '0'; -- Buffer signal for carry
+signal r_ALU_negative_flag : std_logic := '0'; -- Buffer signal for carry
+signal r_ALU_zero_flag : std_logic := '0'; -- Buffer signal for carry
 
-signal tmp : std_logic_vector (8 downto 0); -- Buffer for carry flag output
+signal tmp : std_logic_vector (8 downto 0) := "000000000"; -- Buffer for carry flag output
 
 begin
 	process(i_CLK, i_ENABLE)

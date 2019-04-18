@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MEMORY_CONTROL
-Wed Apr 17 14:20:23 2019
+Thu Apr 18 14:25:09 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -42,16 +42,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 17 14:20:23 2019      ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 18 14:25:09 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; MEMORY_CONTROL                             ;
 ; Top-level Entity Name              ; MEMORY_CONTROL                             ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 64                                         ;
-;     Total combinational functions  ; 18                                         ;
-;     Dedicated logic registers      ; 57                                         ;
-; Total registers                    ; 57                                         ;
-; Total pins                         ; 125                                        ;
+; Total logic elements               ; 71                                         ;
+;     Total combinational functions  ; 25                                         ;
+;     Dedicated logic registers      ; 60                                         ;
+; Total registers                    ; 60                                         ;
+; Total pins                         ; 109                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -171,28 +171,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 64             ;
+; Estimated Total logic elements              ; 71             ;
 ;                                             ;                ;
-; Total combinational functions               ; 18             ;
+; Total combinational functions               ; 25             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 4              ;
-;     -- 3 input functions                    ; 14             ;
-;     -- <=2 input functions                  ; 0              ;
+;     -- 4 input functions                    ; 3              ;
+;     -- 3 input functions                    ; 20             ;
+;     -- <=2 input functions                  ; 2              ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 18             ;
+;     -- normal mode                          ; 25             ;
 ;     -- arithmetic mode                      ; 0              ;
 ;                                             ;                ;
-; Total registers                             ; 57             ;
-;     -- Dedicated logic registers            ; 57             ;
+; Total registers                             ; 60             ;
+;     -- Dedicated logic registers            ; 60             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 125            ;
+; I/O pins                                    ; 109            ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; i_MC_clk~input ;
-; Maximum fan-out                             ; 57             ;
-; Total fan-out                               ; 424            ;
-; Average fan-out                             ; 1.30           ;
+; Maximum fan-out                             ; 60             ;
+; Total fan-out                               ; 436            ;
+; Average fan-out                             ; 1.44           ;
 +---------------------------------------------+----------------+
 
 
@@ -201,7 +201,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |MEMORY_CONTROL            ; 18 (18)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 125  ; 0            ; |MEMORY_CONTROL     ; work         ;
+; |MEMORY_CONTROL            ; 25 (25)           ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 109  ; 0            ; |MEMORY_CONTROL     ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -211,23 +211,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 57    ;
+; Total registers                              ; 60    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Clock Enable       ; 57    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |MEMORY_CONTROL|o_MC_MUX_data[0]~reg0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MEMORY_CONTROL|o_MC_RAM_data[7]~reg0     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MEMORY_CONTROL|o_MC_GPIO_data[3]~reg0    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |MEMORY_CONTROL|o_MC_I2C_data[7]~reg0     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |MEMORY_CONTROL|o_MC_MUX_data[1]~reg0     ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |MEMORY_CONTROL|o_MC_RAM_address[13]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |MEMORY_CONTROL|o_MC_GPIO_address[3]~reg0 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |MEMORY_CONTROL|o_MC_I2C_address[3]~reg0  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
 
 +-------------------------------+
@@ -245,7 +251,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Wed Apr 17 14:20:20 2019
+    Info: Processing started: Thu Apr 18 14:25:08 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MEMORY_CONTROL -c MEMORY_CONTROL
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/test_benches/tb_memory_control.vhd
@@ -255,38 +261,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: MEMORY_CONTROL-Behavioral
     Info (12023): Found entity 1: MEMORY_CONTROL
 Info (12127): Elaborating entity "MEMORY_CONTROL" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at MEMORY_CONTROL.vhd(29): used implicit default value for signal "o_MC_MUX_address" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MEMORY_CONTROL.vhd(31): used implicit default value for signal "o_MC_MUX_enable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at MEMORY_CONTROL.vhd(49): signal "i_MC_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_MC_MUX_address[0]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[1]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[2]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[3]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[4]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[5]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[6]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[7]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[8]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[9]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[10]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[11]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[12]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[13]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[14]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_address[15]" is stuck at GND
-    Warning (13410): Pin "o_MC_MUX_enable" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 189 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 180 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 51 input pins
-    Info (21059): Implemented 74 output pins
-    Info (21061): Implemented 64 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4680 megabytes
-    Info: Processing ended: Wed Apr 17 14:20:23 2019
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21059): Implemented 58 output pins
+    Info (21061): Implemented 71 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Thu Apr 18 14:25:09 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

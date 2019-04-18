@@ -1,5 +1,5 @@
 EDA Netlist Writer report for MEMORY_CONTROL
-Wed Apr 17 14:20:50 2019
+Thu Apr 18 14:25:25 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Apr 17 14:20:50 2019 ;
+; EDA Netlist Writer Status ; Successful - Thu Apr 18 14:25:25 2019 ;
 ; Revision Name             ; MEMORY_CONTROL                        ;
 ; Top-level Entity Name     ; MEMORY_CONTROL                        ;
 ; Family                    ; Cyclone III                           ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Wed Apr 17 14:20:49 2019
+    Info: Processing started: Thu Apr 18 14:25:24 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off MEMORY_CONTROL -c MEMORY_CONTROL
 Info (204019): Generated file MEMORY_CONTROL_6_1200mv_85c_slow.vho in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/memory_controller/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file MEMORY_CONTROL_6_1200mv_0c_slow.vho in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/memory_controller/simulation/modelsim/" for EDA simulation tool
@@ -99,9 +99,9 @@ Info (204019): Generated file MEMORY_CONTROL_6_1200mv_0c_vhd_slow.sdo in folder 
 Info (204019): Generated file MEMORY_CONTROL_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/memory_controller/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file MEMORY_CONTROL_vhd.sdo in folder "C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/memory_controller/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4560 megabytes
-    Info: Processing ended: Wed Apr 17 14:20:51 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4559 megabytes
+    Info: Processing ended: Thu Apr 18 14:25:25 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

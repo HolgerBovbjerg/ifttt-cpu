@@ -1,5 +1,5 @@
 Flow report for MEMORY_CONTROL
-Wed Apr 17 14:20:50 2019
+Thu Apr 18 14:25:25 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 17 14:20:50 2019      ;
+; Flow Status                        ; Successful - Thu Apr 18 14:25:25 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; MEMORY_CONTROL                             ;
 ; Top-level Entity Name              ; MEMORY_CONTROL                             ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F256C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 64 / 15,408 ( < 1 % )                      ;
-;     Total combinational functions  ; 18 / 15,408 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 57 / 15,408 ( < 1 % )                      ;
-; Total registers                    ; 57                                         ;
-; Total pins                         ; 125 / 169 ( 74 % )                         ;
+; Total logic elements               ; 77 / 15,408 ( < 1 % )                      ;
+;     Total combinational functions  ; 25 / 15,408 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 60 / 15,408 ( < 1 % )                      ;
+; Total registers                    ; 60                                         ;
+; Total pins                         ; 109 / 169 ( 64 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/17/2019 14:20:21 ;
+; Start date & time ; 04/18/2019 14:25:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MEMORY_CONTROL      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+------------------------------------------+---------------+-------------+-------------------+
 ; Assignment Name                      ; Value                                    ; Default Value ; Entity Name ; Section Id        ;
 +--------------------------------------+------------------------------------------+---------------+-------------+-------------------+
-; COMPILER_SIGNATURE_ID                ; 172309000256012.155550362118440          ; --            ; --          ; --                ;
+; COMPILER_SIGNATURE_ID                ; 172309000256012.155559030818568          ; --            ; --          ; --                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                       ; --            ; --          ; tb_MEMORY_CONTROL ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_MEMORY_CONTROL                        ; --            ; --          ; eda_simulation    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                     ; --            ; --          ; eda_simulation    ;
@@ -99,12 +99,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4673 MB             ; 00:00:02                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 4981 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4600 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4638 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4673 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 4972 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4600 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4635 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4547 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

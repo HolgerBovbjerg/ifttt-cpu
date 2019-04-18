@@ -44,52 +44,38 @@ architecture Behavioral of MEMORY_CONTROL is
 	
 begin
 
-	process (i_MC_clk)
+	process (i_MC_clk, i_MC_enable)
 	begin
-			if (rising_edge(i_MC_clk) and i_MC_enable = '1')
-			then
-					
+			if (rising_edge(i_MC_clk) and i_MC_enable = '1') then
 					------------------DATA_MEMORY---------------------------------------
-					if ((i_MC_address(15 downto 14) = RAM_address) and i_MC_write_enable = '1') 
-					then
-					o_MC_RAM_write_enable <= '1';
-					o_MC_RAM_address <= i_MC_address(13 downto 0);
-					o_MC_RAM_data <= i_MC_data;
-					
-					elsif ((i_MC_address(15 downto 14) = RAM_address) and i_MC_write_enable = '0') 
-					then
-					o_MC_RAM_write_enable <= '0';
-					o_MC_RAM_address <= i_MC_address(13 downto 0);
-					o_MC_MUX_data <= i_MC_RAM_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
+					if 	((i_MC_address(15 downto 14) = RAM_address) and i_MC_write_enable = '1')	then
+						o_MC_RAM_write_enable <= '1';
+						o_MC_RAM_address <= i_MC_address(13 downto 0);
+						o_MC_RAM_data <= i_MC_data;
+					elsif ((i_MC_address(15 downto 14) = RAM_address) and i_MC_write_enable = '0') 	then
+						o_MC_RAM_write_enable <= '0';
+						o_MC_RAM_address <= i_MC_address(13 downto 0);
+						o_MC_MUX_data <= i_MC_RAM_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
 					------------------GPIO----------------------------------------------
-					elsif ((i_MC_address(15 downto 14) = GPIO_address) and i_MC_write_enable = '1') 
-					then 
-					o_MC_GPIO_write_enable <= '1';
-					o_MC_GPIO_address <= i_MC_address(3 downto 0);
-					o_MC_GPIO_data <= i_MC_data;
-				
-					elsif ((i_MC_address(15 downto 14) = GPIO_address) and i_MC_write_enable = '0')
-					then 
-					o_MC_GPIO_write_enable <= '0';
-					o_MC_GPIO_address <= i_MC_address(3 downto 0);
-					o_MC_MUX_data <= i_MC_GPIO_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
+					elsif ((i_MC_address(15 downto 14) = GPIO_address) and i_MC_write_enable = '1') 	then 
+						o_MC_GPIO_write_enable <= '1';
+						o_MC_GPIO_address <= i_MC_address(3 downto 0);
+						o_MC_GPIO_data <= i_MC_data;
+					elsif ((i_MC_address(15 downto 14) = GPIO_address) and i_MC_write_enable = '0') 	then 
+						o_MC_GPIO_write_enable <= '0';
+						o_MC_GPIO_address <= i_MC_address(3 downto 0);
+						o_MC_MUX_data <= i_MC_GPIO_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
 					------------------I2C-----------------------------------------------
-					elsif ((i_MC_address(15 downto 14) = I2C_address) and i_MC_write_enable = '1')
-					then 
-					o_MC_I2c_write_enable <= '1';
-					o_MC_I2C_address <= i_MC_address(3 downto 0);
-					o_MC_I2C_data <= i_MC_data;
-					
-					elsif ((i_MC_address(15 downto 14) = I2C_address) and i_MC_write_enable = '0')
-					then
-					o_MC_I2c_write_enable <= '0';
-					o_MC_I2C_address <= i_MC_address(3 downto 0);
-					o_MC_MUX_data <= i_MC_I2C_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
-					
+					elsif	((i_MC_address(15 downto 14) = I2C_address) and i_MC_write_enable = '1') 	then 
+						o_MC_I2c_write_enable <= '1';
+						o_MC_I2C_address <= i_MC_address(3 downto 0);
+						o_MC_I2C_data <= i_MC_data;
+					elsif	((i_MC_address(15 downto 14) = I2C_address) and i_MC_write_enable = '0') 	hen
+						o_MC_I2c_write_enable <= '0';
+						o_MC_I2C_address <= i_MC_address(3 downto 0);
+						o_MC_MUX_data <= i_MC_I2C_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
 					end if;
-				
 			end if;
-			
 	end process;
 
 end Behavioral;
