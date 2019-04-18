@@ -1,0 +1,89 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\memory_controller\simulation\modelsim
+Ememory_control
+Z1 w1555503408
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\memory_controller\simulation\modelsim
+Z8 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd
+Z9 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd
+l0
+L7
+Vz:LMlPCBPQ1ZfCGZDezk81
+Z10 OV;C;10.1d;51
+31
+Z11 !s108 1555503729.565000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd|
+Z13 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd|
+Z14 o-93 -work work -O0
+Z15 tExplicit 1
+!s100 RVO;]O^B6DZLFa2cXI@bh3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+DEx4 work 14 memory_control 0 22 z:LMlPCBPQ1ZfCGZDezk81
+l45
+L37
+VJz?20OBI2C3OzQEII<N_82
+R10
+31
+R11
+R12
+R13
+R14
+R15
+!s100 33ee;W5^z8H1:0I<h1jCY2
+!i10b 1
+Etb_memory_control
+Z16 w1555502897
+R2
+R3
+Z17 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R6
+R5
+R4
+R7
+Z18 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/memory_controller/../../test_benches/tb_MEMORY_CONTROL.vhd
+Z19 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/memory_controller/../../test_benches/tb_MEMORY_CONTROL.vhd
+l0
+L9
+VdhL?Q8^UkTKmAVcGY7fz;2
+!s100 j^6W2^WlNXhX^L?fNC[LN3
+R10
+31
+!i10b 1
+Z20 !s108 1555503729.889000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/memory_controller/../../test_benches/tb_MEMORY_CONTROL.vhd|
+Z22 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/memory_controller/../../test_benches/tb_MEMORY_CONTROL.vhd|
+R14
+R15
+Atb_memory_control_arch
+R2
+R3
+R17
+R6
+R5
+R4
+DEx4 work 17 tb_memory_control 0 22 dhL?Q8^UkTKmAVcGY7fz;2
+l56
+L12
+VoVEc8lCc[AoG]LDdN7e3b0
+!s100 eS`PbBdH^CcGPjIi704jX1
+R10
+31
+!i10b 1
+R20
+R21
+R22
+R14
+R15

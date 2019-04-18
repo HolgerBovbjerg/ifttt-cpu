@@ -16,8 +16,10 @@ entity instruction_decoder is
 				o_DATA_IMM : out STD_LOGIC_VECTOR (7 downto 0); 	-- Immidiate data output
 				o_Address_PROG : out STD_LOGIC_VECTOR (9 downto 0); -- Program memory address output 
 				o_Address_MEM : out STD_LOGIC_VECTOR (15 downto 0); -- Address output for accessing data memory and peripherals
+				o_MEM_write_enable : out  STD_LOGIC;
 				o_BRANCH_CONTROL : out  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 				o_Signed : out  STD_LOGIC; -- Bit for signed or unsigned arithmetic
+				o_carry : out std_logic; -- Carry select (1 for carry and 0 for no carry)
 				o_IMM_enable : out  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
 				o_BUS_select : out  STD_LOGIC_VECTOR (1 downto 0) -- BUS select output
 			);
@@ -41,15 +43,16 @@ begin
 			o_DATA_IMM <= i_INSTRUCTION(12 downto 5);
 			-- Signed bit
 			o_Signed <= i_INSTRUCTION(1);
+			-- Carry enable
+			o_carry <= i_INSTRUCTION(2);
 			-- Program memory address
 			o_Address_prog <= i_INSTRUCTION(12 downto 3);
 			-- Memory space address
-			o_Address_mem <= i_INSTRUCTION(15 downto 0);
+			o_Address_mem <= i_INSTRUCTION(17 downto 2);
 			-- Immidiate enable
 			o_IMM_enable <= i_INSTRUCTION(0);
-			-- Save opcode
 			
-			-- Case for resolving whether write enable for register should be asserted or not
+			-- Case for resolving register write enable
 			case i_INSTRUCTION(31 downto 28) is
 				when OPCODE_WRITE => -- Write
 					o_REGISTER_C_WRITE_ENABLE <= '0';
@@ -73,6 +76,14 @@ begin
 					o_BUS_select <= "10";
 				when others =>
 					o_BUS_select <= "00";
+			end case;
+			
+			-- Case for resolving memory write enable
+			case i_INSTRUCTION(31 downto 28) is
+				when OPCODE_WRITE => -- Write
+					o_MEM_write_enable <= '1';
+				when others =>
+					o_MEM_write_enable <= '0';
 			end case;
 			
 		end if;

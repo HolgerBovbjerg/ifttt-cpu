@@ -13,7 +13,6 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.ALL;
-use IEEE.std_logic_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 library work;
@@ -26,6 +25,7 @@ entity ALU is
 				i_ALU_B : in  std_logic_vector (7 downto 0); -- 8-bit input
 				i_ALU_sel : in  std_logic_vector (3 downto 0); -- 4-bit function select input
 				i_ALU_signed : in std_logic; -- Sign select (1 for signed and 0 for unsigned arithmetic)
+				i_ALU_carry : in std_logic; -- Carry select (1 for carry and 0 for no carry)
 				o_ALU_out : out  std_logic_vector (7 downto 0); -- 8-bit output
 				o_ALU_carry_flag : out  std_logic; -- output carry flag
 				o_ALU_overflow_flag : out  std_logic; -- output overflow flag
@@ -36,13 +36,14 @@ end ALU;
 
 architecture Behavioral of ALU is
 
-signal r_ALU_Result : std_logic_vector (7 downto 0); -- Buffer signal for output
-signal r_ALU_carry_flag : std_logic; -- Buffer signal for carry
-signal r_ALU_overflow_flag : std_logic; -- Buffer signal for carry
-signal r_ALU_negative_flag : std_logic; -- Buffer signal for carry
-signal r_ALU_zero_flag : std_logic; -- Buffer signal for carry
+signal r_ALU_Result : std_logic_vector (7 downto 0) := x"00"; -- Buffer signal for output
+signal r_ALU_carry_flag : std_logic := '0'; -- Buffer signal for carry
+signal r_ALU_carry_arithmetic : std_logic_vector(7 downto 0) := x"00"; -- Signal for carry arithmetic
+signal r_ALU_overflow_flag : std_logic := '0'; -- Buffer signal for carry
+signal r_ALU_negative_flag : std_logic := '0'; -- Buffer signal for carry
+signal r_ALU_zero_flag : std_logic := '0'; -- Buffer signal for carry
 
-signal tmp : std_logic_vector (8 downto 0); -- Buffer for carry flag output
+signal tmp : std_logic_vector (8 downto 0) := "000000000"; -- Buffer for carry flag output
 
 begin
 	process(i_CLK, i_ENABLE)
@@ -51,9 +52,17 @@ begin
 			case(i_ALU_Sel) is
 				when OPCODE_ADD => -- Add
 					if (i_ALU_signed = '1') then
-						r_ALU_Result <= std_logic_vector(signed(i_ALU_A) + signed(i_ALU_B));
+						if (i_ALU_carry ='1') then 
+							r_ALU_Result <= std_logic_vector(signed(i_ALU_A) + signed(i_ALU_B) + signed(r_ALU_carry_arithmetic));
+						else
+							r_ALU_Result <= std_logic_vector(signed(i_ALU_A) + signed(i_ALU_B));
+						end if;
 					else
-						r_ALU_Result <= std_logic_vector(unsigned(i_ALU_A) + unsigned(i_ALU_B));
+						if (i_ALU_carry ='1') then 
+							r_ALU_Result <= std_logic_vector(unsigned(i_ALU_A) + unsigned(i_ALU_B) + unsigned(r_ALU_carry_arithmetic));
+						else
+							r_ALU_Result <= std_logic_vector(unsigned(i_ALU_A) + unsigned(i_ALU_B));
+						end if;
 					end if;
 				when OPCODE_SUB => -- Subtract
 					if (i_ALU_signed = '1') then
@@ -126,7 +135,7 @@ begin
 			-- Carry flag
 			case(i_ALU_sel) is 
 				when OPCODE_ADD =>
-					tmp <= ('0' & i_ALU_A) + ('0' & i_ALU_B); -- Sum of inputs assigned to tmp
+					tmp <= std_logic_vector(unsigned('0' & i_ALU_A) + unsigned('0' & i_ALU_B)); -- Sum of inputs assigned to tmp
 					r_ALU_carry_flag <= tmp(8); -- MSB of tmp assigned to carry flag
 				when OPCODE_BSL =>
 					tmp <= std_logic_vector(unsigned('0' & i_ALU_A) sll to_integer(unsigned('0' & i_ALU_B)));
@@ -204,6 +213,12 @@ begin
 		end if;
 		
 	end process;
+	
+	
+	-- Carry arithmetic signal assignment
+	r_ALU_carry_arithmetic(7 downto 1) <= "0000000";
+	r_ALU_carry_arithmetic(0) <= r_ALU_carry_flag;
+	
 	
 	-- buffers assigned to output
 	o_ALU_out <= r_ALU_Result; 
