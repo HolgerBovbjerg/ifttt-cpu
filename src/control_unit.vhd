@@ -1,16 +1,17 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
+library work;
+use work.constants.all;
 
 entity control_unit is
     Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
 				i_RESET : in  STD_LOGIC; -- Reset input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
-				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0) -- State output used for enabling blocks depending on state 
+				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state 
+				
+				-- Memory
+				i_MEM_ready : in STD_LOGIC -- input to tell if memory is currrently accessable
 			 );
 end control_unit;
 
@@ -34,14 +35,20 @@ begin
 					when "0000100" => -- Register read state
 						r_state <= "0001000"; -- Set state to execute state
 					when "0001000" => -- Execute State
-						if (i_OPCODE(3 downto 0) = "1000" or i_OPCODE(3 downto 0) = "0111") then -- Check if a memory has to be accessed, 
+						if (i_OPCODE(3 downto 0) = OPCODE_WRITE or i_OPCODE(3 downto 0) = OPCODE_READ) then -- Check if a memory has to be accessed, 
 														--Write opcode							--Read opcode
-							r_state <= "0010000"; --  Set state to "memory" state
+							if (i_MEM_ready = '1') then
+								r_state <= "0010000"; --  Set state to "memory" state
+							end if;
 						else -- If memory does not have to be accessed 
 							r_state <= "0100000"; -- Set state to "writeback" state
 						end if;
 					when "0010000" => -- Memory state
-								r_state <= "0100000"; -- Set state to "writeback" state
+						if (i_MEM_ready = '0') then
+							r_state <= r_state; -- Keep state
+						elsif (i_MEM_ready = '1') then
+							r_state <= "0100000";
+						end if;
 					when "0100000" => -- Writeback state
 							r_state <= "0000001"; --Set state to "fetch" state
 					when others =>
