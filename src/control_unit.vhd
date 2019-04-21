@@ -7,6 +7,7 @@ use work.constants.all;
 entity control_unit is
     Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
 				i_RESET : in  STD_LOGIC; -- Reset input
+				i_HALT : in  STD_LOGIC; -- Halt input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
 				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0) -- State output used for enabling blocks depending on state 
 			 );
@@ -21,7 +22,9 @@ begin
 	process(i_CLK)
 	begin
 		if rising_edge(i_CLK) then
-			if i_RESET = '1' then -- Check for reset 
+			if (i_HALT = '1') then
+				r_state <= r_state; 
+			elsif i_RESET = '1' then -- Check for reset 
 				r_state <= "0000001"; -- Reset state
 			else
 				case r_state is -- Check current state
@@ -42,6 +45,8 @@ begin
 							r_state <= "0100000";
 					when "0100000" => -- Writeback state
 							r_state <= "0000001"; --Set state to "fetch" state
+					when "1000000" => -- Stall state
+						-- Implement interrupts in this state maybe?
 					when others =>
 							r_state <= "0000001"; --Set state to "fetch" state
 				end case;

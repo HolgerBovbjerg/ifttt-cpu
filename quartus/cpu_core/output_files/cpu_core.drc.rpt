@@ -1,5 +1,5 @@
 Design Assistant report for cpu_core
-Thu Apr 18 15:49:10 2019
+Sun Apr 21 23:03:31 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Thu Apr 18 15:49:10 2019 ;
+; Design Assistant Status           ; Analyzed - Sun Apr 21 23:03:31 2019 ;
 ; Revision Name                     ; cpu_core                            ;
 ; Top-level Entity Name             ; cpu_core                            ;
 ; Family                            ; Cyclone III                         ;
@@ -45,8 +45,8 @@ applicable agreement for further details.
 ; Total High Violations             ; 16                                  ;
 ; - Rule A108                       ; 16                                  ;
 ; Total Medium Violations           ; 0                                   ;
-; Total Information only Violations ; 57                                  ;
-; - Rule T101                       ; 7                                   ;
+; Total Information only Violations ; 56                                  ;
+; - Rule T101                       ; 6                                   ;
 ; - Rule T102                       ; 50                                  ;
 +-----------------------------------+-------------------------------------+
 
@@ -107,31 +107,31 @@ applicable agreement for further details.
 ; Rule A108: Design should not contain latches - Latch 2  ;                                      ;
 ;  Latch 2                                                ; data_bus:INST_data_bus|o_REGISTER[6] ;
 ; Rule A108: Design should not contain latches - Latch 3  ;                                      ;
-;  Latch 3                                                ; data_bus:INST_data_bus|o_MEMORY[6]   ;
+;  Latch 3                                                ; data_bus:INST_data_bus|o_REGISTER[4] ;
 ; Rule A108: Design should not contain latches - Latch 4  ;                                      ;
-;  Latch 4                                                ; data_bus:INST_data_bus|o_REGISTER[5] ;
+;  Latch 4                                                ; data_bus:INST_data_bus|o_MEMORY[4]   ;
 ; Rule A108: Design should not contain latches - Latch 5  ;                                      ;
-;  Latch 5                                                ; data_bus:INST_data_bus|o_REGISTER[1] ;
+;  Latch 5                                                ; data_bus:INST_data_bus|o_REGISTER[0] ;
 ; Rule A108: Design should not contain latches - Latch 6  ;                                      ;
-;  Latch 6                                                ; data_bus:INST_data_bus|o_REGISTER[2] ;
+;  Latch 6                                                ; data_bus:INST_data_bus|o_MEMORY[0]   ;
 ; Rule A108: Design should not contain latches - Latch 7  ;                                      ;
-;  Latch 7                                                ; data_bus:INST_data_bus|o_REGISTER[3] ;
+;  Latch 7                                                ; data_bus:INST_data_bus|o_REGISTER[1] ;
 ; Rule A108: Design should not contain latches - Latch 8  ;                                      ;
-;  Latch 8                                                ; data_bus:INST_data_bus|o_REGISTER[4] ;
+;  Latch 8                                                ; data_bus:INST_data_bus|o_MEMORY[1]   ;
 ; Rule A108: Design should not contain latches - Latch 9  ;                                      ;
-;  Latch 9                                                ; data_bus:INST_data_bus|o_MEMORY[4]   ;
+;  Latch 9                                                ; data_bus:INST_data_bus|o_REGISTER[2] ;
 ; Rule A108: Design should not contain latches - Latch 10 ;                                      ;
-;  Latch 10                                               ; data_bus:INST_data_bus|o_MEMORY[3]   ;
+;  Latch 10                                               ; data_bus:INST_data_bus|o_MEMORY[2]   ;
 ; Rule A108: Design should not contain latches - Latch 11 ;                                      ;
-;  Latch 11                                               ; data_bus:INST_data_bus|o_MEMORY[2]   ;
+;  Latch 11                                               ; data_bus:INST_data_bus|o_REGISTER[3] ;
 ; Rule A108: Design should not contain latches - Latch 12 ;                                      ;
-;  Latch 12                                               ; data_bus:INST_data_bus|o_MEMORY[1]   ;
+;  Latch 12                                               ; data_bus:INST_data_bus|o_MEMORY[3]   ;
 ; Rule A108: Design should not contain latches - Latch 13 ;                                      ;
-;  Latch 13                                               ; data_bus:INST_data_bus|o_MEMORY[5]   ;
+;  Latch 13                                               ; data_bus:INST_data_bus|o_REGISTER[5] ;
 ; Rule A108: Design should not contain latches - Latch 14 ;                                      ;
-;  Latch 14                                               ; data_bus:INST_data_bus|o_REGISTER[0] ;
+;  Latch 14                                               ; data_bus:INST_data_bus|o_MEMORY[5]   ;
 ; Rule A108: Design should not contain latches - Latch 15 ;                                      ;
-;  Latch 15                                               ; data_bus:INST_data_bus|o_MEMORY[0]   ;
+;  Latch 15                                               ; data_bus:INST_data_bus|o_MEMORY[6]   ;
 ; Rule A108: Design should not contain latches - Latch 16 ;                                      ;
 ;  Latch 16                                               ; data_bus:INST_data_bus|o_REGISTER[7] ;
 +---------------------------------------------------------+--------------------------------------+
@@ -143,62 +143,61 @@ applicable agreement for further details.
 ; Rule name                                                        ; Name                                                                 ; Fan-Out ;
 +------------------------------------------------------------------+----------------------------------------------------------------------+---------+
 ; Rule T101: Nodes with more than the specified number of fan-outs ; control_unit:INST_control_unit|r_state[1]                            ; 52      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; i_CORE_CLK~inputclkctrl                                              ; 251     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]             ; 48      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]             ; 56      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0                 ; 33      ;
 ; Rule T101: Nodes with more than the specified number of fan-outs ; control_unit:INST_control_unit|r_state[4]                            ; 55      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~7                 ; 33      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; i_CORE_CLK~inputclkctrl                                              ; 251     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]             ; 56      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]             ; 62      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; i_CORE_CLK~inputclkctrl                                              ; 261     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_OPCODE[3]             ; 49      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_IMM_enable            ; 33      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; i_CORE_CLK~inputclkctrl                                              ; 261     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]             ; 62      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[4]                            ; 55      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[1]                            ; 52      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]             ; 48      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~7                 ; 33      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0                 ; 33      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[2]~6                 ; 27      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[3]             ; 49      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_IMM_enable            ; 33      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~1                 ; 30      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~0                 ; 29      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[2]~2                 ; 29      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]       ; 25      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_Address_MEM[14]       ; 25      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_IMM_enable            ; 22      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[2]             ; 20      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[3]             ; 20      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux9~0                            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux3~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]             ; 21      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[2]             ; 21      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[6]               ; 18      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[5]               ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux10~0                           ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[7]               ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[4]               ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux11~0                           ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux5~0                            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux7~0                            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[3]               ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux4~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux2~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[12]              ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux8~0                            ; 18      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[11]              ; 18      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux12~0                           ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[2]               ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[12]              ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux13~0                           ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux2~0                            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[1]               ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux6~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[4]               ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[3]               ; 18      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux14~0                           ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux5~0                            ; 18      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[9]               ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux9~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux11~0                           ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux13~0                           ; 18      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[0]               ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[8]               ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux4~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux10~0                           ; 18      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[10]              ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux8~0                            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[6]               ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[7]                            ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[1]               ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[7]               ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux6~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux7~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[7]                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux3~0                            ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[8]               ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[2]               ; 18      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[3]                            ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; r_register_enable~0                                                  ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[5]                            ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[0]                            ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[1]                            ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[2]                            ; 16      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0]~clkctrl ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[1]                            ; 15      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[0]                            ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; r_register_enable~0                                                  ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[6]                            ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[5]                            ; 15      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[3]                            ; 15      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[2]                            ; 15      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[4]                            ; 14      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[6]                            ; 13      ;
 +------------------------------------------------------------------+----------------------------------------------------------------------+---------+
 
 
@@ -208,7 +207,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Thu Apr 18 15:49:10 2019
+    Info: Processing started: Sun Apr 21 23:03:30 2019
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off cpu_core -c cpu_core
 Warning (335093): TimeQuest Timing Analyzer is analyzing 16 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'cpu_core.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -218,65 +217,64 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQue
 Critical Warning (308055): (High) Rule A108: Design should not contain latches. Found 16 latch(es) related to this rule.
     Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[7]"
     Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[6]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[6]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[5]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[1]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[2]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[3]"
     Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[4]"
     Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[4]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[3]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[2]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[1]"
-    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[5]"
     Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[0]"
     Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[0]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[1]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[1]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[2]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[2]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[3]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[3]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[5]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[5]"
+    Critical Warning (308012): Node  "data_bus:INST_data_bus|o_MEMORY[6]"
     Critical Warning (308012): Node  "data_bus:INST_data_bus|o_REGISTER[7]"
-Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 7 node(s) with highest fan-out.
+Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 6 node(s) with highest fan-out.
     Info (308011): Node  "control_unit:INST_control_unit|r_state[1]"
-    Info (308011): Node  "i_CORE_CLK~inputclkctrl"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[1]"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[0]"
-    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0"
     Info (308011): Node  "control_unit:INST_control_unit|r_state[4]"
-    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~7"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[1]"
+    Info (308011): Node  "i_CORE_CLK~inputclkctrl"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[3]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_IMM_enable"
 Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
     Info (308011): Node  "i_CORE_CLK~inputclkctrl"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[0]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[1]"
     Info (308011): Node  "control_unit:INST_control_unit|r_state[4]"
     Info (308011): Node  "control_unit:INST_control_unit|r_state[1]"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[1]"
-    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~7"
-    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0"
-    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[2]~6"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[3]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_IMM_enable"
+    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~1"
+    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~0"
+    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[2]~2"
     Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]"
     Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_Address_MEM[14]"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_IMM_enable"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[0]"
     Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[2]"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[3]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux9~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux3~0"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[6]"
     Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[5]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux10~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[7]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[4]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux11~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux5~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux7~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[3]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux4~0"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux2~0"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[12]"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux8~0"
     Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[11]"
     Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux12~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[2]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[12]"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[4]"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[3]"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux14~0"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux5~0"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[9]"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux9~0"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux11~0"
     Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux13~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux2~0"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[0]"
+    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux4~0"
     Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
-Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 57 information messages and 16 warning messages
+Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 56 information messages and 16 warning messages
 Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 4568 megabytes
-    Info: Processing ended: Thu Apr 18 15:49:10 2019
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Sun Apr 21 23:03:31 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

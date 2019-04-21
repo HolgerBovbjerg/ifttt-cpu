@@ -18,22 +18,21 @@ package constants is
 -- Declare constants
 
 -- Opcodes
-constant OPCODE_NOP:    	std_logic_vector(3 downto 0) :=  "0000";	-- Add
-constant OPCODE_ADD:    	std_logic_vector(3 downto 0) :=  "0001";	-- Add
-constant OPCODE_SUB:    	std_logic_vector(3 downto 0) :=  "0010";	-- Subtract 
-constant OPCODE_OR:    		std_logic_vector(3 downto 0) :=  "0011";	-- Or 
-constant OPCODE_XOR:     	std_logic_vector(3 downto 0) :=  "0100";	-- Xor 
-constant OPCODE_AND:    	std_logic_vector(3 downto 0) :=  "0101";	-- And
-constant OPCODE_NOT:    	std_logic_vector(3 downto 0) :=  "0110";  -- Not
-constant OPCODE_READ:    	std_logic_vector(3 downto 0) :=  "0111";	-- Read 
-constant OPCODE_WRITE:    	std_logic_vector(3 downto 0) :=  "1000";	-- Write 
-constant OPCODE_LOAD:    	std_logic_vector(3 downto 0) :=  "1001";	-- Load 
-constant OPCODE_COMPARE:   std_logic_vector(3 downto 0) :=  "1010";	-- Compare 
-constant OPCODE_BSL:   		std_logic_vector(3 downto 0) :=  "1011";	-- Bitshift Left 
-constant OPCODE_BSR:  		std_logic_vector(3 downto 0) :=  "1100";	-- Bitshift Right 
-constant OPCODE_BRANCH:   	std_logic_vector(3 downto 0) :=  "1101";	-- Branch 
-constant OPCODE_JUMPEQ:    std_logic_vector(3 downto 0) :=  "1110";	-- Jumpeq 
-constant OPCODE_SPECIAL:   std_logic_vector(3 downto 0) :=  "1111";	-- Special 
+constant OPCODE_ADD:    	std_logic_vector(3 downto 0) :=  "0000";	-- Add
+constant OPCODE_SUB:    	std_logic_vector(3 downto 0) :=  "0001";	-- Subtract 
+constant OPCODE_OR:    		std_logic_vector(3 downto 0) :=  "0010";	-- Or 
+constant OPCODE_XOR:     	std_logic_vector(3 downto 0) :=  "0011";	-- Xor 
+constant OPCODE_AND:    	std_logic_vector(3 downto 0) :=  "0100";	-- And
+constant OPCODE_NOT:    	std_logic_vector(3 downto 0) :=  "0101";  -- Not
+constant OPCODE_READ:    	std_logic_vector(3 downto 0) :=  "0110";	-- Read 
+constant OPCODE_WRITE:    	std_logic_vector(3 downto 0) :=  "0111";	-- Write 
+constant OPCODE_LOAD:    	std_logic_vector(3 downto 0) :=  "1000";	-- Load 
+constant OPCODE_COMPARE:   std_logic_vector(3 downto 0) :=  "1001";	-- Compare 
+constant OPCODE_BSL:   		std_logic_vector(3 downto 0) :=  "1010";	-- Bitshift Left 
+constant OPCODE_BSR:  		std_logic_vector(3 downto 0) :=  "1011";	-- Bitshift Right 
+constant OPCODE_BRANCH:   	std_logic_vector(3 downto 0) :=  "1100";	-- Branch 
+constant OPCODE_JUMPEQ:    std_logic_vector(3 downto 0) :=  "1101";	-- Jumpeq 
+constant OPCODE_SPECIAL:   std_logic_vector(3 downto 0) :=  "1110";	-- Special 
 
 -- Declare functions and procedure
 --

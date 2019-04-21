@@ -45,6 +45,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				o_MEM_write_enable : out  STD_LOGIC; 
 				o_BRANCH_CONTROL : out  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 				o_carry : out  STD_LOGIC; -- Bit for carry arithmetic
+				o_SAVE_PC : out STD_LOGIC; -- Output for enabling saving of address currently pointed at by program counter
 				o_Signed : out  STD_LOGIC; -- Bit for signed or unsigned arithmetic
 				o_IMM_enable : out  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
 				o_BUS_select : out  STD_LOGIC_VECTOR (1 downto 0) -- BUS select output
@@ -54,6 +55,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	COMPONENT control_unit 
     Port ( 	i_CLK : in  STD_LOGIC; -- Clock input
 				i_RESET : in  STD_LOGIC; -- Reset input
+				i_HALT : in  STD_LOGIC; -- Halt input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
 				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0) -- State output used for enabling blocks depending on state 
 				);
@@ -148,6 +150,8 @@ ARCHITECTURE behavior OF cpu_core IS
 	COMPONENT branch_control 
 	Port ( 	i_CLK : in  STD_LOGIC;
 				i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
+				i_PC_ADDRESS : in  STD_LOGIC_VECTOR (9 downto 0);
+				i_SAVE_PC : in STD_LOGIC;
 				i_ZERO_FLAG : in  STD_LOGIC;
 				i_OVERFLOW_FLAG : in  STD_LOGIC;
 				i_NEGATIVE_FLAG : in  STD_LOGIC;
@@ -196,6 +200,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_BRANCH_CONTROL :  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 	signal w_signed :  STD_LOGIC; -- Bit for signed or unsigned arithmetic
 	signal w_carry : STD_LOGIC;
+	signal w_SAVE_PC : STD_LOGIC;
 	signal w_IMM_enable :  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
 	signal w_BUS_select :  STD_LOGIC_VECTOR (1 downto 0); -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
 	
@@ -291,6 +296,7 @@ begin
 		o_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
 		o_Signed 						=> w_Signed,
 		o_carry							=> w_carry,
+		o_SAVE_PC 						=> w_SAVE_PC,
 		o_IMM_enable 					=> w_IMM_enable,
 		o_BUS_select					=> w_BUS_select
 	);
@@ -298,6 +304,7 @@ begin
 	INST_control_unit : control_unit PORT MAP ( 	
 		i_CLK 							=> i_CORE_CLK,
 		i_RESET 							=> i_CORE_RESET,
+		i_HALT							=> i_CORE_HALT,
 		i_OPCODE 						=> w_OPCODE,
 		o_STATE 							=> w_STATE
 	);
@@ -372,6 +379,8 @@ begin
 	INST_branch_control : branch_control PORT MAP ( 
 		i_CLK 							=> i_CORE_CLK,
 		i_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
+		i_PC_ADDRESS					=> w_Address_PROG,
+		i_SAVE_PC 						=> w_SAVE_PC,
 		i_ZERO_FLAG 					=> w_ALU_zero_flag,
 		i_OVERFLOW_FLAG 				=> w_ALU_overflow_flag,
 		i_NEGATIVE_FLAG 				=> w_ALU_negative_flag,

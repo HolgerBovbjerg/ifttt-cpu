@@ -20,6 +20,7 @@ entity instruction_decoder is
 				o_BRANCH_CONTROL : out  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 				o_Signed : out  STD_LOGIC; -- Bit for signed or unsigned arithmetic
 				o_carry : out std_logic; -- Carry select (1 for carry and 0 for no carry)
+				o_SAVE_PC : out STD_LOGIC; -- Output for enabling saving of address currently pointed at by program counter
 				o_IMM_enable : out  STD_LOGIC; -- Bit for choosing immidiate value (0 for B register and 1 for immidiate value)
 				o_BUS_select : out  STD_LOGIC_VECTOR (1 downto 0) -- BUS select output
 			);
@@ -41,16 +42,16 @@ begin
 			o_REGISTER_C <= i_INSTRUCTION(27 downto 23);
 			-- Immidiate data 
 			o_DATA_IMM <= i_INSTRUCTION(12 downto 5);
-			-- Signed bit
-			o_Signed <= i_INSTRUCTION(1);
 			-- Carry enable
 			o_carry <= i_INSTRUCTION(2);
+			-- Signed bit
+			o_Signed <= i_INSTRUCTION(1);
+			-- Immidiate enable
+			o_IMM_enable <= i_INSTRUCTION(0);
 			-- Program memory address
 			o_Address_prog <= i_INSTRUCTION(12 downto 3);
 			-- Memory space address
 			o_Address_mem <= i_INSTRUCTION(17 downto 2);
-			-- Immidiate enable
-			o_IMM_enable <= i_INSTRUCTION(0);
 			
 			-- Case for resolving register write enable
 			case i_INSTRUCTION(31 downto 28) is
@@ -59,10 +60,15 @@ begin
 					o_BRANCH_CONTROL <= "000";
 				when OPCODE_BRANCH => -- Branch
 					o_REGISTER_C_WRITE_ENABLE <= '0';
+					o_SAVE_PC <= '1'; -- Save PC
 					o_BRANCH_CONTROL <= i_INSTRUCTION(2 downto 0);
 				when OPCODE_JUMPEQ => -- Jumpeq
 					o_REGISTER_C_WRITE_ENABLE <= '0';
+					o_SAVE_PC <= '1'; -- Save PC
 					o_BRANCH_CONTROL <= "010";
+				when OPCODE_NOP => -- Jumpeq
+					o_REGISTER_C_WRITE_ENABLE <= '0';
+					o_BRANCH_CONTROL <= "000";
 				when others =>
 					o_REGISTER_C_WRITE_ENABLE <= '1';
 					o_BRANCH_CONTROL <= "000";
