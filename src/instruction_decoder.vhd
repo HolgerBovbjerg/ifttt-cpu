@@ -57,21 +57,14 @@ begin
 			case i_INSTRUCTION(31 downto 28) is
 				when OPCODE_WRITE => -- Write
 					o_REGISTER_C_WRITE_ENABLE <= '0';
-					o_BRANCH_CONTROL <= "000";
 				when OPCODE_BRANCH => -- Branch
 					o_REGISTER_C_WRITE_ENABLE <= '0';
-					o_SAVE_PC <= '1'; -- Save PC
-					o_BRANCH_CONTROL <= i_INSTRUCTION(2 downto 0);
 				when OPCODE_JUMPEQ => -- Jumpeq
 					o_REGISTER_C_WRITE_ENABLE <= '0';
-					o_SAVE_PC <= '1'; -- Save PC
-					o_BRANCH_CONTROL <= "010";
 				when OPCODE_NOP => -- Jumpeq
 					o_REGISTER_C_WRITE_ENABLE <= '0';
-					o_BRANCH_CONTROL <= "000";
 				when others =>
 					o_REGISTER_C_WRITE_ENABLE <= '1';
-					o_BRANCH_CONTROL <= "000";
 			end case;
 			
 			-- Case for resolving data bus input and output
@@ -90,6 +83,29 @@ begin
 					o_MEM_write_enable <= '1';
 				when others =>
 					o_MEM_write_enable <= '0';
+			end case;
+			
+			-- Case for resolving branch control
+			case i_INSTRUCTION(31 downto 28) is
+				when OPCODE_WRITE => -- Write
+					o_BRANCH_CONTROL <= "000";
+				when OPCODE_BRANCH => -- Branch
+					o_SAVE_PC <= '1'; -- Save PC
+					o_BRANCH_CONTROL <= i_INSTRUCTION(2 downto 0);
+				when OPCODE_JUMPEQ => -- Jumpeq
+					o_SAVE_PC <= '1'; -- Save PC
+					o_BRANCH_CONTROL <= "010";
+				when OPCODE_SPECIAL => -- Special opcode
+					if i_INSTRUCTION(27 downto 25) = OP_SPEC_RETURN then
+						o_BRANCH_CONTROL <= "110";
+						o_SAVE_PC <= '0'; -- Save PC
+					else 
+						o_BRANCH_CONTROL <= "000";
+						o_SAVE_PC <= '0'; -- Save PC
+					end if;
+				when others =>
+					o_BRANCH_CONTROL <= "000";
+					o_SAVE_PC <= '0'; -- Save PC
 			end case;
 			
 		end if;

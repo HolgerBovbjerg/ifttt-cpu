@@ -35,6 +35,9 @@ constant OPCODE_BRANCH:   	std_logic_vector(3 downto 0) :=  "1101";	-- Branch
 constant OPCODE_JUMPEQ:    std_logic_vector(3 downto 0) :=  "1110";	-- Jumpeq 
 constant OPCODE_SPECIAL:   std_logic_vector(3 downto 0) :=  "1111";	-- Special 
 
+-- Special opcodes
+constant OP_SPEC_RETURN: 	std_logic_vector(2 downto 0) :=  "010";
+
 -- Declare functions and procedure
 --
 -- function <function_name>  (signal <signal_name> : in <type_declaration>) return <type_declaration>;
