@@ -57,6 +57,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_RESET : in  STD_LOGIC; -- Reset input
 				i_HALT : in  STD_LOGIC; -- Halt input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
+				i_MEM_state : in STD_LOGIC_VECTOR (1 downto 0);
 				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0) -- State output used for enabling blocks depending on state 
 				);
 	end COMPONENT;
@@ -127,6 +128,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_MC_write_enable : in std_logic; -- determines if it reads or write
 				-- Memory controller outputs
 				o_MC_MUX_data : out std_logic_vector (7 downto 0);
+				o_MC_MEM_state : out std_logic_vector(1 downto 0);
 				
 				-- Peripheral device I/O
 				------------------RAM (DATA_MEMORY)---------------------------------
@@ -244,6 +246,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_MC_I2c_write_enable : std_logic;
 			
 	signal w_MC_MUX_data : std_logic_vector (7 downto 0);
+	signal w_MC_MEM_state : std_logic_vector(1 downto 0);
 	
 	-- Program counter outputs
 	signal w_PC_PM_address : STD_LOGIC_VECTOR(9 downto 0);
@@ -306,6 +309,7 @@ begin
 		i_RESET 							=> i_CORE_RESET,
 		i_HALT							=> i_CORE_HALT,
 		i_OPCODE 						=> w_OPCODE,
+		i_MEM_state						=> w_MC_MEM_state,
 		o_STATE 							=> w_STATE
 	);
 	
@@ -373,7 +377,9 @@ begin
 		o_MC_I2C_data => w_MC_I2C_data,
 		o_MC_I2c_write_enable => w_MC_I2C_write_enable,
 		------------------MUX-----------------------------------------------
-		o_MC_MUX_data => w_MC_MUX_data
+		o_MC_MUX_data => w_MC_MUX_data,
+		------------------Control unit--------------------------------------
+		o_MC_MEM_state => w_MC_MEM_state
 	);
 
 	INST_branch_control : branch_control PORT MAP ( 

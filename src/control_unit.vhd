@@ -9,6 +9,7 @@ entity control_unit is
 				i_RESET : in  STD_LOGIC; -- Reset input
 				i_HALT : in  STD_LOGIC; -- Halt input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
+				i_MEM_state : in STD_LOGIC_VECTOR (1 downto 0);
 				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0) -- State output used for enabling blocks depending on state 
 			 );
 end control_unit;
@@ -42,13 +43,22 @@ begin
 							r_state <= "0100000"; -- Set state to "writeback" state
 						end if;
 					when "0010000" => -- Memory state
-							r_state <= "0100000";
+						case i_MEM_state is 
+							when "00" =>
+								r_state <= r_state;
+							when "01" =>
+								r_state <= r_state;
+							when "10" => 
+								r_state <= "0100000";
+							when others =>
+								r_state <= "0100000";
+						end case;
 					when "0100000" => -- Writeback state
-							r_state <= "0000001"; --Set state to "fetch" state
+						r_state <= "0000001"; --Set state to "fetch" state
 					when "1000000" => -- Stall state
 						-- Implement interrupts in this state maybe?
 					when others =>
-							r_state <= "0000001"; --Set state to "fetch" state
+						r_state <= "0000001"; --Set state to "fetch" state
 				end case;
 			end if;
 		end if;
