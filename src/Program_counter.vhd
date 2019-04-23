@@ -22,13 +22,15 @@ begin
 
 	process (i_PC_clk, i_PC_enable)
 		begin
-			if(rising_edge(i_PC_clk) and i_PC_enable = '1') then 
+			if(rising_edge(i_PC_clk)) then 
 				if (i_PC_reset = '1') then
 					r_PROG_COUNT <= (others => '0');
-				elsif (i_PC_write_enable = '1') then
-					r_PROG_COUNT <= i_PC_address;
-				else 
-					r_PROG_COUNT <= STD_LOGIC_VECTOR(unsigned(r_PROG_COUNT)+1);
+				elsif (i_PC_enable = '1') then 
+					if (i_PC_write_enable = '1') then
+						r_PROG_COUNT <= i_PC_address;
+					else 
+						r_PROG_COUNT <= STD_LOGIC_VECTOR(unsigned(r_PROG_COUNT)+1);
+					end if;
 				end if;
 			end if;
 	end process;

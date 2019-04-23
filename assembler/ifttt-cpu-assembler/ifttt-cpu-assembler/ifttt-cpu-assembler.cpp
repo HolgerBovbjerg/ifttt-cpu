@@ -2,11 +2,19 @@
 //
 
 #include "pch.h"
-#include <iostream>
+#include "file_handling.h"
+#include "translater.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	read_from_asm();
+	translate_asm_to_mif();
+	init_mif(1024, 32, "UNS", "BIN");
+	write_to_mif();
+	
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

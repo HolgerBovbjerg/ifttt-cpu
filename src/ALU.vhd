@@ -50,6 +50,8 @@ begin
 	begin
 		if(rising_edge(i_CLK) and i_ENABLE ='1') then
 			case(i_ALU_Sel) is
+				when OPCODE_NOP => -- No operation
+					r_ALU_Result <=r_ALU_Result;
 				when OPCODE_ADD => -- Add
 					if (i_ALU_signed = '1') then
 						if (i_ALU_carry ='1') then 

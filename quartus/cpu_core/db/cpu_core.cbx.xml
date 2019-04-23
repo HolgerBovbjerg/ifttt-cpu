@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="cpu_core">
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0" CBX_FILE_NAME="altsyncram_lgn1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0" CBX_FILE_NAME="altsyncram_e1m1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0" CBX_FILE_NAME="altsyncram_sp71.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0" CBX_FILE_NAME="altsyncram_6bn1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1" CBX_FILE_NAME="altsyncram_6bn1.tdf"/>
