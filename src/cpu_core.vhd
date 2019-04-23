@@ -26,7 +26,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	Port (	i_IR_clk 				: in STD_LOGIC;
 				i_IR_enable 			: in STD_LOGIC;
 				i_IR_data				: in STD_LOGIC_VECTOR (31 downto 0);
-				o_IR_instruction			: out STD_LOGIC_VECTOR (31 downto 0)
+				o_IR_instruction		: out STD_LOGIC_VECTOR (31 downto 0)
 				);
 	end COMPONENT;
 
@@ -132,17 +132,17 @@ ARCHITECTURE behavior OF cpu_core IS
 				
 				-- Peripheral device I/O
 				------------------RAM (DATA_MEMORY)---------------------------------
-				o_MC_RAM_address : out std_logic_vector (13 downto 0); -- 16 bit output to RAM 
+				o_MC_RAM_address : out std_logic_vector (13 downto 0); -- Address output to RAM 
 				i_MC_RAM_data : in std_logic_vector (7 downto 0);
 				o_MC_RAM_data : out std_logic_vector (7 downto 0);
 				o_MC_RAM_write_enable : out std_logic;
 				------------------GPIO----------------------------------------------
-				o_MC_GPIO_address : out std_logic_vector (3 downto 0); -- 16 bit output to GPIO
+				o_MC_GPIO_address : out std_logic_vector (3 downto 0); -- Address output to GPIO
 				i_MC_GPIO_data : in std_logic_vector (7 downto 0);
 				o_MC_GPIO_data : out std_logic_vector (7 downto 0);
 				o_MC_GPIO_write_enable : out std_logic;
 				------------------I2C-----------------------------------------------
-				o_MC_I2C_address : out std_logic_vector (3 downto 0); -- 16 bit output to I2C
+				o_MC_I2C_address : out std_logic_vector (3 downto 0); -- Address output to I2C
 				i_MC_I2C_data : in std_logic_vector (7 downto 0);
 				o_MC_I2C_data : out std_logic_vector (7 downto 0);
 				o_MC_I2c_write_enable : out std_logic
@@ -151,6 +151,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	
 	COMPONENT branch_control 
 	Port ( 	i_CLK : in  STD_LOGIC;
+				i_PC_REG_ENABLE : in  STD_LOGIC;
 				i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
 				i_PC_ADDRESS : in  STD_LOGIC_VECTOR (9 downto 0);
 				i_SAVE_PC : in STD_LOGIC;
@@ -286,7 +287,7 @@ begin
 	INST_instruction_decoder : instruction_decoder PORT MAP (
 		i_CLK 							=> i_CORE_CLK,
 		i_ENABLE 						=> r_enable_decode,
-		i_INSTRUCTION 					=> w_IR_instruction, 
+		i_INSTRUCTION 					=> w_FLASH_PM_IR_data, 
 		o_OPCODE 						=> w_OPCODE,
 		o_REGISTER_A 					=> w_REGISTER_A,
 		o_REGISTER_B 					=> w_REGISTER_B,
@@ -385,7 +386,8 @@ begin
 	INST_branch_control : branch_control PORT MAP ( 
 		i_CLK 							=> i_CORE_CLK,
 		i_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
-		i_PC_ADDRESS					=> w_Address_PROG,
+		i_PC_REG_ENABLE 				=> r_enable_register_read,
+		i_PC_ADDRESS					=> w_PC_PM_address,
 		i_SAVE_PC 						=> w_SAVE_PC,
 		i_ZERO_FLAG 					=> w_ALU_zero_flag,
 		i_OVERFLOW_FLAG 				=> w_ALU_overflow_flag,

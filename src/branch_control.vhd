@@ -1,8 +1,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.numeric_std.ALL;
 
 entity branch_control is
     Port ( 	i_CLK : in  STD_LOGIC;
+				i_PC_REG_ENABLE : in  STD_LOGIC;
            	i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
 				i_SAVE_PC : in STD_LOGIC;
 				i_PC_ADDRESS : in  STD_LOGIC_VECTOR (9 downto 0);
@@ -65,8 +67,8 @@ begin
 					o_PC_LOAD <= '0';
 			end case;
 			
-			if (i_SAVE_PC = '1') then
-				r_PC_ADDRESS <= i_PC_ADDRESS;
+			if ((i_SAVE_PC and i_PC_REG_ENABLE) = '1' ) then
+				r_PC_ADDRESS <= std_logic_vector(unsigned(i_PC_ADDRESS) + 1);
 			end if;
 			
 		end if;
