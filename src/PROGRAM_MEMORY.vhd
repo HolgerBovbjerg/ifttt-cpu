@@ -19,12 +19,12 @@ architecture Behavioral of PROGRAM_MEMORY is
 	type RAM_ARRAY is array (0 to 1023) of std_logic_vector (31 downto 0);
 
 	signal RAM: RAM_ARRAY :=(
-	--Opcode & Reg C & Reg A & Reg B & Immidiate & Unused & signed & Imm enable
+	--Opcode & Reg C & Reg A & Reg B & Immidiate & Unused & carry & signed & Imm enable
 	OPCODE_LOAD & "00000" & "00000" & "00000" & "00010101" & "000" & '0' & '1', -- Address 0
 	OPCODE_LOAD & "00001" & "00000" & "00000" & "00001010" & "000" & '0' & '1', -- Address 1
-	OPCODE_ADD & "00010" & "00000" & "00001" & "00000000" & "000" & '0' & '0', -- Address 2
-	OPCODE_ADD & "00011" & "00001" & "00010" & "00000000" & "000" & '0' & '0', -- Address 3
-	OPCODE_ADD & "00100" & "00010" & "00011" & "00000000" & "000" & '0' & '0', -- Address 4
+	OPCODE_ADD & "00010" & "00000" & "00001" & "00000000" & "00" 	& '0' & '0' & '0', -- Address 2
+	OPCODE_ADD & "00011" & "00001" & "00010" & "00000000" & "00" 	& '0'	& '0' & '0', -- Address 3
+	OPCODE_ADD & "00100" & "00010" & "00011" & "00000000" & "00" 	& '0'	& '0' & '0', -- Address 4
 	OPCODE_WRITE & "00000" & "00000" & "0100000000000001" & "00", -- Address 5
 	OPCODE_WRITE & "00000" & "00001" & "0100000000000010" & "00", -- Address 6
 	OPCODE_WRITE & "00000" & "00010" & "0100000000000011" & "00", -- Address 7
