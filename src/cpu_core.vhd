@@ -287,7 +287,7 @@ begin
 	INST_instruction_decoder : instruction_decoder PORT MAP (
 		i_CLK 							=> i_CORE_CLK,
 		i_ENABLE 						=> r_enable_decode,
-		i_INSTRUCTION 					=> w_FLASH_PM_IR_data, 
+		i_INSTRUCTION 					=> w_IR_instruction, 
 		o_OPCODE 						=> w_OPCODE,
 		o_REGISTER_A 					=> w_REGISTER_A,
 		o_REGISTER_B 					=> w_REGISTER_B,

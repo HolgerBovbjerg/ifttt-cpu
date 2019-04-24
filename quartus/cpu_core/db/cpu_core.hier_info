@@ -12,21 +12,21 @@ i_CORE_CLK => DATA_RAM:INST_DATA_RAM.i_RAM_clk
 i_CORE_RESET => control_unit:INST_control_unit.i_RESET
 i_CORE_RESET => Program_counter:INST_Program_counter.i_PC_reset
 i_CORE_HALT => control_unit:INST_control_unit.i_HALT
-o_DATA[0] << ALU:INST_ALU.o_ALU_out[0]
-o_DATA[1] << ALU:INST_ALU.o_ALU_out[1]
-o_DATA[2] << ALU:INST_ALU.o_ALU_out[2]
-o_DATA[3] << ALU:INST_ALU.o_ALU_out[3]
-o_DATA[4] << ALU:INST_ALU.o_ALU_out[4]
-o_DATA[5] << ALU:INST_ALU.o_ALU_out[5]
-o_DATA[6] << ALU:INST_ALU.o_ALU_out[6]
-o_DATA[7] << ALU:INST_ALU.o_ALU_out[7]
-o_STATE[0] << control_unit:INST_control_unit.o_STATE[0]
-o_STATE[1] << control_unit:INST_control_unit.o_STATE[1]
-o_STATE[2] << control_unit:INST_control_unit.o_STATE[2]
-o_STATE[3] << control_unit:INST_control_unit.o_STATE[3]
-o_STATE[4] << control_unit:INST_control_unit.o_STATE[4]
-o_STATE[5] << control_unit:INST_control_unit.o_STATE[5]
-o_STATE[6] << control_unit:INST_control_unit.o_STATE[6]
+o_DATA[0] <= ALU:INST_ALU.o_ALU_out[0]
+o_DATA[1] <= ALU:INST_ALU.o_ALU_out[1]
+o_DATA[2] <= ALU:INST_ALU.o_ALU_out[2]
+o_DATA[3] <= ALU:INST_ALU.o_ALU_out[3]
+o_DATA[4] <= ALU:INST_ALU.o_ALU_out[4]
+o_DATA[5] <= ALU:INST_ALU.o_ALU_out[5]
+o_DATA[6] <= ALU:INST_ALU.o_ALU_out[6]
+o_DATA[7] <= ALU:INST_ALU.o_ALU_out[7]
+o_STATE[0] <= control_unit:INST_control_unit.o_STATE[0]
+o_STATE[1] <= control_unit:INST_control_unit.o_STATE[1]
+o_STATE[2] <= control_unit:INST_control_unit.o_STATE[2]
+o_STATE[3] <= control_unit:INST_control_unit.o_STATE[3]
+o_STATE[4] <= control_unit:INST_control_unit.o_STATE[4]
+o_STATE[5] <= control_unit:INST_control_unit.o_STATE[5]
+o_STATE[6] <= control_unit:INST_control_unit.o_STATE[6]
 
 
 |cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY
@@ -544,14 +544,14 @@ i_HALT => r_state[3].ENA
 i_HALT => r_state[4].ENA
 i_HALT => r_state[5].ENA
 i_HALT => r_state[6].ENA
-i_OPCODE[0] => Equal0.IN2
+i_OPCODE[0] => Equal0.IN1
 i_OPCODE[0] => Equal1.IN3
-i_OPCODE[1] => Equal0.IN1
+i_OPCODE[1] => Equal0.IN0
 i_OPCODE[1] => Equal1.IN2
-i_OPCODE[2] => Equal0.IN0
-i_OPCODE[2] => Equal1.IN1
-i_OPCODE[3] => Equal0.IN3
-i_OPCODE[3] => Equal1.IN0
+i_OPCODE[2] => Equal0.IN3
+i_OPCODE[2] => Equal1.IN0
+i_OPCODE[3] => Equal0.IN2
+i_OPCODE[3] => Equal1.IN1
 i_MEM_state[0] => ~NO_FANOUT~
 i_MEM_state[1] => Mux1.IN126
 i_MEM_state[1] => Mux2.IN126

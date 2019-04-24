@@ -64,7 +64,7 @@ architecture Behavioral of PROGRAM_MEMORY is
 begin
 process(i_FLASH_PM_clk)
 	begin
-		if(rising_edge(i_FLASH_PM_clk)) then
+		if(falling_edge(i_FLASH_PM_clk)) then
 			o_FLASH_PM_IR_data <= RAM(to_integer(unsigned(i_FLASH_PM_address)));
 		end if;
 	end process;
