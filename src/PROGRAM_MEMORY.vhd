@@ -19,7 +19,6 @@ architecture Behavioral of PROGRAM_MEMORY is
 	type RAM_ARRAY is array (0 to 1023) of std_logic_vector (31 downto 0);
 
 	signal RAM: RAM_ARRAY :=(
-	-- Input in HEXADECIMAL
 	--Opcode & Reg C & Reg A & Reg B & Immidiate & Unused & signed & Imm enable
 	OPCODE_LOAD & "00000" & "00000" & "00000" & "00010101" & "000" & '0' & '1', -- Address 0
 	OPCODE_LOAD & "00001" & "00000" & "00000" & "00001010" & "000" & '0' & '1', -- Address 1
@@ -43,8 +42,8 @@ architecture Behavioral of PROGRAM_MEMORY is
 	OPCODE_READ & "00000" & "00000" & "0100000000000001" & "00", -- Address 19
 	OPCODE_READ & "00000" & "00000" & "0100000000000010" & "00",-- Address 20
 	OPCODE_READ & "00000" & "00010" & "0100000000000100" & "00", -- Address 21
-	OPCODE_BRANCH & "00000" & "00000" & "00000" & "0000011111" & "001", -- Address 22 -- branch to address 31
-	OPCODE_BRANCH & "00000" & "00000" & "00000" & "0000000010" & "001", -- Address 23 -- branch to address 2
+	OPCODE_BRANCH & "00000" & "00000" & "00000" & "0000011111" & BRANCH_JUMP, -- Address 22 -- branch to address 31
+	OPCODE_JUMPEQ & "00000" & "00000" & "00000" & "0000000010" & BRANCH_JUMP, -- Address 23 -- branch to address 2
 	OPCODE_NOP & "0000000000000000000000000000",
 	OPCODE_NOP & "0000000000000000000000000000",
 	OPCODE_NOP & "0000000000000000000000000000",
