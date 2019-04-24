@@ -2,6 +2,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
+library work;
+use work.constants.all;
+
 entity branch_control is
     Port ( 	i_CLK : in  STD_LOGIC;
 				i_PC_REG_ENABLE : in  STD_LOGIC;
@@ -29,40 +32,43 @@ begin
 		
 		if(rising_edge(i_CLK)) then
 			case i_BRANCH_CONTROL is
-				when "001" =>
+				when BRANCH_JUMP =>
 					o_ADDRESS <= i_ADDRESS;
 					o_PC_LOAD <= '1';
-				when "010" =>
+				when BRANCH_ZERO =>
 					o_ADDRESS <= i_ADDRESS;
 					if i_ZERO_FLAG = '1' then
 						o_PC_LOAD <= '1';
 					else
 						o_PC_LOAD <= '0';
 					end if;
-				when "011" =>
+				when BRANCH_OVERFLOW =>
 					o_ADDRESS <= i_ADDRESS;
 					if i_OVERFLOW_FLAG = '1' then
 						o_PC_LOAD <= '1';
 					else
 						o_PC_LOAD <= '0';
 					end if;
-				when "100" =>
+				when BRANCH_NEGATIVE =>
 					o_ADDRESS <= i_ADDRESS;
 					if i_NEGATIVE_FLAG = '1' then
 						o_PC_LOAD <= '1';
 					else
 						o_PC_LOAD <= '0';
 					end if;
-				when "101" =>
+				when BRANCH_CARRY =>
 					o_ADDRESS <= i_ADDRESS;
 					if i_CARRY_FLAG = '1' then
 						o_PC_LOAD <= '1';
 					else
 						o_PC_LOAD <= '0';
 					end if;
-				when "110" =>
+				when BRANCH_RETURN =>
 					o_ADDRESS <= r_PC_ADDRESS;
 					o_PC_LOAD <= '1';
+				when BRANCH_SAVE_STATE =>
+					r_PC_ADDRESS <= std_logic_vector(unsigned(i_PC_ADDRESS) + 1);
+					o_PC_LOAD <= '0';
 				when others =>
 					o_PC_LOAD <= '0';
 			end case;
