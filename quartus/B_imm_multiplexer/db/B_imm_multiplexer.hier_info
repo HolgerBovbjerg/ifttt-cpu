@@ -1,0 +1,43 @@
+|B_imm_multiplexer
+i_CLK => o_DATA[0]~reg0.CLK
+i_CLK => o_DATA[1]~reg0.CLK
+i_CLK => o_DATA[2]~reg0.CLK
+i_CLK => o_DATA[3]~reg0.CLK
+i_CLK => o_DATA[4]~reg0.CLK
+i_CLK => o_DATA[5]~reg0.CLK
+i_CLK => o_DATA[6]~reg0.CLK
+i_CLK => o_DATA[7]~reg0.CLK
+i_B_imm_sel => o_DATA.OUTPUTSELECT
+i_B_imm_sel => o_DATA.OUTPUTSELECT
+i_B_imm_sel => o_DATA.OUTPUTSELECT
+i_B_imm_sel => o_DATA.OUTPUTSELECT
+i_B_imm_sel => o_DATA.OUTPUTSELECT
+i_B_imm_sel => o_DATA.OUTPUTSELECT
+i_B_imm_sel => o_DATA.OUTPUTSELECT
+i_B_imm_sel => o_DATA.OUTPUTSELECT
+i_DATA_B[0] => o_DATA.DATAA
+i_DATA_B[1] => o_DATA.DATAA
+i_DATA_B[2] => o_DATA.DATAA
+i_DATA_B[3] => o_DATA.DATAA
+i_DATA_B[4] => o_DATA.DATAA
+i_DATA_B[5] => o_DATA.DATAA
+i_DATA_B[6] => o_DATA.DATAA
+i_DATA_B[7] => o_DATA.DATAA
+i_DATA_Imm[0] => o_DATA.DATAB
+i_DATA_Imm[1] => o_DATA.DATAB
+i_DATA_Imm[2] => o_DATA.DATAB
+i_DATA_Imm[3] => o_DATA.DATAB
+i_DATA_Imm[4] => o_DATA.DATAB
+i_DATA_Imm[5] => o_DATA.DATAB
+i_DATA_Imm[6] => o_DATA.DATAB
+i_DATA_Imm[7] => o_DATA.DATAB
+o_DATA[0] << o_DATA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[1] << o_DATA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[2] << o_DATA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[3] << o_DATA[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[4] << o_DATA[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[5] << o_DATA[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[6] << o_DATA[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_DATA[7] << o_DATA[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

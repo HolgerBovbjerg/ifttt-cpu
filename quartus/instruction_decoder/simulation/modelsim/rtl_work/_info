@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\instruction_decoder\simulation\modelsim
+Einstruction_decoder
+Z1 w1555312529
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\instruction_decoder\simulation\modelsim
+Z5 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
+Z6 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
+l0
+L13
+VEKK;OfX@G00@@HWYomGME1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1555318643.778000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
+Z10 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 e03d_2ODgQ9<6dMNJ11L=2
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 19 instruction_decoder 0 22 EKK;OfX@G00@@HWYomGME1
+l33
+L31
+V7jkmi34I4CPQVk<cm<QI<3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 93hbU2^PafGblg3hVnn=F0
+!i10b 1
+Einstruction_decoder_tb
+Z13 w1555316331
+R3
+R2
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R4
+Z15 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd
+Z16 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd
+l0
+L5
+V[5F5gO8@H>VK_=i7MWZT20
+!s100 V;Zj=55MQ>>DoncSAlA7=2
+R7
+31
+!i10b 1
+Z17 !s108 1555318643.863000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd|
+Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd|
+R11
+R12
+Abehavior
+R3
+R2
+R14
+DEx4 work 22 instruction_decoder_tb 0 22 [5F5gO8@H>VK_=i7MWZT20
+l50
+L8
+VP2dXnEi[^;8Hf0`6H;Ji]2
+!s100 FhS:8ckUnP35kf[L2m4OA0
+R7
+31
+!i10b 1
+R17
+R18
+R19
+R11
+R12

@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\control_unit\simulation\modelsim
+Econtrol_unit
+Z1 w1555318394
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\control_unit\simulation\modelsim
+Z5 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd
+Z6 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd
+l0
+L9
+Vm6Q_DgCzHez>iNP^8^LeF1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1555318684.243000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd|
+Z10 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/control_unit.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 UEghEz=JP11<AHdhj0GMf0
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 12 control_unit 0 22 m6Q_DgCzHez>iNP^8^LeF1
+l21
+L17
+Vf^BONBFbD6[8<oXCONAJD2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 0a6^MJ_]M07U6UUaUodCW3
+!i10b 1
+Econtrol_unit_tb
+Z13 w1555318457
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/control_unit/../../test_benches/control_unit_tb.vhd
+Z16 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/control_unit/../../test_benches/control_unit_tb.vhd
+l0
+L8
+VXN6ll6XHX1zDd6?oY3:oi2
+!s100 7nNWOnBBoj4k[?@^KPKj01
+R7
+31
+!i10b 1
+Z17 !s108 1555318684.328000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/control_unit/../../test_benches/control_unit_tb.vhd|
+Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/control_unit/../../test_benches/control_unit_tb.vhd|
+R11
+R12
+Abehavior
+R14
+R2
+R3
+DEx4 work 15 control_unit_tb 0 22 XN6ll6XHX1zDd6?oY3:oi2
+l36
+L11
+VgXQ93<H;D9JFa@KT?i4?43
+!s100 ;]Lo?OHFJlJGF318Q8e210
+R7
+31
+!i10b 1
+R17
+R18
+R19
+R11
+R12

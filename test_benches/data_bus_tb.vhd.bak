@@ -1,0 +1,58 @@
+LIBRARY ieee  ; 
+LIBRARY std  ; 
+USE ieee.std_logic_1164.all  ; 
+USE ieee.std_logic_textio.all  ; 
+USE ieee.std_logic_unsigned.all  ; 
+USE std.textio.all  ; 
+ENTITY data_bus_tb  IS 
+END data_bus_tb; 
+ 
+ARCHITECTURE behavior OF data_bus_tb IS
+	
+	COMPONENT data_bus  
+	PORT ( 
+		o_B0  : out std_logic_vector (7 downto 0) ; 
+		i_Select  : in std_logic_vector (1 downto 0) ; 
+		o_B1  : out std_logic_vector (7 downto 0) ; 
+		i_A0  : in std_logic_vector (7 downto 0) ; 
+		i_A1  : in std_logic_vector (7 downto 0) 
+		); 
+	END COMPONENT ; 
+	  
+	-- Inputs
+	SIGNAL i_Select   :  std_logic_vector (1 downto 0) := "00";
+	SIGNAL i_A0   :  std_logic_vector (7 downto 0) := "00000000"; 
+	SIGNAL i_A1   :  std_logic_vector (7 downto 0) := "00000000"; 
+	  
+	-- Outputs 
+	SIGNAL o_B0   :  std_logic_vector (7 downto 0);
+	SIGNAL o_B1   :  std_logic_vector (7 downto 0);
+	  
+BEGIN
+
+	uut  : multiplex  
+   PORT MAP ( 
+		o_B0   		=> o_B0,
+      i_Select   	=> i_Select,
+      o_B1   		=> o_B1,
+      i_A0   		=> i_A0,
+      i_A1   		=> i_A1   
+		); 
+
+	-- Stimulus process
+	stimu_process : process
+   begin
+		i_A0  <= "01010101";
+		i_A1  <= "11110000";
+		i_Select  <= "00";
+		wait for 10 ns ;
+		i_Select <= "01";
+		wait for 10 ns ;
+		i_Select <= "10";
+		wait for 10 ns ;
+		i_Select <= "11";
+		wait for 10 ns ;
+		wait;
+   end process;
+	
+end;
