@@ -9,7 +9,20 @@ entity cpu_core is
 				i_CORE_RESET : in  STD_LOGIC;
 				i_CORE_HALT : in  STD_LOGIC;
 				o_DATA : out STD_LOGIC_VECTOR(7 downto 0);
-				o_STATE : out STD_LOGIC_VECTOR(6 downto 0)
+				o_STATE : out STD_LOGIC_VECTOR(6 downto 0);
+				
+				-- Memory interface ---------------
+				-- GPIO
+				i_MC_GPIO_data : in STD_LOGIC_VECTOR(7 downto 0);
+				o_MC_GPIO_address : out std_logic_vector (3 downto 0); 
+				o_MC_GPIO_write_enable : out std_logic;
+				o_MC_GPIO_data : out STD_LOGIC_VECTOR(7 downto 0);
+				
+				-- I2C
+				i_MC_I2C_data : in STD_LOGIC_VECTOR(7 downto 0);
+				o_MC_I2C_address : out std_logic_vector (3 downto 0); 
+				o_MC_I2C_write_enable : out std_logic;
+				o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0)
 			);
 end cpu_core;
 
@@ -21,6 +34,15 @@ ARCHITECTURE behavior OF cpu_core IS
 				o_FLASH_PM_IR_data: out std_logic_vector(31 downto 0) -- Data output of FLASH_PM
 				);
 	end COMPONENT;
+	
+	COMPONENT PROG_MEM
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+		clock		: IN STD_LOGIC  := '1';
+		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+	);
+	END COMPONENT;
 
 	COMPONENT InstrucReg 
 	Port (	i_IR_clk 				: in STD_LOGIC;
@@ -238,11 +260,11 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_MC_RAM_data : std_logic_vector (7 downto 0);
 	signal w_MC_RAM_write_enable : std_logic;
 
-	signal w_MC_GPIO_address : std_logic_vector (3 downto 0); -- 16 bit output to GPIO
+	signal w_MC_GPIO_address : std_logic_vector (3 downto 0); 
 	signal w_MC_GPIO_data : std_logic_vector (7 downto 0);
 	signal w_MC_GPIO_write_enable : std_logic;
 	
-	signal w_MC_I2C_address :std_logic_vector (3 downto 0); -- 16 bit output to I2C
+	signal w_MC_I2C_address :std_logic_vector (3 downto 0); 
 	signal w_MC_I2C_data : std_logic_vector (7 downto 0);
 	signal w_MC_I2c_write_enable : std_logic;
 			
@@ -267,7 +289,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal r_enable_alu  : std_logic := '0';
 	signal r_enable_memory  : std_logic := '0';
 	signal r_enable_register_write  : std_logic := '0';
-	signal r_enable_stall  : std_logic := '0';
+	signal r_enable_PC  : std_logic := '0';
 	
 begin
 
@@ -277,6 +299,16 @@ begin
 		o_FLASH_PM_IR_data 			=> w_FLASH_PM_IR_data 
 	);
 
+------- For use with .mif file --------
+
+--	PROG_MEM_inst : PROG_MEM PORT MAP (
+--		address	 => w_PC_PM_address,
+--		clock	 => i_CORE_CLK,
+--		q	 => w_FLASH_PM_IR_data
+--	);
+
+---------------------------------------
+	
 	INST_InstrucReg : InstrucReg PORT MAP (	
 		i_IR_clk 						=> i_CORE_CLK,
 		i_IR_enable 					=> r_enable_fetch,
@@ -349,38 +381,38 @@ begin
 	);
 	
 	INST_data_bus : data_bus PORT MAP ( 
-		i_SELECT 							=> w_BUS_select,
-		i_ALU  								=> w_ALU_out,
-		i_MEMORY  							=> w_MC_MUX_data,
-		o_MEMORY  							=> w_BUS_memory,
-		o_REGISTER  						=> w_BUS_register
+		i_SELECT 						=> w_BUS_select,
+		i_ALU  							=> w_ALU_out,
+		i_MEMORY  						=> w_MC_MUX_data,
+		o_MEMORY  						=> w_BUS_memory,
+		o_REGISTER  					=> w_BUS_register
    );
 	 
 	INST_MEMORY_CONTROL : MEMORY_CONTROL PORT MAP (
-		i_MC_clk => i_CORE_CLK,
-		i_MC_address => w_address_MEM,
-		i_MC_data => w_BUS_memory,
-		i_MC_enable => r_enable_memory,
-		i_MC_write_enable => r_MEM_write_enable,
+		i_MC_clk 						=> i_CORE_CLK,
+		i_MC_address 					=> w_address_MEM,
+		i_MC_data 						=> w_BUS_memory,
+		i_MC_enable 					=> r_enable_memory,
+		i_MC_write_enable 			=> r_MEM_write_enable,
 		------------------RAM (DATA_MEMORY)---------------------------------
-		o_MC_RAM_address => w_MC_RAM_address,
-		i_MC_RAM_data => w_RAM_MC_data,
-		o_MC_RAM_data => w_MC_RAM_data,
-		o_MC_RAM_write_enable => w_MC_RAM_write_enable,
+		o_MC_RAM_address 				=> w_MC_RAM_address,
+		i_MC_RAM_data 					=> w_RAM_MC_data,
+		o_MC_RAM_data 					=> w_MC_RAM_data,
+		o_MC_RAM_write_enable 		=> w_MC_RAM_write_enable,
 		------------------GPIO----------------------------------------------
-		o_MC_GPIO_address =>  w_MC_GPIO_address,
-		i_MC_GPIO_data => x"00",
-		o_MC_GPIO_data => w_MC_GPIO_data,
-		o_MC_GPIO_write_enable => w_MC_GPIO_write_enable,
+		o_MC_GPIO_address 			=> o_MC_GPIO_address,
+		i_MC_GPIO_data 				=> i_MC_GPIO_data,
+		o_MC_GPIO_data 				=> o_MC_GPIO_data,
+		o_MC_GPIO_write_enable 		=> o_MC_GPIO_write_enable,
 		------------------I2C-----------------------------------------------
-		o_MC_I2C_address => w_MC_I2C_address,
-		i_MC_I2C_data => x"00",
-		o_MC_I2C_data => w_MC_I2C_data,
-		o_MC_I2c_write_enable => w_MC_I2C_write_enable,
+		o_MC_I2C_address 				=> o_MC_I2C_address,
+		i_MC_I2C_data 					=> i_MC_I2C_data,
+		o_MC_I2C_data 					=> o_MC_I2C_data,
+		o_MC_I2c_write_enable 		=> o_MC_I2C_write_enable,
 		------------------MUX-----------------------------------------------
-		o_MC_MUX_data => w_MC_MUX_data,
+		o_MC_MUX_data 					=> w_MC_MUX_data,
 		------------------Control unit--------------------------------------
-		o_MC_MEM_state => w_MC_MEM_state
+		o_MC_MEM_state 				=> w_MC_MEM_state
 	);
 
 	INST_branch_control : branch_control PORT MAP ( 
@@ -400,7 +432,7 @@ begin
 	
 	INST_Program_counter : Program_counter PORT MAP( 
 		i_PC_clk 						=> i_CORE_CLK,
-		i_PC_enable 					=> r_enable_register_write,
+		i_PC_enable 					=> r_enable_PC,
 		i_PC_write_enable 			=> w_PC_LOAD,
 		i_PC_address 					=> w_BRANCH_ADDRESS,
 		i_PC_reset 						=> i_CORE_RESET,
@@ -415,18 +447,18 @@ begin
 		o_RAM_MC_data					=>	w_RAM_MC_data
 	);
 	
-	r_register_enable <= r_enable_register_read or r_enable_register_write;
-	r_register_write_enable <= w_REGISTER_C_WRITE_ENABLE and r_enable_register_write;
+	r_register_enable <= r_enable_register_read or r_enable_register_write; -- Register is enabled if theres a read or write to it
+	r_register_write_enable <= w_REGISTER_C_WRITE_ENABLE and r_enable_register_write; -- Write enable only if both write enable and register write state
 	
-	r_MEM_write_enable <= w_MEM_write_enable and r_enable_memory;
+	r_MEM_write_enable <= w_MEM_write_enable and r_enable_memory; -- Memory write enable only if meory enablke and memory write enable
 	
-	r_enable_fetch <= w_STATE(0);
-	r_enable_decode <= w_STATE(1);
-	r_enable_register_read <= w_STATE(2);
-	r_enable_alu <= w_STATE(3);
-	r_enable_memory <= w_STATE(4);
-	r_enable_register_write <= w_STATE(5);
-	r_enable_stall <= w_STATE(6);
+	r_enable_fetch <= w_STATE(0); -- First state is fetch
+	r_enable_decode <= w_STATE(1); -- Second state is decode
+	r_enable_register_read <= w_STATE(2); -- Third state is register read
+	r_enable_alu <= w_STATE(3); -- Fourth state is ALU operation
+	r_enable_memory <= w_STATE(4); -- Fifth state is memory access
+	r_enable_register_write <= w_STATE(5); -- Sixth state is rigister writeback
+	r_enable_PC <= w_STATE(6); -- Seventh state is stall (Processor does nothing)
 	
 	o_DATA <= w_ALU_out;
 	o_STATE <= w_STATE;

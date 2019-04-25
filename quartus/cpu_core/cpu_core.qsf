@@ -81,4 +81,5 @@ set_global_assignment -name VHDL_FILE ../../test_benches/cpu_core_tb.vhd
 set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name ENABLE_DRC_SETTINGS ON
 set_global_assignment -name SYNCHRONIZATION_REGISTER_CHAIN_LENGTH 3
+set_global_assignment -name QIP_FILE ../PROG_MEM/PROG_MEM.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
