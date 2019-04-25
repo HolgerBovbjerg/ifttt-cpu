@@ -2,13 +2,13 @@
 -- Company: Group 414 Aalborg University
 -- Engineer: Holger Severin Bvbjerg
 -- 
--- Create Date:    18:10:46 03/22/2019 
--- Design Name: ALU
--- Module Name:    ALU - Behavioral 
+-- Create Date:    	18:10:46 03/22/2019 
+-- Design Name: 		ALU
+-- Module Name:    	ALU - Behavioral 
 
 -- Additional Comments: 
 --	ALU with four inputs, and five output.
--- Two inputs are for 8-bit data, one input is a 4-bit value for operation selection and one is for selecting signed/unsigned artihmetic
+-- Two inputs are for 8-bit data, one input is a 4-bit value for operation selection and one is for selecting signed/unsigned artihmetic.
 -- One output is the 8-bit ALU result and four are 1-bit ALU flags for carry, overflow, negative and zero.
 ----------------------------------------------------------------------------------
 library IEEE;
@@ -134,7 +134,10 @@ begin
 					r_ALU_Result <= r_ALU_Result;
 			end case;
 			
-			-- Carry flag
+		end if;
+		
+		if(falling_edge(i_ENABLE)) then
+		-- Carry flag
 			case(i_ALU_sel) is 
 				when OPCODE_ADD =>
 					tmp <= std_logic_vector(unsigned('0' & i_ALU_A) + unsigned('0' & i_ALU_B)); -- Sum of inputs assigned to tmp
