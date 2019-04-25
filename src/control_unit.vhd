@@ -54,9 +54,9 @@ begin
 								r_state <= "0100000";
 						end case;
 					when "0100000" => -- Writeback state
-						r_state <= "0000001"; --Set state to "fetch" state
-					when "1000000" => -- Stall state
-						-- Implement interrupts in this state maybe?
+						r_state <= "1000000"; --Set state to "fetch" state
+					when "1000000" => -- Update PC state
+						r_state <= "0000001"; -- Implement interrupts in this state maybe?
 					when others =>
 						r_state <= "0000001"; --Set state to "fetch" state
 				end case;
