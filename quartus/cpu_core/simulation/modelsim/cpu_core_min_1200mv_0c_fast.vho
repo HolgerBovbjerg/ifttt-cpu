@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.4 Build 182 03/12/2014 SJ Web Edition"
 
--- DATE "04/26/2019 11:23:47"
+-- DATE "04/25/2019 11:03:33"
 
 -- 
 -- Device: Altera EP3C16F256C6 Package FBGA256
@@ -38,16 +38,16 @@ ENTITY 	cpu_core IS
 	i_CORE_CLK : IN std_logic;
 	i_CORE_RESET : IN std_logic;
 	i_CORE_HALT : IN std_logic;
-	o_DATA : BUFFER std_logic_vector(7 DOWNTO 0);
-	o_STATE : BUFFER std_logic_vector(6 DOWNTO 0);
+	o_DATA : OUT std_logic_vector(7 DOWNTO 0);
+	o_STATE : OUT std_logic_vector(6 DOWNTO 0);
 	i_MC_GPIO_data : IN std_logic_vector(7 DOWNTO 0);
-	o_MC_GPIO_address : BUFFER std_logic_vector(3 DOWNTO 0);
-	o_MC_GPIO_write_enable : BUFFER std_logic;
-	o_MC_GPIO_data : BUFFER std_logic_vector(7 DOWNTO 0);
+	o_MC_GPIO_address : OUT std_logic_vector(3 DOWNTO 0);
+	o_MC_GPIO_write_enable : OUT std_logic;
+	o_MC_GPIO_data : OUT std_logic_vector(7 DOWNTO 0);
 	i_MC_I2C_data : IN std_logic_vector(7 DOWNTO 0);
-	o_MC_I2C_address : BUFFER std_logic_vector(3 DOWNTO 0);
-	o_MC_I2C_write_enable : BUFFER std_logic;
-	o_MC_I2C_data : BUFFER std_logic_vector(7 DOWNTO 0)
+	o_MC_I2C_address : OUT std_logic_vector(3 DOWNTO 0);
+	o_MC_I2C_write_enable : OUT std_logic;
+	o_MC_I2C_data : OUT std_logic_vector(7 DOWNTO 0)
 	);
 END cpu_core;
 
