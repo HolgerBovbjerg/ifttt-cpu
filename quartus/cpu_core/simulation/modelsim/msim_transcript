@@ -165,10 +165,10 @@
 # 
 #           File in use by: holge  Hostname: HSB-XPS15  ProcessID: 31312
 # 
-#           Attempting to use alternate WLF file "./wlftdfyx56".
+#           Attempting to use alternate WLF file "./wlftssjqi0".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftdfyx56
+#           Using alternate file: ./wlftssjqi0
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -259,8 +259,6 @@
 #    Time: 100 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 100 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
-add wave -position insertpoint  \
-sim:/cpu_core_tb/uut/INST_Program_counter/r_PROG_COUNT
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 105 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
@@ -553,8 +551,12 @@ run
 run
 run
 run
-add wave -position insertpoint sim:/cpu_core_tb/uut/INST_branch_control/*
+run
+run
+run
 restart
+add wave -position insertpoint  \
+sim:/cpu_core_tb/uut/w_PC_PM_address
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_core_tb/uut/INST_DATA_RAM
@@ -924,6 +926,9 @@ run
 #    Time: 455 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 455 ns  Iteration: 1  Instance: /cpu_core_tb/uut/INST_DATA_RAM
+run
+run
+run
 run
 run
 run
