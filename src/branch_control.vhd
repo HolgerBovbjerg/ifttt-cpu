@@ -9,6 +9,7 @@ entity branch_control is
     Port ( 	i_CLK : in  STD_LOGIC;
 				i_PC_REG_ENABLE : in  STD_LOGIC;
            	i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
+				i_PC_INTERRUPT_set : in STD_LOGIC;
 				i_SAVE_PC : in STD_LOGIC;
 				i_PC_ADDRESS : in  STD_LOGIC_VECTOR (9 downto 0);
 				i_ZERO_FLAG : in  STD_LOGIC;
@@ -31,54 +32,59 @@ begin
 	begin
 		
 		if(rising_edge(i_CLK)) then
-			case i_BRANCH_CONTROL is
-				when BRANCH_JUMP =>
-					o_ADDRESS <= i_ADDRESS;
-					o_PC_LOAD <= '1';
-				when BRANCH_ZERO =>
-					o_ADDRESS <= i_ADDRESS;
-					if i_ZERO_FLAG = '1' then
-						o_PC_LOAD <= '1';
-					else
-						o_PC_LOAD <= '0';
-					end if;
-				when BRANCH_OVERFLOW =>
-					o_ADDRESS <= i_ADDRESS;
-					if i_OVERFLOW_FLAG = '1' then
-						o_PC_LOAD <= '1';
-					else
-						o_PC_LOAD <= '0';
-					end if;
-				when BRANCH_NEGATIVE =>
-					o_ADDRESS <= i_ADDRESS;
-					if i_NEGATIVE_FLAG = '1' then
-						o_PC_LOAD <= '1';
-					else
-						o_PC_LOAD <= '0';
-					end if;
-				when BRANCH_CARRY =>
-					o_ADDRESS <= i_ADDRESS;
-					if i_CARRY_FLAG = '1' then
-						o_PC_LOAD <= '1';
-					else
-						o_PC_LOAD <= '0';
-					end if;
-				when BRANCH_RETURN =>
-					o_ADDRESS <= r_PC_ADDRESS;
-					o_PC_LOAD <= '1';
-				when BRANCH_SAVE_STATE =>
-					r_PC_ADDRESS <= std_logic_vector(unsigned(i_PC_ADDRESS) + 1);
-					o_PC_LOAD <= '0';
-				when others =>
-					o_PC_LOAD <= '0';
-			end case;
-			
-			if ((i_SAVE_PC and i_PC_REG_ENABLE) = '1' ) then
+			if (i_PC_INTERRUPT_set = '1') then 
+				o_ADDRESS <= INTERRUPT_address;
+				o_PC_LOAD <= '1';
 				r_PC_ADDRESS <= std_logic_vector(unsigned(i_PC_ADDRESS) + 1);
+			else 
+				case i_BRANCH_CONTROL is
+					when BRANCH_JUMP =>
+						o_ADDRESS <= i_ADDRESS;
+						o_PC_LOAD <= '1';
+					when BRANCH_ZERO =>
+						o_ADDRESS <= i_ADDRESS;
+						if i_ZERO_FLAG = '1' then
+							o_PC_LOAD <= '1';
+						else
+							o_PC_LOAD <= '0';
+						end if;
+					when BRANCH_OVERFLOW =>
+						o_ADDRESS <= i_ADDRESS;
+						if i_OVERFLOW_FLAG = '1' then
+							o_PC_LOAD <= '1';
+						else
+							o_PC_LOAD <= '0';
+						end if;
+					when BRANCH_NEGATIVE =>
+						o_ADDRESS <= i_ADDRESS;
+						if i_NEGATIVE_FLAG = '1' then
+							o_PC_LOAD <= '1';
+						else
+							o_PC_LOAD <= '0';
+						end if;
+					when BRANCH_CARRY =>
+						o_ADDRESS <= i_ADDRESS;
+						if i_CARRY_FLAG = '1' then
+							o_PC_LOAD <= '1';
+						else
+							o_PC_LOAD <= '0';
+						end if;
+					when BRANCH_RETURN =>
+						o_ADDRESS <= r_PC_ADDRESS;
+						o_PC_LOAD <= '1';
+					when BRANCH_SAVE_STATE =>
+						r_PC_ADDRESS <= std_logic_vector(unsigned(i_PC_ADDRESS) + 1);
+						o_PC_LOAD <= '0';
+					when others =>
+						o_PC_LOAD <= '0';
+				end case;
+				
+				if ((i_SAVE_PC and i_PC_REG_ENABLE) = '1' ) then
+					r_PC_ADDRESS <= std_logic_vector(unsigned(i_PC_ADDRESS) + 1);
+				end if;
+				
 			end if;
-			
 		end if;
-		
 	end process;
 
 end Behavioral;

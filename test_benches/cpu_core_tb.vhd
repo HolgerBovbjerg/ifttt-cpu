@@ -26,7 +26,11 @@ ARCHITECTURE behavior OF cpu_core_tb IS
 					i_MC_I2C_data : in STD_LOGIC_VECTOR(7 downto 0);
 					o_MC_I2C_address : out std_logic_vector (3 downto 0); 
 					o_MC_I2C_write_enable : out std_logic;
-					o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0)
+					o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0);
+					
+					-- Interrupt interface ---------------
+					i_INTERRUPT_request : in STD_LOGIC;
+					o_INTERRUPT_ack : out STD_LOGIC
 				);
 	end COMPONENT;
 	
@@ -49,6 +53,9 @@ ARCHITECTURE behavior OF cpu_core_tb IS
 	signal o_MC_I2C_write_enable : std_logic;
 	signal o_MC_I2C_data : STD_LOGIC_VECTOR(7 downto 0);
 	
+	--Interrupts
+	signal i_INTERRUPT_request : std_logic := '0';
+	signal o_INTERRUPT_ack : std_logic;
 	-- Clock period definitions
    constant c_clk_period : time := 10 ns;
 	
@@ -56,20 +63,23 @@ begin
 	
 	-- Instantiate the Unit Under Test (UUT)
 	uut: cpu_core PORT MAP (
-          i_CORE_CLK => i_CLK,
-          i_CORE_RESET => i_reset,
-			 i_CORE_HALT => '0',
-			 o_DATA  => o_DATA, 
-			 o_STATE => o_STATE,
-			 i_MC_GPIO_data => i_MC_I2C_data,
-			 o_MC_GPIO_address => o_MC_GPIO_address,
-			 o_MC_GPIO_write_enable => o_MC_GPIO_write_enable,
-			 o_MC_GPIO_data => o_MC_GPIO_data,	
-			 i_MC_I2C_data => i_MC_I2C_data,
-			 o_MC_I2C_address => o_MC_I2C_address, 
-			 o_MC_I2C_write_enable => o_MC_I2C_write_enable,
-			 o_MC_I2C_data => o_MC_I2C_data        
-			 );
+			i_CORE_CLK => i_CLK,
+         i_CORE_RESET => i_reset,
+			i_CORE_HALT => '0',
+			o_DATA  => o_DATA, 
+			o_STATE => o_STATE,
+			i_MC_GPIO_data => i_MC_I2C_data,
+			o_MC_GPIO_address => o_MC_GPIO_address,
+			o_MC_GPIO_write_enable => o_MC_GPIO_write_enable,
+			o_MC_GPIO_data => o_MC_GPIO_data,	
+			i_MC_I2C_data => i_MC_I2C_data,
+			o_MC_I2C_address => o_MC_I2C_address, 
+			o_MC_I2C_write_enable => o_MC_I2C_write_enable,
+			o_MC_I2C_data => o_MC_I2C_data,
+			i_INTERRUPT_request => i_INTERRUPT_request,
+			o_INTERRUPT_ack => o_INTERRUPT_ack
+			);
+			
 	-- Clock process definitions
    clk_process :process
    begin
@@ -85,7 +95,12 @@ begin
 		i_RESET <= '1';
 		wait for c_clk_period*10;
 		i_RESET <= '0';
-	   wait;
+		
+		wait for c_clk_period*1000;
+		i_INTERRUPT_request <= '1';
+		wait for c_clk_period*10;
+	   i_INTERRUPT_request <= '0';
+		wait;
    end process;
 	
 end;

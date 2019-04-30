@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity GPIO_register is
+	Port (
+		-- Clock and enable
+		i_GPIO_clk					: in STD_LOGIC;
+		
+		--Address inputs
+		i_GPIO_address 			: in STD_LOGIC_VECTOR (3 downto 0);
+		
+		--Data input
+		i_GPIO_1				: in STD_LOGIC_VECTOR (7 downto 0);
+		i_GPIO_2				: in STD_LOGIC_VECTOR (7 downto 0);
+		i_GPIO_3				: in STD_LOGIC_VECTOR (7 downto 0);
+		i_GPIO_4				: in STD_LOGIC_VECTOR (7 downto 0);
+		
+		-- Data Output
+		o_GPIO_1 				: out STD_LOGIC_VECTOR (7 downto 0);
+		o_GPIO_2 				: out STD_LOGIC_VECTOR (7 downto 0);
+		o_GPIO_3 				: out STD_LOGIC_VECTOR (7 downto 0);
+		o_GPIO_4 				: out STD_LOGIC_VECTOR (7 downto 0);
+		
+		i_GPIO_write_enable	: in STD_LOGIC
+	); 
+end GPIO_register;
+		
+architecture behaviour of IO_registers is
+
+type RAM_ARRAY is array (0 to 3) of std_logic_vector(7 downto 0);
+
+signal r_REGISTER: RAM_ARRAY := (others => x"00");
+begin
+
+process(i_GPR_clk)
+	begin
+		if(rising_edge(i_GPR_clk) then
+			
+			if(i_GPR_write_enable = '1') then
+				r_REGISTER(to_integer(unsigned(i_GPR_write_address))) <= i_GPR_data;
+			end if;
+			
+			o_GPR_ALU_data_A <= r_REGISTER(to_integer(unsigned(i_GPR_address_A)));
+			o_GPR_ALU_data_B <= r_REGISTER(to_integer(unsigned(i_GPR_address_B)));
+			
+		end if;
+	end process;
+end behaviour;

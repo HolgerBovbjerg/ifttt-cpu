@@ -10,27 +10,46 @@ entity control_unit is
 				i_HALT : in  STD_LOGIC; -- Halt input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
 				i_MEM_state : in STD_LOGIC_VECTOR (1 downto 0);
-				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0) -- State output used for enabling blocks depending on state 
+				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state 
+				
+				-- Interrupt interface ---------------
+				i_INTERRUPT_request : in STD_LOGIC;
+				o_INTERRUPT_ack : out STD_LOGIC;
+				o_INTERRUPT_PC_set : out STD_LOGIC
 			 );
 end control_unit;
 
 architecture Behavioral of control_unit is
 
 	signal r_state: STD_LOGIC_VECTOR(6 downto 0) := "0000001"; -- Current state
+	signal r_INTERRUPT_active: STD_LOGIC := '0'; -- Interrupt active
+	signal r_INTERRUPT_ack: STD_LOGIC := '0'; -- Interrupt acknowlegde
+	signal r_INTERRUPT_PC_set: STD_LOGIC := '0';
 	
 begin
 
 	process(i_CLK)
 	begin
 		if rising_edge(i_CLK) then
-			if (i_HALT = '1') then
-				r_state <= r_state; 
-			elsif i_RESET = '1' then -- Check for reset 
+			if i_RESET = '1' then -- Check for reset 
 				r_state <= "0000001"; -- Reset state
+			elsif (i_HALT = '1') then
+				r_state <= r_state; 
 			else
 				case r_state is -- Check current state
 					when "0000001" => -- Fetch state
-								r_state <= "0000010"; -- Set state to "decode" state
+						if ((i_INTERRUPT_request = '1') and (r_INTERRUPT_active = '0')) then
+							r_INTERRUPT_active <= '1';
+							r_INTERRUPT_PC_set <= '1';
+							r_INTERRUPT_ack <= '1';
+							r_state <= "0000010";
+						elsif (r_INTERRUPT_ack = '1') then 
+							r_INTERRUPT_ack <= '0';
+							r_INTERRUPT_PC_set <= '0';
+							r_INTERRUPT_active <= '0';
+						else
+							r_state <= "0000010"; -- Set state to "decode" state
+						end if;
 					when "0000010" => -- Decode state
 						r_state <= "0000100"; -- Set state to "Register read" state
 					when "0000100" => -- Register read state
@@ -56,7 +75,7 @@ begin
 					when "0100000" => -- Writeback state
 						r_state <= "1000000"; --Set state to "fetch" state
 					when "1000000" => -- Update PC state
-						r_state <= "0000001"; -- Implement interrupts in this state maybe?
+						r_state <= "0000001";
 					when others =>
 						r_state <= "0000001"; --Set state to "fetch" state
 				end case;
@@ -65,6 +84,8 @@ begin
 	end process;
 
 	o_STATE <= r_state; -- Set state signal to output state
+	o_INTERRUPT_ack <= r_INTERRUPT_ack;
+	o_INTERRUPT_PC_set <= r_INTERRUPT_PC_set;
 
 
 end Behavioral;

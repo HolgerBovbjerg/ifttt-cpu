@@ -40,6 +40,9 @@ constant BRANCH_CARRY: 		std_logic_vector(2 downto 0) :=  "101";
 constant BRANCH_RETURN: 	std_logic_vector(2 downto 0) :=  "110";
 constant BRANCH_SAVE_STATE:std_logic_vector(2 downto 0) :=  "111";
 
+-- Interrupt constants
+constant INTERRUPT_address:std_logic_vector(9 downto 0) := "1111110000";
+
 
 end constants;
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ifttt_top_level">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ifttt_top_level|cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0" CBX_FILE_NAME="altsyncram_ipm1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ifttt_top_level|cpu_core:INST_cpu_core|PROGRAM_MEMORY:INST_PROGRAM_MEMORY|altsyncram:RAM_rtl_0" CBX_FILE_NAME="altsyncram_0i81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ifttt_top_level|cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0" CBX_FILE_NAME="altsyncram_a3o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ifttt_top_level|cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1" CBX_FILE_NAME="altsyncram_a3o1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

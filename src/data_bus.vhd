@@ -27,8 +27,7 @@ begin
 			when "11" =>
 				o_MEMORY <=	i_MEMORY;
 			when others =>
-				o_MEMORY <= x"00";
-				o_REGISTER <= x"00";
+				o_REGISTER <= i_ALU;
 		end case;
 	end process;
 	
