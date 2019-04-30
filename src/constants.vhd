@@ -32,13 +32,16 @@ constant OPCODE_SPECIAL:   std_logic_vector(3 downto 0) :=  "1111";	-- Special
 constant OP_SPEC_RETURN: 	std_logic_vector(2 downto 0) :=  "010";
 
 -- Branch control 
-constant BRANCH_JUMP: std_logic_vector(2 downto 0) :=  "001";
-constant BRANCH_ZERO: std_logic_vector(2 downto 0) :=  "010";
-constant BRANCH_OVERFLOW: std_logic_vector(2 downto 0) :=  "011";
-constant BRANCH_NEGATIVE: std_logic_vector(2 downto 0) :=  "100";
-constant BRANCH_CARRY: std_logic_vector(2 downto 0) :=  "101";
-constant BRANCH_RETURN: std_logic_vector(2 downto 0) :=  "110";
-constant BRANCH_SAVE_STATE: std_logic_vector(2 downto 0) :=  "111";
+constant BRANCH_JUMP: 		std_logic_vector(2 downto 0) :=  "001";
+constant BRANCH_ZERO: 		std_logic_vector(2 downto 0) :=  "010";
+constant BRANCH_OVERFLOW: 	std_logic_vector(2 downto 0) :=  "011";
+constant BRANCH_NEGATIVE: 	std_logic_vector(2 downto 0) :=  "100";
+constant BRANCH_CARRY: 		std_logic_vector(2 downto 0) :=  "101";
+constant BRANCH_RETURN: 	std_logic_vector(2 downto 0) :=  "110";
+constant BRANCH_SAVE_STATE:std_logic_vector(2 downto 0) :=  "111";
+
+-- Interrupt constants
+constant INTERRUPT_address:std_logic_vector(9 downto 0) := "1111110000";
 
 
 end constants;

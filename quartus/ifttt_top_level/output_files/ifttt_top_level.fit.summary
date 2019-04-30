@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Apr 30 19:17:56 2019
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
+Revision Name : ifttt_top_level
+Top-level Entity Name : ifttt_top_level
+Family : Cyclone III
+Device : EP3C16F484C6
+Timing Models : Final
+Total logic elements : 750 / 15,408 ( 5 % )
+    Total combinational functions : 516 / 15,408 ( 3 % )
+    Dedicated logic registers : 489 / 15,408 ( 3 % )
+Total registers : 489
+Total pins : 84 / 347 ( 24 % )
+Total virtual pins : 0
+Total memory bits : 164,352 / 516,096 ( 32 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

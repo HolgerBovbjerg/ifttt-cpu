@@ -22,7 +22,11 @@ entity cpu_core is
 				i_MC_I2C_data : in STD_LOGIC_VECTOR(7 downto 0);
 				o_MC_I2C_address : out std_logic_vector (3 downto 0); 
 				o_MC_I2C_write_enable : out std_logic;
-				o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0)
+				o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0);
+				
+				-- Interrupt interface ---------------
+				i_INTERRUPT_request : in STD_LOGIC;
+				o_INTERRUPT_ack : out STD_LOGIC
 			);
 end cpu_core;
 
@@ -80,7 +84,10 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_HALT : in  STD_LOGIC; -- Halt input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
 				i_MEM_state : in STD_LOGIC_VECTOR (1 downto 0);
-				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0) -- State output used for enabling blocks depending on state 
+				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state 
+				i_INTERRUPT_request : in STD_LOGIC;
+				o_INTERRUPT_ack : out STD_LOGIC;
+				o_INTERRUPT_PC_set : out STD_LOGIC
 				);
 	end COMPONENT;
 	
@@ -176,6 +183,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_PC_REG_ENABLE : in  STD_LOGIC;
 				i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
 				i_PC_ADDRESS : in  STD_LOGIC_VECTOR (9 downto 0);
+				i_PC_INTERRUPT_set : in STD_LOGIC;
 				i_SAVE_PC : in STD_LOGIC;
 				i_ZERO_FLAG : in  STD_LOGIC;
 				i_OVERFLOW_FLAG : in  STD_LOGIC;
@@ -231,7 +239,8 @@ ARCHITECTURE behavior OF cpu_core IS
 	
 
 	-- Control unit outputs
-	signal w_STATE : STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state 
+	signal w_STATE : STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state
+	signal w_INTERRUPT_PC_set : STD_LOGIC; 
 	
 	-- Branch control outputs
 	signal w_BRANCH_ADDRESS : STD_LOGIC_VECTOR (9 downto 0);
@@ -343,7 +352,10 @@ begin
 		i_HALT							=> i_CORE_HALT,
 		i_OPCODE 						=> w_OPCODE,
 		i_MEM_state						=> w_MC_MEM_state,
-		o_STATE 							=> w_STATE
+		o_STATE 							=> w_STATE,
+		i_INTERRUPT_request 			=> i_INTERRUPT_request,
+		o_INTERRUPT_ack				=> o_INTERRUPT_ack, 
+		o_INTERRUPT_PC_set 			=> w_INTERRUPT_PC_set
 	);
 	
 	INST_GPR : register32x8 PORT MAP (
@@ -421,6 +433,7 @@ begin
 		i_PC_REG_ENABLE 				=> r_enable_register_read,
 		i_PC_ADDRESS					=> w_PC_PM_address,
 		i_SAVE_PC 						=> w_SAVE_PC,
+		i_PC_INTERRUPT_set			=> w_INTERRUPT_PC_set,
 		i_ZERO_FLAG 					=> w_ALU_zero_flag,
 		i_OVERFLOW_FLAG 				=> w_ALU_overflow_flag,
 		i_NEGATIVE_FLAG 				=> w_ALU_negative_flag,

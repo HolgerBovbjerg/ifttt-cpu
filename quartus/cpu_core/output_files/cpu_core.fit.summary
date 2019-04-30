@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Apr 25 11:03:19 2019
+Fitter Status : Successful - Tue Apr 30 19:00:39 2019
 Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
 Revision Name : cpu_core
 Top-level Entity Name : cpu_core
 Family : Cyclone III
 Device : EP3C16F256C6
 Timing Models : Final
-Total logic elements : 513 / 15,408 ( 3 % )
-    Total combinational functions : 426 / 15,408 ( 3 % )
-    Dedicated logic registers : 268 / 15,408 ( 2 % )
-Total registers : 268
-Total pins : 60 / 169 ( 36 % )
+Total logic elements : 534 / 15,408 ( 3 % )
+    Total combinational functions : 440 / 15,408 ( 3 % )
+    Dedicated logic registers : 270 / 15,408 ( 2 % )
+Total registers : 270
+Total pins : 62 / 169 ( 37 % )
 Total virtual pins : 0
 Total memory bits : 164,352 / 516,096 ( 32 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )

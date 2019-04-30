@@ -1,0 +1,114 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\GPIO_register\simulation\modelsim
+Ebidir_bus
+Z1 w1556614459
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\GPIO_register\simulation\modelsim
+Z5 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/bidir_bus.vhd
+Z6 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/bidir_bus.vhd
+l0
+L4
+V8@4k2G`63<AL_P_=W;o]f3
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1556616848.438000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/bidir_bus.vhd|
+Z10 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/bidir_bus.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 zT:5c8l9ALbXAYThW;efK0
+!i10b 1
+Abehaviour
+R2
+R3
+DEx4 work 9 bidir_bus 0 22 8@4k2G`63<AL_P_=W;o]f3
+l18
+L14
+VPALibGfjkI1E8Gi0Vam@P1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 zc87MY1UcmT?6UL^5^;Mm3
+!i10b 1
+Egpio_register
+Z13 w1556614774
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/GPIO_register.vhd
+Z16 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/GPIO_register.vhd
+l0
+L5
+VE>lQ1iVM@C`6S;]Hl]^z@0
+R7
+31
+Z17 !s108 1556616848.525000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/GPIO_register.vhd|
+Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/GPIO_register.vhd|
+R11
+R12
+!s100 B0g[:Z<:dk?QONHJU8hAA3
+!i10b 1
+Abehaviour
+R14
+R2
+R3
+DEx4 work 13 gpio_register 0 22 E>lQ1iVM@C`6S;]Hl]^z@0
+l60
+L35
+VWAJ9biZBM0oG@bnED:AE30
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 L?@5@1b4L:]0Nod]UhDBn3
+!i10b 1
+Egpio_register_tb
+Z20 w1556616832
+R14
+R2
+R3
+R4
+Z21 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/GPIO_register/../../toplevel/testbenches/GPIO_register_tb.vhd
+Z22 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/GPIO_register/../../toplevel/testbenches/GPIO_register_tb.vhd
+l0
+L5
+VAJU6^U05Wo<ja3nB>O[b>0
+!s100 oLYLR2i?<FT2:Blb`]WK?1
+R7
+31
+!i10b 1
+Z23 !s108 1556616848.619000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/GPIO_register/../../toplevel/testbenches/GPIO_register_tb.vhd|
+Z25 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/GPIO_register/../../toplevel/testbenches/GPIO_register_tb.vhd|
+R11
+R12
+Abehaviour
+R14
+R2
+R3
+DEx4 work 16 gpio_register_tb 0 22 AJU6^U05Wo<ja3nB>O[b>0
+l54
+L8
+V4TAR7C5D^aH5]cdkQhKG62
+!s100 zR@NXC]W]B]m1KV_;oXaF1
+R7
+31
+!i10b 1
+R23
+R24
+R25
+R11
+R12

@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity GPIO_register is
+end GPIO_register;
+		
+architecture behaviour of GPIO_register is
+
+COMPONENT Port (
+		-- Clock and enable
+		i_GPIO_clk					: in STD_LOGIC;
+		
+		--Address inputs
+		i_GPIO_address 			: in STD_LOGIC_VECTOR (2 downto 0);
+		
+		
+		
+		--Data input
+		i_GPIO_data				: in STD_LOGIC_VECTOR (7 downto 0);
+		
+		-- Data Output
+		o_GPIO_data 			: out STD_LOGIC_VECTOR (7 downto 0);
+		
+		-- GPIO I/O
+		io_GPIO_PIN0 				: inout STD_LOGIC;
+		io_GPIO_PIN1 				: inout STD_LOGIC;
+		io_GPIO_PIN2 				: inout STD_LOGIC;
+		io_GPIO_PIN3 				: inout STD_LOGIC;
+		io_GPIO_PIN4 				: inout STD_LOGIC;
+		io_GPIO_PIN5 				: inout STD_LOGIC;
+		io_GPIO_PIN6 				: inout STD_LOGIC;
+		io_GPIO_PIN7 				: inout STD_LOGIC;
+		
+		-- Misc.
+		i_GPIO_write_enable	: in STD_LOGIC;
+		i_GPIO_config_enable	: in STD_LOGIC
+	); 
