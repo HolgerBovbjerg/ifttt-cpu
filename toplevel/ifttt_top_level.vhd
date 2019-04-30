@@ -16,7 +16,11 @@ entity ifttt_top_level is
 				o_DATA : out STD_LOGIC_VECTOR(7 downto 0);
 				o_STATE : out STD_LOGIC_VECTOR(6 downto 0);
 				
-						-- GPIO I/O
+				-- Interrupt interface ---------------
+				i_INTERRUPT_request : in STD_LOGIC;
+				o_INTERRUPT_ack : out STD_LOGIC;
+				
+				-- GPIO I/O
 				io_GPIO_PIN0 				: inout STD_LOGIC_VECTOR (7 downto 0);
 				io_GPIO_PIN1 				: inout STD_LOGIC_VECTOR (7 downto 0);
 				io_GPIO_PIN2 				: inout STD_LOGIC_VECTOR (7 downto 0);
@@ -49,7 +53,11 @@ architecture behavioural of ifttt_top_level is
 				i_MC_I2C_data : in STD_LOGIC_VECTOR(7 downto 0);
 				o_MC_I2C_address : out std_logic_vector (3 downto 0); 
 				o_MC_I2C_write_enable : out std_logic;
-				o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0)
+				o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0);
+				
+				-- Interrupt interface ---------------
+				i_INTERRUPT_request : in STD_LOGIC;
+				o_INTERRUPT_ack : out STD_LOGIC
 			);
 	end COMPONENT;
 		COMPONENT GPIO_register 
@@ -108,7 +116,9 @@ begin
 		i_MC_I2C_data => x"00",
 		o_MC_I2C_address => open,
 		o_MC_I2C_write_enable => open,
-		o_MC_I2C_data => open	
+		o_MC_I2C_data => open,
+		i_INTERRUPT_request => i_INTERRUPT_request,
+		o_INTERRUPT_ack => o_INTERRUPT_ack
 	);
 	
 	INST_GPIO_register : GPIO_register PORT MAP (
