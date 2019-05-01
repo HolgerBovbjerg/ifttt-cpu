@@ -14,6 +14,7 @@ entity control_unit is
 				
 				-- Interrupt interface ---------------
 				i_INTERRUPT_request : in STD_LOGIC;
+				i_INTERRUPT_enable : in STD_LOGIC;
 				o_INTERRUPT_ack : out STD_LOGIC;
 				o_INTERRUPT_PC_set : out STD_LOGIC
 			 );
@@ -25,28 +26,42 @@ architecture Behavioral of control_unit is
 	signal r_INTERRUPT_active: STD_LOGIC := '0'; -- Interrupt active
 	signal r_INTERRUPT_ack: STD_LOGIC := '0'; -- Interrupt acknowlegde
 	signal r_INTERRUPT_PC_set: STD_LOGIC := '0';
+	signal r_INTERRUPT_request: STD_LOGIC := '0';
 	
 begin
 
 	process(i_CLK)
 	begin
 		if rising_edge(i_CLK) then
-			if i_RESET = '1' then -- Check for reset 
+			if ((i_INTERRUPT_request = '1') and (i_INTERRUPT_enable = '1')) then 
+				r_INTERRUPT_request <= '1';
+			end if;
+			if (i_RESET = '1') then -- Check for reset 
 				r_state <= "0000001"; -- Reset state
+				r_INTERRUPT_active <= '0'; -- Interrupt active
+				r_INTERRUPT_ack <= '0'; -- Interrupt acknowlegde
+				r_INTERRUPT_PC_set <= '0';
+				r_INTERRUPT_request <= '0';
 			elsif (i_HALT = '1') then
 				r_state <= r_state; 
 			else
 				case r_state is -- Check current state
 					when "0000001" => -- Fetch state
-						if ((i_INTERRUPT_request = '1') and (r_INTERRUPT_active = '0')) then
-							r_INTERRUPT_active <= '1';
-							r_INTERRUPT_PC_set <= '1';
-							r_INTERRUPT_ack <= '1';
-							r_state <= "0000010";
-						elsif (r_INTERRUPT_ack = '1') then 
-							r_INTERRUPT_ack <= '0';
-							r_INTERRUPT_PC_set <= '0';
-							r_INTERRUPT_active <= '0';
+						if (i_INTERRUPT_enable = '1') then
+							if ((r_INTERRUPT_request = '1') and (r_INTERRUPT_active = '0')) then
+								r_INTERRUPT_active <= '1';
+								r_INTERRUPT_ack <= '1';
+								r_INTERRUPT_PC_set <= '1';
+								r_state <= "0100000"; -- PC update state
+							else
+								r_state <= "0000010"; -- Set state to "decode" state
+							end if;
+						elsif (r_INTERRUPT_active = '1') then 
+								r_INTERRUPT_ack <= '0';
+								r_INTERRUPT_request <= '0';
+								r_INTERRUPT_PC_set <= '0';
+								r_INTERRUPT_active <= '0';
+								r_state <= "0000010"; -- Set state to "decode" state
 						else
 							r_state <= "0000010"; -- Set state to "decode" state
 						end if;
@@ -73,16 +88,16 @@ begin
 								r_state <= "0100000";
 						end case;
 					when "0100000" => -- Writeback state
-						r_state <= "1000000"; --Set state to "fetch" state
+						r_state <= "1000000"; --Set state to "Update PC" state
 					when "1000000" => -- Update PC state
-						r_state <= "0000001";
+						r_state <= "0000001"; --Set state to "fetch" state
 					when others =>
 						r_state <= "0000001"; --Set state to "fetch" state
 				end case;
 			end if;
 		end if;
 	end process;
-
+	
 	o_STATE <= r_state; -- Set state signal to output state
 	o_INTERRUPT_ack <= r_INTERRUPT_ack;
 	o_INTERRUPT_PC_set <= r_INTERRUPT_PC_set;
