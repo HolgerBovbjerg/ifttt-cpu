@@ -12,8 +12,7 @@ END ;
 ARCHITECTURE i2c_tx_rx_tb_arch OF i2c_tx_rx_tb IS
   SIGNAL i_I2C_reset   :  STD_LOGIC  ; 
   SIGNAL io_I2C_sda   :  STD_LOGIC  ; 
-  SIGNAL o_I2C_data_rx   :  STD_LOGIC_VECTOR (7 downto 0)  ; 
-  SIGNAL o_test_LED   :  STD_LOGIC  ; 
+  SIGNAL o_I2C_data_rx   :  STD_LOGIC_VECTOR (7 downto 0)  ;  
   SIGNAL i_I2C_data_tx   :  STD_LOGIC_VECTOR (7 downto 0)  ; 
   SIGNAL i_I2C_ready   :  STD_LOGIC  ; 
   SIGNAL i_I2C_rw   :  STD_LOGIC  ; 
@@ -25,7 +24,6 @@ ARCHITECTURE i2c_tx_rx_tb_arch OF i2c_tx_rx_tb IS
       i_I2C_reset  : in STD_LOGIC ; 
       io_I2C_sda  : inout STD_LOGIC ; 
       o_I2C_data_rx  : out STD_LOGIC_VECTOR (7 downto 0) ; 
-      o_test_LED  : out STD_LOGIC ; 
       i_I2C_data_tx  : in STD_LOGIC_VECTOR (7 downto 0) ; 
       i_I2C_ready  : in STD_LOGIC ; 
       i_I2C_rw  : in STD_LOGIC ; 
@@ -39,7 +37,6 @@ BEGIN
       i_I2C_reset   => i_I2C_reset  ,
       io_I2C_sda   => io_I2C_sda  ,
       o_I2C_data_rx   => o_I2C_data_rx  ,
-      o_test_LED   => o_test_LED  ,
       i_I2C_data_tx   => i_I2C_data_tx  ,
       i_I2C_ready   => i_I2C_ready  ,
       i_I2C_rw   => i_I2C_rw  ,
