@@ -29,7 +29,9 @@ constant OPCODE_JUMPEQ:    std_logic_vector(3 downto 0) :=  "1110";	-- Jumpeq
 constant OPCODE_SPECIAL:   std_logic_vector(3 downto 0) :=  "1111";	-- Special 
 
 -- Special opcodes
-constant OP_SPEC_RETURN: 	std_logic_vector(2 downto 0) :=  "010"; 	-- Return
+constant OP_SPEC_RETURN: 	std_logic_vector(2 downto 0) :=  "001"; 	-- Return
+constant OP_SPEC_POP: 		std_logic_vector(2 downto 0) :=  "010"; 	-- POP
+constant OP_SPEC_PUSH: 		std_logic_vector(2 downto 0) :=  "011"; 	-- PUSH
 
 -- Memory controller constants
 constant Ram_address: 		std_logic_vector(1 downto 0) := 	"01";		-- Ram address
@@ -52,6 +54,8 @@ constant BRANCH_SAVE_STATE:std_logic_vector(2 downto 0) :=  "111";	-- Save PC an
 -- Interrupt constants
 constant INTERRUPT_address:std_logic_vector(9 downto 0) := "1111110000";
 
+-- Stack constants 
+constant STACK_BEGIN:std_logic_vector(15 downto 0) := "1111111111111111";
 
 end constants;
 

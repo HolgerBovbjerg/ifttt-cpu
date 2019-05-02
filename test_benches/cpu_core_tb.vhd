@@ -96,7 +96,7 @@ begin
 		wait for c_clk_period*10;
 		i_RESET <= '0';
 		wait for c_clk_period*200;
-		i_INTERRUPT_request <= '1';
+		-- i_INTERRUPT_request <= '1';
 		wait for c_clk_period*20;
 	   i_INTERRUPT_request <= '0';
 		wait;
