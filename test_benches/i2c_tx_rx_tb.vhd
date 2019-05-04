@@ -51,7 +51,7 @@ BEGIN
   Process
 	Begin
 	 io_i2c_sda  <= 'H'  ;
-	wait for 23000 ns ; -- 23000 ns
+	wait for 23300 ns ; -- 23000 ns + 300 ns
 	io_i2c_sda  <= '0'  ;
 	wait for 2550 ns; -- 25550
 	io_i2c_sda  <= 'H'  ;
@@ -59,11 +59,11 @@ BEGIN
 	io_i2c_sda  <= '0'  ;
 	wait for 2550 ns; -- 48050
 	io_i2c_sda  <= 'H'  ;
-	wait for 19450 ns ; -- 67500 ns
+	wait for 19750 ns ; -- 67500 ns + 300 ns
 	io_i2c_sda  <= '0'  ;
 	wait for 2700 ns; -- 70050 ns
 	io_i2c_sda  <= 'H'  ;
-	wait for 27450 ns; -- 97500
+	wait for 26850 ns; -- 97500 - 600 ns
 	io_i2c_sda  <= '0'  ;
 	wait for 2550 ns; -- 100050 ns
 	io_i2c_sda  <= 'H'  ; -- start of first received bit
