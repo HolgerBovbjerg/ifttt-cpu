@@ -39,7 +39,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				);
 	end COMPONENT;
 	
-	COMPONENT PROG_MEM
+	COMPONENT mega_prog_mem
 	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
@@ -313,7 +313,7 @@ begin
 
 ------- For use with .mif file --------
 
---	PROG_MEM_inst : PROG_MEM PORT MAP (
+--	mega_prog_mem_inst : mega_prog_mem PORT MAP (
 --		address	 => w_PC_PM_address,
 --		clock	 => i_CORE_CLK,
 --		q	 => w_FLASH_PM_IR_data

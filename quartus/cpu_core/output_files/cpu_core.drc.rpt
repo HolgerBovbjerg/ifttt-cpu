@@ -1,5 +1,5 @@
 Design Assistant report for cpu_core
-Thu May 02 15:00:00 2019
+Mon May 06 11:43:00 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Thu May 02 15:00:00 2019 ;
+; Design Assistant Status           ; Analyzed - Mon May 06 11:43:00 2019 ;
 ; Revision Name                     ; cpu_core                            ;
 ; Top-level Entity Name             ; cpu_core                            ;
 ; Family                            ; Cyclone III                         ;
@@ -140,18 +140,18 @@ applicable agreement for further details.
 ;  Latch 16                                                                                                    ; data_bus:INST_data_bus|o_REGISTER[7]                           ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 1  ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]       ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 2  ;                                                                ;
 ;  Source node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                       ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
 ;  Destination node(s) from clock "i_CORE_CLK"                                                                 ; branch_control:INST_branch_control|o_PC_LOAD                   ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 3  ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[3]       ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 4  ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
@@ -169,24 +169,24 @@ applicable agreement for further details.
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 9  ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 10 ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]       ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 11 ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[2]       ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 12 ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[5]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 13 ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[7]                                   ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
@@ -222,8 +222,8 @@ applicable agreement for further details.
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 23 ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_B[6]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 24 ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_B[4]                      ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
@@ -373,7 +373,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Thu May 02 15:00:00 2019
+    Info: Processing started: Mon May 06 11:43:00 2019
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off cpu_core -c cpu_core
 Warning (335093): TimeQuest Timing Analyzer is analyzing 16 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'cpu_core.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -475,7 +475,7 @@ Info (308044): (Information) Rule T102: Top nodes with the highest number of fan
 Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 56 information messages and 58 warning messages
 Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 54 warnings
     Info: Peak virtual memory: 4567 megabytes
-    Info: Processing ended: Thu May 02 15:00:00 2019
+    Info: Processing ended: Mon May 06 11:43:00 2019
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
