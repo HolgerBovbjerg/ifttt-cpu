@@ -3,6 +3,9 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
 
+library work;
+use work.constants.all;
+
 
 entity MEMORY_CONTROL is
     Port ( 	-- Memory controller inputs
@@ -35,10 +38,6 @@ entity MEMORY_CONTROL is
 end MEMORY_CONTROL;
 
 architecture Behavioral of MEMORY_CONTROL is
-	
-	constant Ram_address 	: std_logic_vector(1 downto 0) := "01";
-	constant GPIO_address 	: std_logic_vector(1 downto 0) := "10";
-	constant I2C_address 	: std_logic_vector(1 downto 0) := "11";
  
 	signal r_MEM_state		: std_logic_vector(1 downto 0) := "00";
 	signal r_MC_CU_ready		: std_logic := '1';
@@ -49,11 +48,11 @@ begin
 	begin
 		if (rising_edge(i_MC_clk)) then
 			case (r_MEM_state) is 
-				when "00" => --idle
+				when MEM_IDLE => --idle
 					if (i_MC_enable = '1') then 
 						r_MEM_state <= "01";
 					end if;
-				when "01" => -- fetching data
+				when MEM_FETCH => -- fetching data
 					case (i_MC_address(15 downto 14)) is
 						when RAM_address =>
 							if (i_MC_write_enable = '1') then
@@ -90,7 +89,7 @@ begin
 							o_MC_MUX_data <= x"00";
 					end case;
 					r_MEM_state <= "10";
-				when "10" => -- Data ready
+				when MEM_DATA_READY => -- Data ready
 					if (i_MC_enable = '0') then 
 						r_MEM_state <= "00";
 					end if;

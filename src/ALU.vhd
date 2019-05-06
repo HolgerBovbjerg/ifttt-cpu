@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: Group 414 Aalborg University
--- Engineer: Holger Severin Bvbjerg
+-- Engineer: Holger Severin Bovbjerg
 -- 
 -- Create Date:    	18:10:46 03/22/2019 
 -- Design Name: 		ALU
@@ -129,7 +129,7 @@ begin
 				when OPCODE_JUMPEQ => -- Jumpeq
 					r_ALU_Result <= (not i_ALU_A) and i_ALU_B; -- If result is zero the two input are equal
 				when OPCODE_SPECIAL => -- Special opcode
-					r_ALU_Result <= r_ALU_Result;
+					r_ALU_Result <= i_ALU_A;
 				when others => 
 					r_ALU_Result <= r_ALU_Result;
 			end case;

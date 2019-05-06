@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 library work;
 use work.constants.all;
@@ -28,6 +29,8 @@ end instruction_decoder;
 
 architecture Behavioral of instruction_decoder is
 
+	signal r_STACK_POINTER : STD_LOGIC_VECTOR(15 downto 0) := STACK_BEGIN;
+
 begin
 
 	process (i_CLK, i_ENABLE)
@@ -48,10 +51,8 @@ begin
 			o_Signed <= i_INSTRUCTION(1);
 			-- Immidiate enable
 			o_IMM_enable <= i_INSTRUCTION(0);
-			-- Program memory address
+			-- Program address
 			o_Address_prog <= i_INSTRUCTION(12 downto 3);
-			-- Memory space address
-			o_Address_mem <= i_INSTRUCTION(17 downto 2);
 			
 			-- Case for resolving register write enable
 			case i_INSTRUCTION(31 downto 28) is
@@ -61,8 +62,15 @@ begin
 					o_REGISTER_C_WRITE_ENABLE <= '0';
 				when OPCODE_JUMPEQ => -- Jumpeq
 					o_REGISTER_C_WRITE_ENABLE <= '0';
-				when OPCODE_NOP => -- Jumpeq
+				when OPCODE_NOP => -- NOP
 					o_REGISTER_C_WRITE_ENABLE <= '0';
+				when OPCODE_SPECIAL =>
+					case (i_INSTRUCTION(17 downto 15)) is
+						when OP_SPEC_POP => -- POP from stack
+							o_REGISTER_C_WRITE_ENABLE <= '1';
+						when others =>
+							o_REGISTER_C_WRITE_ENABLE <= '0';
+					end case;
 				when others =>
 					o_REGISTER_C_WRITE_ENABLE <= '1';
 			end case;
@@ -81,6 +89,13 @@ begin
 			case i_INSTRUCTION(31 downto 28) is
 				when OPCODE_WRITE => -- Write
 					o_MEM_write_enable <= '1';
+				when OPCODE_SPECIAL => -- Write
+					case i_INSTRUCTION(17 downto 15) is
+						when OP_SPEC_PUSH =>
+							o_MEM_write_enable <= '1';
+						when others =>
+							o_MEM_write_enable <= '0';
+						end case;
 				when others =>
 					o_MEM_write_enable <= '0';
 			end case;
@@ -96,18 +111,35 @@ begin
 					o_SAVE_PC <= '1'; -- Save PC
 					o_BRANCH_CONTROL <= "010";
 				when OPCODE_SPECIAL => -- Special opcode
-					if i_INSTRUCTION(27 downto 25) = OP_SPEC_RETURN then
-						o_BRANCH_CONTROL <= "110";
-						o_SAVE_PC <= '0'; -- Save PC
-					else 
-						o_BRANCH_CONTROL <= "000";
-						o_SAVE_PC <= '0'; -- Save PC
-					end if;
+					case i_INSTRUCTION(17 downto 15) is
+						when OP_SPEC_RETURN =>
+							o_BRANCH_CONTROL <= "110";
+							o_SAVE_PC <= '0'; -- Save PC
+						when others =>
+							o_BRANCH_CONTROL <= "000";
+							o_SAVE_PC <= '0'; -- Save PC
+					end case;
 				when others =>
 					o_BRANCH_CONTROL <= "000";
 					o_SAVE_PC <= '0'; -- Save PC
 			end case;
 			
+			-- Case for resolving memory address
+			case (i_INSTRUCTION(31 downto 28)) is
+				when (OPCODE_SPECIAL) =>
+					case (i_INSTRUCTION(17 downto 15)) is 
+						when OP_SPEC_PUSH => 
+							o_Address_mem <= STD_LOGIC_VECTOR(unsigned(r_STACK_POINTER) - 1);
+							r_STACK_POINTER <= STD_LOGIC_VECTOR(unsigned(r_STACK_POINTER) - 1);
+						when OP_SPEC_POP => 
+							o_Address_mem <= r_STACK_POINTER;
+							r_STACK_POINTER <= STD_LOGIC_VECTOR(unsigned(r_STACK_POINTER) + 1);
+						when others =>
+							o_Address_mem <= i_INSTRUCTION(17 downto 2);
+					end case;
+				when others =>
+					o_Address_mem <= i_INSTRUCTION(17 downto 2);
+			end case;	
 		end if;
 		
 	end process;

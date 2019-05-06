@@ -60,6 +60,9 @@ architecture Behavioral of PROGRAM_MEMORY is
 	others => x"00000000"
 	); 
 
+	attribute ram_init_file : string;
+	attribute ram_init_file of ram : signal is "prog.mif";
+
 begin
 process(i_FLASH_PM_clk)
 	begin

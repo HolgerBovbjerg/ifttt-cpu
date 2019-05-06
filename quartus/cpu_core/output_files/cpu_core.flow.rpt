@@ -1,5 +1,5 @@
 Flow report for cpu_core
-Tue Apr 30 19:00:50 2019
+Mon May 06 11:43:03 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 30 19:00:50 2019      ;
+; Flow Status                        ; Successful - Mon May 06 11:43:03 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; cpu_core                                   ;
 ; Top-level Entity Name              ; cpu_core                                   ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F256C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 534 / 15,408 ( 3 % )                       ;
-;     Total combinational functions  ; 440 / 15,408 ( 3 % )                       ;
-;     Dedicated logic registers      ; 270 / 15,408 ( 2 % )                       ;
-; Total registers                    ; 270                                        ;
+; Total logic elements               ; 614 / 15,408 ( 4 % )                       ;
+;     Total combinational functions  ; 524 / 15,408 ( 3 % )                       ;
+;     Dedicated logic registers      ; 301 / 15,408 ( 2 % )                       ;
+; Total registers                    ; 301                                        ;
 ; Total pins                         ; 62 / 169 ( 37 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 164,352 / 516,096 ( 32 % )                 ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/30/2019 19:00:26 ;
+; Start date & time ; 05/06/2019 11:42:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cpu_core            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +---------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 172309000256012.155664362607700       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 172309000256012.155713575808532       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME              ; NA                                    ; --            ; --          ; cpu_core_tb    ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH  ; cpu_core_tb                           ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT                ; Vhdl                                  ; --            ; --          ; eda_simulation ;
@@ -87,11 +87,15 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_RUN_SIM_FOR            ; 100 ns                                ; --            ; --          ; cpu_core_tb    ;
 ; ENABLE_DRC_SETTINGS                   ; On                                    ; Off           ; --          ; --             ;
 ; IP_TOOL_NAME                          ; ROM: 1-PORT                           ; --            ; --          ; --             ;
+; IP_TOOL_NAME                          ; ROM: 1-PORT                           ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                       ; 13.1                                  ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                       ; 13.1                                  ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                                     ; --            ; --          ; --             ;
-; MISC_FILE                             ; ../PROG_MEM/PROG_MEM_inst.vhd         ; --            ; --          ; --             ;
-; MISC_FILE                             ; ../PROG_MEM/PROG_MEM.cmp              ; --            ; --          ; --             ;
+; MISC_FILE                             ; program_memory_mega_inst.vhd          ; --            ; --          ; --             ;
+; MISC_FILE                             ; program_memory_mega.cmp               ; --            ; --          ; --             ;
+; MISC_FILE                             ; mega_prog_mem_inst.vhd                ; --            ; --          ; --             ;
+; MISC_FILE                             ; mega_prog_mem.cmp                     ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE           ; 1.2V                                  ; --            ; --          ; --             ;
 ; PARTITION_COLOR                       ; 16764057                              ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
@@ -109,13 +113,13 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4704 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 4993 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4602 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4645 MB             ; 00:00:02                           ;
-; Design Assistant          ; 00:00:00     ; 1.0                     ; 4569 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4573 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:15                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4703 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 4992 MB             ; 00:00:09                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4610 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4643 MB             ; 00:00:02                           ;
+; Design Assistant          ; 00:00:00     ; 1.0                     ; 4567 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4563 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:18                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
