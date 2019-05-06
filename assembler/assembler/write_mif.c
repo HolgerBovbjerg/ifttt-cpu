@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include "write_mif.h"
 #include "assembly_to_mif.h"
 
 #define buffersize 100
 char temp[buffersize];
 
-int write_mif(FILE *input) {
+int write_mif(FILE *input)
+{
     printf("Writing .mif file...\n");
     FILE *mif;
     // Open mif file
@@ -33,7 +33,7 @@ int write_mif(FILE *input) {
 
     // Set remaining program memory to all zeroes
     printf("Loading unused memory with zeroes...\n");
-    fprintf(mif, "[%d..%d] : 00000000000000000000000000000000;\n", getLineCounter(), 1023);
+    fprintf(mif, "[%d..%d] : 00000000000000000000000000000000;\n", getLineCounter() + 1, 1023);
     // End mif file
     printf("Writing .mif end statement...\n");
     fprintf(mif, "END;");
