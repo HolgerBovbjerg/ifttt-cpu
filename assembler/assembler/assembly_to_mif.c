@@ -5,9 +5,11 @@
 
 #define buffersize 100
 
+// Buffer for storing input string temporarily
 char temp[buffersize];
-// Array to store binary number
+// Buffer to store binary number
 char binaryNum[16];
+
 // Array for opcodes
 char opcodeArray[21][10];
 char opcodeArrayBinary[21][10];
@@ -17,28 +19,28 @@ char specialOpcodeArrayBinary[3][15];
 // Array for registers
 char registerArray[32][15];
 char registerArrayBinary[32][15];
-
 //Array for branch control codes
 char branchArray[8][15];
 char branchArrayBinary[8][15];
-
-int operandCount;
+// Number of opcodes
 int opcodesTotal = 21;
+
+// variables for keeping track of total amount of lines and current line
 int lineCounter = 0;
 int lineIterator = 0;
 
+// Variable for keeping track of opcode
 int opcode = 0;
+
+// Variable for keeping track of index in outputArray
 int outputIndex = 0;
 
+// Arrays for storing input and output
 char inputArray[1024][100];
 char outputArray[1024][100];
 
-char writeReg;
-
 FILE *assembly_to_mif(FILE *input, FILE *output)
 {
-    // Open mif for appending
-    output = fopen("prog.mif", "a");
     // Initiate constants
     initConstants();
     // Read assembly code into buffer
@@ -53,11 +55,9 @@ FILE *assembly_to_mif(FILE *input, FILE *output)
         assembleFromOpcode(output, opcode);
         // Write machine code to outputfile
         printToOutput(output);
-        lineIterator++;
-        lineIterator++;
+        lineIterator++; // Line iterator is increased twice as a fix for
+        lineIterator++; // blank lines appearing after every line read into inputArray
     }
-    // Close outputfile
-    fclose(output);
     printf("Assembly finished!\n");
     // Return outputfile
     return output;
@@ -71,22 +71,20 @@ int readASM(FILE *input)
     {
         int ch;
         char firstLetter;
-        if ((ch = getc(input)) != EOF)
+        if ((ch = getc(input)) != EOF) // if next character is not End Of File
         {
             printf("Reading line %d of assembly code...\n", lineCounter + 1);
             // Copy line to inputArray buffer
-            firstLetter = ch;
-            sprintf(inputArray[i], "%c", firstLetter);
-            strcat(inputArray[i], fgets(temp, buffersize, input));
-            // Add one to linecounter
+            firstLetter = ch; // Save first character as char (needed because of getc(input) in EOF check)
+            sprintf(inputArray[i], "%c", firstLetter); // Add first letter to inputArray at place i
+            strcat(inputArray[i], fgets(temp, buffersize, input)); // append inputArray with reamaining contents of line
             printf("Assembly code read is: \n");
-            // Print assembly code
-            printf(inputArray[i]);
+            printf(inputArray[i]);// Print assembly code stored in inputArray
             printf("\n");
-            lineCounter++;
+            lineCounter++; // Add one to linecounter
             i++;
         }
-        else
+        else // if next character is EOF
         {
             printf("\nEnd of file reached.\n");
             printf("Buffering finished.\n\n");
@@ -99,53 +97,52 @@ int readASM(FILE *input)
 int findOpcode()
 {
     printf("Finding opcode...\n");
-    int opcodeNo = 0;
-    outputIndex = 0;
-    int j = 0;
-    while(j < opcodesTotal)
+    int opcodeNo = 0; // Reset opcodeNumber
+    outputIndex = 0; // Reset outputIndex
+    int j = 0; // Iteration integer
+    while(j < opcodesTotal) // loop through opcodes
     {
-            if (strstr(inputArray[lineIterator], opcodeArray[j]))
+            if (strstr(inputArray[lineIterator], opcodeArray[j])) // A match is found
             {
-                opcodeNo = j;
+                opcodeNo = j; // Save opcode number
                 printf("Opcode found!\n");
-                strcpy(outputArray[outputIndex], opcodeArrayBinary[opcodeNo]);
+                strcpy(outputArray[outputIndex], opcodeArrayBinary[opcodeNo]); // Copy opcode binary value to outputarray
                 printf("Opcode is: ");
-                printf(opcodeArray[opcodeNo]);
+                printf(opcodeArray[opcodeNo]); // Print name of opcode found
                 printf("\n");
-                outputIndex++;
+                outputIndex++; // Go to next index in outputArray
                 break;
             }
             j++;
 
     }
-    return opcodeNo;
+    return opcodeNo; // Return opcode number for use in assembly
 }
 
 void assembleFromOpcode(FILE *outputFile, int number)
 {
-    char *pch;
-    pch = strtok(inputArray[lineIterator], " ,");
-    printf("%s\n", pch);
+    char *pch; // Create char pointer for reading string tokens
+    pch = strtok(inputArray[lineIterator], " ,"); // Read first string token in inputArray (Opcode)
     printf("Generating binary machine code...\n");
     if (number == 0) // no operation
     {
         printf("Opcode type is: No Operation\n");
-        strcpy(outputArray[outputIndex], "0000000000000000000000000000");
+        strcpy(outputArray[outputIndex], "0000000000000000000000000000"); // Add zeroes to output for NOP
     }
     else if (1 <= number && number <= 9) // register register instruction
     {
         printf("Opcode type is: Register register operation\n");
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get first register name (Register C)
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32 - 1; i++) // Loop through register names
         {
-            if (strstr(pch,registerArray[i]))
+            if (strstr(pch,registerArray[i])) // If a match is found
             {
-                strcpy(outputArray[outputIndex],registerArrayBinary[i]);
+                strcpy(outputArray[outputIndex],registerArrayBinary[i]); // Copy binary value of register to outputArray
             }
         }
-        outputIndex++;
-        pch = strtok(NULL, " ,");
+        outputIndex++; // When all registers have been looked through go to next index in output array
+        pch = strtok(NULL, " ,"); // Get next register name (Register A)
         printf("%s\n", pch);
         for (int i =0; i < 32 - 1; i++)
         {
@@ -154,10 +151,10 @@ void assembleFromOpcode(FILE *outputFile, int number)
                 strcpy(outputArray[outputIndex],registerArrayBinary[i]);
             }
         }
-        outputIndex++;
-        if (number != 8)
+        outputIndex++; // When all registers have been looked through go to next index in output array
+        if (number != 8) // If opcode number is not a "NOT" operation look for third register
         {
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get next register name (Register A)
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
         {
@@ -167,7 +164,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         }
-        else
+        else // If "NOT" operation append output with five zeroes
         {
             strcpy(outputArray[outputIndex], "00000");
         }
@@ -177,67 +174,67 @@ void assembleFromOpcode(FILE *outputFile, int number)
     else if (number == 10) // register load instruction
     {
         printf("Opcode type is: Register load operation\n");
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get register address
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32 - 1; i++) // Loop through register names
         {
-            if (strstr(pch,registerArray[i]))
+            if (strstr(pch,registerArray[i])) // If a match is found
             {
-                strcpy(outputArray[outputIndex],registerArrayBinary[i]);
+                strcpy(outputArray[outputIndex],registerArrayBinary[i]); // Copy binary equivalent to output array
             }
         }
         outputIndex++;
-        strcpy(outputArray[outputIndex], "0000000000");
+        strcpy(outputArray[outputIndex], "0000000000"); // Append output with zeroes
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get immidiate value as a string
         printf("%s\n", pch);
-        char ch = *pch;
-        int imm = ch - '0';
+        char ch = *pch; // Cast immidiate value to char
+        int imm = ch - '0'; // Cast char to integer
         printf("%d\n", imm);
-        decToBinary(imm);
-        strcpy(outputArray[outputIndex], binaryNum);
+        decToBinary(imm); // Convert decimal number to binary string (stored in binaryNum)
+        strcpy(outputArray[outputIndex], binaryNum); //Copy binary number to output array
         outputIndex++;
-        strcpy(outputArray[outputIndex], "00000");
+        strcpy(outputArray[outputIndex], "00000"); // Append output with zeroes
     }
     else if (15 == number || number == 17) // register immediate instruction
     {
         printf("Opcode type is: Register immediate operation\n");
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get first register name
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32 - 1; i++) // Loop through register names
         {
-            if (strstr(pch,registerArray[i]))
+            if (strstr(pch,registerArray[i])) // If match
             {
-                strcpy(outputArray[outputIndex],registerArrayBinary[i]);
+                strcpy(outputArray[outputIndex],registerArrayBinary[i]); // Copy binary equivalent to output array
             }
         }
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get register name
         printf("%s\n", pch);
-        char ch = *pch;
-        int imm = ch - '0';
+        for (int i = 0; i < 32 - 1; i++) // Loop through register names
+        {
+            if (strstr(pch,registerArray[i])) // If match
+            {
+                strcpy(outputArray[outputIndex],registerArrayBinary[i]); // Copy binary equivalent to output array
+            }
+        }
+        outputIndex++;
+        pch = strtok(NULL, " ,"); // Get immediate value
+        printf("%s\n", pch);
+        char ch = *pch; // Cast immidiate value to char
+        int imm = ch - '0'; // Cast char to integer
         printf("%d\n", imm);
-        decToBinary(imm);
-        strcpy(outputArray[outputIndex], binaryNum);
+        decToBinary(imm); // Convert decimal number to binary string (stored in binaryNum)
+        strcpy(outputArray[outputIndex], binaryNum); //Copy binary number to output array
         outputIndex++;
-        pch = strtok(NULL, " ,");
-        printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
-        {
-            if (strstr(pch,registerArray[i]))
-            {
-                strcpy(outputArray[outputIndex],registerArrayBinary[i]);
-            }
-        }
+        strcpy(outputArray[outputIndex], "000000000"); // append output with zeroes
         outputIndex++;
-        strcpy(outputArray[outputIndex], "00000");
-        outputIndex++;
-        strcpy(outputArray[outputIndex], "00001");
+        strcpy(outputArray[outputIndex], "1"); // Append output with one for IMM enable
     }
     else if (number == 16) // register carry instruction
     {
         printf("Opcode type is: Register carry operation\n");
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get first register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
         {
@@ -247,7 +244,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get next register
         printf("%s\n", pch);
         for (int i =0; i < 32 - 1; i++)
         {
@@ -257,7 +254,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get third register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
         {
@@ -267,14 +264,14 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         outputIndex++;
-        strcpy(outputArray[outputIndex], "0000000000100");
+        strcpy(outputArray[outputIndex], "0000000000100");  // Append with zeroes (The '1' is for CARRY enable)
     }
     else if (11 <= number && number <= 12) // memory write/read
     {
         printf("Opcode type is: Memory operation\n");
-        if(number == 11)
+        if(number == 11) // If memory write
         {
-            pch = strtok(NULL, " ,");
+            pch = strtok(NULL, " ,"); // Get register name
             printf("%s\n", pch);
             for (int i = 0; i < 32 - 1; i++)
             {
@@ -287,7 +284,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
             strcpy(outputArray[outputIndex], "00000");
             outputIndex++;
         }
-        else
+        else // If memory read
         {
             strcpy(outputArray[outputIndex], "00000");
             outputIndex++;
@@ -302,37 +299,38 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
             outputIndex++;
         }
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get hex address
         printf("%s\n", pch);
-        hexToBinary(pch);
-        strcpy(outputArray[outputIndex], binaryNum);
+        hexToBinary(pch); //Convert hex string to binary string (stored in binaryNum)
+        strcpy(outputArray[outputIndex], binaryNum); // store binaryNUm in outputArray
         outputIndex++;
         strcpy(outputArray[outputIndex], "00");
     }
     else if (13 == number) // Branch instruction
     {
         printf("Opcode type is: Branch operation\n");
-        strcpy(outputArray[outputIndex], "000000000");
+        strcpy(outputArray[outputIndex], "000000000"); /* Append output with 9 zeroes as string returned from hexToBinary
+                                                        is 16 bits but program address is 10 bits*/
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get hex string
         printf("%s\n", pch);
-        hexToBinary(pch);
+        hexToBinary(pch); // Convert hex string to binary
         strcpy(outputArray[outputIndex], binaryNum);
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get branch command
         printf("%s\n", pch);
-        for (int i = 0; i < 5 - 1; i++)
+        for (int i = 0; i < 5 - 1; i++) // Loop through branch control commands
         {
-            if (strstr(pch, branchArray[i]))
+            if (strstr(pch, branchArray[i])) // If match
             {
-                strcpy(outputArray[outputIndex], branchArrayBinary[i]);
+                strcpy(outputArray[outputIndex], branchArrayBinary[i]); // Copy binary equivaent to output
             }
         }
     }
     else if (14 == number) // Jumpeq instruction
     {
         printf("Opcode type is: Jumpeq operation\n");
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get first register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
         {
@@ -342,7 +340,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get second register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
         {
@@ -352,9 +350,9 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get hex value string
         printf("%s\n", pch);
-        hexToBinary(pch);
+        hexToBinary(pch); // Conevert hex string to binary
         strcpy(outputArray[outputIndex], binaryNum);
         outputIndex++;
         strcpy(outputArray[outputIndex], "00");
@@ -362,16 +360,16 @@ void assembleFromOpcode(FILE *outputFile, int number)
     else if (number == 18) // Return instruction
     {
         printf("Opcode type is: Special opcode\n");
-        strcpy(outputArray[outputIndex], "0000000000");
+        strcpy(outputArray[outputIndex], "0000000000"); // Append output with zeroes
         outputIndex++;
-        strcpy(outputArray[outputIndex], specialOpcodeArrayBinary[0]);
+        strcpy(outputArray[outputIndex], specialOpcodeArrayBinary[0]); // Write return special opcode to output
         outputIndex++;
-        strcpy(outputArray[outputIndex], "000000000000000");
+        strcpy(outputArray[outputIndex], "000000000000000"); // Append output with zeroes
     }
     else if (number == 19) // Push instruction
     {
         printf("Opcode type is: Special opcode\n");
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
         {
@@ -383,7 +381,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         strcpy(outputArray[outputIndex], "00000");
         outputIndex++;
-        strcpy(outputArray[outputIndex], specialOpcodeArrayBinary[1]);
+        strcpy(outputArray[outputIndex], specialOpcodeArrayBinary[1]); // write PUSH special opcode to output
         outputIndex++;
         strcpy(outputArray[outputIndex], "000000000000000");
     }
@@ -392,7 +390,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         printf("Opcode type is: Special opcode\n");
         strcpy(outputArray[outputIndex], "00000");
         outputIndex++;
-        pch = strtok(NULL, " ,");
+        pch = strtok(NULL, " ,"); // Get register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
         {
@@ -402,7 +400,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         outputIndex++;
-        strcpy(outputArray[outputIndex], specialOpcodeArrayBinary[2]);
+        strcpy(outputArray[outputIndex], specialOpcodeArrayBinary[2]); // write PUSH special opcode to output
         outputIndex++;
         strcpy(outputArray[outputIndex], "000000000000000");
     }
@@ -417,23 +415,26 @@ void assembleFromOpcode(FILE *outputFile, int number)
 void printToOutput(FILE *outputFile)
 {
     printf("Printing line of machine code to outputfile...\n");
-    if (((lineIterator / 2) + 1) < 10)
+    // Write line number
+    if (((lineIterator / 2)) < 10) // Check for formatting
     {
-        fprintf(outputFile, "%d   : ", (lineIterator / 2) + 1);
+        fprintf(outputFile, "%d   : ", (lineIterator / 2));
     }
-    else if (((lineIterator / 2) + 1) < 100)
+    else if (((lineIterator / 2)) < 100) // Check for formatting
     {
-        fprintf(outputFile, "%d  : ", (lineIterator / 2) + 1);
+        fprintf(outputFile, "%d  : ", (lineIterator / 2));
     }
-    else
+    else // Check for formatting
     {
-        fprintf(outputFile, "%d : ", (lineIterator / 2) + 1);
+        fprintf(outputFile, "%d : ", (lineIterator / 2));
     }
-    for (int i = 0; i <= outputIndex; i++)
+    // Write line of machine code
+    for (int i = 0; i <= outputIndex; i++) // Loop through output array
     {
-        fprintf(outputFile, outputArray[i]);
+        fprintf(outputFile, outputArray[i]); // For every element print value to outputfile
     }
-    fprintf(outputFile, ";\n");
+    // New line
+    fprintf(outputFile, ";\n"); // Print nextline to outputfile
     printf("Outputfile updated.\n");
 }
 
@@ -445,39 +446,38 @@ int getLineCounter()
 
 int decToBinary(int decimalNumber)
 {
-    binaryNum[8] = '\0';
-    int  c, k;
+    binaryNum[8] = '\0'; // Set 8 character in binaryNum to string termination as data is only 8 bits
+    int  c, k; // Iteration variables
     printf("%d in binary number system is:\n", decimalNumber);
 
-    for (c = 7; c >= 0; c--)
+    for (c = 7; c >= 0; c--) // Loop eight times one for every bit in number
     {
-        k = decimalNumber >> c;
+        k = decimalNumber >> c; // k = decimal number rightshifted c times
 
-        if (k & 1)
+        if (k & 1) // if k is '1'
         {
             printf("1");
-            binaryNum[7-c] = '1';
+            binaryNum[7-c] = '1'; // Bit at place 7-c is 1
         }
-        else
+        else // k is '0'
         {
             printf("0");
-            binaryNum[7-c] = '0';
+            binaryNum[7-c] = '0'; // Bit at place 7-c is 0
         }
     }
-
     printf("\n");
     return 0;
 }
 
 int hexToBinary(char hexdec[])
 {
-    long int i = 0;
-    char binaryNumBuff[16];
-    binaryNumBuff[0] = '\0';
-    binaryNum[0] = '\0';
-    int notHex = 0;
-    while (hexdec[i]) {
-        switch (hexdec[i]) {
+    long int i = 0; // Iteration variable
+    char binaryNumBuff[16]; // Buffer array
+    binaryNumBuff[0] = '\0'; // Reset buffer
+    binaryNum[0] = '\0'; // Reset binary number variable
+    int notHex = 0; // Reset notHex
+    while (hexdec[i]) { // Loop through hex number
+        switch (hexdec[i]) { // Translating to binary
         case '0':
             strcat(binaryNumBuff, "0000");
             printf("0000");
@@ -550,26 +550,27 @@ int hexToBinary(char hexdec[])
             break;
         default:
             printf("\nInvalid hexadecimal digit %c", hexdec[i]);
-            notHex = 1;
+            notHex = 1; // non hex character read
         }
         i++;
     }
     printf("\n");
-    if (notHex)
+    if (notHex) // Fix for situation were an empty character is read
     {
         i--;
     }
-    for (int j = i; j < 4; j++)
+    for (int j = i; j < 4; j++) // Append binary number with zeroes so that number is 16 bit
     {
         strcat(binaryNum, "0000");
     }
-    strcat(binaryNum, binaryNumBuff);
+    strcat(binaryNum, binaryNumBuff); // append binary number with buffer
     return 0;
 }
 
 int initConstants()
 {
     printf("Initialising assembly constants...\n");
+    //Copy constants to arrays
     strcpy(opcodeArray[0], "NOP");     // NOP opcode
     strcpy(opcodeArray[1], "ADDR");    // Add opcode
     strcpy(opcodeArray[2], "SUBR");    // Subtraction opcode

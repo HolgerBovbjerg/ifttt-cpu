@@ -7,33 +7,39 @@ char temp[buffersize];
 
 int write_mif(FILE *input)
 {
-    printf("Writing .mif file...\n");
+    // Create FILE pointer for output
     FILE *mif;
-    // Open mif file
-    mif = fopen("prog.mif", "w");
+    // Request name of outputfile
+    printf("Write name of outputfile:\n");
+    char str[100];
+    mif = fopen(gets(str), "w");
+    // Check for file
     if (!mif)
     {
         printf("File cannot be written to \n");
         return 0;
     }
-    // Write config data
+    printf("Writing to %s...\n", str);
+    // Write config data to outputfile
     printf("Writing memory config...\n");
-    fprintf(mif, "DEPTH = %d;\n", 1024);
-    fprintf(mif, "WIDTH = %d;\n", 32);
+    // Request config data to outputfile
+    printf("Write memory depth:\n");
+    char depth[100];
+    gets(depth);
+    fprintf(mif, "DEPTH = %s;\n", depth);
+    printf("Write memory width:\n");
+    char width[100];
+    gets(width);
+    fprintf(mif, "WIDTH = %s;\n", width);
     fprintf(mif, "ADDRESS_RADIX = UNS;\n");
-    fprintf(mif, "DATA_RADIX = BIN;\n");
+    fprintf(mif, "DATA_RADIX = BIN;\n\n");
     fprintf(mif, "CONTENT\n");
-    fprintf(mif, "BEGIN\n\n");
-    // close mif file
-    fclose(mif);
-    // Append mif with binary code generated from assembly code
+    fprintf(mif, "BEGIN\n");
+    // Append mif with binary code generated from assembly code input
     mif = assembly_to_mif(input, mif);
-    // Open mif for appending
-    fopen("prog.mif", "a");
-
     // Set remaining program memory to all zeroes
     printf("Loading unused memory with zeroes...\n");
-    fprintf(mif, "[%d..%d] : 00000000000000000000000000000000;\n", getLineCounter() + 1, 1023);
+    fprintf(mif, "[%d..%d] : 00000000000000000000000000000000;\n", getLineCounter(), 1023);
     // End mif file
     printf("Writing .mif end statement...\n");
     fprintf(mif, "END;");

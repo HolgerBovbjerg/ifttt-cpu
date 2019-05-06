@@ -1,5 +1,5 @@
 Design Assistant report for cpu_core
-Mon May 06 12:28:19 2019
+Mon May 06 15:38:00 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Mon May 06 12:28:19 2019 ;
+; Design Assistant Status           ; Analyzed - Mon May 06 15:38:00 2019 ;
 ; Revision Name                     ; cpu_core                            ;
 ; Top-level Entity Name             ; cpu_core                            ;
 ; Family                            ; Cyclone III                         ;
@@ -358,7 +358,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Mon May 06 12:28:19 2019
+    Info: Processing started: Mon May 06 15:38:00 2019
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off cpu_core -c cpu_core
 Warning (335093): TimeQuest Timing Analyzer is analyzing 16 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'cpu_core.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -459,7 +459,7 @@ Info (308044): (Information) Rule T102: Top nodes with the highest number of fan
 Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 57 information messages and 57 warning messages
 Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 52 warnings
     Info: Peak virtual memory: 4583 megabytes
-    Info: Processing ended: Mon May 06 12:28:19 2019
+    Info: Processing ended: Mon May 06 15:38:00 2019
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 

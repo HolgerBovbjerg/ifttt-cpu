@@ -19,10 +19,10 @@ Program works in the following way:
 */
 
 int main() {
-    FILE *inputFile;
-    inputFile=NULL;
-    inputFile = read_assembly(inputFile);
-    write_mif(inputFile);
+    FILE *inputFile; // Create FILE pointer for inputfile
+    inputFile=NULL; // Set FILE pointer to NULL
+    inputFile = read_assembly(inputFile); //Get file pointer to read file
+    write_mif(inputFile); //Pass filepointer to write_mif function
     return 0;
 }
 
