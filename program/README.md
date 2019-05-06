@@ -55,7 +55,7 @@ Storing r1 XOR r2 in r3
 The AND instruction ANDs two registers and stores the result in a third. It needs three register names.
 Example:
 Storing r1 AND r2 in r3
-* OR r3, r1, r2
+* AND r3, r1, r2
 12. NOT 
 The or instruction NOTs a register and stores the result in another. It needs two register names.
 Example:
