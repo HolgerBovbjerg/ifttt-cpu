@@ -22,8 +22,8 @@ int write_mif(FILE *input)
     fprintf(mif, "WIDTH = %d;\n", 32);
     fprintf(mif, "ADDRESS_RADIX = UNS;\n");
     fprintf(mif, "DATA_RADIX = BIN;\n");
-    fprintf(mif, "CONTENT;\n");
-    fprintf(mif, "BEGIN;\n\n");
+    fprintf(mif, "CONTENT\n");
+    fprintf(mif, "BEGIN\n\n");
     // close mif file
     fclose(mif);
     // Append mif with binary code generated from assembly code

@@ -305,19 +305,21 @@ ARCHITECTURE behavior OF cpu_core IS
 	
 begin
 
-	INST_PROGRAM_MEMORY : PROGRAM_MEMORY PORT MAP (
-		i_FLASH_PM_address 			=> w_PC_PM_address,
-		i_FLASH_PM_clk 				=> i_CORE_CLK,
-		o_FLASH_PM_IR_data 			=> w_FLASH_PM_IR_data 
-	);
+------- For use with own program memory --------
+
+--	INST_PROGRAM_MEMORY : PROGRAM_MEMORY PORT MAP (
+--		i_FLASH_PM_address 			=> w_PC_PM_address,
+--		i_FLASH_PM_clk 				=> i_CORE_CLK,
+--		o_FLASH_PM_IR_data 			=> w_FLASH_PM_IR_data 
+--	);
 
 ------- For use with .mif file --------
 
---	mega_prog_mem_inst : mega_prog_mem PORT MAP (
---		address	 => w_PC_PM_address,
---		clock	 => i_CORE_CLK,
---		q	 => w_FLASH_PM_IR_data
---	);
+	mega_prog_mem_inst : mega_prog_mem PORT MAP (
+		address	 => w_PC_PM_address,
+		clock	 => i_CORE_CLK,
+		q	 => w_FLASH_PM_IR_data
+	);
 
 ---------------------------------------
 	
