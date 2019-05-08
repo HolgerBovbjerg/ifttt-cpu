@@ -2,7 +2,8 @@
 This assembler is made for use with the iftt-cpu
 
 ## Guideline
-The assembler needs an input file with assembly code. One line can only contain one instruction to be performed.
+The assembler needs an input file with assembly code. One line can only contain one instruction to be performed. Possible register names are r1, r2, r3, ... , r32. Memory addresses are given in hex values equivalent to up to 16 bit. Program memory addresses are given in hex values equivalent of up to 10 bit. Immediate data is given in integer values between 0 and 255. 
+OBS: The current assembler does not support signed number operation. 
 The available instructions are currently as following 
 1. NOP 
 The NOP instruction does not need operands as nothing is done
@@ -90,7 +91,7 @@ Jump to address f if r1 and r2 are equal
 The RETURN instruction is used to return to the last saved program address. No operands are needed.
 Example:
 Return to last saved program address
-* Return
+* RETURN
 19. PUSH
 The PUSH instruction is used to push data from a register to a memory stack. A register name is needed.
 Example:
