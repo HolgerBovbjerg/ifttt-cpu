@@ -51,6 +51,7 @@ architecture behavioural of ifttt_top_level is
 				
 				-- I2C
 				i_MC_I2C_data : in STD_LOGIC_VECTOR(7 downto 0);
+				i_MC_I2C_busy : in STD_LOGIC;
 				o_MC_I2C_address : out std_logic_vector (3 downto 0); 
 				o_MC_I2C_write_enable : out std_logic;
 				o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0);
@@ -60,7 +61,8 @@ architecture behavioural of ifttt_top_level is
 				o_INTERRUPT_ack : out STD_LOGIC
 			);
 	end COMPONENT;
-		COMPONENT GPIO_register 
+	
+	COMPONENT GPIO_register 
 	Port (
 		-- Clock and enable
 		i_GPIO_clk					: in STD_LOGIC;
@@ -114,6 +116,7 @@ begin
 		o_MC_GPIO_write_enable => w_MC_GPIO_write_enable,
 		o_MC_GPIO_data => w_MC_GPIO_data,
 		i_MC_I2C_data => x"00",
+		i_MC_I2C_busy => '0',
 		o_MC_I2C_address => open,
 		o_MC_I2C_write_enable => open,
 		o_MC_I2C_data => open,
