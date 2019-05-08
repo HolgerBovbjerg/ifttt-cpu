@@ -1,5 +1,5 @@
 NOP
-LOAD r1, 3
+LOAD r1, 100
 LOAD r2, 4
 ADDR r3, r1, r2 
 ADDI r4, r3, 5

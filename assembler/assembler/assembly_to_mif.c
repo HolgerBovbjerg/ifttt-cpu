@@ -188,8 +188,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get immidiate value as a string
         printf("%s\n", pch);
-        char ch = *pch; // Cast immidiate value to char
-        int imm = ch - '0'; // Cast char to integer
+        int imm = atoi(pch); // Cast char to integer
         printf("%d\n", imm);
         decToBinary(imm); // Convert decimal number to binary string (stored in binaryNum)
         strcpy(outputArray[outputIndex], binaryNum); //Copy binary number to output array
@@ -221,8 +220,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get immediate value
         printf("%s\n", pch);
-        char ch = *pch; // Cast immidiate value to char
-        int imm = ch - '0'; // Cast char to integer
+        int imm = atoi(pch); // Cast char to integer
         printf("%d\n", imm);
         decToBinary(imm); // Convert decimal number to binary string (stored in binaryNum)
         strcpy(outputArray[outputIndex], binaryNum); //Copy binary number to output array
@@ -448,7 +446,7 @@ int decToBinary(int decimalNumber)
 {
     binaryNum[8] = '\0'; // Set 8 character in binaryNum to string termination as data is only 8 bits
     int  c, k; // Iteration variables
-    printf("%d in binary number system is:\n", decimalNumber);
+    printf("Translating %d from decimal to binary...\n", decimalNumber);
 
     for (c = 7; c >= 0; c--) // Loop eight times one for every bit in number
     {
@@ -471,6 +469,7 @@ int decToBinary(int decimalNumber)
 
 int hexToBinary(char hexdec[])
 {
+    printf("Translating %s from hex to binary...\n", hexdec);
     long int i = 0; // Iteration variable
     char binaryNumBuff[16]; // Buffer array
     binaryNumBuff[0] = '\0'; // Reset buffer
