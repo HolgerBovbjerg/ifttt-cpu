@@ -51,14 +51,24 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_G21 -to i_CLK
+set_location_assignment PIN_G3 -to i_HALT
+set_location_assignment PIN_H2 -to i_RESET
+set_location_assignment PIN_J1 -to o_STATE[0]
+set_location_assignment PIN_J2 -to o_STATE[1]
+set_location_assignment PIN_J3 -to o_STATE[2]
+set_location_assignment PIN_H1 -to o_STATE[3]
+set_location_assignment PIN_F2 -to o_STATE[4]
+set_location_assignment PIN_E1 -to o_STATE[5]
+set_location_assignment PIN_C1 -to o_STATE[6]
+set_location_assignment PIN_C2 -to o_DATA[0]
+set_location_assignment PIN_B1 -to o_DATA[1]
+set_location_assignment PIN_B2 -to o_DATA[2]
+set_global_assignment -name VHDL_FILE ../../I2C/I2C_tx_rx.vhd
+set_global_assignment -name VHDL_FILE ../../I2C/I2C_input_reg.vhd
+set_global_assignment -name VHDL_FILE ../../I2C/I2C_handler2.vhd
 set_global_assignment -name VHDL_FILE ../../toplevel/bidir_bus.vhd
-set_global_assignment -name VHDL_FILE ../../toplevel/I2C_tx_rx.vhd
-set_global_assignment -name VHDL_FILE ../../toplevel/I2C_sda_mux.vhd
-set_global_assignment -name VHDL_FILE ../../toplevel/I2C_scl_mux.vhd
-set_global_assignment -name VHDL_FILE ../../toplevel/I2C_mux.vhd
-set_global_assignment -name VHDL_FILE ../../toplevel/I2C_handler.vhd
-set_global_assignment -name VHDL_FILE ../../toplevel/I2C_addr_demux.vhd
-set_global_assignment -name VHDL_FILE ../../toplevel/clk_divider.vhd
 set_global_assignment -name VHDL_FILE ../../src/Register32x8.vhd
 set_global_assignment -name VHDL_FILE ../../src/PROGRAM_MEMORY.vhd
 set_global_assignment -name VHDL_FILE ../../src/Program_counter.vhd
@@ -76,20 +86,8 @@ set_global_assignment -name VHDL_FILE ../../src/B_imm_multiplexer.vhd
 set_global_assignment -name VHDL_FILE ../../src/ALU.vhd
 set_global_assignment -name VHDL_FILE ../../toplevel/ifttt_top_level.vhd
 set_global_assignment -name VHDL_FILE ../../toplevel/GPIO_register.vhd
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_G21 -to i_CLK
-set_location_assignment PIN_G3 -to i_HALT
-set_location_assignment PIN_H2 -to i_RESET
-set_location_assignment PIN_J1 -to o_STATE[0]
-set_location_assignment PIN_J2 -to o_STATE[1]
-set_location_assignment PIN_J3 -to o_STATE[2]
-set_location_assignment PIN_H1 -to o_STATE[3]
-set_location_assignment PIN_F2 -to o_STATE[4]
-set_location_assignment PIN_E1 -to o_STATE[5]
-set_location_assignment PIN_C1 -to o_STATE[6]
-set_location_assignment PIN_C2 -to o_DATA[0]
-set_location_assignment PIN_B1 -to o_DATA[1]
-set_location_assignment PIN_B2 -to o_DATA[2]
 set_global_assignment -name SDC_FILE output_files/ifttt_top_level.sdc
 set_global_assignment -name QIP_FILE mega_prog_mem.qip
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

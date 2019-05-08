@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ifttt_top_level
-Wed May 08 12:21:52 2019
+Wed May 08 22:03:39 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -15,7 +15,7 @@ Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. User-Specified and Inferred Latches
+ 10. State Machine - |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|state
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Inverted Register Statistics
@@ -27,13 +27,17 @@ Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
  19. Source assignments for cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1|altsyncram_a3o1:auto_generated
  20. Source assignments for cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_ipm1:auto_generated
  21. Parameter Settings for User Entity Instance: cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component
- 22. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0
- 23. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1
- 24. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0
- 25. altsyncram Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "cpu_core:INST_cpu_core"
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+ 22. Parameter Settings for User Entity Instance: I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2
+ 23. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0
+ 24. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1
+ 25. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg"
+ 28. Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2"
+ 29. Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx"
+ 30. Port Connectivity Checks: "cpu_core:INST_cpu_core"
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -59,16 +63,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 08 12:21:52 2019      ;
+; Analysis & Synthesis Status        ; Successful - Wed May 08 22:03:39 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; ifttt_top_level                            ;
 ; Top-level Entity Name              ; ifttt_top_level                            ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 934                                        ;
-;     Total combinational functions  ; 577                                        ;
-;     Dedicated logic registers      ; 552                                        ;
-; Total registers                    ; 552                                        ;
-; Total pins                         ; 84                                         ;
+; Total logic elements               ; 1,090                                      ;
+;     Total combinational functions  ; 687                                        ;
+;     Dedicated logic registers      ; 640                                        ;
+; Total registers                    ; 640                                        ;
+; Total pins                         ; 86                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 164,352                                    ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -179,6 +183,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                                          ; Library ;
 +-------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../../I2C/I2C_tx_rx.vhd                               ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_tx_rx.vhd                                                             ;         ;
+; ../../I2C/I2C_input_reg.vhd                           ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_input_reg.vhd                                                         ;         ;
+; ../../I2C/I2C_handler2.vhd                            ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_handler2.vhd                                                          ;         ;
 ; ../../toplevel/bidir_bus.vhd                          ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/bidir_bus.vhd                                                        ;         ;
 ; ../../src/Register32x8.vhd                            ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd                                                          ;         ;
 ; ../../src/Program_counter.vhd                         ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Program_counter.vhd                                                       ;         ;
@@ -221,29 +228,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 934               ;
+; Estimated Total logic elements              ; 1,090             ;
 ;                                             ;                   ;
-; Total combinational functions               ; 577               ;
+; Total combinational functions               ; 687               ;
 ; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 282               ;
-;     -- 3 input functions                    ; 220               ;
-;     -- <=2 input functions                  ; 75                ;
+;     -- 4 input functions                    ; 339               ;
+;     -- 3 input functions                    ; 253               ;
+;     -- <=2 input functions                  ; 95                ;
 ;                                             ;                   ;
 ; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 486               ;
-;     -- arithmetic mode                      ; 91                ;
+;     -- normal mode                          ; 590               ;
+;     -- arithmetic mode                      ; 97                ;
 ;                                             ;                   ;
-; Total registers                             ; 552               ;
-;     -- Dedicated logic registers            ; 552               ;
+; Total registers                             ; 640               ;
+;     -- Dedicated logic registers            ; 640               ;
 ;     -- I/O registers                        ; 0                 ;
 ;                                             ;                   ;
-; I/O pins                                    ; 84                ;
+; I/O pins                                    ; 86                ;
 ; Total memory bits                           ; 164352            ;
 ; Embedded Multiplier 9-bit elements          ; 0                 ;
 ; Maximum fan-out node                        ; r_CLK_divided[23] ;
-; Maximum fan-out                             ; 588               ;
-; Total fan-out                               ; 4632              ;
-; Average fan-out                             ; 3.25              ;
+; Maximum fan-out                             ; 598               ;
+; Total fan-out                               ; 5304              ;
+; Average fan-out                             ; 3.26              ;
 +---------------------------------------------+-------------------+
 
 
@@ -252,7 +259,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Library Name ;
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |ifttt_top_level                                     ; 577 (24)          ; 552 (24)     ; 164352      ; 0            ; 0       ; 0         ; 84   ; 0            ; |ifttt_top_level                                                                                                                         ; work         ;
+; |ifttt_top_level                                     ; 687 (24)          ; 640 (24)     ; 164352      ; 0            ; 0       ; 0         ; 86   ; 0            ; |ifttt_top_level                                                                                                                         ; work         ;
 ;    |GPIO_register:INST_GPIO_register|                ; 56 (56)           ; 208 (80)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register                                                                                        ; work         ;
 ;       |bidir_bus:INST_bidir_bus1|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus1                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus2|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus2                                                              ; work         ;
@@ -262,7 +269,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |bidir_bus:INST_bidir_bus6|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus6                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus7|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus7                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus8|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus8                                                              ; work         ;
-;    |cpu_core:INST_cpu_core|                          ; 497 (1)           ; 320 (0)      ; 164352      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core                                                                                                  ; work         ;
+;    |I2C_tx_rx:INST_I2C_tx_rx|                        ; 124 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx                                                                                                ; work         ;
+;       |I2C_handler2:inst_I2C_handler2|               ; 111 (111)         ; 52 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2                                                                 ; work         ;
+;       |I2C_input_reg:inst_I2C_input_reg|             ; 12 (12)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg                                                               ; work         ;
+;    |cpu_core:INST_cpu_core|                          ; 483 (1)           ; 330 (0)      ; 164352      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core                                                                                                  ; work         ;
 ;       |ALU:INST_ALU|                                 ; 220 (220)         ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|ALU:INST_ALU                                                                                     ; work         ;
 ;       |B_imm_multiplexer:INST_B_imm_multiplexer|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|B_imm_multiplexer:INST_B_imm_multiplexer                                                         ; work         ;
 ;       |DATA_RAM:INST_DATA_RAM|                       ; 28 (26)           ; 54 (53)      ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM                                                                           ; work         ;
@@ -270,12 +280,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_ipm1:auto_generated|         ; 2 (0)             ; 1 (1)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_ipm1:auto_generated                    ; work         ;
 ;                |decode_ara:decode2|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_ipm1:auto_generated|decode_ara:decode2 ; work         ;
 ;       |InstrucReg:INST_InstrucReg|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|InstrucReg:INST_InstrucReg                                                                       ; work         ;
-;       |MEMORY_CONTROL:INST_MEMORY_CONTROL|           ; 31 (31)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL                                                               ; work         ;
+;       |MEMORY_CONTROL:INST_MEMORY_CONTROL|           ; 34 (34)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL                                                               ; work         ;
 ;       |Program_counter:INST_Program_counter|         ; 21 (21)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|Program_counter:INST_Program_counter                                                             ; work         ;
 ;       |branch_control:INST_branch_control|           ; 29 (29)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control                                                               ; work         ;
 ;       |control_unit:INST_control_unit|               ; 28 (28)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|control_unit:INST_control_unit                                                                   ; work         ;
-;       |data_bus:INST_data_bus|                       ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|data_bus:INST_data_bus                                                                           ; work         ;
-;       |instruction_decoder:INST_instruction_decoder| ; 82 (82)           ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder                                                     ; work         ;
+;       |data_bus:INST_data_bus|                       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|data_bus:INST_data_bus                                                                           ; work         ;
+;       |instruction_decoder:INST_instruction_decoder| ; 81 (81)           ; 61 (61)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder                                                     ; work         ;
 ;       |mega_prog_mem:mega_prog_mem_inst|             ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst                                                                 ; work         ;
 ;          |altsyncram:altsyncram_component|           ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component                                 ; work         ;
 ;             |altsyncram_23r3:auto_generated|         ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component|altsyncram_23r3:auto_generated  ; work         ;
@@ -309,48 +319,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                                                                        ;
-+-------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------+
-; Latch Name                                                  ; Latch Enable Signal                                                                 ; Free of Timing Hazards ;
-+-------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------+
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[0] ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[7] ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[6] ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[5] ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[4] ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[3] ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[1] ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[2] ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[0]   ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[1]   ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[2]   ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[3]   ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[4]   ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[5]   ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[6]   ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[7]   ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; yes                    ;
-; Number of user-specified and inferred latches = 16          ;                                                                                     ;                        ;
-+-------------------------------------------------------------+-------------------------------------------------------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|state                                                       ;
++----------------+------------+-------------+-----------+----------------+----------------+----------------+---------------+-------------+-------------+
+; Name           ; state.stop ; state.error ; state.NAK ; state.slv_ack3 ; state.slv_ack2 ; state.slv_ack1 ; state.exe_cmd ; state.start ; state.ready ;
++----------------+------------+-------------+-----------+----------------+----------------+----------------+---------------+-------------+-------------+
+; state.ready    ; 0          ; 0           ; 0         ; 0              ; 0              ; 0              ; 0             ; 0           ; 0           ;
+; state.start    ; 0          ; 0           ; 0         ; 0              ; 0              ; 0              ; 0             ; 1           ; 1           ;
+; state.exe_cmd  ; 0          ; 0           ; 0         ; 0              ; 0              ; 0              ; 1             ; 0           ; 1           ;
+; state.slv_ack1 ; 0          ; 0           ; 0         ; 0              ; 0              ; 1              ; 0             ; 0           ; 1           ;
+; state.slv_ack2 ; 0          ; 0           ; 0         ; 0              ; 1              ; 0              ; 0             ; 0           ; 1           ;
+; state.slv_ack3 ; 0          ; 0           ; 0         ; 1              ; 0              ; 0              ; 0             ; 0           ; 1           ;
+; state.NAK      ; 0          ; 0           ; 1         ; 0              ; 0              ; 0              ; 0             ; 0           ; 1           ;
+; state.error    ; 0          ; 1           ; 0         ; 0              ; 0              ; 0              ; 0             ; 0           ; 1           ;
+; state.stop     ; 1          ; 0           ; 0         ; 0              ; 0              ; 0              ; 0             ; 0           ; 1           ;
++----------------+------------+-------------+-----------+----------------+----------------+----------------+---------------+-------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                    ;
-+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-; Register name                                                                     ; Reason for Removal                                                                                ;
-+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[0] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[2] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[1] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[2] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[3] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[4] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[5] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
-; cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_ack             ; Merged with cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_PC_set              ;
-; Total Number of Removed Registers = 9                                             ;                                                                                                   ;
-+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                      ;
++-------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+; Register name                                                                       ; Reason for Removal                                                                                ;
++-------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_BUS_select[0] ; Lost fanout                                                                                       ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[0]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[2] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[1]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[2]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[3]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[4]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[5]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
+; cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_ack               ; Merged with cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_PC_set              ;
+; Total Number of Removed Registers = 10                                              ;                                                                                                   ;
++-------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -358,12 +361,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 552   ;
-; Number of registers using Synchronous Clear  ; 22    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 640   ;
+; Number of registers using Synchronous Clear  ; 30    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 33    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 281   ;
+; Number of registers using Clock Enable       ; 349   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -391,6 +394,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[16]                ; 1       ;
 ; cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[18]                ; 1       ;
 ; cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[14]                ; 1       ;
+; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_busy                          ; 2       ;
+; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|o_I2C_sda_txrx                  ; 7       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[14] ; 2       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[13] ; 2       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[12] ; 2       ;
@@ -407,6 +412,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[1]  ; 2       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[0]  ; 2       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[15] ; 2       ;
+; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[1]               ; 18      ;
+; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[0]               ; 18      ;
+; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[2]               ; 12      ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[30]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[44]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[42]                   ; 1       ;
@@ -415,7 +423,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[36]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[34]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[32]                   ; 1       ;
-; Total number of inverted registers = 42                                                 ;         ;
+; Total number of inverted registers = 47                                                 ;         ;
 +-----------------------------------------------------------------------------------------+---------+
 
 
@@ -536,30 +544,34 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------------------------------------------------+---------------------------------------------------------------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_state[3]                              ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_address[1]                ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |ifttt_top_level|GPIO_register:INST_GPIO_register|o_GPIO_data[0]                                               ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_data[7]                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_data[0]                    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|Program_counter:INST_Program_counter|r_PROG_COUNT[3]                   ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|r_PC_ADDRESS[7]                     ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_REGISTER_C_WRITE_ENABLE ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|o_ADDRESS[5]                        ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|o_ADDRESS[0]                        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]         ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[0]          ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_MUX_data[4]                    ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|ALU:INST_ALU|r_ALU_Result[6]                                           ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[1]        ;
-; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |ifttt_top_level|cpu_core:INST_cpu_core|data_bus:INST_data_bus|Mux4                                            ;
-; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |ifttt_top_level|cpu_core:INST_cpu_core|data_bus:INST_data_bus|Mux11                                           ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux75                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_state[2]                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg|r_register[2][7]             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_address[1]          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_address[1]         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_data[3]             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_data[4]            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_data[5]             ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |ifttt_top_level|GPIO_register:INST_GPIO_register|o_GPIO_data[1]                                        ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|Program_counter:INST_Program_counter|r_PROG_COUNT[5]            ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|r_PC_ADDRESS[0]              ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_MEM_write_enable ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|o_ADDRESS[9]                 ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|o_ADDRESS[0]                 ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[14]  ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[8]   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_ack_cnt[0]                   ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_MUX_data[2]             ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_txrx[0]                 ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|ALU:INST_ALU|r_ALU_Result[5]                                    ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[8] ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux62                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|state                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -656,6 +668,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                                                  ;
 ; CBXI_PARAMETER                     ; altsyncram_23r3      ; Untyped                                                                  ;
 +------------------------------------+----------------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2 ;
++----------------+----------+--------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                     ;
++----------------+----------+--------------------------------------------------------------------------+
+; input_clk      ; 50000000 ; Signed Integer                                                           ;
+; bus_clk        ; 400000   ; Signed Integer                                                           ;
++----------------+----------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -895,17 +918,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu_core:INST_cpu_core"                                                                              ;
-+-----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                  ; Type   ; Severity ; Details                                                                             ;
-+-----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_mc_i2c_data         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; i_mc_i2c_busy         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_mc_i2c_address      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; o_mc_i2c_write_enable ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; o_mc_i2c_data         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg"                                       ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_i2c_slv_addr[7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o_i2c_setup[7..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2" ;
++--------------+-------+----------+---------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                           ;
++--------------+-------+----------+---------------------------------------------------+
+; i_i2c_reg_tx ; Input ; Info     ; Stuck at GND                                      ;
++--------------+-------+----------+---------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx"                                                                      ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_i2c_ack_error ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu_core:INST_cpu_core"                                                                               ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                             ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_mc_i2c_address[3..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -923,31 +970,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Wed May 08 12:21:47 2019
+    Info: Processing started: Wed May 08 22:03:34 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ifttt_top_level -c ifttt_top_level
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/i2c/i2c_tx_rx.vhd
+    Info (12022): Found design unit 1: I2C_tx_rx-rtl
+    Info (12023): Found entity 1: I2C_tx_rx
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/i2c/i2c_input_reg.vhd
+    Info (12022): Found design unit 1: I2C_input_reg-rtl
+    Info (12023): Found entity 1: I2C_input_reg
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/i2c/i2c_handler2.vhd
+    Info (12022): Found design unit 1: I2C_handler2-rtl
+    Info (12023): Found entity 1: I2C_handler2
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/bidir_bus.vhd
     Info (12022): Found design unit 1: bidir_bus-behaviour
     Info (12023): Found entity 1: bidir_bus
-Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/i2c_tx_rx.vhd
-    Info (12022): Found design unit 1: I2C_tx_rx-rtl
-    Info (12023): Found entity 1: I2C_tx_rx
-Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/i2c_sda_mux.vhd
-    Info (12022): Found design unit 1: I2C_sda_mux-rtl
-    Info (12023): Found entity 1: I2C_sda_mux
-Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/i2c_scl_mux.vhd
-    Info (12022): Found design unit 1: I2C_scl_mux-rtl
-    Info (12023): Found entity 1: I2C_scl_mux
-Info (12021): Found 0 design units, including 0 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/i2c_mux.vhd
-Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/i2c_handler.vhd
-    Info (12022): Found design unit 1: I2C_handler-rtl
-    Info (12023): Found entity 1: I2C_handler
-Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/i2c_addr_demux.vhd
-    Info (12022): Found design unit 1: I2C_addr_demux-rtl
-    Info (12023): Found entity 1: I2C_addr_demux
-Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/clk_divider.vhd
-    Info (12022): Found design unit 1: clk_divider-rtl
-    Info (12023): Found entity 1: clk_divider
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/src/register32x8.vhd
     Info (12022): Found design unit 1: register32x8-behaviour
     Info (12023): Found entity 1: register32x8
@@ -1003,6 +1040,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file mega_pr
     Info (12022): Found design unit 1: mega_prog_mem-SYN
     Info (12023): Found entity 1: mega_prog_mem
 Info (12127): Elaborating entity "ifttt_top_level" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ifttt_top_level.vhd(130): object "w_I2C_ack_error" assigned a value but never read
 Info (12128): Elaborating entity "cpu_core" for hierarchy "cpu_core:INST_cpu_core"
 Info (12128): Elaborating entity "mega_prog_mem" for hierarchy "cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component"
@@ -1068,30 +1106,32 @@ Info (12128): Elaborating entity "register32x8" for hierarchy "cpu_core:INST_cpu
 Info (12128): Elaborating entity "B_imm_multiplexer" for hierarchy "cpu_core:INST_cpu_core|B_imm_multiplexer:INST_B_imm_multiplexer"
 Info (12128): Elaborating entity "ALU" for hierarchy "cpu_core:INST_cpu_core|ALU:INST_ALU"
 Info (12128): Elaborating entity "data_bus" for hierarchy "cpu_core:INST_cpu_core|data_bus:INST_data_bus"
-Warning (10631): VHDL Process Statement warning at data_bus.vhd(18): inferring latch(es) for signal or variable "o_REGISTER", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at data_bus.vhd(18): inferring latch(es) for signal or variable "o_MEMORY", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "o_MEMORY[0]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_MEMORY[1]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_MEMORY[2]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_MEMORY[3]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_MEMORY[4]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_MEMORY[5]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_MEMORY[6]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_MEMORY[7]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_REGISTER[0]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_REGISTER[1]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_REGISTER[2]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_REGISTER[3]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_REGISTER[4]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_REGISTER[5]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_REGISTER[6]" at data_bus.vhd(18)
-Info (10041): Inferred latch for "o_REGISTER[7]" at data_bus.vhd(18)
 Info (12128): Elaborating entity "MEMORY_CONTROL" for hierarchy "cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL"
 Info (12128): Elaborating entity "branch_control" for hierarchy "cpu_core:INST_cpu_core|branch_control:INST_branch_control"
 Info (12128): Elaborating entity "Program_counter" for hierarchy "cpu_core:INST_cpu_core|Program_counter:INST_Program_counter"
 Info (12128): Elaborating entity "DATA_RAM" for hierarchy "cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM"
 Info (12128): Elaborating entity "GPIO_register" for hierarchy "GPIO_register:INST_GPIO_register"
 Info (12128): Elaborating entity "bidir_bus" for hierarchy "GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus1"
+Info (12128): Elaborating entity "I2C_tx_rx" for hierarchy "I2C_tx_rx:INST_I2C_tx_rx"
+Info (12128): Elaborating entity "I2C_handler2" for hierarchy "I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2"
+Info (12128): Elaborating entity "I2C_input_reg" for hierarchy "I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_REGISTER[7]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[0]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[1]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[2]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[3]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[4]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[5]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[6]" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "cpu_core:INST_cpu_core|data_bus:INST_data_bus|o_MEMORY[7]" feeding internal logic into a wire
 Warning (276020): Inferred RAM node "cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
@@ -1191,19 +1231,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/deco
     Info (12023): Found entity 1: decode_ara
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qlb.tdf
     Info (12023): Found entity 1: mux_qlb
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1115 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1268 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 16 output pins
-    Info (21060): Implemented 64 bidirectional pins
-    Info (21061): Implemented 967 logic cells
+    Info (21060): Implemented 66 bidirectional pins
+    Info (21061): Implemented 1118 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
     Info: Peak virtual memory: 4720 megabytes
-    Info: Processing ended: Wed May 08 12:21:52 2019
+    Info: Processing ended: Wed May 08 22:03:39 2019
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 
