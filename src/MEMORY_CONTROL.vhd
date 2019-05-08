@@ -32,6 +32,7 @@ entity MEMORY_CONTROL is
 				------------------I2C-----------------------------------------------
 				o_MC_I2C_address : out std_logic_vector (3 downto 0); -- 16 bit output to I2C
 				i_MC_I2C_data : in std_logic_vector (7 downto 0);
+				i_MC_I2C_busy	: in std_logic;
 				o_MC_I2C_data : out std_logic_vector (7 downto 0);
 				o_MC_I2c_write_enable : out std_logic
 			  );
@@ -64,6 +65,7 @@ begin
 								o_MC_RAM_address <= i_MC_address(13 downto 0);
 								o_MC_MUX_data <= i_MC_RAM_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
 							end if;
+							r_MEM_state <= "10";
 						when GPIO_address =>
 							if (i_MC_write_enable = '1') then
 								o_MC_GPIO_write_enable <= '1';
@@ -74,7 +76,7 @@ begin
 								o_MC_GPIO_address <= i_MC_address(3 downto 0);
 								o_MC_MUX_data <= i_MC_GPIO_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
 							end if;
-							
+							r_MEM_state <= "10";
 						when I2C_address =>
 							if (i_MC_write_enable = '1') then
 								o_MC_I2c_write_enable <= '1';
@@ -85,10 +87,12 @@ begin
 								o_MC_I2C_address <= i_MC_address(3 downto 0);
 								o_MC_MUX_data <= i_MC_I2C_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
 							end if;	
+							if (i_MC_I2C_busy = '0') then
+								r_MEM_state <= "10";
+							end if;
 						when others =>
 							o_MC_MUX_data <= x"00";
 					end case;
-					r_MEM_state <= "10";
 				when MEM_DATA_READY => -- Data ready
 					if (i_MC_enable = '0') then 
 						r_MEM_state <= "00";

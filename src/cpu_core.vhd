@@ -20,6 +20,7 @@ entity cpu_core is
 				
 				-- I2C
 				i_MC_I2C_data : in STD_LOGIC_VECTOR(7 downto 0);
+				i_MC_I2C_busy	: in std_logic;
 				o_MC_I2C_address : out std_logic_vector (3 downto 0); 
 				o_MC_I2C_write_enable : out std_logic;
 				o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0);
@@ -173,6 +174,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				o_MC_GPIO_write_enable : out std_logic;
 				------------------I2C-----------------------------------------------
 				o_MC_I2C_address : out std_logic_vector (3 downto 0); -- Address output to I2C
+				i_MC_I2C_busy	: in std_logic;
 				i_MC_I2C_data : in std_logic_vector (7 downto 0);
 				o_MC_I2C_data : out std_logic_vector (7 downto 0);
 				o_MC_I2c_write_enable : out std_logic
@@ -424,6 +426,7 @@ begin
 		o_MC_GPIO_write_enable 		=> o_MC_GPIO_write_enable,
 		------------------I2C-----------------------------------------------
 		o_MC_I2C_address 				=> o_MC_I2C_address,
+		i_MC_I2C_busy					=> i_MC_I2C_busy,
 		i_MC_I2C_data 					=> i_MC_I2C_data,
 		o_MC_I2C_data 					=> o_MC_I2C_data,
 		o_MC_I2c_write_enable 		=> o_MC_I2C_write_enable,

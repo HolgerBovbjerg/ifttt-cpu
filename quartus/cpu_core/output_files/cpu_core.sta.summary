@@ -3,27 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'i_CORE_CLK'
-Slack : -5.206
-TNS   : -743.034
+Slack : -5.371
+TNS   : -744.732
 
 Type  : Slow 1200mV 85C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -3.292
-TNS   : -12.362
+Slack : -3.626
+TNS   : -13.367
 
 Type  : Slow 1200mV 85C Model Setup 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : -2.586
-TNS   : -28.994
+Slack : -2.116
+TNS   : -28.773
 
 Type  : Slow 1200mV 85C Model Hold 'i_CORE_CLK'
-Slack : 0.169
+Slack : 0.134
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.357
+Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : 0.800
+Slack : 0.855
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i_CORE_CLK'
@@ -35,31 +35,31 @@ Slack : -1.000
 TNS   : -5.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : 0.391
+Slack : 0.415
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'i_CORE_CLK'
-Slack : -4.490
-TNS   : -632.497
+Slack : -4.674
+TNS   : -632.443
 
 Type  : Slow 1200mV 0C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -2.980
-TNS   : -11.263
+Slack : -3.237
+TNS   : -12.121
 
 Type  : Slow 1200mV 0C Model Setup 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : -2.369
-TNS   : -25.865
+Slack : -1.907
+TNS   : -25.463
 
 Type  : Slow 1200mV 0C Model Hold 'i_CORE_CLK'
-Slack : 0.094
+Slack : 0.089
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.312
+Slack : 0.313
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : 0.785
+Slack : 0.831
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i_CORE_CLK'
@@ -71,43 +71,43 @@ Slack : -1.000
 TNS   : -5.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : 0.435
+Slack : 0.431
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'i_CORE_CLK'
-Slack : -2.508
-TNS   : -268.946
+Slack : -2.634
+TNS   : -266.035
 
 Type  : Fast 1200mV 0C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -1.645
-TNS   : -5.861
+Slack : -1.861
+TNS   : -6.561
 
 Type  : Fast 1200mV 0C Model Setup 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : -1.243
-TNS   : -11.086
+Slack : -0.937
+TNS   : -10.852
 
 Type  : Fast 1200mV 0C Model Hold 'i_CORE_CLK'
-Slack : 0.052
+Slack : 0.067
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.186
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : 0.413
+Slack : 0.455
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i_CORE_CLK'
 Slack : -3.000
-TNS   : -471.268
+TNS   : -470.826
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'control_unit:INST_control_unit|r_state[3]'
 Slack : -1.000
 TNS   : -5.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'instruction_decoder:INST_instruction_decoder|o_BUS_select[0]'
-Slack : 0.373
+Slack : 0.387
 TNS   : 0.000
 
 ------------------------------------------------------------
