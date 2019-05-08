@@ -2,7 +2,7 @@
 This assembler is made for use with the iftt-cpu
 
 ## Guideline
-The assembler needs an input file with assembly code. One line can only contain one instruction to be performed. Possible register names are r1, r2, r3, ... , r32. Memory addresses are given in hex values equivalent to up to 16 bit (0000..ffff). Program memory addresses are given in hex values representable by 10 bit(0000..03ff). Immediate data is given in integer values between 0 and 255.\ 
+The assembler needs an input file with assembly code. One line can only contain one instruction to be performed. Possible register names are r1, r2, r3, ... , r32. Memory addresses are given in hex values equivalent to up to 16 bit (0000..ffff). Program memory addresses are given in hex values representable by 10 bit (0000..03ff). Immediate data is given in integer values between 0 and 255.\ 
 OBS: The current assembler does not support signed number operation.\ 
 The available instructions are currently as following:\ 
 1. NOP 
