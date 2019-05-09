@@ -138,7 +138,7 @@ architecture behavioural of ifttt_top_level is
 begin 
 
 	INST_cpu_core : cpu_core PORT MAP (
-		i_CORE_CLK => r_CLK_divided(10),
+		i_CORE_CLK => r_CLK_divided(12),
 		i_CORE_RESET => i_RESET,
 		i_CORE_HALT => i_HALT,
 		o_DATA => o_DATA,
@@ -157,7 +157,7 @@ begin
 	);
 	
 	INST_GPIO_register : GPIO_register PORT MAP (
-		i_GPIO_clk					=> r_CLK_divided(10),
+		i_GPIO_clk					=> r_CLK_divided(12),
 		i_GPIO_address 			=> w_MC_GPIO_address(2 downto 0),
 		i_GPIO_data					=> w_MC_GPIO_data,
 		o_GPIO_data 				=> w_GPIO_data,
