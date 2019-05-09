@@ -24,6 +24,7 @@ ARCHITECTURE behavior OF cpu_core_tb IS
 					
 					-- I2C
 					i_MC_I2C_data : in STD_LOGIC_VECTOR(7 downto 0);
+					i_MC_I2C_busy : in STD_LOGIC;
 					o_MC_I2C_address : out std_logic_vector (3 downto 0); 
 					o_MC_I2C_write_enable : out std_logic;
 					o_MC_I2C_data : out STD_LOGIC_VECTOR(7 downto 0);
@@ -49,6 +50,7 @@ ARCHITECTURE behavior OF cpu_core_tb IS
 	signal o_MC_GPIO_write_enable : std_logic;
 	signal o_MC_GPIO_data : STD_LOGIC_VECTOR(7 downto 0);
 	signal i_MC_I2C_data : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+	signal i_MC_I2C_busy : STD_LOGIC := '0';
 	signal o_MC_I2C_address : std_logic_vector (3 downto 0); 
 	signal o_MC_I2C_write_enable : std_logic;
 	signal o_MC_I2C_data : STD_LOGIC_VECTOR(7 downto 0);
@@ -73,6 +75,7 @@ begin
 			o_MC_GPIO_write_enable => o_MC_GPIO_write_enable,
 			o_MC_GPIO_data => o_MC_GPIO_data,	
 			i_MC_I2C_data => i_MC_I2C_data,
+			i_MC_I2C_busy => i_MC_I2C_busy,
 			o_MC_I2C_address => o_MC_I2C_address, 
 			o_MC_I2C_write_enable => o_MC_I2C_write_enable,
 			o_MC_I2C_data => o_MC_I2C_data,

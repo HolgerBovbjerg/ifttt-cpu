@@ -7,7 +7,7 @@ use ieee.std_logic_unsigned.all;
 entity I2C_handler2 is
 	generic(
 		input_clk			: integer := 50000000;						-- Main clock speed for Altera DE0 is 50 MHz
-		bus_clk				: integer := 400000							-- SCL clock set to 100 kbps
+		bus_clk				: integer := 400000							-- SCL clock set to 400 kbps
 	);
 	port(
 		--inputs
@@ -84,7 +84,7 @@ begin
 	end if;
 end process;
 
-process (all)
+process (i_I2C_clk, i_I2C_reset)
 begin
 	if (i_I2C_reset = '0') then													-- Reset to initial values
 		state <= ready;																-- Go to ready state

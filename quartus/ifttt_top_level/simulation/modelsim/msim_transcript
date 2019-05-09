@@ -10,6 +10,38 @@
 # ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_tx_rx.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity I2C_tx_rx
+# -- Compiling architecture rtl of I2C_tx_rx
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_input_reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity I2C_input_reg
+# -- Compiling architecture rtl of I2C_input_reg
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_handler2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity I2C_handler2
+# -- Compiling architecture rtl of I2C_handler2
+# ** Warning: C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_handler2.vhd(66): Choice in CASE statement alternative must be locally static.
+# ** Warning: C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_handler2.vhd(69): Choice in CASE statement alternative must be locally static.
+# ** Warning: C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_handler2.vhd(72): Choice in CASE statement alternative must be locally static.
 # vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/toplevel/bidir_bus.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -80,15 +112,14 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity GPIO_register
 # -- Compiling architecture behaviour of GPIO_register
-# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/PROGRAM_MEMORY.vhd}
+# vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ifttt_top_level/mega_prog_mem.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package constants
-# -- Compiling entity PROGRAM_MEMORY
-# -- Compiling architecture Behavioral of PROGRAM_MEMORY
+# -- Loading package altera_mf_components
+# -- Compiling entity mega_prog_mem
+# -- Compiling architecture SYN of mega_prog_mem
 # vcom -93 -work work {C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/MEMORY_CONTROL.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -105,6 +136,7 @@
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
 # -- Loading package constants
 # -- Compiling entity instruction_decoder
 # -- Compiling architecture Behavioral of instruction_decoder
