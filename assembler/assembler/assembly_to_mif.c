@@ -188,12 +188,14 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get immidiate value as a string
         printf("%s\n", pch);
-        int imm = atoi(pch); // Cast char to integer
+        int imm = atoi(pch); // Cast string to integer
         printf("%d\n", imm);
         decToBinary(imm); // Convert decimal number to binary string (stored in binaryNum)
         strcpy(outputArray[outputIndex], binaryNum); //Copy binary number to output array
         outputIndex++;
-        strcpy(outputArray[outputIndex], "00000"); // Append output with zeroes
+        strcpy(outputArray[outputIndex], "0000"); // Append output with zeroes
+        outputIndex++;
+        strcpy(outputArray[outputIndex], "1"); // Append output with one for IMM enable
     }
     else if (15 == number || number == 17) // register immediate instruction
     {
@@ -218,11 +220,12 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         outputIndex++;
-        pch = strtok(NULL, " ,"); // Get immediate value
+        pch = strtok(NULL, " ,"); // Get immediate value as a string
         printf("%s\n", pch);
-        int imm = atoi(pch); // Cast char to integer
+        int imm = atoi(pch); // Cast string to integer
         printf("%d\n", imm);
         decToBinary(imm); // Convert decimal number to binary string (stored in binaryNum)
+        printf("%s", binaryNum);
         strcpy(outputArray[outputIndex], binaryNum); //Copy binary number to output array
         outputIndex++;
         strcpy(outputArray[outputIndex], "000000000"); // append output with zeroes
@@ -317,11 +320,11 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get branch command
         printf("%s\n", pch);
-        for (int i = 0; i < 5 - 1; i++) // Loop through branch control commands
+        for (int i = 0; i < 5; i++) // Loop through branch control commands
         {
             if (strstr(pch, branchArray[i])) // If match
             {
-                strcpy(outputArray[outputIndex], branchArrayBinary[i]); // Copy binary equivaent to output
+                strcpy(outputArray[outputIndex], branchArrayBinary[i]); // Copy binary equivalent to output
             }
         }
     }
@@ -350,7 +353,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get hex value string
         printf("%s\n", pch);
-        hexToBinary(pch); // Conevert hex string to binary
+        hexToBinary(pch); // Convert hex string to binary
         strcpy(outputArray[outputIndex], binaryNum);
         outputIndex++;
         strcpy(outputArray[outputIndex], "00");
@@ -474,7 +477,6 @@ int hexToBinary(char hexdec[])
     char binaryNumBuff[16]; // Buffer array
     binaryNumBuff[0] = '\0'; // Reset buffer
     binaryNum[0] = '\0'; // Reset binary number variable
-    int notHex = 0; // Reset notHex
     while (hexdec[i]) { // Loop through hex number
         switch (hexdec[i]) { // Translating to binary
         case '0':
@@ -549,20 +551,15 @@ int hexToBinary(char hexdec[])
             break;
         default:
             printf("\nInvalid hexadecimal digit %c", hexdec[i]);
-            notHex = 1; // non hex character read
         }
+        if (i == 3) break;
         i++;
     }
     printf("\n");
-    if (notHex) // Fix for situation were an empty character is read
+    for(int j = 0; j < 16; j++)
     {
-        i--;
+        binaryNum[j] = binaryNumBuff[j];// append binary number with buffer
     }
-    for (int j = i; j < 4; j++) // Append binary number with zeroes so that number is 16 bit
-    {
-        strcat(binaryNum, "0000");
-    }
-    strcat(binaryNum, binaryNumBuff); // append binary number with buffer
     return 0;
 }
 
@@ -683,7 +680,8 @@ int initConstants()
     strcpy(branchArray[1], "CAR");
     strcpy(branchArray[2], "OVR");
     strcpy(branchArray[3], "NEG");
-    strcpy(branchArray[4], "EQ");
+    strcpy(branchArray[4], "ZER");
+    strcpy(branchArray[5], "TEST");
     strcpy(branchArrayBinary[0], "001");
     strcpy(branchArrayBinary[1], "010");
     strcpy(branchArrayBinary[2], "011");

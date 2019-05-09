@@ -24,9 +24,9 @@ begin
 	with i_Select select 
 		o_MEMORY 	<=	w_INPUT when "01",
 							w_INPUT when "11",
-							"ZZZZZZZZ"	when others;
+							x"00"	when others;
 	with i_Select select 
 		o_REGISTER 	<=	w_INPUT when "00",
 							w_INPUT when "10",
-							"ZZZZZZZZ"	when others;			
+							x"00"	when others;			
 end behaviour;

@@ -31,30 +31,30 @@
 
 1556885330 c:\users\holge\onedrive\desktop\assembler\assembler\assembly_to_mif.h
 
-1557333303 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\assembly_to_mif.c
+1557410184 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\assembly_to_mif.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"assembly_to_mif.h"
 
-1557339356 c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\assembly_to_mif.h
+1557346570 c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\assembly_to_mif.h
 
-1557146788 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\main.c
+1557346570 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\main.c
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 	"read_assembly.h"
 	"write_mif.h"
 
-1557339356 c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\read_assembly.h
+1557346570 c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\read_assembly.h
 
-1557338329 c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\write_mif.h
+1557346570 c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\write_mif.h
 
-1557146149 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\read_assembly.c
+1557346570 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\read_assembly.c
 	<stdio.h>
 	"read_assembly.h"
 
-1557153383 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\write_mif.c
+1557346570 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\write_mif.c
 	<stdio.h>
 	"write_mif.h"
 	"assembly_to_mif.h"

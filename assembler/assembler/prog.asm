@@ -1,198 +1,55 @@
-NOP
 LOAD r1, 100
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH f5, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
+LOAD r2, 50
+LOAD r3, 6
+LOAD r4, 4
+LOAD r5, 6
+LOAD r6, 2
+LOAD r7, 6
+WRITE r1, C000
+WRITE r2, C001
+WRITE r3, C003
+WRITE r4, C003
+WRITE r5, C003
+WRITE r6, C003
+WRITE r7, C003
+LOAD r3, 7
+LOAD r4, 5
+LOAD r5, 7
+LOAD r6, 3
+LOAD r7, 7
+WRITE r3, C003
+WRITE r4, C003
+WRITE r5, C003
+WRITE r6, C003
+WRITE r7, C003
 NOP
-LOAD r1, 3
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH fff, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
 NOP
-LOAD r1, 3
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH fff, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
 NOP
-LOAD r1, 3
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH fff, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
+READ r10, C002
 NOP
-LOAD r1, 3
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH fff, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
 NOP
-LOAD r1, 3
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH fff, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
 NOP
-LOAD r1, 3
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH fff, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
+SUBI r1, r2, 50 
+BRANCH 0022, ZER
+BRANCH 0027, JMP 
+LOAD r8, 170
+LOAD r9, 255
+WRITE r8, 8008
+WRITE r9, 8000
+WRITE r9, 8001 
+LOAD r3, 6
+LOAD r4, 4
+LOAD r5, 6
+LOAD r6, 2
+LOAD r7, 6
+WRITE r1, C000
+WRITE r2, C001
+WRITE r3, C003
+WRITE r4, C003
+WRITE r5, C003
+WRITE r6, C003
+WRITE r7, C003
 NOP
-LOAD r1, 3
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH fff, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
 NOP
-LOAD r1, 3
-LOAD r2, 4
-ADDR r3, r1, r2 
-ADDI r4, r3, 5
-ADDC r5, r3, r4 
-SUBR r6, r4, r5
-SUBI r7, r6, 7
-BSL r8, r6, r7
-BSR r9, r7, r8
-OR r10, r8, r9
-XOR r11, r9, r10
-AND r12, r10, r11
-NOT r13, r12
-CMP r14, r12, r13
-WRITE r15, 11 
-READ r16, 11 
-BRANCH fff, JMP 
-JUMPEQ r1, r2, f
-PUSH r16
-POP r17
-RETURN
+NOP
+ADDI r1, r3, 5

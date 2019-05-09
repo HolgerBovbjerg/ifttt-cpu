@@ -10,11 +10,7 @@ entity I2C_tx_rx is
 		io_I2C_scl					: inout std_logic;							-- SCL in/out tri-state port
 		
 		--inputs
-		--i_I2C_rw					: in std_logic;								-- 0 is transmit, 1 is receive
 		i_I2C_clk					: in std_logic;								-- I2C main clock
---		i_I2C_ready					: in std_logic;								-- Ready trigger to start Read/Write function
---		i_I2C_reset					: in std_logic;								-- Reset trigger 
---		i_I2C_data_tx				: in std_logic_vector (7 downto 0);		-- Data transmitted
 		i_I2C_data_tx				: in std_logic_vector (7 downto 0);		-- Register input
 		i_I2C_write_enable		: in std_logic;								-- I2C registers we = '1'
 		i_I2C_write_regaddr_tx  : in std_logic_vector (1 downto 0);		-- I2C registers address select
@@ -81,26 +77,20 @@ begin
 	inst_I2C_handler2 : I2C_handler2 port map(
 		i_I2C_clk			=> i_I2C_clk,
 		i_I2C_sda_txrx		=> r_i_I2C_sda_txrx,
---		i_I2C_ready			=> i_I2C_ready,
---		i_I2C_reset			=> i_I2C_reset,
 		i_I2C_ready			=> r_I2C_setup (2),
 		i_I2C_reset			=> r_I2C_setup (1),
-		--i_I2C_addr			=> "1100100",					-- 7 bit address input w_I2C_addr -- address 100
 		i_I2C_addr			=> r_I2C_slv_addr (6 downto 0),
-		--i_I2C_data_tx		=> i_I2C_data_tx,
 		i_I2C_data_tx		=> r_I2C_slv_data_tx,
-		--i_I2C_rw				=> i_I2C_rw,
 		i_I2C_rw				=> r_I2C_setup (0),
 		i_I2C_reg_tx		=> x"00",						-- Slave Register
 		i_I2C_scl_txrx		=> r_i_I2C_scl_txrx,
 		o_I2C_busy			=> o_I2C_busy,
 		o_I2C_scl_enable	=> r_I2C_scl_enable,
 		o_I2C_ack_error	=> o_I2C_ack_error,
-		--o_I2C_data_rx		=> o_I2C_data_rx,
 		o_I2C_data_rx		=> r_I2C_data_rx,
 		o_I2C_scl_txrx		=> r_o_I2C_scl_txrx,
 		o_I2C_sda_txrx		=> r_o_I2C_sda_txrx
-		);
+	);
 		
 	inst_I2C_input_reg : I2C_input_reg port map(
 		i_I2C_clk					=> i_I2C_clk,

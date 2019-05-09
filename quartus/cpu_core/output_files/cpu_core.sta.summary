@@ -3,72 +3,72 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'i_CORE_CLK'
-Slack : -5.138
-TNS   : -699.693
+Slack : -5.080
+TNS   : -730.858
 
 Type  : Slow 1200mV 85C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -2.953
-TNS   : -9.589
+Slack : -2.833
+TNS   : -10.847
 
 Type  : Slow 1200mV 85C Model Hold 'i_CORE_CLK'
-Slack : 0.066
-TNS   : 0.000
+Slack : -0.041
+TNS   : -0.041
 
 Type  : Slow 1200mV 85C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.358
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i_CORE_CLK'
 Slack : -3.000
-TNS   : -564.792
+TNS   : -565.792
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'control_unit:INST_control_unit|r_state[3]'
 Slack : -1.000
 TNS   : -5.000
 
 Type  : Slow 1200mV 0C Model Setup 'i_CORE_CLK'
-Slack : -4.521
-TNS   : -587.615
+Slack : -4.411
+TNS   : -617.586
 
 Type  : Slow 1200mV 0C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -2.643
-TNS   : -8.651
+Slack : -2.542
+TNS   : -9.780
 
 Type  : Slow 1200mV 0C Model Hold 'i_CORE_CLK'
-Slack : 0.034
-TNS   : 0.000
+Slack : -0.068
+TNS   : -0.068
 
 Type  : Slow 1200mV 0C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.314
+Slack : 0.299
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i_CORE_CLK'
 Slack : -3.000
-TNS   : -564.792
+TNS   : -565.792
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'control_unit:INST_control_unit|r_state[3]'
 Slack : -1.000
 TNS   : -5.000
 
 Type  : Fast 1200mV 0C Model Setup 'i_CORE_CLK'
-Slack : -2.398
-TNS   : -236.750
+Slack : -2.431
+TNS   : -255.740
 
 Type  : Fast 1200mV 0C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -1.355
-TNS   : -3.999
+Slack : -1.331
+TNS   : -4.837
 
 Type  : Fast 1200mV 0C Model Hold 'i_CORE_CLK'
-Slack : 0.024
-TNS   : 0.000
+Slack : -0.043
+TNS   : -0.043
 
 Type  : Fast 1200mV 0C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.186
+Slack : 0.177
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i_CORE_CLK'
 Slack : -3.000
-TNS   : -469.994
+TNS   : -471.138
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'control_unit:INST_control_unit|r_state[3]'
 Slack : -1.000
