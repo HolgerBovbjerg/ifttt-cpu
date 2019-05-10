@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ifttt_top_level
-Thu May 09 12:52:11 2019
+Thu May 09 15:41:22 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -63,15 +63,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 09 12:52:11 2019      ;
+; Analysis & Synthesis Status        ; Successful - Thu May 09 15:41:22 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; ifttt_top_level                            ;
 ; Top-level Entity Name              ; ifttt_top_level                            ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 1,076                                      ;
-;     Total combinational functions  ; 681                                        ;
-;     Dedicated logic registers      ; 627                                        ;
-; Total registers                    ; 627                                        ;
+; Total logic elements               ; 1,079                                      ;
+;     Total combinational functions  ; 684                                        ;
+;     Dedicated logic registers      ; 629                                        ;
+; Total registers                    ; 629                                        ;
 ; Total pins                         ; 86                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 164,352                                    ;
@@ -228,29 +228,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 1,076             ;
+; Estimated Total logic elements              ; 1,079             ;
 ;                                             ;                   ;
-; Total combinational functions               ; 681               ;
+; Total combinational functions               ; 684               ;
 ; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 357               ;
-;     -- 3 input functions                    ; 243               ;
-;     -- <=2 input functions                  ; 81                ;
+;     -- 4 input functions                    ; 360               ;
+;     -- 3 input functions                    ; 240               ;
+;     -- <=2 input functions                  ; 84                ;
 ;                                             ;                   ;
 ; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 597               ;
-;     -- arithmetic mode                      ; 84                ;
+;     -- normal mode                          ; 598               ;
+;     -- arithmetic mode                      ; 86                ;
 ;                                             ;                   ;
-; Total registers                             ; 627               ;
-;     -- Dedicated logic registers            ; 627               ;
+; Total registers                             ; 629               ;
+;     -- Dedicated logic registers            ; 629               ;
 ;     -- I/O registers                        ; 0                 ;
 ;                                             ;                   ;
 ; I/O pins                                    ; 86                ;
 ; Total memory bits                           ; 164352            ;
 ; Embedded Multiplier 9-bit elements          ; 0                 ;
-; Maximum fan-out node                        ; r_CLK_divided[10] ;
+; Maximum fan-out node                        ; r_CLK_divided[12] ;
 ; Maximum fan-out                             ; 599               ;
-; Total fan-out                               ; 5291              ;
-; Average fan-out                             ; 3.29              ;
+; Total fan-out                               ; 5304              ;
+; Average fan-out                             ; 3.28              ;
 +---------------------------------------------+-------------------+
 
 
@@ -259,7 +259,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Library Name ;
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |ifttt_top_level                                     ; 681 (11)          ; 627 (11)     ; 164352      ; 0            ; 0       ; 0         ; 86   ; 0            ; |ifttt_top_level                                                                                                                         ; work         ;
+; |ifttt_top_level                                     ; 684 (13)          ; 629 (13)     ; 164352      ; 0            ; 0       ; 0         ; 86   ; 0            ; |ifttt_top_level                                                                                                                         ; work         ;
 ;    |GPIO_register:INST_GPIO_register|                ; 56 (56)           ; 208 (80)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register                                                                                        ; work         ;
 ;       |bidir_bus:INST_bidir_bus1|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus1                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus2|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus2                                                              ; work         ;
@@ -269,8 +269,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |bidir_bus:INST_bidir_bus6|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus6                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus7|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus7                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus8|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus8                                                              ; work         ;
-;    |I2C_tx_rx:INST_I2C_tx_rx|                        ; 123 (1)           ; 77 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx                                                                                                ; work         ;
-;       |I2C_handler2:inst_I2C_handler2|               ; 110 (110)         ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2                                                                 ; work         ;
+;    |I2C_tx_rx:INST_I2C_tx_rx|                        ; 124 (1)           ; 77 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx                                                                                                ; work         ;
+;       |I2C_handler2:inst_I2C_handler2|               ; 111 (111)         ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2                                                                 ; work         ;
 ;       |I2C_input_reg:inst_I2C_input_reg|             ; 12 (12)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg                                                               ; work         ;
 ;    |cpu_core:INST_cpu_core|                          ; 491 (1)           ; 331 (0)      ; 164352      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core                                                                                                  ; work         ;
 ;       |ALU:INST_ALU|                                 ; 220 (220)         ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|ALU:INST_ALU                                                                                     ; work         ;
@@ -351,8 +351,8 @@ Encoding Type:  One-Hot
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
 ; cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_ack             ; Merged with cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_PC_set              ;
-; r_CLK_divided[11..23]                                                             ; Lost fanout                                                                                       ;
-; Total Number of Removed Registers = 22                                            ;                                                                                                   ;
+; r_CLK_divided[13..23]                                                             ; Lost fanout                                                                                       ;
+; Total Number of Removed Registers = 20                                            ;                                                                                                   ;
 +-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 
@@ -361,7 +361,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 627   ;
+; Total registers                              ; 629   ;
 ; Number of registers using Synchronous Clear  ; 30    ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 32    ;
@@ -412,7 +412,7 @@ Encoding Type:  One-Hot
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[0]  ; 2       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[15] ; 2       ;
 ; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[1]               ; 19      ;
-; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[0]               ; 18      ;
+; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[0]               ; 17      ;
 ; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[2]               ; 12      ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[30]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[44]                   ; 1       ;
@@ -969,7 +969,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Thu May 09 12:52:07 2019
+    Info: Processing started: Thu May 09 15:41:18 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ifttt_top_level -c ifttt_top_level
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/i2c/i2c_tx_rx.vhd
@@ -1216,18 +1216,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (17049): 11 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1261 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1265 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 16 output pins
     Info (21060): Implemented 66 bidirectional pins
-    Info (21061): Implemented 1111 logic cells
+    Info (21061): Implemented 1115 logic cells
     Info (21064): Implemented 64 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4716 megabytes
-    Info: Processing ended: Thu May 09 12:52:11 2019
+    Info: Peak virtual memory: 4720 megabytes
+    Info: Processing ended: Thu May 09 15:41:22 2019
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
