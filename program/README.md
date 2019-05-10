@@ -85,3 +85,13 @@ Example: Push r1 to stack in memory
 The POP instruction is used to pop data from memory stack to a register. A register name is needed. \
 Example: POP data from stack memory to r1
     * PUSH r1
+    
+    
+## Memory addresses
+### I^2C
+I2C address register = C00 (write only)
+I2C data tx register = C01 (write only)
+I2C data rx register = C02 (read ony)
+I2C setup register = C02 (write ony)
+
+
