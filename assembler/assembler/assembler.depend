@@ -31,13 +31,13 @@
 
 1556885330 c:\users\holge\onedrive\desktop\assembler\assembler\assembly_to_mif.h
 
-1557410478 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\assembly_to_mif.c
+1557500579 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\assembly_to_mif.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"assembly_to_mif.h"
 
-1557346570 c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\assembly_to_mif.h
+1557499882 c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\assembly_to_mif.h
 
 1557346570 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\main.c
 	<stdio.h>
@@ -54,7 +54,7 @@
 	<stdio.h>
 	"read_assembly.h"
 
-1557346570 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\write_mif.c
+1557500215 source:c:\users\holge\onedrive\aau - elektronik og it\4. semester\p4\ifttt-cpu\assembler\assembler\write_mif.c
 	<stdio.h>
 	"write_mif.h"
 	"assembly_to_mif.h"

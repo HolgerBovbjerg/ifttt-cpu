@@ -36,7 +36,7 @@ int opcode = 0;
 int outputIndex = 0;
 
 // Arrays for storing input and output
-char inputArray[1024][100];
+char inputArray[2048][100];
 char outputArray[1024][100];
 
 FILE *assembly_to_mif(FILE *input, FILE *output)
@@ -67,7 +67,7 @@ int readASM(FILE *input)
 {
     // For every line in inputfile
     printf("Buffering assembly code...\n\n");
-    for (int i = 0; i < 1024; i++)
+    for (int i = 0; i < 1024*2; i++)
     {
         int ch;
         char firstLetter;
@@ -419,13 +419,17 @@ void printToOutput(FILE *outputFile)
     // Write line number
     if (((lineIterator / 2)) < 10) // Check for formatting
     {
-        fprintf(outputFile, "%d   : ", (lineIterator / 2));
+        fprintf(outputFile, "%d    : ", (lineIterator / 2));
     }
     else if (((lineIterator / 2)) < 100) // Check for formatting
     {
+        fprintf(outputFile, "%d   : ", (lineIterator / 2));
+    }
+    else if (((lineIterator / 2)) < 1000) // Check for formatting
+    {
         fprintf(outputFile, "%d  : ", (lineIterator / 2));
     }
-    else // Check for formatting
+    else
     {
         fprintf(outputFile, "%d : ", (lineIterator / 2));
     }
