@@ -39,7 +39,14 @@ int write_mif(FILE *input)
     mif = assembly_to_mif(input, mif);
     // Set remaining program memory to all zeroes
     printf("Loading unused memory with zeroes...\n");
-    fprintf(mif, "[%d..%d] : 00000000000000000000000000000000;\n", getLineCounter(), 1023);
+    if (getLineCounter() < 1023)
+    {
+        fprintf(mif, "[%d..%d] : 00000000000000000000000000000000;\n", getLineCounter(), 1023);
+    }
+    else if (getLineCounter() == 1023)
+    {
+        fprintf(mif, "[%d] : 00000000000000000000000000000000;\n", getLineCounter());
+    }
     // End mif file
     printf("Writing .mif end statement...\n");
     fprintf(mif, "END;");

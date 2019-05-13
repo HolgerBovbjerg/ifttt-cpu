@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("C:/Users/Claus Rytter Nielsen/Documents/GitHub/ifttt-cpu/quartus/ifttt_top_level/output_files/") File("ifttt_top_level.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16F484) Path("C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ifttt_top_level/output_files/") File("ifttt_top_level.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
