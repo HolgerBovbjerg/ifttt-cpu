@@ -99,6 +99,8 @@ signal buffer_ptr					: integer := 0;
 signal print_ptr					: integer := 0;
 signal init_ptr					: integer := 0;
 signal delay_cnt					: integer range 0 to divider;
+signal begin_receive				: std_logic := '0';
+signal begin_init					: std_logic := '0';
 
 begin
 
@@ -161,18 +163,22 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 				if (i_display_write_enable = '1') then
 					r_buffer(buffer_ptr) <= i_display_data;
 					buffer_ptr <= buffer_ptr+1;
+					--begin_receive <= '1';
 					state <= receive;
 				else
 					state <= ready;
 				end if;
 ----------------------------------Receive----------------------------------------			
 			when receive =>
-
-				if (i_display_write_enable = '1' and buffer_ptr < 33) then
+				if (i_display_write_enable = '1' and buffer_ptr < 33 and begin_init = '0') then
+				--if (buffer_ptr < 33) then
 					r_buffer(buffer_ptr) <= i_display_data;
 					buffer_ptr <= buffer_ptr+1;
-				else
+				elsif (begin_init = '1' or buffer_ptr = 33) then 
 					state <= init;
+					buffer_ptr <= buffer_ptr-1;
+				else
+					state <= receive;
 				end if;
 ---------------------------------Initialise--------------------------------------				
 			when init =>
@@ -308,5 +314,18 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 		end case;
 	end if;
 end if;
+end process;
+
+process (all)
+begin
+	if (falling_edge(i_display_clock)) then
+		--if (r_buffer(buffer_ptr-1) = x"03" and begin_receive = '1' and begin_init = '0') then
+		if (r_buffer(buffer_ptr-1) = x"03" and begin_init = '0') then
+			--state <= init;
+			--begin_receive <= '0';
+			begin_init <= '1';
+			--buffer_ptr <= buffer_ptr-1;
+		end if;
+	end if;
 end process;
 end architecture rtl;			
