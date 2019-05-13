@@ -110,7 +110,7 @@ begin
 						r_data_txrx <= i_I2C_addr & not i_I2C_rw;										-- Load slave address + R/W bit
 						r_busy <= '1';																			-- Set busy flag
 						state <= start;																		-- Go to start state
-						else																						-- Remain in ready state (idle)
+					else																							-- Remain in ready state (idle)
 						o_I2C_sda_txrx <= '1';																-- Set SDA 'high'
 						r_busy <= '0';																			-- Clear busy flag
 						state <= ready;																		-- Go to ready state
@@ -131,7 +131,7 @@ begin
 							o_I2C_sda_txrx <= '1';									-- set SDA 'high' and prepare for acknowledge 3
 							state <= slv_ack3;										-- go to slave acknowledge 3
 						elsif (r_ack_cnt = "01" and i_I2C_rw = '1') then	-- If finished writing register to slave (RD)
-							o_I2C_sda_txrx <= '1';									-- Set SDA to 'high'
+							o_I2C_sda_txrx <= '1';									-- Set SDA to 'high' and prepare for acknowledge 2
 							state <= slv_ack2;										-- Go to slave acknowledge 2
 						elsif (r_ack_cnt = "11" and i_I2C_rw = '1') then	-- if finished reading data from slave
 							o_I2C_sda_txrx <= '1';									-- Set SDA 'high' and prepare for not-acknowledge
