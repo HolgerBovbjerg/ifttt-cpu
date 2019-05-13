@@ -1,0 +1,5 @@
+Counter loop:
+h'001C: LOAD r1, 0 // Store zero in r1
+h'001D: ADDI r1, r1, 1 // Add 1 to r1 and store it in r1
+h'001E: SUBI r2, r1, 1 // Subtract 1 from r1 and store it in r2
+h'001F: BRANCH 001D, NEG // branch to ADDI if negative

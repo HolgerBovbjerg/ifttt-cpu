@@ -109,6 +109,14 @@ io_GPIO_PIN7[6] <> GPIO_register:INST_GPIO_register.io_GPIO_PIN7[6]
 io_GPIO_PIN7[7] <> GPIO_register:INST_GPIO_register.io_GPIO_PIN7[7]
 io_I2C_scl <> I2C_tx_rx:INST_I2C_tx_rx.io_I2C_scl
 io_I2C_sda <> I2C_tx_rx:INST_I2C_tx_rx.io_I2C_sda
+o_I2C_received[0] << I2C_tx_rx:INST_I2C_tx_rx.o_I2C_data_rx[0]
+o_I2C_received[1] << I2C_tx_rx:INST_I2C_tx_rx.o_I2C_data_rx[1]
+o_I2C_received[2] << I2C_tx_rx:INST_I2C_tx_rx.o_I2C_data_rx[2]
+o_I2C_received[3] << I2C_tx_rx:INST_I2C_tx_rx.o_I2C_data_rx[3]
+o_I2C_received[4] << I2C_tx_rx:INST_I2C_tx_rx.o_I2C_data_rx[4]
+o_I2C_received[5] << I2C_tx_rx:INST_I2C_tx_rx.o_I2C_data_rx[5]
+o_I2C_received[6] << I2C_tx_rx:INST_I2C_tx_rx.o_I2C_data_rx[6]
+o_I2C_received[7] << I2C_tx_rx:INST_I2C_tx_rx.o_I2C_data_rx[7]
 
 
 |ifttt_top_level|cpu_core:INST_cpu_core

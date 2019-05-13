@@ -71,7 +71,7 @@ begin
 	
 	INST_bidir_bus2 : bidir_bus 
    Port map(
-        io_bidir_port   	=> io_GPIO_PIN1,
+        io_bidir_port   => io_GPIO_PIN1,
         i_OUT_enable 	=> r_CONFIG_REGISTER(1),
 		  i_CLK 				=> i_GPIO_clk,
         i_DATA_in     	=> r_IO_REG_OUT(1),

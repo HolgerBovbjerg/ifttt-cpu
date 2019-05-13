@@ -1,5 +1,5 @@
 Assembler report for ifttt_top_level
-Mon May 13 10:12:12 2019
+Mon May 13 15:40:49 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 13 10:12:12 2019 ;
+; Assembler Status      ; Successful - Mon May 13 15:40:49 2019 ;
 ; Revision Name         ; ifttt_top_level                       ;
 ; Top-level Entity Name ; ifttt_top_level                       ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                                                   ;
 +----------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                                                              ;
-; JTAG usercode  ; 0x0017870F                                                                                                                                ;
-; Checksum       ; 0x0017870F                                                                                                                                ;
+; JTAG usercode  ; 0x001763A4                                                                                                                                ;
+; Checksum       ; 0x001763A4                                                                                                                                ;
 +----------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Mon May 13 10:12:11 2019
+    Info: Processing started: Mon May 13 15:40:47 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ifttt_top_level -c ifttt_top_level
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4610 megabytes
-    Info: Processing ended: Mon May 13 10:12:12 2019
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Mon May 13 15:40:49 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

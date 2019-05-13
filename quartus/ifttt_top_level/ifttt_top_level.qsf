@@ -55,16 +55,8 @@ set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_G21 -to i_CLK
 set_location_assignment PIN_G3 -to i_HALT
 set_location_assignment PIN_H2 -to i_RESET
-set_location_assignment PIN_J1 -to o_STATE[0]
-set_location_assignment PIN_J2 -to o_STATE[1]
-set_location_assignment PIN_J3 -to o_STATE[2]
-set_location_assignment PIN_H1 -to o_STATE[3]
-set_location_assignment PIN_F2 -to o_STATE[4]
-set_location_assignment PIN_E1 -to o_STATE[5]
-set_location_assignment PIN_C1 -to o_STATE[6]
-set_location_assignment PIN_C2 -to o_DATA[0]
-set_location_assignment PIN_B1 -to o_DATA[1]
-set_location_assignment PIN_B2 -to o_DATA[2]
+set_location_assignment PIN_B1 -to o_STATE[0]
+set_location_assignment PIN_B2 -to o_STATE[4]
 set_global_assignment -name VHDL_FILE ../../I2C/I2C_tx_rx.vhd
 set_global_assignment -name VHDL_FILE ../../I2C/I2C_input_reg.vhd
 set_global_assignment -name VHDL_FILE ../../I2C/I2C_handler2.vhd
@@ -112,4 +104,12 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ifttt_top_le
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1 us" -section_id ifttt_top_level_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ifttt_top_level_tb -section_id ifttt_top_level_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ../../toplevel/testbenches/ifttt_top_level_tb.vhd -section_id ifttt_top_level_tb
+set_location_assignment PIN_J1 -to o_I2C_received[0]
+set_location_assignment PIN_J2 -to o_I2C_received[1]
+set_location_assignment PIN_J3 -to o_I2C_received[2]
+set_location_assignment PIN_H1 -to o_I2C_received[3]
+set_location_assignment PIN_F2 -to o_I2C_received[4]
+set_location_assignment PIN_E1 -to o_I2C_received[5]
+set_location_assignment PIN_C1 -to o_I2C_received[6]
+set_location_assignment PIN_C2 -to o_I2C_received[7]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

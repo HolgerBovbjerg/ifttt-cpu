@@ -1,0 +1,75 @@
+MIF/HEX Update report for ifttt_top_level
+Mon May 13 15:46:59 2019
+Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Mon May 13 15:46:59 2019 ;
+; Revision Name         ; ifttt_top_level                       ;
+; Top-level Entity Name ; ifttt_top_level                       ;
+; Family                ; Cyclone III                           ;
+; Device                ; EP3C16F484C6                          ;
++-----------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                                                                                        ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ifttt_top_level/db/ifttt_top_level.ram0_data_ram_24acaa6a.hdl.mif     ;
+; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ifttt_top_level/db/ifttt_top_level.ram0_register32x8_e16f5a94.hdl.mif ;
+; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ifttt_top_level/prog.mif                                              ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit MIF/HEX Update
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+    Info: Processing started: Mon May 13 15:46:58 2019
+Info: Command: quartus_cdb ifttt_top_level -c ifttt_top_level --update_mif
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ifttt_top_level/db/ifttt_top_level.ram0_data_ram_24acaa6a.hdl.mif
+    Info (39025): Processed Memory Initialization File C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ifttt_top_level/db/ifttt_top_level.ram0_register32x8_e16f5a94.hdl.mif
+    Info (39025): Processed Memory Initialization File C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/ifttt_top_level/prog.mif
+Info: Quartus II 64-Bit MIF/HEX Update was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4637 megabytes
+    Info: Processing ended: Mon May 13 15:47:00 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
