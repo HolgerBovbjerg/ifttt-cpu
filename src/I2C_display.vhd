@@ -23,8 +23,8 @@ entity I2C_display is
 	i_display_reset			: in std_logic;
 	
 	-- Outputs
-	o_display_reset		: out std_logic				:= '1';								
-	o_display_ready		: out std_logic            := '1';	
+	o_display_reset		: out std_logic							:= '0';								
+	o_display_ready		: out std_logic							:= '0';	
 	o_display_data			: out std_logic_vector (7 downto 0)	:= x"00"	
 	);
 end entity;
@@ -110,8 +110,6 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 		print_ptr <= 0;
 		init_ptr <= 0;
 		trans_cnt <= 0;
-		init_flag <= '0';
-		transmit_flag <= '0';
 		r_buffer <= (others => x"00");
 		state <= ready;
 	else
@@ -143,9 +141,7 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 							state <= transmit;
 							delay_cnt <= 0;
 						else
-							if (delay_cnt < 500) then
-								delay_cnt <= delay_cnt+1;
-							end if;
+							delay_cnt <= delay_cnt+1;
 							state <= reset;
 						end if;
 				end case;
@@ -170,9 +166,9 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 			when init =>
 				init_flag <= '1';
 				transmit_flag <= '0';		
-				if ((init_ptr < 2) and (i_display_busy = '1')) then    -- init ptr 28
+				if ((init_ptr < 28) and (i_display_busy = '1')) then
 					state <= init;
-				elsif ((init_ptr < 2) and (i_display_busy = '0')) then  -- init ptr 28
+				elsif ((init_ptr < 28) and (i_display_busy = '0')) then
 					o_display_data <= r_init(init_ptr);
 					init_ptr <= init_ptr+1;
 					state <= reset;
@@ -212,12 +208,36 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 										state <= transmit;
 									end if;
 								else
+									-- if trans_cnt = 3 and print_ptr = buffer_ptr-1  <--- try dis if the other doesn't work
+									--	print_ptr++
 									o_display_data <= r_chars(char_ptr);
 									char_ptr <= char_ptr+1;
 									trans_cnt <= trans_cnt+1;
 									state <= reset;
 								end if;
 							end if;
+							
+							
+							
+							/*if (start = '1' and trans_cnt = 3) then
+								if (print_ptr = buffer_ptr) then
+									r_buffer <= (others => x"00");
+									trans_cnt <= 0;
+									print_ptr <= 0;
+									char_ptr <= 0;
+									state <= ready;
+								else
+									o_display_data <= r_chars(char_ptr);
+									print_ptr <= print_ptr+1;
+									start <= '0';
+									trans_cnt <= 0;
+									state <= transmit;
+								end if;							
+							else
+								char_ptr <= char_ptr+1;
+								trans_cnt <= trans_cnt+1;
+								state <= reset;
+							end if;*/
 						when others =>
 							state <= transmit;
 					end case;
