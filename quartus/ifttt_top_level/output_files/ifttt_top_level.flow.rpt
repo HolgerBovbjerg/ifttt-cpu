@@ -1,5 +1,5 @@
 Flow report for ifttt_top_level
-Thu May 09 15:41:42 2019
+Mon May 13 09:56:23 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu May 09 15:41:42 2019      ;
+; Flow Status                        ; Successful - Mon May 13 09:56:23 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; ifttt_top_level                            ;
 ; Top-level Entity Name              ; ifttt_top_level                            ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 995 / 15,408 ( 6 % )                       ;
-;     Total combinational functions  ; 709 / 15,408 ( 5 % )                       ;
-;     Dedicated logic registers      ; 629 / 15,408 ( 4 % )                       ;
-; Total registers                    ; 630                                        ;
+; Total logic elements               ; 991 / 15,408 ( 6 % )                       ;
+;     Total combinational functions  ; 703 / 15,408 ( 5 % )                       ;
+;     Dedicated logic registers      ; 616 / 15,408 ( 4 % )                       ;
+; Total registers                    ; 616                                        ;
 ; Total pins                         ; 86 / 347 ( 25 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 164,352 / 516,096 ( 32 % )                 ;
@@ -64,33 +64,42 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/09/2019 15:41:18 ;
+; Start date & time ; 05/13/2019 09:55:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ifttt_top_level     ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                           ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 172309000256012.155740927828332       ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
-; IP_TOOL_NAME                        ; ROM: 1-PORT                           ; --            ; --          ; --             ;
-; IP_TOOL_VERSION                     ; 13.1                                  ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
-; MISC_FILE                           ; mega_prog_mem_inst.vhd                ; --            ; --          ; --             ;
-; MISC_FILE                           ; mega_prog_mem.cmp                     ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                            ;
++--------------------------------------+---------------------------------------------------+---------------+-------------+--------------------+
+; Assignment Name                      ; Value                                             ; Default Value ; Entity Name ; Section Id         ;
++--------------------------------------+---------------------------------------------------+---------------+-------------+--------------------+
+; COMPILER_SIGNATURE_ID                ; 172309000256012.155773415937004                   ; --            ; --          ; --                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                ; --            ; --          ; ifttt_top_level_tb ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ifttt_top_level_tb                                ; --            ; --          ; eda_simulation     ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                              ; --            ; --          ; eda_simulation     ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                            ; <None>        ; --          ; --                 ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                   ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_FILE                  ; ../../toplevel/testbenches/ifttt_top_level_tb.vhd ; --            ; --          ; ifttt_top_level_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ifttt_top_level_tb                                ; --            ; --          ; ifttt_top_level_tb ;
+; EDA_TEST_BENCH_NAME                  ; ifttt_top_level_tb                                ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 us                                              ; --            ; --          ; ifttt_top_level_tb ;
+; IP_TOOL_NAME                         ; ROM: 1-PORT                                       ; --            ; --          ; --                 ;
+; IP_TOOL_VERSION                      ; 13.1                                              ; --            ; --          ; --                 ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                ; --            ; --          ; --                 ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                 ; --            ; --          ; --                 ;
+; MISC_FILE                            ; mega_prog_mem_inst.vhd                            ; --            ; --          ; --                 ;
+; MISC_FILE                            ; mega_prog_mem.cmp                                 ; --            ; --          ; --                 ;
+; PARTITION_COLOR                      ; 16764057                                          ; --            ; --          ; Top                ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                             ; --            ; --          ; Top                ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                            ; --            ; --          ; Top                ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                               ; --            ; --          ; --                 ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW             ; --            ; --          ; --                 ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                      ; --            ; --          ; --                 ;
+; VHDL_INPUT_VERSION                   ; VHDL_2008                                         ; VHDL_1993     ; --          ; --                 ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES       ; Off                                               ; --            ; --          ; --                 ;
++--------------------------------------+---------------------------------------------------+---------------+-------------+--------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -98,12 +107,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4720 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 4981 MB             ; 00:00:08                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4716 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 4989 MB             ; 00:00:08                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4606 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4654 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4654 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4573 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:17                           ;
+; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:17                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
