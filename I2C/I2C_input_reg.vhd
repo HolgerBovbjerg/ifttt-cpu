@@ -28,12 +28,12 @@ architecture rtl of I2C_input_reg is
 type reg_array is array (0 to 4) of std_logic_vector (7 downto 0);
 
 signal r_register					: reg_array := (others => x"00");
-signal r_I2C_slv_addr			: std_logic_vector (2 downto 0) := "000";
-signal r_I2C_slv_data_tx		: std_logic_vector (2 downto 0) := "001";
-signal r_I2C_slv_data_rx		: std_logic_vector (2 downto 0) := "010";
-signal r_I2C_setup				: std_logic_vector (2 downto 0) := "011";
-signal r_I2C_slave_reg			: std_logic_vector (2 downto 0) := "100";
-signal r_I2C_write_regaddr_rx	: std_logic_vector (2 downto 0) := "010";
+constant r_I2C_slv_addr			: std_logic_vector (2 downto 0) := "000";
+constant r_I2C_slv_data_tx		: std_logic_vector (2 downto 0) := "001";
+constant r_I2C_slv_data_rx		: std_logic_vector (2 downto 0) := "010";
+constant r_I2C_setup				: std_logic_vector (2 downto 0) := "011";
+constant r_I2C_slave_reg			: std_logic_vector (2 downto 0) := "100";
+constant r_I2C_write_regaddr_rx	: std_logic_vector (2 downto 0) := "010";
 
 begin
 

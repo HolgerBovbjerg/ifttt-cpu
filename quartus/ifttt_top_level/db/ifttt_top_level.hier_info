@@ -1,26 +1,48 @@
 |ifttt_top_level
-i_CLK => cpu_core:INST_cpu_core.i_CORE_CLK
-i_CLK => GPIO_register:INST_GPIO_register.i_GPIO_clk
 i_CLK => I2C_tx_rx:INST_I2C_tx_rx.i_I2C_clk
+i_CLK => r_CLK_divided[0].CLK
+i_CLK => r_CLK_divided[1].CLK
+i_CLK => r_CLK_divided[2].CLK
+i_CLK => r_CLK_divided[3].CLK
+i_CLK => r_CLK_divided[4].CLK
+i_CLK => r_CLK_divided[5].CLK
+i_CLK => r_CLK_divided[6].CLK
+i_CLK => r_CLK_divided[7].CLK
+i_CLK => r_CLK_divided[8].CLK
+i_CLK => r_CLK_divided[9].CLK
+i_CLK => r_CLK_divided[10].CLK
+i_CLK => r_CLK_divided[11].CLK
+i_CLK => r_CLK_divided[12].CLK
+i_CLK => r_CLK_divided[13].CLK
+i_CLK => r_CLK_divided[14].CLK
+i_CLK => r_CLK_divided[15].CLK
+i_CLK => r_CLK_divided[16].CLK
+i_CLK => r_CLK_divided[17].CLK
+i_CLK => r_CLK_divided[18].CLK
+i_CLK => r_CLK_divided[19].CLK
+i_CLK => r_CLK_divided[20].CLK
+i_CLK => r_CLK_divided[21].CLK
+i_CLK => r_CLK_divided[22].CLK
+i_CLK => r_CLK_divided[23].CLK
 i_RESET => cpu_core:INST_cpu_core.i_CORE_RESET
 i_HALT => cpu_core:INST_cpu_core.i_CORE_HALT
-o_DATA[0] <= cpu_core:INST_cpu_core.o_DATA[0]
-o_DATA[1] <= cpu_core:INST_cpu_core.o_DATA[1]
-o_DATA[2] <= cpu_core:INST_cpu_core.o_DATA[2]
-o_DATA[3] <= cpu_core:INST_cpu_core.o_DATA[3]
-o_DATA[4] <= cpu_core:INST_cpu_core.o_DATA[4]
-o_DATA[5] <= cpu_core:INST_cpu_core.o_DATA[5]
-o_DATA[6] <= cpu_core:INST_cpu_core.o_DATA[6]
-o_DATA[7] <= cpu_core:INST_cpu_core.o_DATA[7]
-o_STATE[0] <= cpu_core:INST_cpu_core.o_STATE[0]
-o_STATE[1] <= cpu_core:INST_cpu_core.o_STATE[1]
-o_STATE[2] <= cpu_core:INST_cpu_core.o_STATE[2]
-o_STATE[3] <= cpu_core:INST_cpu_core.o_STATE[3]
-o_STATE[4] <= cpu_core:INST_cpu_core.o_STATE[4]
-o_STATE[5] <= cpu_core:INST_cpu_core.o_STATE[5]
-o_STATE[6] <= cpu_core:INST_cpu_core.o_STATE[6]
+o_DATA[0] << cpu_core:INST_cpu_core.o_DATA[0]
+o_DATA[1] << cpu_core:INST_cpu_core.o_DATA[1]
+o_DATA[2] << cpu_core:INST_cpu_core.o_DATA[2]
+o_DATA[3] << cpu_core:INST_cpu_core.o_DATA[3]
+o_DATA[4] << cpu_core:INST_cpu_core.o_DATA[4]
+o_DATA[5] << cpu_core:INST_cpu_core.o_DATA[5]
+o_DATA[6] << cpu_core:INST_cpu_core.o_DATA[6]
+o_DATA[7] << cpu_core:INST_cpu_core.o_DATA[7]
+o_STATE[0] << cpu_core:INST_cpu_core.o_STATE[0]
+o_STATE[1] << cpu_core:INST_cpu_core.o_STATE[1]
+o_STATE[2] << cpu_core:INST_cpu_core.o_STATE[2]
+o_STATE[3] << cpu_core:INST_cpu_core.o_STATE[3]
+o_STATE[4] << cpu_core:INST_cpu_core.o_STATE[4]
+o_STATE[5] << cpu_core:INST_cpu_core.o_STATE[5]
+o_STATE[6] << cpu_core:INST_cpu_core.o_STATE[6]
 i_INTERRUPT_request => cpu_core:INST_cpu_core.i_INTERRUPT_request
-o_INTERRUPT_ack <= cpu_core:INST_cpu_core.o_INTERRUPT_ack
+o_INTERRUPT_ack << cpu_core:INST_cpu_core.o_INTERRUPT_ack
 io_GPIO_PIN0[0] <> GPIO_register:INST_GPIO_register.io_GPIO_PIN0[0]
 io_GPIO_PIN0[1] <> GPIO_register:INST_GPIO_register.io_GPIO_PIN0[1]
 io_GPIO_PIN0[2] <> GPIO_register:INST_GPIO_register.io_GPIO_PIN0[2]
@@ -3859,6 +3881,7 @@ i_I2C_data_tx[7] => I2C_input_reg:inst_I2C_input_reg.i_I2C_data_tx[7]
 i_I2C_write_enable => I2C_input_reg:inst_I2C_input_reg.i_I2C_write_enable
 i_I2C_write_regaddr_tx[0] => I2C_input_reg:inst_I2C_input_reg.i_I2C_write_regaddr_tx[0]
 i_I2C_write_regaddr_tx[1] => I2C_input_reg:inst_I2C_input_reg.i_I2C_write_regaddr_tx[1]
+i_I2C_write_regaddr_tx[2] => I2C_input_reg:inst_I2C_input_reg.i_I2C_write_regaddr_tx[2]
 o_I2C_busy <= I2C_handler2:inst_I2C_handler2.o_I2C_busy
 o_I2C_data_rx[0] <= I2C_input_reg:inst_I2C_input_reg.o_I2C_slv_data_rx[0]
 o_I2C_data_rx[1] <= I2C_input_reg:inst_I2C_input_reg.o_I2C_slv_data_rx[1]
@@ -4065,6 +4088,14 @@ o_I2C_sda_txrx <= o_I2C_sda_txrx~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg
+i_I2C_clk => r_register[4][0].CLK
+i_I2C_clk => r_register[4][1].CLK
+i_I2C_clk => r_register[4][2].CLK
+i_I2C_clk => r_register[4][3].CLK
+i_I2C_clk => r_register[4][4].CLK
+i_I2C_clk => r_register[4][5].CLK
+i_I2C_clk => r_register[4][6].CLK
+i_I2C_clk => r_register[4][7].CLK
 i_I2C_clk => r_register[3][0].CLK
 i_I2C_clk => r_register[3][1].CLK
 i_I2C_clk => r_register[3][2].CLK
@@ -4101,6 +4132,8 @@ i_I2C_data_tx[0] => r_register.DATAB
 i_I2C_data_tx[0] => r_register.DATAB
 i_I2C_data_tx[0] => r_register.DATAB
 i_I2C_data_tx[0] => r_register.DATAB
+i_I2C_data_tx[0] => r_register.DATAB
+i_I2C_data_tx[1] => r_register.DATAB
 i_I2C_data_tx[1] => r_register.DATAB
 i_I2C_data_tx[1] => r_register.DATAB
 i_I2C_data_tx[1] => r_register.DATAB
@@ -4109,6 +4142,8 @@ i_I2C_data_tx[2] => r_register.DATAB
 i_I2C_data_tx[2] => r_register.DATAB
 i_I2C_data_tx[2] => r_register.DATAB
 i_I2C_data_tx[2] => r_register.DATAB
+i_I2C_data_tx[2] => r_register.DATAB
+i_I2C_data_tx[3] => r_register.DATAB
 i_I2C_data_tx[3] => r_register.DATAB
 i_I2C_data_tx[3] => r_register.DATAB
 i_I2C_data_tx[3] => r_register.DATAB
@@ -4117,6 +4152,8 @@ i_I2C_data_tx[4] => r_register.DATAB
 i_I2C_data_tx[4] => r_register.DATAB
 i_I2C_data_tx[4] => r_register.DATAB
 i_I2C_data_tx[4] => r_register.DATAB
+i_I2C_data_tx[4] => r_register.DATAB
+i_I2C_data_tx[5] => r_register.DATAB
 i_I2C_data_tx[5] => r_register.DATAB
 i_I2C_data_tx[5] => r_register.DATAB
 i_I2C_data_tx[5] => r_register.DATAB
@@ -4125,6 +4162,8 @@ i_I2C_data_tx[6] => r_register.DATAB
 i_I2C_data_tx[6] => r_register.DATAB
 i_I2C_data_tx[6] => r_register.DATAB
 i_I2C_data_tx[6] => r_register.DATAB
+i_I2C_data_tx[6] => r_register.DATAB
+i_I2C_data_tx[7] => r_register.DATAB
 i_I2C_data_tx[7] => r_register.DATAB
 i_I2C_data_tx[7] => r_register.DATAB
 i_I2C_data_tx[7] => r_register.DATAB
@@ -4137,8 +4176,9 @@ i_I2C_data_rx[4] => r_register.DATAA
 i_I2C_data_rx[5] => r_register.DATAA
 i_I2C_data_rx[6] => r_register.DATAA
 i_I2C_data_rx[7] => r_register.DATAA
-i_I2C_write_regaddr_tx[0] => Decoder0.IN1
-i_I2C_write_regaddr_tx[1] => Decoder0.IN0
+i_I2C_write_regaddr_tx[0] => Decoder0.IN2
+i_I2C_write_regaddr_tx[1] => Decoder0.IN1
+i_I2C_write_regaddr_tx[2] => Decoder0.IN0
 i_I2C_write_enable => r_register.OUTPUTSELECT
 i_I2C_write_enable => r_register.OUTPUTSELECT
 i_I2C_write_enable => r_register.OUTPUTSELECT
@@ -4147,6 +4187,14 @@ i_I2C_write_enable => r_register.OUTPUTSELECT
 i_I2C_write_enable => r_register.OUTPUTSELECT
 i_I2C_write_enable => r_register.OUTPUTSELECT
 i_I2C_write_enable => r_register.OUTPUTSELECT
+i_I2C_write_enable => r_register[4][0].ENA
+i_I2C_write_enable => r_register[4][1].ENA
+i_I2C_write_enable => r_register[4][2].ENA
+i_I2C_write_enable => r_register[4][3].ENA
+i_I2C_write_enable => r_register[4][4].ENA
+i_I2C_write_enable => r_register[4][5].ENA
+i_I2C_write_enable => r_register[4][6].ENA
+i_I2C_write_enable => r_register[4][7].ENA
 i_I2C_write_enable => r_register[3][0].ENA
 i_I2C_write_enable => r_register[3][1].ENA
 i_I2C_write_enable => r_register[3][2].ENA
@@ -4203,5 +4251,13 @@ o_I2C_setup[4] <= r_register[3][4].DB_MAX_OUTPUT_PORT_TYPE
 o_I2C_setup[5] <= r_register[3][5].DB_MAX_OUTPUT_PORT_TYPE
 o_I2C_setup[6] <= r_register[3][6].DB_MAX_OUTPUT_PORT_TYPE
 o_I2C_setup[7] <= r_register[3][7].DB_MAX_OUTPUT_PORT_TYPE
+o_I2C_slave_reg[0] <= r_register[4][0].DB_MAX_OUTPUT_PORT_TYPE
+o_I2C_slave_reg[1] <= r_register[4][1].DB_MAX_OUTPUT_PORT_TYPE
+o_I2C_slave_reg[2] <= r_register[4][2].DB_MAX_OUTPUT_PORT_TYPE
+o_I2C_slave_reg[3] <= r_register[4][3].DB_MAX_OUTPUT_PORT_TYPE
+o_I2C_slave_reg[4] <= r_register[4][4].DB_MAX_OUTPUT_PORT_TYPE
+o_I2C_slave_reg[5] <= r_register[4][5].DB_MAX_OUTPUT_PORT_TYPE
+o_I2C_slave_reg[6] <= r_register[4][6].DB_MAX_OUTPUT_PORT_TYPE
+o_I2C_slave_reg[7] <= r_register[4][7].DB_MAX_OUTPUT_PORT_TYPE
 
 

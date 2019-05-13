@@ -106,7 +106,7 @@ architecture behavioural of ifttt_top_level is
 		i_I2C_clk					: in std_logic;								-- I2C main clock
 		i_I2C_data_tx				: in std_logic_vector (7 downto 0);		-- Register input
 		i_I2C_write_enable		: in std_logic;								-- I2C registers we = '1'
-		i_I2C_write_regaddr_tx  : in std_logic_vector (1 downto 0);		-- I2C registers address select
+		i_I2C_write_regaddr_tx  : in std_logic_vector (2 downto 0);		-- I2C registers address select
 		
 		--outputs
 		o_I2C_busy					: out std_logic;								-- Busy flag. Set is '1'. Clear is '0'
@@ -138,7 +138,7 @@ architecture behavioural of ifttt_top_level is
 begin 
 
 	INST_cpu_core : cpu_core PORT MAP (
-		i_CORE_CLK => i_CLK,
+		i_CORE_CLK => r_CLK_divided(20),
 		i_CORE_RESET => i_RESET,
 		i_CORE_HALT => i_HALT,
 		o_DATA => o_DATA,
@@ -157,7 +157,7 @@ begin
 	);
 	
 	INST_GPIO_register : GPIO_register PORT MAP (
-		i_GPIO_clk					=> i_CLK,
+		i_GPIO_clk					=> r_CLK_divided(20),
 		i_GPIO_address 			=> w_MC_GPIO_address(2 downto 0),
 		i_GPIO_data					=> w_MC_GPIO_data,
 		o_GPIO_data 				=> w_GPIO_data,
@@ -180,7 +180,7 @@ begin
 		i_I2C_clk					=> i_CLK,
 		i_I2C_data_tx				=> w_MC_I2C_data,
 		i_I2C_write_enable		=> w_MC_I2C_write_enable,
-		i_I2C_write_regaddr_tx  => w_MC_I2C_address(1 downto 0),
+		i_I2C_write_regaddr_tx  => w_MC_I2C_address(2 downto 0),
 		o_I2C_busy					=> w_I2C_busy,
 		o_I2C_data_rx				=> w_I2C_data_rx,
 		o_I2C_ack_error			=> w_I2C_ack_error
