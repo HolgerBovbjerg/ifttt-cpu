@@ -22,7 +22,7 @@ entity I2C_tx_rx is
 		);
 end entity;
 
-architecture rtl of I2C_tx_rx is
+architecture behavioural of I2C_tx_rx is
 	signal r_i_I2C_sda_txrx	: std_logic;							-- Tri-state buffer SDA input wire
 	signal r_i_I2C_scl_txrx : std_logic;							-- Tri-state buffer SCL input wire
 	signal r_o_I2C_sda_txrx	: std_logic;							-- Tristate buffer SDA output wire
@@ -112,6 +112,6 @@ begin
 	io_I2C_scl <= '0' 	when (r_o_I2C_scl_txrx = '0' and r_I2C_scl_enable = '1') else 'Z';
 	r_i_I2C_sda_txrx <= io_I2C_sda;
 	r_i_I2C_scl_txrx <= io_I2C_scl;
-end architecture rtl;
+end architecture behavioural;
 		
 		
