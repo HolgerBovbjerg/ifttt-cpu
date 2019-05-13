@@ -13,7 +13,7 @@ entity I2C_tx_rx is
 		i_I2C_clk					: in std_logic;								-- I2C main clock
 		i_I2C_data_tx				: in std_logic_vector (7 downto 0);		-- Register input
 		i_I2C_write_enable		: in std_logic;								-- I2C registers we = '1'
-		i_I2C_write_regaddr_tx  : in std_logic_vector (1 downto 0);		-- I2C registers address select
+		i_I2C_write_regaddr_tx  : in std_logic_vector (2 downto 0);		-- I2C registers address select
 		
 		--outputs
 		o_I2C_busy					: out std_logic;								-- Busy flag. Set is '1'. Clear is '0'
@@ -31,7 +31,8 @@ architecture rtl of I2C_tx_rx is
 	signal r_I2C_data_rx		: std_logic_vector (7 downto 0);	-- Signal from I2C handler to register
 	signal r_I2C_slv_addr	: std_logic_vector (7 downto 0);	-- Signal for slave address + rw bit
 	signal r_I2C_setup		: std_logic_vector (7 downto 0);	-- Signal for slave setup
-	signal r_I2C_slv_data_tx: std_logic_vector (7 downto 0);	-- signal 
+	signal r_I2C_slv_data_tx: std_logic_vector (7 downto 0);	-- signal slave data transmit
+	signal r_I2C_slv_reg		: std_logic_vector (7 downto 0);	-- signal slave internal register address
 	
 	
 	component I2C_handler2
@@ -63,12 +64,13 @@ COMPONENT I2C_input_reg
 		i_I2C_clk					: IN STD_LOGIC;
 		i_I2C_data_tx				: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		i_I2C_data_rx				: IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-		i_I2C_write_regaddr_tx	: IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		i_I2C_write_regaddr_tx	: IN STD_LOGIC_VECTOR(2 DOWNTO 0);
 		i_I2C_write_enable		: IN STD_LOGIC;
 		o_I2C_slv_addr				: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		o_I2C_slv_data_tx			: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		o_I2C_slv_data_rx			: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-		o_I2C_setup					: OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+		o_I2C_setup					: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+		o_I2C_slave_reg			: out std_logic_vector(7 downto 0)
 	);
 END COMPONENT;	
 	
@@ -82,7 +84,7 @@ begin
 		i_I2C_addr			=> r_I2C_slv_addr (6 downto 0),
 		i_I2C_data_tx		=> r_I2C_slv_data_tx,
 		i_I2C_rw				=> r_I2C_setup (0),
-		i_I2C_reg_tx		=> x"00",						-- Slave Register
+		i_I2C_reg_tx		=> r_I2C_slv_reg,						-- Slave Register
 		i_I2C_scl_txrx		=> r_i_I2C_scl_txrx,
 		o_I2C_busy			=> o_I2C_busy,
 		o_I2C_scl_enable	=> r_I2C_scl_enable,
@@ -90,7 +92,7 @@ begin
 		o_I2C_data_rx		=> r_I2C_data_rx,
 		o_I2C_scl_txrx		=> r_o_I2C_scl_txrx,
 		o_I2C_sda_txrx		=> r_o_I2C_sda_txrx
-	);
+		);
 		
 	inst_I2C_input_reg : I2C_input_reg port map(
 		i_I2C_clk					=> i_I2C_clk,
@@ -101,7 +103,8 @@ begin
 		o_I2C_slv_addr				=>	r_I2C_slv_addr,
 		o_I2C_slv_data_tx			=>	r_I2C_slv_data_tx,
 		o_I2C_slv_data_rx			=> o_I2C_data_rx,
-		o_I2C_setup					=> r_I2C_setup
+		o_I2C_setup					=> r_I2C_setup,
+		o_I2C_slave_reg			=> r_I2C_slv_reg
 	);
 
 -- Tri-state buffer for SDA and SCL
