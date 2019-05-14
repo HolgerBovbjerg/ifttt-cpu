@@ -123,35 +123,40 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 		case state is
 			when reset =>
 				case delay_cnt is
-					when 0 to (divider/4)-1 =>
-						o_display_reset <= '0';
-						o_display_ready <= '1';
+					when 0 to (divider/4)-1 => -- When counter is 0 to 124
+						o_display_reset <= '0'; -- Set reset output low
+						o_display_ready <= '1'; -- Ready output stays high
 						delay_cnt <= delay_cnt+1;
 						state <= reset;
-					when divider/4 to (2*divider/4)-1 =>
-						o_display_reset <= '1';
-						o_display_ready <= '1';
+					when divider/4 to (2*divider/4)-1 => -- When counter is 125 to 249
+						o_display_reset <= '1'; -- Set reset output high again
+						o_display_ready <= '1'; -- Ready output stays high
 						delay_cnt <= delay_cnt+1;
 						state <= reset;
-					when (2*divider/4) to (3*divider/4)-1 =>
-						o_display_reset <= '1';
-						o_display_ready <= '0';
+					when (2*divider/4) to (3*divider/4)-1 => -- When counter is 250 to 374
+						o_display_reset <= '1'; -- Reset output stays high
+						o_display_ready <= '0'; -- Set ready output low
 						delay_cnt <= delay_cnt+1;
 						state <= reset;
-					when others =>
-						o_display_reset <= '1';
-						o_display_ready <= '1';
+					when others => -- When counter is 375 to 500
+						o_display_reset <= '1'; -- Reset output stays high
+						o_display_ready <= '1'; -- Set ready output high again
 						if (init_flag = '1' and delay_cnt = divider and i_display_busy = '0') then
+						-- If init flag is high and delay counter has reached 500 and the I2C handler isn't busy
 							state <= init;
 							delay_cnt <= 0;
 						elsif (transmit_flag = '1' and delay_cnt = divider and i_display_busy = '0') then
+						-- If transmit flag is high and delay counter has reached 500 and the handler isn't busy
 							if (start = '1') then
-								state <= transmit;
+							-- If the driver hasn't sent all 4 bytes of a character
+								state <= transmit; -- Go to "transmit" state
 							else
-								state <= CharSelect;
+							-- If the driver is about to start sending the 4 bytes of the next character
+								state <= CharSelect; 
 							end if;
 							delay_cnt <= 0;
-						else
+						else 
+						-- Else if delay counter is less than 500, increment counter
 							if (delay_cnt < 500) then
 								delay_cnt <= delay_cnt+1;
 							end if;
@@ -171,36 +176,43 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 ----------------------------------Receive----------------------------------------			
 			when receive =>
 				if (i_display_write_enable = '1' and buffer_ptr < 33 and begin_init = '0') then
-				--if (buffer_ptr < 33) then
+				-- if write_enable is high, buffer isn’t full and driver hasn’t signaled to start sending 
+				-- initialisation data, load input data into input buffer
 					r_buffer(buffer_ptr) <= i_display_data;
 					buffer_ptr <= buffer_ptr+1;
 				elsif (begin_init = '1' or buffer_ptr = 33) then 
+				-- if buffer is full or driver has signaled to start sending initialisation data, go to
+				-- "init" state and decrement buffer pointer
 					state <= init;
 					buffer_ptr <= buffer_ptr-1;
 				else
+				-- If write_enable is low but still receiving data, remain in "receive" state
 					state <= receive;
 				end if;
 ---------------------------------Initialise--------------------------------------				
 			when init =>
-				init_flag <= '1';
-				transmit_flag <= '0';		
-				if ((init_ptr < 28) and (i_display_busy = '1')) then    -- init ptr 28
+				init_flag <= '1'; -- Set init_flag high so the driver returns here after reset
+				transmit_flag <= '0'; -- Set transmit_flag low
+				if ((init_ptr < 28) and (i_display_busy = '1')) then
+				-- If handler is busy, do nothing
 					state <= init;
-				elsif ((init_ptr < 28) and (i_display_busy = '0')) then  -- init ptr 28
+				elsif ((init_ptr < 28) and (i_display_busy = '0')) then
+				-- If handler is ready, send data and increment init pointer
 					o_display_data <= r_init(init_ptr);
 					init_ptr <= init_ptr+1;
 					state <= reset;
 				else
+				-- If all initialisation data is sent go to "CharSelect" state
 					init_ptr <= init_ptr+1;
 					state <= CharSelect;
 				end if;
 ----------------------------------CharSelect-------------------------------------
 			when CharSelect =>
-				start <= '1';
-				state <= transmit;
+				start <= '1'; -- Set start flag high for use in "transmit" state
+				state <= transmit; -- Set state to "transmit"
 				case r_buffer(print_ptr) is
-					when A =>
-						char_ptr <= 0;
+					when A => -- If buffer entry matches the A constant
+						char_ptr <= 0; -- set char pointer to 0
 					when B =>
 						char_ptr <= 4;
 					when C =>
@@ -284,11 +296,15 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 			when transmit =>
 				init_flag <= '0';
 				transmit_flag <= '1';
-				if (print_ptr < (buffer_ptr+1) and (i_display_busy = '1')) then
+				if (print_ptr < (buffer_ptr) and (i_display_busy = '1')) then
+				-- If handler is busy, do nothing.
 				state <= transmit;
-				elsif (print_ptr < (buffer_ptr+1) and (i_display_busy = '0')) then
+				elsif (print_ptr < (buffer_ptr) and (i_display_busy = '0')) then
+				-- If handler isn’t busy and printer pointer hasn’t reached EoT byte
 					if (trans_cnt = 4) then
+					-- If all bytes of a character have been sent
 						if (print_ptr = buffer_ptr-1) then
+						-- If it’s that last character, reset everything and go to "ready"
 							r_buffer <= (others => x"00");
 							o_display_data <= x"00";
 							trans_cnt <= 0;
@@ -299,12 +315,14 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 							transmit_flag <= '0';
 							state <= ready;
 						else
+						-- If there are still characters to send, go to next character
 							print_ptr <= print_ptr+1;
 							start <= '0';
 							trans_cnt <= 0;
 							state <= CharSelect;
 						end if;
 					else
+					-- If not all bytes of a character have been sent, send next byte
 						o_display_data <= r_chars(char_ptr);
 						char_ptr <= char_ptr+1;
 						trans_cnt <= trans_cnt+1;
@@ -318,14 +336,14 @@ end process;
 
 process (all)
 begin
-	if (falling_edge(i_display_clock)) then
-		--if (r_buffer(buffer_ptr-1) = x"03" and begin_receive = '1' and begin_init = '0') then
+	if (falling_edge(i_display_clock)) then -- On a falling edge of the clock
 		if (r_buffer(buffer_ptr-1) = x"03" and begin_init = '0') then
-			--state <= init;
-			--begin_receive <= '0';
+		-- If the last entry is an End of Text byte and the driver hasn’t started sending init data
 			begin_init <= '1';
-			--buffer_ptr <= buffer_ptr-1;
+		elsif (state = ready) then
+		-- If the driver has been reset, set begin_init low
+			begin_init <= '0';
 		end if;
 	end if;
 end process;
-end architecture rtl;			
+end architecture rtl;
