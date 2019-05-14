@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'i_CORE_CLK'
-Slack : -5.080
-TNS   : -730.858
+Slack : -4.873
+TNS   : -763.315
 
 Type  : Slow 1200mV 85C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -2.833
-TNS   : -10.847
+Slack : -3.391
+TNS   : -11.842
 
 Type  : Slow 1200mV 85C Model Hold 'i_CORE_CLK'
-Slack : -0.041
-TNS   : -0.041
+Slack : 0.056
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.343
+Slack : 0.357
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i_CORE_CLK'
@@ -27,19 +27,19 @@ Slack : -1.000
 TNS   : -5.000
 
 Type  : Slow 1200mV 0C Model Setup 'i_CORE_CLK'
-Slack : -4.411
-TNS   : -617.586
+Slack : -4.242
+TNS   : -646.659
 
 Type  : Slow 1200mV 0C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -2.542
-TNS   : -9.780
+Slack : -3.043
+TNS   : -10.804
 
 Type  : Slow 1200mV 0C Model Hold 'i_CORE_CLK'
-Slack : -0.068
-TNS   : -0.068
+Slack : 0.016
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.299
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i_CORE_CLK'
@@ -51,24 +51,24 @@ Slack : -1.000
 TNS   : -5.000
 
 Type  : Fast 1200mV 0C Model Setup 'i_CORE_CLK'
-Slack : -2.431
-TNS   : -255.740
+Slack : -2.372
+TNS   : -276.418
 
 Type  : Fast 1200mV 0C Model Setup 'control_unit:INST_control_unit|r_state[3]'
-Slack : -1.331
-TNS   : -4.837
+Slack : -1.652
+TNS   : -5.407
 
 Type  : Fast 1200mV 0C Model Hold 'i_CORE_CLK'
-Slack : -0.043
-TNS   : -0.043
+Slack : 0.025
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'control_unit:INST_control_unit|r_state[3]'
-Slack : 0.177
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i_CORE_CLK'
 Slack : -3.000
-TNS   : -471.138
+TNS   : -471.046
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'control_unit:INST_control_unit|r_state[3]'
 Slack : -1.000
