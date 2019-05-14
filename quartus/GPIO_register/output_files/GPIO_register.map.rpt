@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GPIO_register
-Tue Apr 30 12:27:24 2019
+Tue May 14 14:08:04 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 30 12:27:24 2019      ;
+; Analysis & Synthesis Status        ; Successful - Tue May 14 14:08:04 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; GPIO_register                              ;
 ; Top-level Entity Name              ; GPIO_register                              ;
@@ -254,7 +254,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Tue Apr 30 12:27:22 2019
+    Info: Processing started: Tue May 14 14:08:03 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GPIO_register -c GPIO_register
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/toplevel/bidir_bus.vhd
@@ -277,9 +277,9 @@ Info (21057): Implemented 343 device resources after synthesis - the final resou
     Info (21060): Implemented 64 bidirectional pins
     Info (21061): Implemented 257 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4681 megabytes
-    Info: Processing ended: Tue Apr 30 12:27:24 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Tue May 14 14:08:04 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
