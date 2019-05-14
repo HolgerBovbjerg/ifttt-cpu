@@ -102,8 +102,6 @@ begin
 			
 			-- Case for resolving branch control
 			case i_INSTRUCTION(31 downto 28) is
-				when OPCODE_WRITE => -- Write
-					o_BRANCH_CONTROL <= "000";
 				when OPCODE_BRANCH => -- Branch
 					o_SAVE_PC <= '1'; -- Save PC
 					o_BRANCH_CONTROL <= i_INSTRUCTION(2 downto 0);
@@ -114,14 +112,14 @@ begin
 					case i_INSTRUCTION(17 downto 15) is
 						when OP_SPEC_RETURN =>
 							o_BRANCH_CONTROL <= "110";
-							o_SAVE_PC <= '0'; -- Save PC
+							o_SAVE_PC <= '0'; 
 						when others =>
 							o_BRANCH_CONTROL <= "000";
-							o_SAVE_PC <= '0'; -- Save PC
+							o_SAVE_PC <= '0'; 
 					end case;
 				when others =>
 					o_BRANCH_CONTROL <= "000";
-					o_SAVE_PC <= '0'; -- Save PC
+					o_SAVE_PC <= '0'; 
 			end case;
 			
 			-- Case for resolving memory address

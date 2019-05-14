@@ -310,13 +310,18 @@ void assembleFromOpcode(FILE *outputFile, int number)
     else if (13 == number) // Branch instruction
     {
         printf("Opcode type is: Branch operation\n");
-        strcpy(outputArray[outputIndex], "000000000"); /* Append output with 9 zeroes as string returned from hexToBinary
-                                                        is 16 bits but program address is 10 bits*/
+        strcpy(outputArray[outputIndex], "000000000000000"); // Append output with 15 zeroes as no registers are used
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get hex string
         printf("%s\n", pch);
         hexToBinary(pch); // Convert hex string to binary
-        strcpy(outputArray[outputIndex], binaryNum);
+        char tenBit[11];
+        for (int i = 0; i < 10; i++)
+        {
+            tenBit[i] = binaryNum[6+i];
+        }
+        tenBit[10] = '\0'; // End string number to 10 bits
+        strcpy(outputArray[outputIndex], tenBit);
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get branch command
         printf("%s\n", pch);
@@ -331,6 +336,8 @@ void assembleFromOpcode(FILE *outputFile, int number)
     else if (14 == number) // Jumpeq instruction
     {
         printf("Opcode type is: Jumpeq operation\n");
+        strcpy(outputArray[outputIndex], "00000"); //Append with zeroes
+        outputIndex++;
         pch = strtok(NULL, " ,"); // Get first register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
@@ -354,9 +361,15 @@ void assembleFromOpcode(FILE *outputFile, int number)
         pch = strtok(NULL, " ,"); // Get hex value string
         printf("%s\n", pch);
         hexToBinary(pch); // Convert hex string to binary
-        strcpy(outputArray[outputIndex], binaryNum);
+        char tenBit[11];
+        for (int i = 0; i < 10; i++)
+        {
+            tenBit[i] = binaryNum[6+i];
+        }
+        tenBit[10] = '\0'; // End string number to 10 bits
+        strcpy(outputArray[outputIndex], tenBit);
         outputIndex++;
-        strcpy(outputArray[outputIndex], "00");
+        strcpy(outputArray[outputIndex], "000");
     }
     else if (number == 18) // Return instruction
     {
