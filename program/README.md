@@ -57,31 +57,35 @@ Example: Storing NOT r1 in r2
 The CMP instruction compares two regsiters and stores the result in a third. It needs three register names.\
 Example: Comparison of r1 compared with r2 stored in r3
     * CMP r3, r1, r2
-14. WRITE
+14. LOAD
+The LOAD instruction loads an 8 bit value into a GP register.\
+Example: 100 loaded into r1
+    * LOAD r1, 100
+15. WRITE
 The WRITE instruction writes a register to a memory location indicated as a hex number. It needs a register name and a memory address in hex.\
 Example:  Write r1 to memory address 1
     * WRITE r1, 1
-15. READ 
+16. READ 
 The read instruction reads a value from a memory location and stores it in a register. It needs a register name and a memory address in hex. \
 Example: Read memory address f and store it in r1
     * WRITE r1, f
-16. BRANCH
-The BRANCH instruction has five subinstructions to specify a condition for branching. A hex address and a subinstruction is needed. Possible subinstructions are: JMP - unconditional jump, CAR - jump if carry flag is set, OVR - jump if overflow flag is set, NEG - jump if negative flag is set, EQ - Jump if equal flag is set.\
+17. BRANCH
+The BRANCH instruction has five subinstructions to specify a condition for branching. A hex address and a subinstruction is needed. Possible subinstructions are: JMP - unconditional jump, CAR - jump if carry flag is set, OVR - jump if overflow flag is set, NEG - jump if negative flag is set, ZER - Jump if zero flag is set.\
 Example: Jump to address f if overflow flag is set
     * BRANCH f, OVR
-17. JUMPEQ
+18. JUMPEQ
 The JUMPEQ instruction is used to compare two registers and jump if they are equal. Two register names and a hex address are needed.\
 Example:  Jump to address f if r1 and r2 are equal
     * JUMPEQ r1, r2, f
-18. RETURN 
+19. RETURN 
 The RETURN instruction is used to return to the last saved program address. No operands are needed.\
 Example: Return to last saved program address
     * RETURN
-19. PUSH
+20. PUSH
 The PUSH instruction is used to push data from a register to a memory stack. A register name is needed.\
 Example: Push r1 to stack in memory
     * PUSH r1
-20. POP
+21. POP
 The POP instruction is used to pop data from memory stack to a register. A register name is needed. \
 Example: POP data from stack memory to r1
     * PUSH r1

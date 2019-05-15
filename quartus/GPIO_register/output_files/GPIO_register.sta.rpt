@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for GPIO_register
-Tue Apr 30 12:27:38 2019
+Tue May 14 14:08:18 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -4098,7 +4098,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Tue Apr 30 12:27:36 2019
+    Info: Processing started: Tue May 14 14:08:16 2019
 Info: Command: quartus_sta GPIO_register -c GPIO_register
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -4170,7 +4170,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Tue Apr 30 12:27:38 2019
+    Info: Processing ended: Tue May 14 14:08:18 2019
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
