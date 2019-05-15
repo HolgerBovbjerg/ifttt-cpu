@@ -44,7 +44,6 @@ constant MEM_DATA_READY: 	std_logic_vector(1 downto 0) := 	"10";		-- Memory data
 
 -- Branch control 
 constant BRANCH_JUMP: 		std_logic_vector(2 downto 0) :=  "001";	-- Branch jump
-
 constant BRANCH_OVERFLOW: 	std_logic_vector(2 downto 0) :=  "011";	-- Branch if overflow flag set
 constant BRANCH_CARRY: 		std_logic_vector(2 downto 0) :=  "010";	-- Branch if carry flag set
 constant BRANCH_NEGATIVE: 	std_logic_vector(2 downto 0) :=  "100";	-- Branch if negative flag set
