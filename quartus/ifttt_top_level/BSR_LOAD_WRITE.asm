@@ -1,0 +1,6 @@
+LOAD r1, 255
+LOAD r4, 0
+BSR r2, r4, r1
+LOAD r3, 255
+WRITE r3, 8008
+WRITE r2, 8000
