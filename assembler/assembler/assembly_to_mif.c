@@ -521,7 +521,7 @@ int hexToBinary(char hexdec[])
             printf("0101");
             break;
         case '6':
-            strcpy(binaryNumBuff, "0110");
+            strcat(binaryNumBuff, "0110");
             printf("0110");
             break;
         case '7':
