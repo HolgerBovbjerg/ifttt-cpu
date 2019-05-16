@@ -82,11 +82,13 @@ signal r_chars : char_array :=(
 	x"2D", x"29", x"0D", x"09", -- Space 		148-151
 	x"3D", x"39", x"AD", x"A9", -- Colon		152-155
 	x"3D", x"39", x"FD", x"F9", -- Unknown		156-159
+	
+	
 	others => x"00");
 
 constant divider					: integer := (input_clk/trigger_clk);
 signal state 						: machine;
-signal r_buffer 					: data_array := (others => x"00");
+signal r_buffer : data_array 	:=(others => x"00");
 signal w_reset						: std_logic := '0';
 signal start						: std_logic := '0';
 signal init_flag					: std_logic := '0';

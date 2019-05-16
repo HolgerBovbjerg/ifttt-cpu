@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ifttt_top_level
-Thu May 16 10:14:26 2019
+Thu May 16 13:10:50 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -15,32 +15,36 @@ Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |ifttt_top_level|I2C_display:INST_I2C_display|state
- 11. State Machine - |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|state
- 12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Registers Added for RAM Pass-Through Logic
- 17. Registers Packed Into Inferred Megafunctions
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
- 19. Source assignments for cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component|altsyncram_23r3:auto_generated
- 20. Source assignments for cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0|altsyncram_a3o1:auto_generated
- 21. Source assignments for cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1|altsyncram_a3o1:auto_generated
- 22. Source assignments for cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_ipm1:auto_generated
- 23. Parameter Settings for User Entity Instance: cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component
- 24. Parameter Settings for User Entity Instance: I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2
- 25. Parameter Settings for User Entity Instance: I2C_display:INST_I2C_display
- 26. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0
- 27. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1
- 28. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0
- 29. altsyncram Parameter Settings by Entity Instance
- 30. Port Connectivity Checks: "I2C_display:INST_I2C_display"
- 31. Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg"
- 32. Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx"
- 33. Port Connectivity Checks: "cpu_core:INST_cpu_core"
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
+ 10. State Machine - |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|state
+ 11. State Machine - |ifttt_top_level|Display_driver:INST_Display_driver|Display_I2C_handler:inst|state
+ 12. State Machine - |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|state
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Registers Added for RAM Pass-Through Logic
+ 18. Registers Packed Into Inferred Megafunctions
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Source assignments for cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component|altsyncram_23r3:auto_generated
+ 21. Source assignments for cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0|altsyncram_a3o1:auto_generated
+ 22. Source assignments for cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1|altsyncram_a3o1:auto_generated
+ 23. Source assignments for cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_ipm1:auto_generated
+ 24. Parameter Settings for User Entity Instance: cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2
+ 26. Parameter Settings for User Entity Instance: Display_driver:INST_Display_driver|Display_I2C_handler:inst
+ 27. Parameter Settings for User Entity Instance: Display_driver:INST_Display_driver|I2C_display:disp
+ 28. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_0
+ 29. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|register32x8:INST_GPR|altsyncram:r_REGISTER_rtl_1
+ 30. Parameter Settings for Inferred Entity Instance: cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "Display_driver:INST_Display_driver|I2C_display:disp"
+ 33. Port Connectivity Checks: "Display_driver:INST_Display_driver|Display_I2C_handler:inst"
+ 34. Port Connectivity Checks: "Display_driver:INST_Display_driver"
+ 35. Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg"
+ 36. Port Connectivity Checks: "I2C_tx_rx:INST_I2C_tx_rx"
+ 37. Port Connectivity Checks: "cpu_core:INST_cpu_core"
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -66,16 +70,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 16 10:14:26 2019      ;
+; Analysis & Synthesis Status        ; Successful - Thu May 16 13:10:50 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; ifttt_top_level                            ;
 ; Top-level Entity Name              ; ifttt_top_level                            ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 1,089                                      ;
-;     Total combinational functions  ; 685                                        ;
-;     Dedicated logic registers      ; 633                                        ;
-; Total registers                    ; 633                                        ;
-; Total pins                         ; 94                                         ;
+; Total logic elements               ; 2,309                                      ;
+;     Total combinational functions  ; 1,640                                      ;
+;     Dedicated logic registers      ; 1,107                                      ;
+; Total registers                    ; 1107                                       ;
+; Total pins                         ; 96                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 164,352                                    ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -187,6 +191,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                                          ; Library ;
 +-------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../../Display/Display_I2C_handler.vhd                 ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/Display/Display_I2C_handler.vhd                                               ;         ;
+; ../../Display/Display_driver.vhd                      ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/Display/Display_driver.vhd                                                    ;         ;
 ; ../../Display/I2C_display.vhd                         ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/Display/I2C_display.vhd                                                       ;         ;
 ; ../../Display/display_constants.vhd                   ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/Display/display_constants.vhd                                                 ;         ;
 ; ../../I2C/I2C_tx_rx.vhd                               ; yes             ; User VHDL File                                        ; C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/I2C/I2C_tx_rx.vhd                                                             ;         ;
@@ -234,29 +240,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 1,089            ;
+; Estimated Total logic elements              ; 2,309            ;
 ;                                             ;                  ;
-; Total combinational functions               ; 685              ;
+; Total combinational functions               ; 1640             ;
 ; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 369              ;
-;     -- 3 input functions                    ; 240              ;
-;     -- <=2 input functions                  ; 76               ;
+;     -- 4 input functions                    ; 968              ;
+;     -- 3 input functions                    ; 409              ;
+;     -- <=2 input functions                  ; 263              ;
 ;                                             ;                  ;
 ; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 604              ;
-;     -- arithmetic mode                      ; 81               ;
+;     -- normal mode                          ; 1350             ;
+;     -- arithmetic mode                      ; 290              ;
 ;                                             ;                  ;
-; Total registers                             ; 633              ;
-;     -- Dedicated logic registers            ; 633              ;
+; Total registers                             ; 1107             ;
+;     -- Dedicated logic registers            ; 1107             ;
 ;     -- I/O registers                        ; 0                ;
 ;                                             ;                  ;
-; I/O pins                                    ; 94               ;
+; I/O pins                                    ; 96               ;
 ; Total memory bits                           ; 164352           ;
 ; Embedded Multiplier 9-bit elements          ; 0                ;
 ; Maximum fan-out node                        ; r_CLK_divided[7] ;
-; Maximum fan-out                             ; 600              ;
-; Total fan-out                               ; 5366             ;
-; Average fan-out                             ; 3.28             ;
+; Maximum fan-out                             ; 609              ;
+; Total fan-out                               ; 10207            ;
+; Average fan-out                             ; 3.32             ;
 +---------------------------------------------+------------------+
 
 
@@ -265,7 +271,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Library Name ;
 +------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |ifttt_top_level                                     ; 685 (8)           ; 633 (8)      ; 164352      ; 0            ; 0       ; 0         ; 94   ; 0            ; |ifttt_top_level                                                                                                                         ; work         ;
+; |ifttt_top_level                                     ; 1640 (8)          ; 1107 (8)     ; 164352      ; 0            ; 0       ; 0         ; 96   ; 0            ; |ifttt_top_level                                                                                                                         ; work         ;
+;    |Display_driver:INST_Display_driver|              ; 956 (1)           ; 465 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|Display_driver:INST_Display_driver                                                                                      ; work         ;
+;       |Display_I2C_handler:inst|                     ; 86 (86)           ; 37 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|Display_driver:INST_Display_driver|Display_I2C_handler:inst                                                             ; work         ;
+;       |I2C_display:disp|                             ; 869 (869)         ; 428 (428)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp                                                                     ; work         ;
 ;    |GPIO_register:INST_GPIO_register|                ; 56 (56)           ; 208 (80)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register                                                                                        ; work         ;
 ;       |bidir_bus:INST_bidir_bus1|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus1                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus2|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus2                                                              ; work         ;
@@ -275,10 +284,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |bidir_bus:INST_bidir_bus6|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus6                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus7|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus7                                                              ; work         ;
 ;       |bidir_bus:INST_bidir_bus8|                    ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|GPIO_register:INST_GPIO_register|bidir_bus:INST_bidir_bus8                                                              ; work         ;
-;    |I2C_tx_rx:INST_I2C_tx_rx|                        ; 134 (1)           ; 85 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx                                                                                                ; work         ;
-;       |I2C_handler2:inst_I2C_handler2|               ; 120 (120)         ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2                                                                 ; work         ;
+;    |I2C_tx_rx:INST_I2C_tx_rx|                        ; 130 (1)           ; 85 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx                                                                                                ; work         ;
+;       |I2C_handler2:inst_I2C_handler2|               ; 116 (116)         ; 51 (51)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2                                                                 ; work         ;
 ;       |I2C_input_reg:inst_I2C_input_reg|             ; 13 (13)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg                                                               ; work         ;
-;    |cpu_core:INST_cpu_core|                          ; 487 (1)           ; 332 (0)      ; 164352      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core                                                                                                  ; work         ;
+;    |cpu_core:INST_cpu_core|                          ; 490 (1)           ; 341 (0)      ; 164352      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core                                                                                                  ; work         ;
 ;       |ALU:INST_ALU|                                 ; 220 (220)         ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|ALU:INST_ALU                                                                                     ; work         ;
 ;       |B_imm_multiplexer:INST_B_imm_multiplexer|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|B_imm_multiplexer:INST_B_imm_multiplexer                                                         ; work         ;
 ;       |DATA_RAM:INST_DATA_RAM|                       ; 28 (26)           ; 54 (53)      ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM                                                                           ; work         ;
@@ -286,7 +295,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |altsyncram_ipm1:auto_generated|         ; 2 (0)             ; 1 (1)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_ipm1:auto_generated                    ; work         ;
 ;                |decode_ara:decode2|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_ipm1:auto_generated|decode_ara:decode2 ; work         ;
 ;       |InstrucReg:INST_InstrucReg|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|InstrucReg:INST_InstrucReg                                                                       ; work         ;
-;       |MEMORY_CONTROL:INST_MEMORY_CONTROL|           ; 33 (33)           ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL                                                               ; work         ;
+;       |MEMORY_CONTROL:INST_MEMORY_CONTROL|           ; 36 (36)           ; 67 (67)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL                                                               ; work         ;
 ;       |Program_counter:INST_Program_counter|         ; 21 (21)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|Program_counter:INST_Program_counter                                                             ; work         ;
 ;       |branch_control:INST_branch_control|           ; 29 (29)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control                                                               ; work         ;
 ;       |control_unit:INST_control_unit|               ; 27 (27)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ifttt_top_level|cpu_core:INST_cpu_core|control_unit:INST_control_unit                                                                   ; work         ;
@@ -327,7 +336,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------+
-; State Machine - |ifttt_top_level|I2C_display:INST_I2C_display|state                                           ;
+; State Machine - |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|state                    ;
 +------------------+-------------+----------------+------------------+------------+---------------+-------------+
 ; Name             ; state.reset ; state.transmit ; state.CharSelect ; state.init ; state.receive ; state.ready ;
 +------------------+-------------+----------------+------------------+------------+---------------+-------------+
@@ -338,6 +347,24 @@ Encoding Type:  One-Hot
 ; state.transmit   ; 0           ; 1              ; 0                ; 0          ; 0             ; 1           ;
 ; state.reset      ; 1           ; 0              ; 0                ; 0          ; 0             ; 1           ;
 +------------------+-------------+----------------+------------------+------------+---------------+-------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ifttt_top_level|Display_driver:INST_Display_driver|Display_I2C_handler:inst|state                                                   ;
++----------------+------------+-------------+-----------+----------------+----------------+----------------+---------------+-------------+-------------+
+; Name           ; state.stop ; state.error ; state.NAK ; state.slv_ack3 ; state.slv_ack2 ; state.slv_ack1 ; state.exe_cmd ; state.start ; state.ready ;
++----------------+------------+-------------+-----------+----------------+----------------+----------------+---------------+-------------+-------------+
+; state.ready    ; 0          ; 0           ; 0         ; 0              ; 0              ; 0              ; 0             ; 0           ; 0           ;
+; state.start    ; 0          ; 0           ; 0         ; 0              ; 0              ; 0              ; 0             ; 1           ; 1           ;
+; state.exe_cmd  ; 0          ; 0           ; 0         ; 0              ; 0              ; 0              ; 1             ; 0           ; 1           ;
+; state.slv_ack1 ; 0          ; 0           ; 0         ; 0              ; 0              ; 1              ; 0             ; 0           ; 1           ;
+; state.slv_ack2 ; 0          ; 0           ; 0         ; 0              ; 1              ; 0              ; 0             ; 0           ; 1           ;
+; state.slv_ack3 ; 0          ; 0           ; 0         ; 1              ; 0              ; 0              ; 0             ; 0           ; 1           ;
+; state.NAK      ; 0          ; 0           ; 1         ; 0              ; 0              ; 0              ; 0             ; 0           ; 1           ;
+; state.error    ; 0          ; 1           ; 0         ; 0              ; 0              ; 0              ; 0             ; 0           ; 1           ;
+; state.stop     ; 1          ; 0           ; 0         ; 0              ; 0              ; 0              ; 0             ; 0           ; 1           ;
++----------------+------------+-------------+-----------+----------------+----------------+----------------+---------------+-------------+-------------+
 
 
 Encoding Type:  One-Hot
@@ -358,380 +385,58 @@ Encoding Type:  One-Hot
 +----------------+------------+-------------+-----------+----------------+----------------+----------------+---------------+-------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                      ;
-+-------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-; Register name                                                                       ; Reason for Removal                                                                                ;
-+-------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[0]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[2] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[1]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[2]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[3]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[4]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[5]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
-; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7]   ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
-; cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_ack               ; Merged with cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_PC_set              ;
-; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_write_enable ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|buffer_ptr[0..31]                                      ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|print_ptr[0..31]                                       ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|trans_cnt[0..31]                                       ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|begin_init                                             ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|delay_cnt[0..8]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|init_flag                                              ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|start                                                  ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|transmit_flag                                          ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|init_ptr[2..31]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[32][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[0][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[1][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[2][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[3][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[4][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[5][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[6][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[7][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[8][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[9][6]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[10][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[11][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[12][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[13][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[14][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[15][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[16][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[17][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[18][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[19][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[20][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[21][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[22][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[23][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[24][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[25][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[26][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[27][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[28][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[29][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[30][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[31][6]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[32][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[0][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[1][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[2][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[3][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[4][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[5][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[6][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[7][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[8][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[9][7]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[10][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[11][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[12][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[13][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[14][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[15][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[16][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[17][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[18][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[19][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[20][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[21][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[22][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[23][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[24][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[25][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[26][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[27][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[28][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[29][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[30][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[31][7]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[32][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[0][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[1][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[2][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[3][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[4][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[5][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[6][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[7][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[8][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[9][5]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[10][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[11][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[12][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[13][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[14][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[15][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[16][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[17][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[18][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[19][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[20][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[21][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[22][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[23][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[24][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[25][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[26][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[27][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[28][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[29][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[30][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[31][5]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[32][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[0][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[1][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[2][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[3][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[4][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[5][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[6][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[7][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[8][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[9][4]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[10][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[11][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[12][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[13][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[14][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[15][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[16][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[17][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[18][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[19][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[20][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[21][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[22][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[23][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[24][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[25][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[26][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[27][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[28][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[29][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[30][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[31][4]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[32][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[0][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[1][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[2][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[3][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[4][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[5][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[6][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[7][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[8][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[9][3]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[10][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[11][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[12][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[13][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[14][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[15][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[16][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[17][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[18][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[19][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[20][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[21][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[22][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[23][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[24][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[25][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[26][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[27][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[28][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[29][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[30][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[31][3]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[32][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[0][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[1][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[2][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[3][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[4][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[5][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[6][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[7][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[8][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[9][2]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[10][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[11][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[12][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[13][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[14][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[15][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[16][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[17][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[18][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[19][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[20][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[21][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[22][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[23][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[24][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[25][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[26][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[27][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[28][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[29][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[30][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[31][2]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[32][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[0][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[1][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[2][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[3][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[4][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[5][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[6][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[7][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[8][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[9][1]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[10][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[11][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[12][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[13][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[14][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[15][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[16][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[17][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[18][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[19][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[20][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[21][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[22][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[23][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[24][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[25][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[26][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[27][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[28][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[29][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[30][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[31][1]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[32][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[0][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[1][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[2][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[3][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[4][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[5][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[6][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[7][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[8][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[9][0]                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[10][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[11][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[12][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[13][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[14][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[15][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[16][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[17][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[18][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[19][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[20][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[21][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[22][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[23][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[24][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[25][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[26][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[27][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[28][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[29][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[30][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|r_buffer[31][0]                                        ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|init_ptr[0,1]                                          ; Lost fanout                                                                                       ;
-; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[0..7]   ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|state.ready                                            ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|state.receive                                          ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|state.init                                             ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|state.CharSelect                                       ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|state.transmit                                         ; Lost fanout                                                                                       ;
-; I2C_display:INST_I2C_display|state.reset                                            ; Lost fanout                                                                                       ;
-; r_CLK_divided[8..23]                                                                ; Lost fanout                                                                                       ;
-; Total Number of Removed Registers = 445                                             ;                                                                                                   ;
-+-------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                    ;
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+; Register name                                                                     ; Reason for Removal                                                                                ;
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+; Display_driver:INST_Display_driver|Display_I2C_handler:inst|w_set_bit_rx          ; Lost fanout                                                                                       ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[0] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[2] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[1] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[2] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[3] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[4] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[5] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[6] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
+; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_DATA_IMM[7] ; Merged with cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
+; cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_ack             ; Merged with cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_INTERRUPT_PC_set              ;
+; Display_driver:INST_Display_driver|I2C_display:disp|o_display_data[1]             ; Stuck at GND due to stuck port data_in                                                            ;
+; Display_driver:INST_Display_driver|Display_I2C_handler:inst|state.NAK             ; Stuck at GND due to stuck port data_in                                                            ;
+; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[8..31]               ; Lost fanout                                                                                       ;
+; r_CLK_divided[8..23]                                                              ; Lost fanout                                                                                       ;
+; Total Number of Removed Registers = 52                                            ;                                                                                                   ;
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                         ;
-+----------------------------------------------+--------------------+---------------------------------------------------------------------------------+
-; Register name                                ; Reason for Removal ; Registers Removed due to This Register                                          ;
-+----------------------------------------------+--------------------+---------------------------------------------------------------------------------+
-; I2C_display:INST_I2C_display|print_ptr[31]   ; Lost Fanouts       ; I2C_display:INST_I2C_display|trans_cnt[0],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[1],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[2],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[3],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[4],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[5],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[6],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[7],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[8],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[9],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[10],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[11],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[12],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[13],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[14],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[15],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[16],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[17],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[18],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[19],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[20],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[21],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[22],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[23],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[24],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[25],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[26],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[27],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[28],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[29],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[30],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|trans_cnt[31]                                      ;
-; I2C_display:INST_I2C_display|buffer_ptr[0]   ; Lost Fanouts       ; I2C_display:INST_I2C_display|buffer_ptr[1],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|buffer_ptr[2],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|buffer_ptr[3],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|buffer_ptr[4],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|buffer_ptr[5],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|buffer_ptr[6],                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|state.ready,                                       ;
-;                                              ;                    ; I2C_display:INST_I2C_display|state.receive,                                     ;
-;                                              ;                    ; I2C_display:INST_I2C_display|state.init,                                        ;
-;                                              ;                    ; I2C_display:INST_I2C_display|state.CharSelect,                                  ;
-;                                              ;                    ; I2C_display:INST_I2C_display|state.transmit,                                    ;
-;                                              ;                    ; I2C_display:INST_I2C_display|state.reset                                        ;
-; I2C_display:INST_I2C_display|begin_init      ; Lost Fanouts       ; I2C_display:INST_I2C_display|r_buffer[32][6],                                   ;
-;                                              ;                    ; I2C_display:INST_I2C_display|r_buffer[32][7],                                   ;
-;                                              ;                    ; I2C_display:INST_I2C_display|r_buffer[32][5],                                   ;
-;                                              ;                    ; I2C_display:INST_I2C_display|r_buffer[32][4],                                   ;
-;                                              ;                    ; I2C_display:INST_I2C_display|r_buffer[32][3],                                   ;
-;                                              ;                    ; I2C_display:INST_I2C_display|r_buffer[32][2],                                   ;
-;                                              ;                    ; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[6], ;
-;                                              ;                    ; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[7], ;
-;                                              ;                    ; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[5], ;
-;                                              ;                    ; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[4], ;
-;                                              ;                    ; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[3], ;
-;                                              ;                    ; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[2]  ;
-; I2C_display:INST_I2C_display|delay_cnt[0]    ; Lost Fanouts       ; I2C_display:INST_I2C_display|delay_cnt[1],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|delay_cnt[2],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|delay_cnt[3],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|delay_cnt[4],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|delay_cnt[5],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|delay_cnt[6],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|delay_cnt[7],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|delay_cnt[8],                                      ;
-;                                              ;                    ; I2C_display:INST_I2C_display|transmit_flag                                      ;
-; I2C_display:INST_I2C_display|r_buffer[32][1] ; Lost Fanouts       ; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[1]  ;
-; I2C_display:INST_I2C_display|r_buffer[32][0] ; Lost Fanouts       ; cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[0]  ;
-+----------------------------------------------+--------------------+---------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                               ;
++------------------------------------------------------------------+--------------------+-------------------------------------------------------------------+
+; Register name                                                    ; Reason for Removal ; Registers Removed due to This Register                            ;
++------------------------------------------------------------------+--------------------+-------------------------------------------------------------------+
+; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[31] ; Lost Fanouts       ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[30], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[29], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[28], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[27], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[26], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[25], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[24], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[23], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[22], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[21], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[20], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[19], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[18], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[17], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[16], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[15], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[14], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[13], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[12], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[11], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[10], ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[9],  ;
+;                                                                  ;                    ; Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[8]   ;
++------------------------------------------------------------------+--------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -739,12 +444,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 633   ;
-; Number of registers using Synchronous Clear  ; 22    ;
-; Number of registers using Synchronous Load   ; 15    ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Total registers                              ; 1107  ;
+; Number of registers using Synchronous Clear  ; 163   ;
+; Number of registers using Synchronous Load   ; 19    ;
+; Number of registers using Asynchronous Clear ; 58    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 360   ;
+; Number of registers using Clock Enable       ; 804   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -772,6 +477,7 @@ Encoding Type:  One-Hot
 ; cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[16]                ; 1       ;
 ; cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[18]                ; 1       ;
 ; cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[14]                ; 1       ;
+; Display_driver:INST_Display_driver|Display_I2C_handler:inst|o_I2C_sda_txrx              ; 2       ;
 ; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|o_I2C_sda_txrx                  ; 5       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[13] ; 2       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[12] ; 2       ;
@@ -787,9 +493,14 @@ Encoding Type:  One-Hot
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[2]  ; 2       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[1]  ; 2       ;
 ; cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[0]  ; 2       ;
-; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[0]               ; 18      ;
+; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[0]               ; 17      ;
 ; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[1]               ; 18      ;
 ; I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_bit_cnt[2]               ; 12      ;
+; Display_driver:INST_Display_driver|I2C_display:disp|o_display_reset                     ; 30      ;
+; Display_driver:INST_Display_driver|Display_I2C_handler:inst|w_data_bit_cnt[1]           ; 10      ;
+; Display_driver:INST_Display_driver|Display_I2C_handler:inst|w_data_bit_cnt[0]           ; 9       ;
+; Display_driver:INST_Display_driver|Display_I2C_handler:inst|w_data_bit_cnt[2]           ; 4       ;
+; Display_driver:INST_Display_driver|I2C_display:disp|o_display_ready                     ; 3       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[30]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[32]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[34]                   ; 1       ;
@@ -798,7 +509,8 @@ Encoding Type:  One-Hot
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[40]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[42]                   ; 1       ;
 ; cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[44]                   ; 1       ;
-; Total number of inverted registers = 44                                                 ;         ;
+; Display_driver:INST_Display_driver|Display_I2C_handler:inst|w_busy                      ; 13      ;
+; Total number of inverted registers = 51                                                 ;         ;
 +-----------------------------------------------------------------------------------------+---------+
 
 
@@ -924,69 +636,76 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|init_ptr[28]                                               ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|control_unit:INST_control_unit|r_state[2]                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg|r_register[2][0]              ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2c_write_enable         ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_write_enable        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[1]          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_data[0]              ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_data[0]             ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_data[5]              ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |ifttt_top_level|GPIO_register:INST_GPIO_register|o_GPIO_data[1]                                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg|r_register[2][7]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_address[0]           ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_address[2]          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|init_ptr[16]                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[0]          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_data[4]              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_data[3]             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_data[1]              ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |ifttt_top_level|GPIO_register:INST_GPIO_register|o_GPIO_data[6]                                         ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|Program_counter:INST_Program_counter|r_PROG_COUNT[3]             ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|r_PC_ADDRESS[2]               ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|trans_cnt[17]                                              ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|r_PC_ADDRESS[0]               ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_MEM_write_enable  ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|o_ADDRESS[8]                  ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|o_ADDRESS[4]                  ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|branch_control:INST_branch_control|o_ADDRESS[2]                  ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[14]   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]   ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[14] ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[5]    ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|delay_cnt[0]                                               ;
-; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|print_ptr[19]                                              ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_ack_cnt[0]                    ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_MUX_data[1]              ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|ALU:INST_ALU|r_ALU_Result[5]                                     ;
-; 11:1               ; 32 bits   ; 224 LEs       ; 64 LEs               ; 160 LEs                ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|buffer_ptr[20]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[32][2]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[31][1]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[30][6]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[29][6]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[28][6]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[27][5]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[26][1]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[25][0]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[24][3]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[23][6]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[22][5]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[21][7]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[20][5]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[19][0]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[18][2]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[17][6]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[16][5]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[15][5]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[14][4]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[13][7]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[12][0]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[11][0]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[10][7]                                            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[9][0]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[8][1]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[7][6]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[6][5]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[5][3]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[4][1]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[3][0]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[2][3]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[1][3]                                             ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 8 LEs                ; 40 LEs                 ; Yes        ; |ifttt_top_level|I2C_display:INST_I2C_display|r_buffer[0][7]                                             ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[10]   ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 9 LEs                ; 18 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|delay_cnt[1]                        ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|trans_cnt[7]                        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_ack_cnt[1]                    ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|print_ptr[0]                        ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_MUX_data[2]              ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|char_ptr[2]                         ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|o_display_data[4]                   ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|Display_I2C_handler:inst|w_data_txrx[1]              ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|ALU:INST_ALU|r_ALU_Result[6]                                     ;
+; 12:1               ; 32 bits   ; 256 LEs       ; 64 LEs               ; 192 LEs                ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|buffer_ptr[2]                       ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[32][5]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[31][7]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[30][3]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[29][2]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[28][4]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[27][4]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[26][6]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[25][5]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[24][1]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[23][4]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[22][3]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[21][0]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[20][7]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[19][0]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[18][3]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[17][4]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[16][2]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[15][7]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[14][0]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[13][3]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[12][7]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[11][3]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[10][4]                     ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[9][4]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[8][2]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[7][5]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[6][5]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[5][2]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[4][3]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[3][2]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[2][5]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[1][5]                      ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|r_buffer[0][4]                      ;
 ; 12:1               ; 7 bits    ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; Yes        ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|r_data_txrx[2]                  ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[0]  ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux75                         ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; Yes        ; |ifttt_top_level|cpu_core:INST_cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[13] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |ifttt_top_level|Display_driver:INST_Display_driver|Display_I2C_handler:inst|state                       ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |ifttt_top_level|cpu_core:INST_cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux74                         ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 52 LEs               ; 26 LEs                 ; No         ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|char_ptr                            ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |ifttt_top_level|Display_driver:INST_Display_driver|Display_I2C_handler:inst|state                       ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |ifttt_top_level|I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2|state                           ;
-; 33:1               ; 8 bits    ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |ifttt_top_level|I2C_display:INST_I2C_display|Mux15                                                      ;
+; 33:1               ; 8 bits    ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|Mux14                               ;
+; 33:1               ; 8 bits    ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; No         ; |ifttt_top_level|Display_driver:INST_Display_driver|I2C_display:disp|Mux1                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------+
 
 
@@ -1098,15 +817,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: I2C_display:INST_I2C_display ;
-+----------------+----------+-----------------------------------------------+
-; Parameter Name ; Value    ; Type                                          ;
-+----------------+----------+-----------------------------------------------+
-; char_scalar    ; 4        ; Signed Integer                                ;
-; input_clk      ; 50000000 ; Signed Integer                                ;
-; trigger_clk    ; 100000   ; Signed Integer                                ;
-+----------------+----------+-----------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Display_driver:INST_Display_driver|Display_I2C_handler:inst ;
++----------------+----------+------------------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                         ;
++----------------+----------+------------------------------------------------------------------------------+
+; input_clk      ; 50000000 ; Signed Integer                                                               ;
+; bus_clk        ; 100000   ; Signed Integer                                                               ;
++----------------+----------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Display_driver:INST_Display_driver|I2C_display:disp ;
++----------------+----------+----------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                 ;
++----------------+----------+----------------------------------------------------------------------+
+; char_scalar    ; 4        ; Signed Integer                                                       ;
+; input_clk      ; 50000000 ; Signed Integer                                                       ;
+; trigger_clk    ; 100000   ; Signed Integer                                                       ;
++----------------+----------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1346,17 +1076,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Display_driver:INST_Display_driver|I2C_display:disp" ;
++------------------+-------+----------+-------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                   ;
++------------------+-------+----------+-------------------------------------------+
+; i_display_enable ; Input ; Info     ; Stuck at VCC                              ;
++------------------+-------+----------+-------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "I2C_display:INST_I2C_display"                                                                   ;
+; Port Connectivity Checks: "Display_driver:INST_Display_driver|Display_I2C_handler:inst"                                    ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port             ; Type   ; Severity ; Details                                                                             ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
-; i_display_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; i_display_busy   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; o_display_reset  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; o_display_ready  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; o_display_data   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; i_i2c_addr[2..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_i2c_addr[4..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_i2c_addr[6]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_i2c_addr[5]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_i2c_rw         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_i2c_reg_tx     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; o_i2c_data_rx    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Display_driver:INST_Display_driver"                                                                 ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; i_i2c_display_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_i2c_ack_error      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -1392,7 +1143,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1402,9 +1153,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Thu May 16 10:14:19 2019
+    Info: Processing started: Thu May 16 13:10:38 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ifttt_top_level -c ifttt_top_level
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/display/display_i2c_handler.vhd
+    Info (12022): Found design unit 1: Display_I2C_handler-rtl
+    Info (12023): Found entity 1: Display_I2C_handler
+Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/display/display_driver.vhd
+    Info (12022): Found design unit 1: Display_driver-behaviour
+    Info (12023): Found entity 1: Display_driver
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/display/i2c_display.vhd
     Info (12022): Found design unit 1: I2C_display-rtl
     Info (12023): Found entity 1: I2C_display
@@ -1481,10 +1238,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12022): Found design unit 1: ifttt_top_level_tb-behavioural
     Info (12023): Found entity 1: ifttt_top_level_tb
 Info (12127): Elaborating entity "ifttt_top_level" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ifttt_top_level.vhd(153): object "w_display_reset" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at ifttt_top_level.vhd(154): object "w_display_ready" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at ifttt_top_level.vhd(155): object "w_display_data" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at ifttt_top_level.vhd(160): object "w_I2C_ack_error" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at ifttt_top_level.vhd(161): object "w_I2C_ack_error" assigned a value but never read
 Info (12128): Elaborating entity "cpu_core" for hierarchy "cpu_core:INST_cpu_core"
 Info (12128): Elaborating entity "mega_prog_mem" for hierarchy "cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "cpu_core:INST_cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component"
@@ -1559,10 +1313,18 @@ Info (12128): Elaborating entity "bidir_bus" for hierarchy "GPIO_register:INST_G
 Info (12128): Elaborating entity "I2C_tx_rx" for hierarchy "I2C_tx_rx:INST_I2C_tx_rx"
 Info (12128): Elaborating entity "I2C_handler2" for hierarchy "I2C_tx_rx:INST_I2C_tx_rx|I2C_handler2:inst_I2C_handler2"
 Info (12128): Elaborating entity "I2C_input_reg" for hierarchy "I2C_tx_rx:INST_I2C_tx_rx|I2C_input_reg:inst_I2C_input_reg"
-Info (12128): Elaborating entity "I2C_display" for hierarchy "I2C_display:INST_I2C_display"
+Info (12128): Elaborating entity "Display_driver" for hierarchy "Display_driver:INST_Display_driver"
+Info (12128): Elaborating entity "Display_I2C_handler" for hierarchy "Display_driver:INST_Display_driver|Display_I2C_handler:inst"
+Info (12128): Elaborating entity "I2C_display" for hierarchy "Display_driver:INST_Display_driver|I2C_display:disp"
 Warning (276020): Inferred RAM node "cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "cpu_core:INST_cpu_core|DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "Display_driver:INST_Display_driver|I2C_display:disp|r_init" is uninferred due to inappropriate RAM size
+Warning (113028): 4 out of 32 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 28 to 31 are not initialized
+Warning (113028): 96 out of 256 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 160 to 255 are not initialized
 Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "cpu_core:INST_cpu_core|register32x8:INST_GPR|r_REGISTER_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1662,19 +1424,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 436 registers lost all their fanouts during netlist optimizations.
+Info (17049): 41 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1284 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2524 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 24 output pins
-    Info (21060): Implemented 66 bidirectional pins
-    Info (21061): Implemented 1126 logic cells
+    Info (21060): Implemented 68 bidirectional pins
+    Info (21061): Implemented 2364 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4712 megabytes
-    Info: Processing ended: Thu May 16 10:14:27 2019
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Processing ended: Thu May 16 13:10:50 2019
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 

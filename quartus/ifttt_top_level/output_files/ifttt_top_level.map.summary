@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu May 16 10:14:26 2019
+Analysis & Synthesis Status : Successful - Thu May 16 13:10:50 2019
 Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
 Revision Name : ifttt_top_level
 Top-level Entity Name : ifttt_top_level
 Family : Cyclone III
-Total logic elements : 1,089
-    Total combinational functions : 685
-    Dedicated logic registers : 633
-Total registers : 633
-Total pins : 94
+Total logic elements : 2,309
+    Total combinational functions : 1,640
+    Dedicated logic registers : 1,107
+Total registers : 1107
+Total pins : 96
 Total virtual pins : 0
 Total memory bits : 164,352
 Embedded Multiplier 9-bit elements : 0

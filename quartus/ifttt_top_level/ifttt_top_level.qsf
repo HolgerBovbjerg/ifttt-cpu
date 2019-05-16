@@ -88,6 +88,8 @@ set_location_assignment PIN_F2 -to o_I2C_received[4]
 set_location_assignment PIN_E1 -to o_I2C_received[5]
 set_location_assignment PIN_C1 -to o_I2C_received[6]
 set_location_assignment PIN_C2 -to o_I2C_received[7]
+set_global_assignment -name VHDL_FILE ../../Display/Display_I2C_handler.vhd
+set_global_assignment -name VHDL_FILE ../../Display/Display_driver.vhd
 set_global_assignment -name VHDL_FILE ../../Display/I2C_display.vhd
 set_global_assignment -name VHDL_FILE ../../Display/display_constants.vhd
 set_global_assignment -name VHDL_FILE ../../I2C/I2C_tx_rx.vhd
