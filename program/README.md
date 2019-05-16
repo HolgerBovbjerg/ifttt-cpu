@@ -93,17 +93,26 @@ Example: POP data from stack memory to r1
     
 ## Memory addresses
 ### Data memory
+Every hex address with 00 as the first bits are data memory. Data memory has 16384 adresses each storing 8 bit.\ 
 Decimal address         Hex address\
 [0..16383]        =>    [0000..0FFF]\
 
+### Display driver
+Every hex address with 01 as the first bits are display driver.
+[4000..3FFF]\
+
+ASCII input supported. Buffers up to 34 bytes. Text is written to display when end of text character is written to display driver.
+
 ### I^2C
+Every hex address with 10 as the first bits are I^2C.\
 I2C address register          = C000 (write only)\
 I2C data tx register          = C001 (write only)\
 I2C data rx register          = C002 (read ony)\
-I2C setup register            = C003 (write ony)\
-I2C slave register register   = C003 (write ony)\
+I2C setup register            = C003 (write only)\
+I2C slave register register   = C003 (write only)\
 
 ### GPIO addresses
+Every hex address with 11 as the first bits are GPIO.\
 PIN0     = 8000 \
 PIN1     = 8001 \
 PIN2     = 8002 \
@@ -113,7 +122,4 @@ PIN5     = 8005 \
 PIN6     = 8006 \
 PIN7     = 8007 \
 CONFIG   = 8008 - [PIN7, PIN6, PIN5, PIN4, PIN3, PIN2, PI1, PIN0] (1 for output, 0 for input)\
-All GPIO pins are inputs initially
-
-### Display driver
-
+All GPIO pins are inputs initially. If a pin is configured as output it cannot be read and if it is configured as input it cannot be written to.
