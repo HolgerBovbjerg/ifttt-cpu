@@ -175,12 +175,12 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 				end if;
 ----------------------------------Receive----------------------------------------			
 			when receive =>
-				if (i_display_write_enable = '1' and buffer_ptr < 33 and begin_init = '0') then
+				if (i_display_write_enable = '1' and buffer_ptr < 34 and begin_init = '0') then
 				-- if write_enable is high, buffer isn’t full and driver hasn’t signaled to start sending 
 				-- initialisation data, load input data into input buffer
 					r_buffer(buffer_ptr) <= i_display_data;
 					buffer_ptr <= buffer_ptr+1;
-				elsif (begin_init = '1' or buffer_ptr = 33) then 
+				elsif (begin_init = '1' or buffer_ptr = 34) then 
 				-- if buffer is full or driver has signaled to start sending initialisation data, go to
 				-- "init" state and decrement buffer pointer
 					state <= init;
