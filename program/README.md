@@ -92,10 +92,28 @@ Example: POP data from stack memory to r1
     
     
 ## Memory addresses
-### I^2C
-I2C address register = C00 (write only)
-I2C data tx register = C01 (write only)
-I2C data rx register = C02 (read ony)
-I2C setup register = C02 (write ony)
+### Data memory
+Decimal address         Hex address\
+[0..16383]        =>    [0000..0FFF]\
 
+### I^2C
+I2C address register          = C000 (write only)\
+I2C data tx register          = C001 (write only)\
+I2C data rx register          = C002 (read ony)\
+I2C setup register            = C003 (write ony)\
+I2C slave register register   = C003 (write ony)\
+
+### GPIO addresses
+PIN0     = 8000 \
+PIN1     = 8001 \
+PIN2     = 8002 \
+PIN3     = 8003 \
+PIN4     = 8004 \
+PIN5     = 8005 \
+PIN6     = 8006 \
+PIN7     = 8007 \
+CONFIG   = 8008 - [PIN7, PIN6, PIN5, PIN4, PIN3, PIN2, PI1, PIN0] (1 for output, 0 for input)\
+All GPIO pins are inputs initially
+
+### Display driver
 
