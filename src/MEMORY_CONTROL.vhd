@@ -24,6 +24,9 @@ entity MEMORY_CONTROL is
 				i_MC_RAM_data : in std_logic_vector (7 downto 0);
 				o_MC_RAM_data : out std_logic_vector (7 downto 0);
 				o_MC_RAM_write_enable : out std_logic;
+				------------------Display driver------------------------------------
+				o_MC_DISPLAY_data : out std_logic_vector (7 downto 0);
+				o_MC_DISPLAY_write_enable : out std_logic;
 				------------------GPIO----------------------------------------------
 				o_MC_GPIO_address : out std_logic_vector (3 downto 0); -- 16 bit output to GPIO
 				i_MC_GPIO_data : in std_logic_vector (7 downto 0);
@@ -64,6 +67,14 @@ begin
 								o_MC_RAM_write_enable <= '0';
 								o_MC_RAM_address <= i_MC_address(13 downto 0);
 								o_MC_MUX_data <= i_MC_RAM_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
+							end if;
+							r_MEM_state <= MEM_DATA_READY;
+						when Display_address =>
+							if (i_MC_write_enable = '1') then
+								o_MC_DISPLAY_write_enable <= '1';
+								o_MC_DISPLAY_data <= i_MC_data;
+							else
+								o_MC_DISPLAY_write_enable <= '0';
 							end if;
 							r_MEM_state <= MEM_DATA_READY;
 						when GPIO_address =>

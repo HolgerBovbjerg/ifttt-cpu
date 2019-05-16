@@ -48,6 +48,11 @@ architecture behavioural of ifttt_top_level is
 				o_STATE : out STD_LOGIC_VECTOR(6 downto 0);
 				
 				-- Memory interface ---------------
+				
+				-- Display driver
+				o_MC_DISPLAY_data : out std_logic_vector (7 downto 0);
+				o_MC_DISPLAY_write_enable : out std_logic;
+				
 				-- GPIO
 				i_MC_GPIO_data : in STD_LOGIC_VECTOR(7 downto 0);
 				o_MC_GPIO_address : out std_logic_vector (3 downto 0); 
@@ -125,6 +130,10 @@ architecture behavioural of ifttt_top_level is
 	signal w_MC_I2C_data : STD_LOGIC_VECTOR(7 downto 0);
 	signal w_MC_I2C_write_enable : STD_LOGIC;
 	
+	-- Display outputs
+	signal w_MC_DISPLAY_data : std_logic_vector(7 downto 0);
+	signal w_MC_DISPLAY_write_enable : std_logic;
+	
 	-- I2C outputs
 	signal w_I2C_busy	: std_logic;								
 	signal w_I2C_data_rx	: std_logic_vector (7 downto 0);	
@@ -145,6 +154,8 @@ begin
 		i_CORE_HALT => i_HALT,
 		o_DATA => o_DATA,
 		o_STATE => o_STATE,
+		o_MC_DISPLAY_data =>w_MC_DISPLAY_data, 
+		o_MC_DISPLAY_write_enable => w_MC_DISPLAY_write_enable,
 		i_MC_GPIO_data => w_GPIO_data,
 		o_MC_GPIO_address => w_MC_GPIO_address, 
 		o_MC_GPIO_write_enable => w_MC_GPIO_write_enable,
