@@ -57,6 +57,39 @@ set_location_assignment PIN_G3 -to i_HALT
 set_location_assignment PIN_H2 -to i_RESET
 set_location_assignment PIN_B1 -to o_STATE[0]
 set_location_assignment PIN_B2 -to o_STATE[4]
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_AB16 -to i_INTERRUPT_request
+set_location_assignment PIN_AA16 -to io_GPIO_PIN0[7]
+set_location_assignment PIN_AA15 -to io_GPIO_PIN1[7]
+set_location_assignment PIN_AB15 -to io_GPIO_PIN2[7]
+set_location_assignment PIN_AA14 -to io_GPIO_PIN3[7]
+set_location_assignment PIN_AB14 -to io_GPIO_PIN4[7]
+set_location_assignment PIN_AB13 -to io_GPIO_PIN5[7]
+set_location_assignment PIN_AA13 -to io_GPIO_PIN6[7]
+set_location_assignment PIN_AA10 -to io_GPIO_PIN7[7]
+set_location_assignment PIN_AA8 -to io_I2C_scl
+set_location_assignment PIN_AB8 -to io_I2C_sda
+set_location_assignment PIN_AB10 -to o_INTERRUPT_ack
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ifttt_top_level_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME ifttt_top_level_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ifttt_top_level_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1 us" -section_id ifttt_top_level_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ifttt_top_level_tb -section_id ifttt_top_level_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ../../toplevel/testbenches/ifttt_top_level_tb.vhd -section_id ifttt_top_level_tb
+set_location_assignment PIN_J1 -to o_I2C_received[0]
+set_location_assignment PIN_J2 -to o_I2C_received[1]
+set_location_assignment PIN_J3 -to o_I2C_received[2]
+set_location_assignment PIN_H1 -to o_I2C_received[3]
+set_location_assignment PIN_F2 -to o_I2C_received[4]
+set_location_assignment PIN_E1 -to o_I2C_received[5]
+set_location_assignment PIN_C1 -to o_I2C_received[6]
+set_location_assignment PIN_C2 -to o_I2C_received[7]
+set_global_assignment -name VHDL_FILE ../../Display/I2C_display.vhd
+set_global_assignment -name VHDL_FILE ../../Display/display_constants.vhd
 set_global_assignment -name VHDL_FILE ../../I2C/I2C_tx_rx.vhd
 set_global_assignment -name VHDL_FILE ../../I2C/I2C_input_reg.vhd
 set_global_assignment -name VHDL_FILE ../../I2C/I2C_handler2.vhd
@@ -80,36 +113,5 @@ set_global_assignment -name VHDL_FILE ../../toplevel/ifttt_top_level.vhd
 set_global_assignment -name VHDL_FILE ../../toplevel/GPIO_register.vhd
 set_global_assignment -name SDC_FILE output_files/ifttt_top_level.sdc
 set_global_assignment -name QIP_FILE mega_prog_mem.qip
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_AB16 -to i_INTERRUPT_request
-set_location_assignment PIN_AA16 -to io_GPIO_PIN0[7]
-set_location_assignment PIN_AA15 -to io_GPIO_PIN1[7]
-set_location_assignment PIN_AB15 -to io_GPIO_PIN2[7]
-set_location_assignment PIN_AA14 -to io_GPIO_PIN3[7]
-set_location_assignment PIN_AB14 -to io_GPIO_PIN4[7]
-set_location_assignment PIN_AB13 -to io_GPIO_PIN5[7]
-set_location_assignment PIN_AA13 -to io_GPIO_PIN6[7]
-set_location_assignment PIN_AA10 -to io_GPIO_PIN7[7]
-set_location_assignment PIN_AA8 -to io_I2C_scl
-set_location_assignment PIN_AB8 -to io_I2C_sda
-set_location_assignment PIN_AB10 -to o_INTERRUPT_ack
-set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
-set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name VHDL_FILE ../../toplevel/testbenches/ifttt_top_level_tb.vhd
-set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH ifttt_top_level_tb -section_id eda_simulation
-set_global_assignment -name EDA_TEST_BENCH_NAME ifttt_top_level_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ifttt_top_level_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1 us" -section_id ifttt_top_level_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ifttt_top_level_tb -section_id ifttt_top_level_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE ../../toplevel/testbenches/ifttt_top_level_tb.vhd -section_id ifttt_top_level_tb
-set_location_assignment PIN_J1 -to o_I2C_received[0]
-set_location_assignment PIN_J2 -to o_I2C_received[1]
-set_location_assignment PIN_J3 -to o_I2C_received[2]
-set_location_assignment PIN_H1 -to o_I2C_received[3]
-set_location_assignment PIN_F2 -to o_I2C_received[4]
-set_location_assignment PIN_E1 -to o_I2C_received[5]
-set_location_assignment PIN_C1 -to o_I2C_received[6]
-set_location_assignment PIN_C2 -to o_I2C_received[7]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

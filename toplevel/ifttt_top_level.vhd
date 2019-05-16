@@ -1,7 +1,3 @@
-
-
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
@@ -19,6 +15,10 @@ entity ifttt_top_level is
 				-- Interrupt interface ---------------
 				i_INTERRUPT_request : in STD_LOGIC;
 				o_INTERRUPT_ack : out STD_LOGIC;
+				
+				-- Display
+				io_DISPLAY_scl					: inout STD_LOGIC;
+				io_DISPLAY_sda					: inout STD_LOGIC;
 				
 				-- GPIO I/O
 				io_GPIO_PIN0 				: inout STD_LOGIC_VECTOR (7 downto 0);
@@ -120,6 +120,24 @@ architecture behavioural of ifttt_top_level is
 		o_I2C_ack_error			: out std_logic								-- Error flag 'high' if error during transaction
 		);
 	end COMPONENT;
+	
+	COMPONENT Display_driver
+	port(
+		--io ports
+		io_I2C_sda		: inout std_logic;							-- SDA in/out tri-state port
+		io_I2C_scl		: inout std_logic;							-- SCL in/out tri-state port
+		
+		--inputs
+		i_I2C_clk				: in std_logic;								-- I2C main clock
+		i_I2C_reset				: in std_logic;								-- Reset trigger 
+		i_I2C_display_enable	: in std_logic;
+		i_display_write_enable : in std_logic;
+		i_I2C_display_input	: in std_logic_vector (7 downto 0);
+		
+		--outputs
+		o_I2C_ack_error: out std_logic								-- Error flag 'high' if error during transaction
+		);
+	end COMPONENT;
 
 	
 	-- CPU outputs
@@ -129,10 +147,13 @@ architecture behavioural of ifttt_top_level is
 	signal w_MC_I2C_address : STD_LOGIC_VECTOR(3 downto 0);
 	signal w_MC_I2C_data : STD_LOGIC_VECTOR(7 downto 0);
 	signal w_MC_I2C_write_enable : STD_LOGIC;
-	
-	-- Display outputs
 	signal w_MC_DISPLAY_data : std_logic_vector(7 downto 0);
 	signal w_MC_DISPLAY_write_enable : std_logic;
+	
+	-- Display outputs
+	signal w_display_reset		: std_logic;								
+	signal w_display_ready		: std_logic;	
+	signal w_display_data		: std_logic_vector (7 downto 0);
 	
 	-- I2C outputs
 	signal w_I2C_busy	: std_logic;								
@@ -198,8 +219,18 @@ begin
 		o_I2C_busy					=> w_I2C_busy,
 		o_I2C_data_rx				=> w_I2C_data_rx,
 		o_I2C_ack_error			=> w_I2C_ack_error
-		);
-
+	);
+	
+	INST_Display_driver : Display_driver PORT MAP (
+		io_I2C_sda					=> io_DISPLAY_sda,	 
+		io_I2C_scl					=> io_DISPLAY_scl,
+		i_I2C_clk					=>	i_CLK,					
+		i_I2C_reset					=> i_RESET,						
+		i_I2C_display_enable		=> '1',
+		i_display_write_enable 	=> w_MC_DISPLAY_write_enable,
+		i_I2C_display_input		=> w_MC_DISPLAY_data,
+		o_I2C_ack_error			=> open
+	);
 	
 	process(i_CLK)
 	begin

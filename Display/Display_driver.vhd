@@ -10,15 +10,13 @@ entity Display_driver is
 		io_I2C_scl		: inout std_logic;							-- SCL in/out tri-state port
 		
 		--inputs
-		i_I2C_rw					: in std_logic;								-- 0 is transmit, 1 is receive
 		i_I2C_clk				: in std_logic;								-- I2C main clock
 		i_I2C_reset				: in std_logic;								-- Reset trigger 
 		i_I2C_display_enable	: in std_logic;
-		i_display_writeenable : in std_logic;
+		i_display_write_enable : in std_logic;
 		i_I2C_display_input	: in std_logic_vector (7 downto 0);
 		
 		--outputs
-		o_I2C_data_rx	: out std_logic_vector (7 downto 0);	-- Data received from I2C device
 		o_I2C_ack_error: out std_logic								-- Error flag 'high' if error during transaction
 		);
 end entity;
@@ -88,7 +86,7 @@ begin
 		o_I2C_busy			=> w_I2C_busy,					-- Sends busy signal to display handler
 		o_I2C_scl_enable	=> w_I2C_scl_enable,
 		o_I2C_ack_error	=> o_I2C_ack_error,
-		o_I2C_data_rx		=> o_I2C_data_rx,
+		o_I2C_data_rx		=> open,
 		o_I2C_scl_txrx		=> w_o_I2C_scl_txrx,
 		o_I2C_sda_txrx		=> w_o_I2C_sda_txrx
 		);
@@ -96,7 +94,7 @@ begin
 	disp : I2C_display port map(
 		-- Inputs
 		i_display_enable			=> '1',							-- Display always set high
-		i_display_write_enable	=> i_display_writeenable,	
+		i_display_write_enable	=> i_display_write_enable,	
 		i_display_clock			=> i_I2C_clk,
 		i_display_data				=> i_I2C_display_input,		-- Display handler gets data input from CPU
 		i_display_busy				=> w_I2C_busy,					-- Display handler gets busy signal from I2C handler
