@@ -120,6 +120,23 @@ architecture behavioural of ifttt_top_level is
 		o_I2C_ack_error			: out std_logic								-- Error flag 'high' if error during transaction
 		);
 	end COMPONENT;
+	
+	COMPONENT I2C_display
+	port(
+		-- Inputs
+		i_display_enable			: in std_logic;
+		i_display_write_enable	: in std_logic;
+		i_display_clock			: in std_logic;
+		i_display_data				: in std_logic_vector (7 downto 0);
+		i_display_busy				: in std_logic;
+		i_display_reset			: in std_logic;
+		
+		-- Outputs
+		o_display_reset		: out std_logic				:= '1';								
+		o_display_ready		: out std_logic            := '1';	
+		o_display_data			: out std_logic_vector (7 downto 0)	:= x"00"
+		);
+	end COMPONENT;
 
 	
 	-- CPU outputs
@@ -129,10 +146,13 @@ architecture behavioural of ifttt_top_level is
 	signal w_MC_I2C_address : STD_LOGIC_VECTOR(3 downto 0);
 	signal w_MC_I2C_data : STD_LOGIC_VECTOR(7 downto 0);
 	signal w_MC_I2C_write_enable : STD_LOGIC;
-	
-	-- Display outputs
 	signal w_MC_DISPLAY_data : std_logic_vector(7 downto 0);
 	signal w_MC_DISPLAY_write_enable : std_logic;
+	
+	-- Display outputs
+	signal w_display_reset		: std_logic;								
+	signal w_display_ready		: std_logic;	
+	signal w_display_data		: std_logic_vector (7 downto 0);
 	
 	-- I2C outputs
 	signal w_I2C_busy	: std_logic;								
@@ -198,7 +218,20 @@ begin
 		o_I2C_busy					=> w_I2C_busy,
 		o_I2C_data_rx				=> w_I2C_data_rx,
 		o_I2C_ack_error			=> w_I2C_ack_error
+	);
+	
+	INST_I2C_display : I2C_display PORT MAP (
+		i_display_enable			=> '1',
+		i_display_write_enable	=> w_MC_DISPLAY_write_enable,
+		i_display_clock			=> i_CLK,
+		i_display_data				=> w_MC_DISPLAY_data,
+		i_display_busy				=> '0',
+		i_display_reset			=> i_RESET,
+		o_display_reset			=> w_display_reset,								
+		o_display_ready			=> w_display_ready,	
+		o_display_data				=> w_display_data
 		);
+	
 
 	
 	process(i_CLK)
