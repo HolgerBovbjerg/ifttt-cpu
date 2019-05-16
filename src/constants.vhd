@@ -34,7 +34,8 @@ constant OP_SPEC_POP: 		std_logic_vector(2 downto 0) :=  "010"; 	-- POP
 constant OP_SPEC_PUSH: 		std_logic_vector(2 downto 0) :=  "011"; 	-- PUSH
 
 -- Memory controller constants
-constant Ram_address: 		std_logic_vector(1 downto 0) := 	"01";		-- Ram address
+constant Ram_address: 		std_logic_vector(1 downto 0) := 	"00";		-- Ram address
+constant Display_address: 	std_logic_vector(1 downto 0) := 	"01";		-- Display address
 constant GPIO_address: 		std_logic_vector(1 downto 0) := 	"10";		-- GPIO address
 constant I2C_address: 		std_logic_vector(1 downto 0) := 	"11";		-- I2C address
 
@@ -55,7 +56,7 @@ constant BRANCH_SAVE_STATE:std_logic_vector(2 downto 0) :=  "111";	-- Save PC an
 constant INTERRUPT_address:std_logic_vector(9 downto 0) := "1111110000";
 
 -- Stack constants 
-constant STACK_BEGIN:std_logic_vector(15 downto 0) := "1111111111111111";
+constant STACK_BEGIN:std_logic_vector(15 downto 0) := "0011111111111111";
 
 end constants;
 

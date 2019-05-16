@@ -12,6 +12,11 @@ entity cpu_core is
 				o_STATE : out STD_LOGIC_VECTOR(6 downto 0);
 				
 				-- Memory interface ---------------
+				
+				-- Display driver
+				o_MC_DISPLAY_data : out std_logic_vector (7 downto 0);
+				o_MC_DISPLAY_write_enable : out std_logic;
+				
 				-- GPIO
 				i_MC_GPIO_data : in STD_LOGIC_VECTOR(7 downto 0);
 				o_MC_GPIO_address : out std_logic_vector (3 downto 0); 
@@ -167,6 +172,9 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_MC_RAM_data : in std_logic_vector (7 downto 0);
 				o_MC_RAM_data : out std_logic_vector (7 downto 0);
 				o_MC_RAM_write_enable : out std_logic;
+				------------------Display driver------------------------------------
+				o_MC_DISPLAY_data : out std_logic_vector (7 downto 0);
+				o_MC_DISPLAY_write_enable : out std_logic;
 				------------------GPIO----------------------------------------------
 				o_MC_GPIO_address : out std_logic_vector (3 downto 0); -- Address output to GPIO
 				i_MC_GPIO_data : in std_logic_vector (7 downto 0);
@@ -273,14 +281,17 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_MC_RAM_address : std_logic_vector (13 downto 0); 
 	signal w_MC_RAM_data : std_logic_vector (7 downto 0);
 	signal w_MC_RAM_write_enable : std_logic;
-
-	signal w_MC_GPIO_address : std_logic_vector (3 downto 0); 
-	signal w_MC_GPIO_data : std_logic_vector (7 downto 0);
-	signal w_MC_GPIO_write_enable : std_logic;
 	
-	signal w_MC_I2C_address :std_logic_vector (3 downto 0); 
-	signal w_MC_I2C_data : std_logic_vector (7 downto 0);
-	signal w_MC_I2c_write_enable : std_logic;
+--	signal w_MC_DISPLAY_data : std_logic_vector (7 downto 0);
+--	signal w_MC_DISPLAY_write_enable : std_logic;
+--
+--	signal w_MC_GPIO_address : std_logic_vector (3 downto 0); 
+--	signal w_MC_GPIO_data : std_logic_vector (7 downto 0);
+--	signal w_MC_GPIO_write_enable : std_logic;
+--	
+--	signal w_MC_I2C_address :std_logic_vector (3 downto 0); 
+--	signal w_MC_I2C_data : std_logic_vector (7 downto 0);
+--	signal w_MC_I2c_write_enable : std_logic;
 			
 	signal w_MC_MUX_data : std_logic_vector (7 downto 0);
 	signal w_MC_MEM_state : std_logic_vector(1 downto 0);
@@ -419,6 +430,9 @@ begin
 		i_MC_RAM_data 					=> w_RAM_MC_data,
 		o_MC_RAM_data 					=> w_MC_RAM_data,
 		o_MC_RAM_write_enable 		=> w_MC_RAM_write_enable,
+		------------------Display-------------------------------------------
+		o_MC_DISPLAY_data 				=> o_MC_DISPLAY_data,
+		o_MC_DISPLAY_write_enable 	=> o_MC_DISPLAY_write_enable,
 		------------------GPIO----------------------------------------------
 		o_MC_GPIO_address 			=> o_MC_GPIO_address,
 		i_MC_GPIO_data 				=> i_MC_GPIO_data,
