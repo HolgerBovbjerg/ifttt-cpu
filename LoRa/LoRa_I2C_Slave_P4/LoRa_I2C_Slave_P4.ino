@@ -14,7 +14,7 @@ byte SlaveSend;
 byte SensorVal;
 int DataToMaster;
 
-int aaa;
+int aaa;    \\integers that swap between 1 and 0
 int bbb;
 
 int DataToSend;
