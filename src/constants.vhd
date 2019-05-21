@@ -30,8 +30,9 @@ constant OPCODE_SPECIAL:   std_logic_vector(3 downto 0) :=  "1111";	-- Special
 
 -- Special opcodes
 constant OP_SPEC_RETURN: 	std_logic_vector(2 downto 0) :=  "001"; 	-- Return
-constant OP_SPEC_POP: 		std_logic_vector(2 downto 0) :=  "010"; 	-- POP
-constant OP_SPEC_PUSH: 		std_logic_vector(2 downto 0) :=  "011"; 	-- PUSH
+constant OP_SPEC_PUSH: 		std_logic_vector(2 downto 0) :=  "010"; 	-- PUSH
+constant OP_SPEC_POP: 		std_logic_vector(2 downto 0) :=  "011"; 	-- POP
+
 
 -- Memory controller constants
 constant Ram_address: 		std_logic_vector(1 downto 0) := 	"00";		-- Ram address
