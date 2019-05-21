@@ -16,6 +16,11 @@ ARCHITECTURE behavior OF cpu_core_tb IS
 					o_STATE : out STD_LOGIC_VECTOR(6 downto 0);
 					
 					-- Memory interface ---------------
+					
+					-- Display driver
+					o_MC_DISPLAY_data : out std_logic_vector (7 downto 0);
+					o_MC_DISPLAY_write_enable : out std_logic;
+					
 					-- GPIO
 					i_MC_GPIO_data : in STD_LOGIC_VECTOR(7 downto 0);
 					o_MC_GPIO_address : out std_logic_vector (3 downto 0); 
@@ -45,6 +50,8 @@ ARCHITECTURE behavior OF cpu_core_tb IS
 	
 	
 	-- MEMORY
+	signal o_MC_DISPLAY_data : std_logic_vector (7 downto 0);
+	signal o_MC_DISPLAY_write_enable : std_logic;
 	signal i_MC_GPIO_data : STD_LOGIC_VECTOR(7 downto 0) := x"00";
 	signal o_MC_GPIO_address : std_logic_vector (3 downto 0); 
 	signal o_MC_GPIO_write_enable : std_logic;
@@ -70,6 +77,8 @@ begin
 			i_CORE_HALT => '0',
 			o_DATA  => o_DATA, 
 			o_STATE => o_STATE,
+			o_MC_DISPLAY_data => o_MC_DISPLAY_data,
+			o_MC_DISPLAY_write_enable => o_MC_DISPLAY_write_enable,
 			i_MC_GPIO_data => i_MC_I2C_data,
 			o_MC_GPIO_address => o_MC_GPIO_address,
 			o_MC_GPIO_write_enable => o_MC_GPIO_write_enable,
