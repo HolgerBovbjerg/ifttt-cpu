@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_core
-Tue May 14 11:13:44 2019
+Tue May 21 08:44:12 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -57,16 +57,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 14 11:13:44 2019      ;
+; Analysis & Synthesis Status        ; Successful - Tue May 21 08:44:12 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; cpu_core                                   ;
 ; Top-level Entity Name              ; cpu_core                                   ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 661                                        ;
-;     Total combinational functions  ; 491                                        ;
-;     Dedicated logic registers      ; 333                                        ;
-; Total registers                    ; 333                                        ;
-; Total pins                         ; 63                                         ;
+; Total logic elements               ; 677                                        ;
+;     Total combinational functions  ; 499                                        ;
+;     Dedicated logic registers      ; 342                                        ;
+; Total registers                    ; 342                                        ;
+; Total pins                         ; 72                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 164,352                                    ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -216,29 +216,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------+
 ; Resource                                    ; Usage            ;
 +---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 661              ;
+; Estimated Total logic elements              ; 677              ;
 ;                                             ;                  ;
-; Total combinational functions               ; 491              ;
+; Total combinational functions               ; 499              ;
 ; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 247              ;
-;     -- 3 input functions                    ; 195              ;
+;     -- 4 input functions                    ; 256              ;
+;     -- 3 input functions                    ; 194              ;
 ;     -- <=2 input functions                  ; 49               ;
 ;                                             ;                  ;
 ; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 422              ;
+;     -- normal mode                          ; 430              ;
 ;     -- arithmetic mode                      ; 69               ;
 ;                                             ;                  ;
-; Total registers                             ; 333              ;
-;     -- Dedicated logic registers            ; 333              ;
+; Total registers                             ; 342              ;
+;     -- Dedicated logic registers            ; 342              ;
 ;     -- I/O registers                        ; 0                ;
 ;                                             ;                  ;
-; I/O pins                                    ; 63               ;
+; I/O pins                                    ; 72               ;
 ; Total memory bits                           ; 164352           ;
 ; Embedded Multiplier 9-bit elements          ; 0                ;
 ; Maximum fan-out node                        ; i_CORE_CLK~input ;
-; Maximum fan-out                             ; 392              ;
-; Total fan-out                               ; 3699             ;
-; Average fan-out                             ; 3.65             ;
+; Maximum fan-out                             ; 401              ;
+; Total fan-out                               ; 3764             ;
+; Average fan-out                             ; 3.59             ;
 +---------------------------------------------+------------------+
 
 
@@ -247,20 +247,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; |cpu_core                                         ; 491 (1)           ; 333 (0)      ; 164352      ; 0            ; 0       ; 0         ; 63   ; 0            ; |cpu_core                                                                                                  ; work         ;
-;    |ALU:INST_ALU|                                 ; 220 (220)         ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|ALU:INST_ALU                                                                                     ; work         ;
+; |cpu_core                                         ; 499 (1)           ; 342 (0)      ; 164352      ; 0            ; 0       ; 0         ; 72   ; 0            ; |cpu_core                                                                                                  ; work         ;
+;    |ALU:INST_ALU|                                 ; 227 (227)         ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|ALU:INST_ALU                                                                                     ; work         ;
 ;    |B_imm_multiplexer:INST_B_imm_multiplexer|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|B_imm_multiplexer:INST_B_imm_multiplexer                                                         ; work         ;
 ;    |DATA_RAM:INST_DATA_RAM|                       ; 28 (26)           ; 54 (53)      ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|DATA_RAM:INST_DATA_RAM                                                                           ; work         ;
 ;       |altsyncram:MEMORY_rtl_0|                   ; 2 (0)             ; 1 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0                                                   ; work         ;
 ;          |altsyncram_e1m1:auto_generated|         ; 2 (0)             ; 1 (1)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_e1m1:auto_generated                    ; work         ;
 ;             |decode_ara:decode2|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|DATA_RAM:INST_DATA_RAM|altsyncram:MEMORY_rtl_0|altsyncram_e1m1:auto_generated|decode_ara:decode2 ; work         ;
 ;    |InstrucReg:INST_InstrucReg|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|InstrucReg:INST_InstrucReg                                                                       ; work         ;
-;    |MEMORY_CONTROL:INST_MEMORY_CONTROL|           ; 33 (33)           ; 59 (59)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL                                                               ; work         ;
+;    |MEMORY_CONTROL:INST_MEMORY_CONTROL|           ; 36 (36)           ; 68 (68)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL                                                               ; work         ;
 ;    |Program_counter:INST_Program_counter|         ; 21 (21)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|Program_counter:INST_Program_counter                                                             ; work         ;
 ;    |branch_control:INST_branch_control|           ; 29 (29)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|branch_control:INST_branch_control                                                               ; work         ;
 ;    |control_unit:INST_control_unit|               ; 28 (28)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|control_unit:INST_control_unit                                                                   ; work         ;
 ;    |data_bus:INST_data_bus|                       ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|data_bus:INST_data_bus                                                                           ; work         ;
-;    |instruction_decoder:INST_instruction_decoder| ; 82 (82)           ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|instruction_decoder:INST_instruction_decoder                                                     ; work         ;
+;    |instruction_decoder:INST_instruction_decoder| ; 80 (80)           ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|instruction_decoder:INST_instruction_decoder                                                     ; work         ;
 ;    |mega_prog_mem:mega_prog_mem_inst|             ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|mega_prog_mem:mega_prog_mem_inst                                                                 ; work         ;
 ;       |altsyncram:altsyncram_component|           ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component                                 ; work         ;
 ;          |altsyncram_23r3:auto_generated|         ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu_core|mega_prog_mem:mega_prog_mem_inst|altsyncram:altsyncram_component|altsyncram_23r3:auto_generated  ; work         ;
@@ -317,12 +317,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 333   ;
-; Number of registers using Synchronous Clear  ; 30    ;
+; Total registers                              ; 342   ;
+; Number of registers using Synchronous Clear  ; 19    ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 214   ;
+; Number of registers using Clock Enable       ; 219   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -350,9 +350,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[16]                ; 1       ;
 ; register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[18]                ; 1       ;
 ; register32x8:INST_GPR|r_REGISTER_rtl_0_bypass[14]                ; 1       ;
-; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[0]  ; 2       ;
-; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[15] ; 2       ;
-; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[14] ; 2       ;
 ; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[13] ; 2       ;
 ; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[12] ; 2       ;
 ; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[11] ; 2       ;
@@ -366,6 +363,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[3]  ; 2       ;
 ; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[2]  ; 2       ;
 ; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[1]  ; 2       ;
+; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[0]  ; 2       ;
 ; DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[30]                   ; 1       ;
 ; DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[32]                   ; 1       ;
 ; DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[34]                   ; 1       ;
@@ -374,7 +372,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[40]                   ; 1       ;
 ; DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[42]                   ; 1       ;
 ; DATA_RAM:INST_DATA_RAM|MEMORY_rtl_0_bypass[44]                   ; 1       ;
-; Total number of inverted registers = 42                          ;         ;
+; Total number of inverted registers = 40                          ;         ;
 +------------------------------------------------------------------+---------+
 
 
@@ -495,29 +493,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------+----------------------------------------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |cpu_core|control_unit:INST_control_unit|r_state[6]                              ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_address[2]                ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_address[3]                 ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_data[4]                   ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_data[4]                    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_data[7]                    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |cpu_core|Program_counter:INST_Program_counter|r_PROG_COUNT[0]                   ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |cpu_core|branch_control:INST_branch_control|r_PC_ADDRESS[1]                     ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|o_REGISTER_C_WRITE_ENABLE ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |cpu_core|branch_control:INST_branch_control|o_ADDRESS[9]                        ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|branch_control:INST_branch_control|o_ADDRESS[3]                        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]         ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[0]          ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_MUX_data[4]                    ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |cpu_core|ALU:INST_ALU|r_ALU_Result[6]                                           ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[5]        ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux62                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |cpu_core|control_unit:INST_control_unit|r_state[3]                        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_address[1]          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_address[3]           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_DISPLAY_data[2]          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_GPIO_data[5]             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_I2C_data[4]              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_data[6]              ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |cpu_core|Program_counter:INST_Program_counter|r_PROG_COUNT[3]             ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |cpu_core|branch_control:INST_branch_control|r_PC_ADDRESS[7]               ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|o_MEM_write_enable  ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |cpu_core|branch_control:INST_branch_control|o_ADDRESS[9]                  ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |cpu_core|branch_control:INST_branch_control|o_ADDRESS[3]                  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[15] ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|o_Address_MEM[11]   ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_MUX_data[6]              ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; Yes        ; |cpu_core|ALU:INST_ALU|r_ALU_Result[6]                                     ;
+; 6:1                ; 14 bits   ; 56 LEs        ; 14 LEs               ; 42 LEs                 ; Yes        ; |cpu_core|instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[10] ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; No         ; |cpu_core|MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux70                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -858,7 +858,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -868,7 +868,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Tue May 14 11:13:39 2019
+    Info: Processing started: Tue May 21 08:44:03 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_core -c cpu_core
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/holge/onedrive/aau - elektronik og it/4. semester/p4/ifttt-cpu/src/memory_control.vhd
@@ -1098,15 +1098,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "i_MC_I2C_busy"
-Info (21057): Implemented 821 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 846 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 694 logic cells
+    Info (21059): Implemented 51 output pins
+    Info (21061): Implemented 710 logic cells
     Info (21064): Implemented 64 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4711 megabytes
-    Info: Processing ended: Tue May 14 11:13:44 2019
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4715 megabytes
+    Info: Processing ended: Tue May 21 08:44:12 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 

@@ -33,7 +33,6 @@ begin
 
 	process(i_CLK) 
 	begin
-		
 		if(rising_edge(i_CLK)) then
 			if ((r_INTERRUPT_enable = '1') and (i_PC_INTERRUPT_set = '1') and (r_INTERRUPT_set = '0')) then
 				r_INTERRUPT_set <= '1';

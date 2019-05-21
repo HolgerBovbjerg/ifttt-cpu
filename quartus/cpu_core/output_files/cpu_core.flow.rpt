@@ -1,5 +1,5 @@
 Flow report for cpu_core
-Tue May 14 11:14:08 2019
+Tue May 21 08:44:42 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue May 14 11:14:08 2019      ;
+; Flow Status                        ; Successful - Tue May 21 08:44:42 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; cpu_core                                   ;
 ; Top-level Entity Name              ; cpu_core                                   ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F256C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 648 / 15,408 ( 4 % )                       ;
-;     Total combinational functions  ; 516 / 15,408 ( 3 % )                       ;
-;     Dedicated logic registers      ; 333 / 15,408 ( 2 % )                       ;
-; Total registers                    ; 333                                        ;
-; Total pins                         ; 63 / 169 ( 37 % )                          ;
+; Total logic elements               ; 651 / 15,408 ( 4 % )                       ;
+;     Total combinational functions  ; 524 / 15,408 ( 3 % )                       ;
+;     Dedicated logic registers      ; 342 / 15,408 ( 2 % )                       ;
+; Total registers                    ; 342                                        ;
+; Total pins                         ; 72 / 169 ( 43 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 164,352 / 516,096 ( 32 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/14/2019 11:13:39 ;
+; Start date & time ; 05/21/2019 08:44:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cpu_core            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +---------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 172309000256012.155782521939496       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 172309000256012.155842104415852       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME              ; NA                                    ; --            ; --          ; cpu_core_tb    ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH  ; cpu_core_tb                           ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT                ; Vhdl                                  ; --            ; --          ; eda_simulation ;
@@ -113,13 +113,13 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4711 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 4994 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4606 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4647 MB             ; 00:00:02                           ;
-; Design Assistant          ; 00:00:00     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4562 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 4715 MB             ; 00:00:06                           ;
+; Fitter                    ; 00:00:14     ; 1.0                     ; 4984 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4606 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4640 MB             ; 00:00:03                           ;
+; Design Assistant          ; 00:00:01     ; 1.0                     ; 4584 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4563 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:24                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

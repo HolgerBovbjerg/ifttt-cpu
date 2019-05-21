@@ -79,7 +79,7 @@ begin
 			case i_INSTRUCTION(31 downto 28) is
 				when OPCODE_WRITE => -- Write
 					o_BUS_select <= "01";
-				when OPCODE_READ => -- Write
+				when OPCODE_READ => -- Read
 					o_BUS_select <= "10";
 				when others =>
 					o_BUS_select <= "00";
@@ -89,7 +89,7 @@ begin
 			case i_INSTRUCTION(31 downto 28) is
 				when OPCODE_WRITE => -- Write
 					o_MEM_write_enable <= '1';
-				when OPCODE_SPECIAL => -- Write
+				when OPCODE_SPECIAL => -- Special opcode
 					case i_INSTRUCTION(17 downto 15) is
 						when OP_SPEC_PUSH =>
 							o_MEM_write_enable <= '1';

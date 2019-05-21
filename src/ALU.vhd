@@ -147,6 +147,8 @@ begin
 					r_ALU_carry_flag <= tmp(8);
 				when OPCODE_BRANCH =>
 					r_ALU_carry_flag <= r_ALU_carry_flag;
+				when OPCODE_NOP =>
+					r_ALU_carry_flag <= r_ALU_carry_flag;
 				when others =>
 					r_ALU_carry_flag <= '0';
 			end case;
@@ -157,21 +159,26 @@ begin
 					if(i_ALU_A(7) = i_ALU_B(7)) then -- Test for subtraction overflow
 						if(i_ALU_A(7) /= r_ALU_Result(7)) then
 							r_ALU_overflow_flag <= '1';
+						else 
+							r_ALU_overflow_flag <= '0';
 						end if;
 					else 
-						r_ALU_overflow_flag <= '0';
-						
+						r_ALU_overflow_flag <= '0';	
 					end if;
 				when OPCODE_SUB =>
 					if(i_ALU_A(7) /= i_ALU_B(7)) then -- Test for addition overflow
 						if(i_ALU_A(7) /= r_ALU_Result(7)) then
 							r_ALU_overflow_flag <= '1';
+						else 
+							r_ALU_overflow_flag <= '0';
 						end if;
 					else 
 						r_ALU_overflow_flag <= '0';
 					end if;
 				when OPCODE_BRANCH =>
 					r_ALU_overflow_flag <= r_ALU_overflow_flag;
+				when OPCODE_NOP =>
+					r_ALU_overflow_flag <= r_ALU_overflow_flag;	
 				when others =>
 					r_ALU_overflow_flag <= '0';
 			end case;
@@ -203,6 +210,8 @@ begin
 						end if;
 					end if;
 				when OPCODE_BRANCH =>
+					r_ALU_negative_flag <= r_ALU_negative_flag;
+				when OPCODE_NOP =>
 					r_ALU_negative_flag <= r_ALU_negative_flag;
 				when others =>
 					r_ALU_negative_flag <= '0';

@@ -16,11 +16,11 @@ port(
 end DATA_RAM;
 
 architecture Behavioral of DATA_RAM is  
-	type MEM is array (16383 downto 0) of std_logic_vector (7 downto 0); -- initial values in the RAM
-	signal MEMORY : MEM :=(
-	others => x"00"
+	type MEM is array (16383 downto 0) of std_logic_vector (7 downto 0); 
+	signal MEMORY : MEM :=(-- Instantiating memory
+	others => x"00" -- initial values in the RAM
 	);
-	signal ADDR : INTEGER RANGE 0 TO 16383;		-- The addresses are ordered from 1 and up.
+	signal ADDR : INTEGER RANGE 0 TO 16383;		-- The addresses are ordered from 0 to 16383
 	begin
 		process (i_RAM_address, i_RAM_data, i_RAM_write_enable, i_RAM_clk)
 			begin
