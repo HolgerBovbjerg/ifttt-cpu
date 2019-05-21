@@ -220,6 +220,8 @@ void assembleFromOpcode(FILE *outputFile, int number)
             }
         }
         outputIndex++;
+        strcpy(outputArray[outputIndex], "00000"); // append output with zeroes
+        outputIndex++;
         pch = strtok(NULL, " ,"); // Get immediate value as a string
         printf("%s\n", pch);
         int imm = atoi(pch); // Cast string to integer
@@ -228,7 +230,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         printf("%s", binaryNum);
         strcpy(outputArray[outputIndex], binaryNum); //Copy binary number to output array
         outputIndex++;
-        strcpy(outputArray[outputIndex], "000000000"); // append output with zeroes
+        strcpy(outputArray[outputIndex], "0000"); // append output with zeroes
         outputIndex++;
         strcpy(outputArray[outputIndex], "1"); // Append output with one for IMM enable
     }
