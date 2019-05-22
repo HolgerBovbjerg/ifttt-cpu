@@ -53,6 +53,7 @@ begin
 				when OPCODE_NOP => -- No operation
 					r_ALU_Result <=r_ALU_Result;
 				when OPCODE_ADD => -- Add
+					tmp <= std_logic_vector(unsigned('0' & i_ALU_A) + unsigned('0' & i_ALU_B)); -- Sum of inputs assigned to tmp
 					if (i_ALU_signed = '1') then
 						if (i_ALU_carry ='1') then 
 							r_ALU_Result <= std_logic_vector(signed(i_ALU_A) + signed(i_ALU_B) + signed(r_ALU_carry_arithmetic));
@@ -121,6 +122,7 @@ begin
 					r_ALU_Result(2 downto 0) <= "000";
 					
 				when OPCODE_BSL => -- Bit shift left
+					tmp <= std_logic_vector(unsigned('0' & i_ALU_A) sll to_integer(unsigned('0' & i_ALU_B)));
 					r_ALU_Result <= std_logic_vector(unsigned(i_ALU_A) sll to_integer(unsigned(i_ALU_B)));
 				when OPCODE_BSR => -- Bit shift right
 					r_ALU_Result <= std_logic_vector(unsigned(i_ALU_A) srl to_integer(unsigned(i_ALU_B)));
@@ -140,10 +142,8 @@ begin
 		-- Carry flag
 			case(i_ALU_sel) is 
 				when OPCODE_ADD =>
-					tmp <= std_logic_vector(unsigned('0' & i_ALU_A) + unsigned('0' & i_ALU_B)); -- Sum of inputs assigned to tmp
 					r_ALU_carry_flag <= tmp(8); -- MSB of tmp assigned to carry flag
 				when OPCODE_BSL =>
-					tmp <= std_logic_vector(unsigned('0' & i_ALU_A) sll to_integer(unsigned('0' & i_ALU_B)));
 					r_ALU_carry_flag <= tmp(8);
 				when OPCODE_BRANCH =>
 					r_ALU_carry_flag <= r_ALU_carry_flag;
