@@ -385,6 +385,8 @@ void assembleFromOpcode(FILE *outputFile, int number)
     else if (number == 19) // Push instruction
     {
         printf("Opcode type is: Special opcode\n");
+        strcpy(outputArray[outputIndex], "00000");
+        outputIndex++;
         pch = strtok(NULL, " ,"); // Get register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
@@ -394,8 +396,6 @@ void assembleFromOpcode(FILE *outputFile, int number)
                 strcpy(outputArray[outputIndex],registerArrayBinary[i]);
             }
         }
-        outputIndex++;
-        strcpy(outputArray[outputIndex], "00000");
         outputIndex++;
         strcpy(outputArray[outputIndex], specialOpcodeArrayBinary[1]); // write PUSH special opcode to output
         outputIndex++;
@@ -404,8 +404,6 @@ void assembleFromOpcode(FILE *outputFile, int number)
     else if (number == 20) // Pop instruction
     {
         printf("Opcode type is: Special opcode\n");
-        strcpy(outputArray[outputIndex], "00000");
-        outputIndex++;
         pch = strtok(NULL, " ,"); // Get register
         printf("%s\n", pch);
         for (int i = 0; i < 32 - 1; i++)
@@ -415,6 +413,8 @@ void assembleFromOpcode(FILE *outputFile, int number)
                 strcpy(outputArray[outputIndex],registerArrayBinary[i]);
             }
         }
+        outputIndex++;
+        strcpy(outputArray[outputIndex], "00000");
         outputIndex++;
         strcpy(outputArray[outputIndex], specialOpcodeArrayBinary[2]); // write PUSH special opcode to output
         outputIndex++;
