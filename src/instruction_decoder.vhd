@@ -17,6 +17,7 @@ entity instruction_decoder is
 				o_DATA_IMM : out STD_LOGIC_VECTOR (7 downto 0); 	-- Immidiate data output
 				o_Address_PROG : out STD_LOGIC_VECTOR (9 downto 0); -- Program memory address output 
 				o_Address_MEM : out STD_LOGIC_VECTOR (15 downto 0); -- Address output for accessing data memory and peripherals
+				o_MEM_access : out STD_LOGIC;
 				o_MEM_write_enable : out  STD_LOGIC;
 				o_BRANCH_CONTROL : out  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 				o_Signed : out  STD_LOGIC; -- Bit for signed or unsigned arithmetic
@@ -81,6 +82,15 @@ begin
 					o_BUS_select <= "01";
 				when OPCODE_READ => -- Read
 					o_BUS_select <= "10";
+				when OPCODE_SPECIAL => -- Special opcode
+					case i_INSTRUCTION(17 downto 15) is
+						when OP_SPEC_PUSH =>
+							o_BUS_select <= "01";
+						when OP_SPEC_POP =>
+							o_BUS_select <= "10";
+						when others =>
+							o_BUS_select <= "00";
+					end case;
 				when others =>
 					o_BUS_select <= "00";
 			end case;
@@ -95,7 +105,7 @@ begin
 							o_MEM_write_enable <= '1';
 						when others =>
 							o_MEM_write_enable <= '0';
-						end case;
+					end case;
 				when others =>
 					o_MEM_write_enable <= '0';
 			end case;
@@ -138,6 +148,17 @@ begin
 				when others =>
 					o_Address_mem <= i_INSTRUCTION(17 downto 2);
 			end case;	
+			
+			-- Resolving if memory access is needed
+			if (i_INSTRUCTION(31 downto 28) = OPCODE_WRITE or i_INSTRUCTION(31 downto 28) = OPCODE_READ) then -- Check if a memory has to be accessed, 
+														--Write opcode							--Read opcode
+				o_MEM_access <= '1';
+			elsif ((i_INSTRUCTION(31 downto 28) = OPCODE_SPECIAL) and ((i_INSTRUCTION(17 downto 15) = OP_SPEC_PUSH) or (i_INSTRUCTION(17 downto 15) = OP_SPEC_POP))) then 
+				o_MEM_access <= '1';
+			else
+				o_MEM_access <= '0';
+			end if;
+							
 		end if;
 		
 	end process;

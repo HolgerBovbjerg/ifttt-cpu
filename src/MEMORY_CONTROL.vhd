@@ -56,6 +56,10 @@ begin
 					if (i_MC_enable = '1') then 
 						r_MEM_state <= "01";
 					end if;
+					o_MC_RAM_write_enable <= '0';
+					o_MC_DISPLAY_write_enable <= '0';
+					o_MC_GPIO_write_enable <= '0';
+					o_MC_I2C_write_enable <= '0';
 				when MEM_FETCH => -- fetching data
 					case (i_MC_address(15 downto 14)) is
 						when RAM_address =>
@@ -90,7 +94,7 @@ begin
 							r_MEM_state <= MEM_DATA_READY;
 						when I2C_address =>
 							if (i_MC_write_enable = '1') then
-								o_MC_I2c_write_enable <= '1';
+								o_MC_I2C_write_enable <= '1';
 								o_MC_I2C_address <= i_MC_address(3 downto 0);
 								o_MC_I2C_data <= i_MC_data;
 							elsif (i_MC_write_enable = '0') then

@@ -10,6 +10,7 @@ entity control_unit is
 				i_HALT : in  STD_LOGIC; -- Halt input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
 				i_MEM_state : in STD_LOGIC_VECTOR (1 downto 0);
+				i_MEM_access : in STD_LOGIC; 
 				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state 
 				
 				-- Interrupt interface ---------------
@@ -70,8 +71,7 @@ begin
 					when "0000100" => -- Register read state
 						r_state <= "0001000"; -- Set state to execute state
 					when "0001000" => -- Execute State
-						if (i_OPCODE(3 downto 0) = OPCODE_WRITE or i_OPCODE(3 downto 0) = OPCODE_READ) then -- Check if a memory has to be accessed, 
-														--Write opcode							--Read opcode
+						if (i_MEM_access = '1') then
 							r_state <= "0010000"; --  Set state to "memory" state
 						else -- If memory does not have to be accessed 
 							r_state <= "0100000"; -- Set state to "writeback" state

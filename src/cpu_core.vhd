@@ -74,7 +74,8 @@ ARCHITECTURE behavior OF cpu_core IS
 				o_DATA_IMM : out STD_LOGIC_VECTOR (7 downto 0); 	-- Immidiate data output
 				o_Address_PROG : out STD_LOGIC_VECTOR (9 downto 0); -- Program memory address output 
 				o_Address_MEM : out STD_LOGIC_VECTOR (15 downto 0); -- Address output for accessing data memory and peripherals
-				o_MEM_write_enable : out  STD_LOGIC; 
+				o_MEM_write_enable : out  STD_LOGIC;
+				o_MEM_access : out STD_LOGIC;
 				o_BRANCH_CONTROL : out  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 				o_carry : out  STD_LOGIC; -- Bit for carry arithmetic
 				o_SAVE_PC : out STD_LOGIC; -- Output for enabling saving of address currently pointed at by program counter
@@ -90,6 +91,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				i_HALT : in  STD_LOGIC; -- Halt input
 				i_OPCODE : in  STD_LOGIC_VECTOR (3 downto 0); -- Opcode input
 				i_MEM_state : in STD_LOGIC_VECTOR (1 downto 0);
+				i_MEM_access : in STD_LOGIC;
 				o_STATE : out  STD_LOGIC_VECTOR (6 downto 0); -- State output used for enabling blocks depending on state 
 				i_INTERRUPT_request : in STD_LOGIC;
 				i_INTERRUPT_enable : in STD_LOGIC;
@@ -242,6 +244,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_Address_PROG : STD_LOGIC_VECTOR (9 downto 0); -- Program memory address output 
 	signal w_Address_MEM : STD_LOGIC_VECTOR (15 downto 0); -- Address output for accessing data memory and peripherals
 	signal w_MEM_write_enable :  STD_LOGIC;
+	signal w_MEM_access : STD_LOGIC;
 	signal w_BRANCH_CONTROL :  STD_LOGIC_VECTOR (2 downto 0); -- Branch control output
 	signal w_signed :  STD_LOGIC; -- Bit for signed or unsigned arithmetic
 	signal w_carry : STD_LOGIC;
@@ -355,6 +358,7 @@ begin
 		o_DATA_IMM 						=> w_DATA_IMM,
 		o_Address_PROG 				=> w_Address_PROG,
 		o_Address_MEM 					=> w_Address_MEM,
+		o_MEM_access 					=> w_MEM_access,
 		o_MEM_write_enable			=> w_MEM_write_enable,
 		o_BRANCH_CONTROL 				=> w_BRANCH_CONTROL,
 		o_Signed 						=> w_Signed,
@@ -370,6 +374,7 @@ begin
 		i_HALT							=> i_CORE_HALT,
 		i_OPCODE 						=> w_OPCODE,
 		i_MEM_state						=> w_MC_MEM_state,
+		i_MEM_access 					=> w_MEM_access,
 		o_STATE 							=> w_STATE,
 		i_INTERRUPT_request 			=> i_INTERRUPT_request,
 		i_INTERRUPT_enable			=> w_INTERRUPT_enable,
