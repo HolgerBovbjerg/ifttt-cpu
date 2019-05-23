@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\B_imm_multiplexer\simulation\modelsim
 Eb_imm_multiplexer
-Z1 w1555320825
+Z1 w1557993305
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\B_imm_multiplexer\simulation\modelsim
@@ -12,23 +12,23 @@ Z5 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/
 Z6 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/B_imm_multiplexer.vhd
 l0
 L4
-V35VlM>IZcOS:VS>^;bbK10
+V]B2k4iFNfGh;4j4kW7MkD2
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1555325888.382000
+Z8 !s108 1558595653.925000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/B_imm_multiplexer.vhd|
 Z10 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/B_imm_multiplexer.vhd|
 Z11 o-93 -work work -O0
 Z12 tExplicit 1
-!s100 9WHfSdZ0^`QH;<XSMX<Oh3
+!s100 Rb;;EHM4[o:1l8COoWL@X1
 !i10b 1
 Abehavioral
 R2
 R3
-DEx4 work 17 b_imm_multiplexer 0 22 35VlM>IZcOS:VS>^;bbK10
-l16
-L14
-VGe46N2OAGBJlbn:0zSlYe1
+DEx4 work 17 b_imm_multiplexer 0 22 ]B2k4iFNfGh;4j4kW7MkD2
+l15
+L13
+V7BD[ARSYbl;;Tl36JM[gl3
 R7
 31
 R8
@@ -36,10 +36,10 @@ R9
 R10
 R11
 R12
-!s100 ;6z062XJoCXUghQUlGFU92
+!s100 GOzbNcgLlXdQ2e5LOCMX70
 !i10b 1
 Eb_imm_multiplexer_tb
-Z13 w1555325873
+Z13 w1558595645
 Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R2
 R3
@@ -53,7 +53,7 @@ V1AEfE4e=89XALm;V2J@Xb3
 R7
 31
 !i10b 1
-Z17 !s108 1555325888.467000
+Z17 !s108 1558595654.009000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/B_imm_multiplexer/../../test_benches/B_imm_multiplexer_tb.vhd|
 Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/B_imm_multiplexer/../../test_benches/B_imm_multiplexer_tb.vhd|
 R11
@@ -63,10 +63,10 @@ R14
 R2
 R3
 DEx4 work 20 b_imm_multiplexer_tb 0 22 1AEfE4e=89XALm;V2J@Xb3
-l32
+l31
 L9
-V`5E]2EQ:YN4KFLUEc=EBA2
-!s100 ?0JI6jFXIU>andAd:^FYD2
+V[jGTeGXk>VcjNVU8dR9X[1
+!s100 flA5_a<5EJPolEd=fT9k`2
 R7
 31
 !i10b 1

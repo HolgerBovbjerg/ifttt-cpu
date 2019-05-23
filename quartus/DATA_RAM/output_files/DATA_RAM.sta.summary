@@ -1,0 +1,17 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i_RAM_clk'
+Slack : -3.000
+TNS   : -143.136
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i_RAM_clk'
+Slack : -3.000
+TNS   : -143.136
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i_RAM_clk'
+Slack : -3.000
+TNS   : -75.656
+
+------------------------------------------------------------

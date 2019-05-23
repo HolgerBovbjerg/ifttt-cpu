@@ -1,0 +1,3167 @@
+// Copyright (C) 1991-2014 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EP3C16F484C6 Package FBGA484
+// 
+
+//
+// This file contains Fast Corner delays for the design using part EP3C16F484C6,
+// with speed grade M, core voltage 1.2V, and temperature 0 Celsius
+//
+
+// 
+// This SDF file should be used for ModelSim-Altera (VHDL) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "DATA_RAM")
+  (DATE "05/23/2019 16:24:42")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II 64-Bit")
+  (VERSION "Version 13.1.4 Build 182 03/12/2014 SJ Web Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "cycloneiii_io_obuf")
+    (INSTANCE \\o_RAM_MC_data\[0\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (498:498:498) (551:551:551))
+        (IOPATH i o (1310:1310:1310) (1301:1301:1301))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_obuf")
+    (INSTANCE \\o_RAM_MC_data\[1\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (316:316:316) (359:359:359))
+        (IOPATH i o (2235:2235:2235) (2325:2325:2325))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_obuf")
+    (INSTANCE \\o_RAM_MC_data\[2\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (486:486:486) (546:546:546))
+        (IOPATH i o (1310:1310:1310) (1301:1301:1301))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_obuf")
+    (INSTANCE \\o_RAM_MC_data\[3\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (319:319:319) (353:353:353))
+        (IOPATH i o (1300:1300:1300) (1291:1291:1291))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_obuf")
+    (INSTANCE \\o_RAM_MC_data\[4\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (487:487:487) (549:549:549))
+        (IOPATH i o (1310:1310:1310) (1301:1301:1301))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_obuf")
+    (INSTANCE \\o_RAM_MC_data\[5\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (449:449:449) (497:497:497))
+        (IOPATH i o (1320:1320:1320) (1311:1311:1311))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_obuf")
+    (INSTANCE \\o_RAM_MC_data\[6\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (494:494:494) (551:551:551))
+        (IOPATH i o (1300:1300:1300) (1291:1291:1291))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_obuf")
+    (INSTANCE \\o_RAM_MC_data\[7\]\~output\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (320:320:320) (356:356:356))
+        (IOPATH i o (1300:1300:1300) (1291:1291:1291))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[13\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (362:362:362) (744:744:744))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_write_enable\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (382:382:382) (764:764:764))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|decode2\|eq_node\[0\]\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (1619:1619:1619) (1813:1813:1813))
+        (PORT datad (1967:1967:1967) (2238:2238:2238))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_clk\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (431:431:431) (813:813:813))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_clkctrl")
+    (INSTANCE \\i_RAM_clk\~inputclkctrl\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (97:97:97) (82:82:82))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_data\[0\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (391:391:391) (773:773:773))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[0\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (372:372:372) (754:754:754))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[1\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (362:362:362) (744:744:744))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[2\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (382:382:382) (764:764:764))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[3\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (352:352:352) (734:734:734))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[4\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (382:382:382) (764:764:764))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[5\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (362:362:362) (744:744:744))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[6\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (372:372:372) (754:754:754))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[7\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (382:382:382) (764:764:764))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[8\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (372:372:372) (754:754:754))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[9\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (362:362:362) (744:744:744))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[10\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (382:382:382) (764:764:764))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[11\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (382:382:382) (764:764:764))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_address\[12\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (372:372:372) (754:754:754))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2091:2091:2091) (2371:2371:2371))
+        (PORT clk (1068:1068:1068) (1086:1086:1086))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1840:1840:1840) (2082:2082:2082))
+        (PORT d[1] (1987:1987:1987) (2252:2252:2252))
+        (PORT d[2] (2108:2108:2108) (2404:2404:2404))
+        (PORT d[3] (2060:2060:2060) (2332:2332:2332))
+        (PORT d[4] (2086:2086:2086) (2377:2377:2377))
+        (PORT d[5] (2067:2067:2067) (2370:2370:2370))
+        (PORT d[6] (1996:1996:1996) (2274:2274:2274))
+        (PORT d[7] (1963:1963:1963) (2225:2225:2225))
+        (PORT d[8] (2140:2140:2140) (2398:2398:2398))
+        (PORT d[9] (2067:2067:2067) (2333:2333:2333))
+        (PORT d[10] (2043:2043:2043) (2327:2327:2327))
+        (PORT d[11] (2050:2050:2050) (2336:2336:2336))
+        (PORT d[12] (2008:2008:2008) (2285:2285:2285))
+        (PORT clk (1066:1066:1066) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (860:860:860) (921:921:921))
+        (PORT clk (1066:1066:1066) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1068:1068:1068) (1086:1086:1086))
+        (PORT d[0] (1144:1144:1144) (1214:1214:1214))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1841:1841:1841) (2082:2082:2082))
+        (PORT d[1] (1975:1975:1975) (2239:2239:2239))
+        (PORT d[2] (2098:2098:2098) (2386:2386:2386))
+        (PORT d[3] (2061:2061:2061) (2332:2332:2332))
+        (PORT d[4] (2063:2063:2063) (2350:2350:2350))
+        (PORT d[5] (2068:2068:2068) (2370:2370:2370))
+        (PORT d[6] (1997:1997:1997) (2274:2274:2274))
+        (PORT d[7] (1964:1964:1964) (2225:2225:2225))
+        (PORT d[8] (2141:2141:2141) (2398:2398:2398))
+        (PORT d[9] (2068:2068:2068) (2333:2333:2333))
+        (PORT d[10] (2044:2044:2044) (2327:2327:2327))
+        (PORT d[11] (2051:2051:2051) (2336:2336:2336))
+        (PORT d[12] (2009:2009:2009) (2285:2285:2285))
+        (PORT clk (1025:1025:1025) (1045:1045:1045))
+        (PORT ena (2437:2437:2437) (2237:2237:2237))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1025:1025:1025) (1045:1045:1045))
+        (PORT d[0] (2437:2437:2437) (2237:2237:2237))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a0\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|decode2\|eq_node\[1\]\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (1615:1615:1615) (1807:1807:1807))
+        (PORT datad (1966:1966:1966) (2239:2239:2239))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2099:2099:2099) (2367:2367:2367))
+        (PORT clk (1069:1069:1069) (1086:1086:1086))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1993:1993:1993) (2251:2251:2251))
+        (PORT d[1] (1852:1852:1852) (2109:2109:2109))
+        (PORT d[2] (1929:1929:1929) (2165:2165:2165))
+        (PORT d[3] (2059:2059:2059) (2304:2304:2304))
+        (PORT d[4] (1990:1990:1990) (2251:2251:2251))
+        (PORT d[5] (2023:2023:2023) (2281:2281:2281))
+        (PORT d[6] (1942:1942:1942) (2186:2186:2186))
+        (PORT d[7] (1983:1983:1983) (2248:2248:2248))
+        (PORT d[8] (1958:1958:1958) (2216:2216:2216))
+        (PORT d[9] (1968:1968:1968) (2219:2219:2219))
+        (PORT d[10] (1991:1991:1991) (2256:2256:2256))
+        (PORT d[11] (2048:2048:2048) (2328:2328:2328))
+        (PORT d[12] (1925:1925:1925) (2161:2161:2161))
+        (PORT clk (1067:1067:1067) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (934:934:934) (983:983:983))
+        (PORT clk (1067:1067:1067) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1086:1086:1086))
+        (PORT d[0] (1218:1218:1218) (1276:1276:1276))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1087:1087:1087))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1983:1983:1983) (2237:2237:2237))
+        (PORT d[1] (2006:2006:2006) (2270:2270:2270))
+        (PORT d[2] (1941:1941:1941) (2179:2179:2179))
+        (PORT d[3] (2060:2060:2060) (2304:2304:2304))
+        (PORT d[4] (1967:1967:1967) (2227:2227:2227))
+        (PORT d[5] (2024:2024:2024) (2281:2281:2281))
+        (PORT d[6] (1943:1943:1943) (2186:2186:2186))
+        (PORT d[7] (1984:1984:1984) (2248:2248:2248))
+        (PORT d[8] (1959:1959:1959) (2216:2216:2216))
+        (PORT d[9] (1969:1969:1969) (2219:2219:2219))
+        (PORT d[10] (1992:1992:1992) (2256:2256:2256))
+        (PORT d[11] (2049:2049:2049) (2328:2328:2328))
+        (PORT d[12] (1926:1926:1926) (2161:2161:2161))
+        (PORT clk (1026:1026:1026) (1045:1045:1045))
+        (PORT ena (2658:2658:2658) (2448:2448:2448))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1045:1045:1045))
+        (PORT d[0] (2658:2658:2658) (2448:2448:2448))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a8\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|address_reg_b\[0\]\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (881:881:881) (885:885:885))
+        (PORT asdata (1794:1794:1794) (1984:1984:1984))
+        (PORT ena (2549:2549:2549) (2287:2287:2287))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|mux3\|result_node\[0\]\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (572:572:572) (654:654:654))
+        (PORT datac (738:738:738) (835:835:835))
+        (PORT datad (140:140:140) (189:189:189))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_data\[1\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (372:372:372) (754:754:754))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1822:1822:1822) (2068:2068:2068))
+        (PORT clk (1060:1060:1060) (1078:1078:1078))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2119:2119:2119) (2408:2408:2408))
+        (PORT d[1] (2460:2460:2460) (2795:2795:2795))
+        (PORT d[2] (2230:2230:2230) (2541:2541:2541))
+        (PORT d[3] (2027:2027:2027) (2307:2307:2307))
+        (PORT d[4] (2316:2316:2316) (2648:2648:2648))
+        (PORT d[5] (2234:2234:2234) (2543:2543:2543))
+        (PORT d[6] (2018:2018:2018) (2294:2294:2294))
+        (PORT d[7] (2123:2123:2123) (2405:2405:2405))
+        (PORT d[8] (1956:1956:1956) (2200:2200:2200))
+        (PORT d[9] (2249:2249:2249) (2544:2544:2544))
+        (PORT d[10] (2090:2090:2090) (2393:2393:2393))
+        (PORT d[11] (2073:2073:2073) (2369:2369:2369))
+        (PORT d[12] (2556:2556:2556) (2919:2919:2919))
+        (PORT clk (1058:1058:1058) (1076:1076:1076))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (692:692:692) (742:742:742))
+        (PORT clk (1058:1058:1058) (1076:1076:1076))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1060:1060:1060) (1078:1078:1078))
+        (PORT d[0] (976:976:976) (1035:1035:1035))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1061:1061:1061) (1079:1079:1079))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1061:1061:1061) (1079:1079:1079))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1061:1061:1061) (1079:1079:1079))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1061:1061:1061) (1079:1079:1079))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2132:2132:2132) (2426:2426:2426))
+        (PORT d[1] (2295:2295:2295) (2621:2621:2621))
+        (PORT d[2] (2082:2082:2082) (2367:2367:2367))
+        (PORT d[3] (2028:2028:2028) (2307:2307:2307))
+        (PORT d[4] (2151:2151:2151) (2456:2456:2456))
+        (PORT d[5] (2235:2235:2235) (2543:2543:2543))
+        (PORT d[6] (2019:2019:2019) (2294:2294:2294))
+        (PORT d[7] (2124:2124:2124) (2405:2405:2405))
+        (PORT d[8] (1957:1957:1957) (2200:2200:2200))
+        (PORT d[9] (2250:2250:2250) (2544:2544:2544))
+        (PORT d[10] (2091:2091:2091) (2393:2393:2393))
+        (PORT d[11] (2074:2074:2074) (2369:2369:2369))
+        (PORT d[12] (2557:2557:2557) (2919:2919:2919))
+        (PORT clk (1017:1017:1017) (1037:1037:1037))
+        (PORT ena (2742:2742:2742) (2503:2503:2503))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1017:1017:1017) (1037:1037:1037))
+        (PORT d[0] (2742:2742:2742) (2503:2503:2503))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1018:1018:1018) (1038:1038:1038))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1018:1018:1018) (1038:1038:1038))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a9\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1018:1018:1018) (1038:1038:1038))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2017:2017:2017) (2283:2283:2283))
+        (PORT clk (1063:1063:1063) (1080:1080:1080))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2121:2121:2121) (2409:2409:2409))
+        (PORT d[1] (2273:2273:2273) (2589:2589:2589))
+        (PORT d[2] (1932:1932:1932) (2192:2192:2192))
+        (PORT d[3] (1912:1912:1912) (2161:2161:2161))
+        (PORT d[4] (2317:2317:2317) (2650:2650:2650))
+        (PORT d[5] (2395:2395:2395) (2722:2722:2722))
+        (PORT d[6] (2031:2031:2031) (2318:2318:2318))
+        (PORT d[7] (2134:2134:2134) (2413:2413:2413))
+        (PORT d[8] (1975:1975:1975) (2225:2225:2225))
+        (PORT d[9] (2238:2238:2238) (2530:2530:2530))
+        (PORT d[10] (2089:2089:2089) (2381:2381:2381))
+        (PORT d[11] (2085:2085:2085) (2376:2376:2376))
+        (PORT d[12] (2401:2401:2401) (2730:2730:2730))
+        (PORT clk (1061:1061:1061) (1078:1078:1078))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (685:685:685) (739:739:739))
+        (PORT clk (1061:1061:1061) (1078:1078:1078))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1063:1063:1063) (1080:1080:1080))
+        (PORT d[0] (969:969:969) (1033:1033:1033))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1064:1064:1064) (1081:1081:1081))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1064:1064:1064) (1081:1081:1081))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1064:1064:1064) (1081:1081:1081))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1064:1064:1064) (1081:1081:1081))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2133:2133:2133) (2428:2428:2428))
+        (PORT d[1] (2285:2285:2285) (2609:2609:2609))
+        (PORT d[2] (2137:2137:2137) (2423:2423:2423))
+        (PORT d[3] (1913:1913:1913) (2161:2161:2161))
+        (PORT d[4] (2152:2152:2152) (2458:2458:2458))
+        (PORT d[5] (2396:2396:2396) (2722:2722:2722))
+        (PORT d[6] (2032:2032:2032) (2318:2318:2318))
+        (PORT d[7] (2135:2135:2135) (2413:2413:2413))
+        (PORT d[8] (1976:1976:1976) (2225:2225:2225))
+        (PORT d[9] (2239:2239:2239) (2530:2530:2530))
+        (PORT d[10] (2090:2090:2090) (2381:2381:2381))
+        (PORT d[11] (2086:2086:2086) (2376:2376:2376))
+        (PORT d[12] (2402:2402:2402) (2730:2730:2730))
+        (PORT clk (1020:1020:1020) (1039:1039:1039))
+        (PORT ena (2771:2771:2771) (2526:2526:2526))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1020:1020:1020) (1039:1039:1039))
+        (PORT d[0] (2771:2771:2771) (2526:2526:2526))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1021:1021:1021) (1040:1040:1040))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1021:1021:1021) (1040:1040:1040))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a1\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1021:1021:1021) (1040:1040:1040))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|mux3\|result_node\[1\]\~1\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (470:470:470) (540:540:540))
+        (PORT datac (367:367:367) (418:418:418))
+        (PORT datad (145:145:145) (193:193:193))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_data\[2\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (402:402:402) (784:784:784))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1744:1744:1744) (1945:1945:1945))
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2409:2409:2409) (2745:2745:2745))
+        (PORT d[1] (2544:2544:2544) (2903:2903:2903))
+        (PORT d[2] (2330:2330:2330) (2634:2634:2634))
+        (PORT d[3] (1896:1896:1896) (2144:2144:2144))
+        (PORT d[4] (2603:2603:2603) (2979:2979:2979))
+        (PORT d[5] (2431:2431:2431) (2756:2756:2756))
+        (PORT d[6] (2185:2185:2185) (2482:2482:2482))
+        (PORT d[7] (2320:2320:2320) (2623:2623:2623))
+        (PORT d[8] (2311:2311:2311) (2602:2602:2602))
+        (PORT d[9] (2415:2415:2415) (2729:2729:2729))
+        (PORT d[10] (2266:2266:2266) (2579:2579:2579))
+        (PORT d[11] (2269:2269:2269) (2572:2572:2572))
+        (PORT d[12] (2585:2585:2585) (2928:2928:2928))
+        (PORT clk (1067:1067:1067) (1085:1085:1085))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (689:689:689) (740:740:740))
+        (PORT clk (1067:1067:1067) (1085:1085:1085))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+        (PORT d[0] (977:977:977) (1034:1034:1034))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1088:1088:1088))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1088:1088:1088))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1088:1088:1088))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1088:1088:1088))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2410:2410:2410) (2745:2745:2745))
+        (PORT d[1] (2557:2557:2557) (2921:2921:2921))
+        (PORT d[2] (2096:2096:2096) (2378:2378:2378))
+        (PORT d[3] (1897:1897:1897) (2144:2144:2144))
+        (PORT d[4] (2592:2592:2592) (2965:2965:2965))
+        (PORT d[5] (2432:2432:2432) (2756:2756:2756))
+        (PORT d[6] (2186:2186:2186) (2482:2482:2482))
+        (PORT d[7] (2321:2321:2321) (2623:2623:2623))
+        (PORT d[8] (2312:2312:2312) (2602:2602:2602))
+        (PORT d[9] (2416:2416:2416) (2729:2729:2729))
+        (PORT d[10] (2267:2267:2267) (2579:2579:2579))
+        (PORT d[11] (2270:2270:2270) (2572:2572:2572))
+        (PORT d[12] (2586:2586:2586) (2928:2928:2928))
+        (PORT clk (1026:1026:1026) (1046:1046:1046))
+        (PORT ena (3062:3062:3062) (2782:2782:2782))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1046:1046:1046))
+        (PORT d[0] (3062:3062:3062) (2782:2782:2782))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1047:1047:1047))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1047:1047:1047))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a10\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1047:1047:1047))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1740:1740:1740) (1932:1932:1932))
+        (PORT clk (1065:1065:1065) (1082:1082:1082))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2239:2239:2239) (2548:2548:2548))
+        (PORT d[1] (2531:2531:2531) (2884:2884:2884))
+        (PORT d[2] (2310:2310:2310) (2625:2625:2625))
+        (PORT d[3] (2203:2203:2203) (2505:2505:2505))
+        (PORT d[4] (2558:2558:2558) (2935:2935:2935))
+        (PORT d[5] (2566:2566:2566) (2918:2918:2918))
+        (PORT d[6] (2039:2039:2039) (2325:2325:2325))
+        (PORT d[7] (2121:2121:2121) (2395:2395:2395))
+        (PORT d[8] (2106:2106:2106) (2368:2368:2368))
+        (PORT d[9] (2409:2409:2409) (2714:2714:2714))
+        (PORT d[10] (2090:2090:2090) (2382:2382:2382))
+        (PORT d[11] (2086:2086:2086) (2377:2377:2377))
+        (PORT d[12] (2551:2551:2551) (2895:2895:2895))
+        (PORT clk (1063:1063:1063) (1080:1080:1080))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (525:525:525) (552:552:552))
+        (PORT clk (1063:1063:1063) (1080:1080:1080))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1065:1065:1065) (1082:1082:1082))
+        (PORT d[0] (809:809:809) (845:845:845))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1083:1083:1083))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1083:1083:1083))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1083:1083:1083))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1083:1083:1083))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2252:2252:2252) (2566:2566:2566))
+        (PORT d[1] (2543:2543:2543) (2902:2902:2902))
+        (PORT d[2] (2064:2064:2064) (2352:2352:2352))
+        (PORT d[3] (2204:2204:2204) (2505:2505:2505))
+        (PORT d[4] (2582:2582:2582) (2967:2967:2967))
+        (PORT d[5] (2567:2567:2567) (2918:2918:2918))
+        (PORT d[6] (2040:2040:2040) (2325:2325:2325))
+        (PORT d[7] (2122:2122:2122) (2395:2395:2395))
+        (PORT d[8] (2107:2107:2107) (2368:2368:2368))
+        (PORT d[9] (2410:2410:2410) (2714:2714:2714))
+        (PORT d[10] (2091:2091:2091) (2382:2382:2382))
+        (PORT d[11] (2087:2087:2087) (2377:2377:2377))
+        (PORT d[12] (2552:2552:2552) (2895:2895:2895))
+        (PORT clk (1022:1022:1022) (1041:1041:1041))
+        (PORT ena (2755:2755:2755) (2515:2515:2515))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1022:1022:1022) (1041:1041:1041))
+        (PORT d[0] (2755:2755:2755) (2515:2515:2515))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1023:1023:1023) (1042:1042:1042))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1023:1023:1023) (1042:1042:1042))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a2\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1023:1023:1023) (1042:1042:1042))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|mux3\|result_node\[2\]\~2\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (409:409:409) (474:474:474))
+        (PORT datac (566:566:566) (661:661:661))
+        (PORT datad (141:141:141) (186:186:186))
+        (IOPATH dataa combout (166:166:166) (163:163:163))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_data\[3\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (372:372:372) (754:754:754))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1759:1759:1759) (1979:1979:1979))
+        (PORT clk (1066:1066:1066) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1971:1971:1971) (2230:2230:2230))
+        (PORT d[1] (2154:2154:2154) (2441:2441:2441))
+        (PORT d[2] (1943:1943:1943) (2184:2184:2184))
+        (PORT d[3] (2196:2196:2196) (2458:2458:2458))
+        (PORT d[4] (1802:1802:1802) (2046:2046:2046))
+        (PORT d[5] (1977:1977:1977) (2233:2233:2233))
+        (PORT d[6] (2132:2132:2132) (2403:2403:2403))
+        (PORT d[7] (2135:2135:2135) (2425:2425:2425))
+        (PORT d[8] (2257:2257:2257) (2559:2559:2559))
+        (PORT d[9] (1971:1971:1971) (2229:2229:2229))
+        (PORT d[10] (2144:2144:2144) (2423:2423:2423))
+        (PORT d[11] (2217:2217:2217) (2514:2514:2514))
+        (PORT d[12] (2105:2105:2105) (2368:2368:2368))
+        (PORT clk (1064:1064:1064) (1082:1082:1082))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (928:928:928) (979:979:979))
+        (PORT clk (1064:1064:1064) (1082:1082:1082))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1084:1084:1084))
+        (PORT d[0] (1212:1212:1212) (1272:1272:1272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1067:1067:1067) (1085:1085:1085))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1067:1067:1067) (1085:1085:1085))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1067:1067:1067) (1085:1085:1085))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1067:1067:1067) (1085:1085:1085))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1983:1983:1983) (2244:2244:2244))
+        (PORT d[1] (2306:2306:2306) (2602:2602:2602))
+        (PORT d[2] (1955:1955:1955) (2198:2198:2198))
+        (PORT d[3] (2197:2197:2197) (2458:2458:2458))
+        (PORT d[4] (1814:1814:1814) (2060:2060:2060))
+        (PORT d[5] (1978:1978:1978) (2233:2233:2233))
+        (PORT d[6] (2133:2133:2133) (2403:2403:2403))
+        (PORT d[7] (2136:2136:2136) (2425:2425:2425))
+        (PORT d[8] (2258:2258:2258) (2559:2559:2559))
+        (PORT d[9] (1972:1972:1972) (2229:2229:2229))
+        (PORT d[10] (2145:2145:2145) (2423:2423:2423))
+        (PORT d[11] (2218:2218:2218) (2514:2514:2514))
+        (PORT d[12] (2106:2106:2106) (2368:2368:2368))
+        (PORT clk (1023:1023:1023) (1043:1043:1043))
+        (PORT ena (2861:2861:2861) (2628:2628:2628))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1023:1023:1023) (1043:1043:1043))
+        (PORT d[0] (2861:2861:2861) (2628:2628:2628))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1024:1024:1024) (1044:1044:1044))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1024:1024:1024) (1044:1044:1044))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a11\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1024:1024:1024) (1044:1044:1044))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1890:1890:1890) (2126:2126:2126))
+        (PORT clk (1069:1069:1069) (1086:1086:1086))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1959:1959:1959) (2216:2216:2216))
+        (PORT d[1] (2335:2335:2335) (2642:2642:2642))
+        (PORT d[2] (1918:1918:1918) (2154:2154:2154))
+        (PORT d[3] (2198:2198:2198) (2457:2457:2457))
+        (PORT d[4] (2131:2131:2131) (2414:2414:2414))
+        (PORT d[5] (1777:1777:1777) (1990:1990:1990))
+        (PORT d[6] (2143:2143:2143) (2423:2423:2423))
+        (PORT d[7] (1996:1996:1996) (2267:2267:2267))
+        (PORT d[8] (2281:2281:2281) (2590:2590:2590))
+        (PORT d[9] (1959:1959:1959) (2219:2219:2219))
+        (PORT d[10] (2285:2285:2285) (2595:2595:2595))
+        (PORT d[11] (2229:2229:2229) (2535:2535:2535))
+        (PORT d[12] (2122:2122:2122) (2385:2385:2385))
+        (PORT clk (1067:1067:1067) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1184:1184:1184) (1281:1281:1281))
+        (PORT clk (1067:1067:1067) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1086:1086:1086))
+        (PORT d[0] (1455:1455:1455) (1562:1562:1562))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1087:1087:1087))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1070:1070:1070) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2127:2127:2127) (2410:2410:2410))
+        (PORT d[1] (2179:2179:2179) (2478:2478:2478))
+        (PORT d[2] (1926:1926:1926) (2152:2152:2152))
+        (PORT d[3] (2199:2199:2199) (2457:2457:2457))
+        (PORT d[4] (2134:2134:2134) (2413:2413:2413))
+        (PORT d[5] (1778:1778:1778) (1990:1990:1990))
+        (PORT d[6] (2144:2144:2144) (2423:2423:2423))
+        (PORT d[7] (1997:1997:1997) (2267:2267:2267))
+        (PORT d[8] (2282:2282:2282) (2590:2590:2590))
+        (PORT d[9] (1960:1960:1960) (2219:2219:2219))
+        (PORT d[10] (2286:2286:2286) (2595:2595:2595))
+        (PORT d[11] (2230:2230:2230) (2535:2535:2535))
+        (PORT d[12] (2123:2123:2123) (2385:2385:2385))
+        (PORT clk (1026:1026:1026) (1045:1045:1045))
+        (PORT ena (2849:2849:2849) (2621:2621:2621))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1045:1045:1045))
+        (PORT d[0] (2849:2849:2849) (2621:2621:2621))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a3\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1027:1027:1027) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|mux3\|result_node\[3\]\~3\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (158:158:158) (217:217:217))
+        (PORT datac (742:742:742) (840:840:840))
+        (PORT datad (754:754:754) (845:845:845))
+        (IOPATH datab combout (188:188:188) (177:177:177))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_data\[4\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (382:382:382) (764:764:764))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1981:1981:1981) (2238:2238:2238))
+        (PORT clk (1063:1063:1063) (1080:1080:1080))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2116:2116:2116) (2404:2404:2404))
+        (PORT d[1] (2257:2257:2257) (2571:2571:2571))
+        (PORT d[2] (2095:2095:2095) (2390:2390:2390))
+        (PORT d[3] (2046:2046:2046) (2321:2321:2321))
+        (PORT d[4] (2139:2139:2139) (2444:2444:2444))
+        (PORT d[5] (2063:2063:2063) (2358:2358:2358))
+        (PORT d[6] (2039:2039:2039) (2330:2330:2330))
+        (PORT d[7] (2280:2280:2280) (2582:2582:2582))
+        (PORT d[8] (2095:2095:2095) (2364:2364:2364))
+        (PORT d[9] (2240:2240:2240) (2540:2540:2540))
+        (PORT d[10] (2065:2065:2065) (2359:2359:2359))
+        (PORT d[11] (2086:2086:2086) (2388:2388:2388))
+        (PORT d[12] (2367:2367:2367) (2696:2696:2696))
+        (PORT clk (1061:1061:1061) (1078:1078:1078))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (683:683:683) (736:736:736))
+        (PORT clk (1061:1061:1061) (1078:1078:1078))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1063:1063:1063) (1080:1080:1080))
+        (PORT d[0] (980:980:980) (1040:1040:1040))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1064:1064:1064) (1081:1081:1081))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1064:1064:1064) (1081:1081:1081))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1064:1064:1064) (1081:1081:1081))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1064:1064:1064) (1081:1081:1081))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2117:2117:2117) (2410:2410:2410))
+        (PORT d[1] (2265:2265:2265) (2566:2566:2566))
+        (PORT d[2] (2259:2259:2259) (2558:2558:2558))
+        (PORT d[3] (2047:2047:2047) (2321:2321:2321))
+        (PORT d[4] (2129:2129:2129) (2430:2430:2430))
+        (PORT d[5] (2064:2064:2064) (2358:2358:2358))
+        (PORT d[6] (2040:2040:2040) (2330:2330:2330))
+        (PORT d[7] (2281:2281:2281) (2582:2582:2582))
+        (PORT d[8] (2096:2096:2096) (2364:2364:2364))
+        (PORT d[9] (2241:2241:2241) (2540:2540:2540))
+        (PORT d[10] (2066:2066:2066) (2359:2359:2359))
+        (PORT d[11] (2087:2087:2087) (2388:2388:2388))
+        (PORT d[12] (2368:2368:2368) (2696:2696:2696))
+        (PORT clk (1020:1020:1020) (1039:1039:1039))
+        (PORT ena (2746:2746:2746) (2498:2498:2498))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1020:1020:1020) (1039:1039:1039))
+        (PORT d[0] (2746:2746:2746) (2498:2498:2498))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1021:1021:1021) (1040:1040:1040))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1021:1021:1021) (1040:1040:1040))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a12\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1021:1021:1021) (1040:1040:1040))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1796:1796:1796) (2011:2011:2011))
+        (PORT clk (1065:1065:1065) (1082:1082:1082))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1985:1985:1985) (2259:2259:2259))
+        (PORT d[1] (2240:2240:2240) (2563:2563:2563))
+        (PORT d[2] (2107:2107:2107) (2398:2398:2398))
+        (PORT d[3] (2236:2236:2236) (2534:2534:2534))
+        (PORT d[4] (2274:2274:2274) (2606:2606:2606))
+        (PORT d[5] (2076:2076:2076) (2376:2376:2376))
+        (PORT d[6] (1992:1992:1992) (2256:2256:2256))
+        (PORT d[7] (1950:1950:1950) (2194:2194:2194))
+        (PORT d[8] (1940:1940:1940) (2190:2190:2190))
+        (PORT d[9] (2226:2226:2226) (2512:2512:2512))
+        (PORT d[10] (2089:2089:2089) (2392:2392:2392))
+        (PORT d[11] (2005:2005:2005) (2295:2295:2295))
+        (PORT d[12] (2138:2138:2138) (2409:2409:2409))
+        (PORT clk (1063:1063:1063) (1080:1080:1080))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (711:711:711) (758:758:758))
+        (PORT clk (1063:1063:1063) (1080:1080:1080))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1065:1065:1065) (1082:1082:1082))
+        (PORT d[0] (995:995:995) (1051:1051:1051))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1083:1083:1083))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1083:1083:1083))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1083:1083:1083))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1066:1066:1066) (1083:1083:1083))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1815:1815:1815) (2069:2069:2069))
+        (PORT d[1] (2230:2230:2230) (2550:2550:2550))
+        (PORT d[2] (2296:2296:2296) (2614:2614:2614))
+        (PORT d[3] (2237:2237:2237) (2534:2534:2534))
+        (PORT d[4] (2297:2297:2297) (2638:2638:2638))
+        (PORT d[5] (2077:2077:2077) (2376:2376:2376))
+        (PORT d[6] (1993:1993:1993) (2256:2256:2256))
+        (PORT d[7] (1951:1951:1951) (2194:2194:2194))
+        (PORT d[8] (1941:1941:1941) (2190:2190:2190))
+        (PORT d[9] (2227:2227:2227) (2512:2512:2512))
+        (PORT d[10] (2090:2090:2090) (2392:2392:2392))
+        (PORT d[11] (2006:2006:2006) (2295:2295:2295))
+        (PORT d[12] (2139:2139:2139) (2409:2409:2409))
+        (PORT clk (1022:1022:1022) (1041:1041:1041))
+        (PORT ena (2452:2452:2452) (2251:2251:2251))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1022:1022:1022) (1041:1041:1041))
+        (PORT d[0] (2452:2452:2452) (2251:2251:2251))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1023:1023:1023) (1042:1042:1042))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1023:1023:1023) (1042:1042:1042))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a4\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1023:1023:1023) (1042:1042:1042))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|mux3\|result_node\[4\]\~4\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (492:492:492) (560:560:560))
+        (PORT datac (478:478:478) (542:542:542))
+        (PORT datad (143:143:143) (192:192:192))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_data\[5\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (362:362:362) (744:744:744))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1970:1970:1970) (2191:2191:2191))
+        (PORT clk (1076:1076:1076) (1093:1093:1093))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1985:1985:1985) (2243:2243:2243))
+        (PORT d[1] (2471:2471:2471) (2804:2804:2804))
+        (PORT d[2] (2103:2103:2103) (2356:2356:2356))
+        (PORT d[3] (2380:2380:2380) (2650:2650:2650))
+        (PORT d[4] (1681:1681:1681) (1875:1875:1875))
+        (PORT d[5] (2163:2163:2163) (2430:2430:2430))
+        (PORT d[6] (2290:2290:2290) (2579:2579:2579))
+        (PORT d[7] (2021:2021:2021) (2288:2288:2288))
+        (PORT d[8] (2439:2439:2439) (2764:2764:2764))
+        (PORT d[9] (2137:2137:2137) (2417:2417:2417))
+        (PORT d[10] (2299:2299:2299) (2590:2590:2590))
+        (PORT d[11] (2385:2385:2385) (2703:2703:2703))
+        (PORT d[12] (2319:2319:2319) (2618:2618:2618))
+        (PORT clk (1074:1074:1074) (1091:1091:1091))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (930:930:930) (985:985:985))
+        (PORT clk (1074:1074:1074) (1091:1091:1091))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1076:1076:1076) (1093:1093:1093))
+        (PORT d[0] (1201:1201:1201) (1267:1267:1267))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1077:1077:1077) (1094:1094:1094))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1077:1077:1077) (1094:1094:1094))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1077:1077:1077) (1094:1094:1094))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1077:1077:1077) (1094:1094:1094))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2087:2087:2087) (2363:2363:2363))
+        (PORT d[1] (2483:2483:2483) (2817:2817:2817))
+        (PORT d[2] (2117:2117:2117) (2367:2367:2367))
+        (PORT d[3] (2381:2381:2381) (2650:2650:2650))
+        (PORT d[4] (1658:1658:1658) (1849:1849:1849))
+        (PORT d[5] (2164:2164:2164) (2430:2430:2430))
+        (PORT d[6] (2291:2291:2291) (2579:2579:2579))
+        (PORT d[7] (2022:2022:2022) (2288:2288:2288))
+        (PORT d[8] (2440:2440:2440) (2764:2764:2764))
+        (PORT d[9] (2138:2138:2138) (2417:2417:2417))
+        (PORT d[10] (2300:2300:2300) (2590:2590:2590))
+        (PORT d[11] (2386:2386:2386) (2703:2703:2703))
+        (PORT d[12] (2320:2320:2320) (2618:2618:2618))
+        (PORT clk (1033:1033:1033) (1052:1052:1052))
+        (PORT ena (3029:3029:3029) (2774:2774:2774))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1033:1033:1033) (1052:1052:1052))
+        (PORT d[0] (3029:3029:3029) (2774:2774:2774))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1034:1034:1034) (1053:1053:1053))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1034:1034:1034) (1053:1053:1053))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a13\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1034:1034:1034) (1053:1053:1053))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1799:1799:1799) (2013:2013:2013))
+        (PORT clk (1071:1071:1071) (1089:1089:1089))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1958:1958:1958) (2214:2214:2214))
+        (PORT d[1] (2178:2178:2178) (2473:2473:2473))
+        (PORT d[2] (1921:1921:1921) (2163:2163:2163))
+        (PORT d[3] (2230:2230:2230) (2491:2491:2491))
+        (PORT d[4] (2131:2131:2131) (2408:2408:2408))
+        (PORT d[5] (2151:2151:2151) (2424:2424:2424))
+        (PORT d[6] (2139:2139:2139) (2411:2411:2411))
+        (PORT d[7] (2008:2008:2008) (2281:2281:2281))
+        (PORT d[8] (2290:2290:2290) (2589:2589:2589))
+        (PORT d[9] (2118:2118:2118) (2394:2394:2394))
+        (PORT d[10] (2324:2324:2324) (2628:2628:2628))
+        (PORT d[11] (2252:2252:2252) (2562:2562:2562))
+        (PORT d[12] (2145:2145:2145) (2413:2413:2413))
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (746:746:746) (782:782:782))
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1071:1071:1071) (1089:1089:1089))
+        (PORT d[0] (1030:1030:1030) (1075:1075:1075))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1072:1072:1072) (1090:1090:1090))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1072:1072:1072) (1090:1090:1090))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1072:1072:1072) (1090:1090:1090))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1072:1072:1072) (1090:1090:1090))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1958:1958:1958) (2226:2226:2226))
+        (PORT d[1] (2190:2190:2190) (2487:2487:2487))
+        (PORT d[2] (1934:1934:1934) (2173:2173:2173))
+        (PORT d[3] (2231:2231:2231) (2491:2491:2491))
+        (PORT d[4] (2144:2144:2144) (2422:2422:2422))
+        (PORT d[5] (2152:2152:2152) (2424:2424:2424))
+        (PORT d[6] (2140:2140:2140) (2411:2411:2411))
+        (PORT d[7] (2009:2009:2009) (2281:2281:2281))
+        (PORT d[8] (2291:2291:2291) (2589:2589:2589))
+        (PORT d[9] (2119:2119:2119) (2394:2394:2394))
+        (PORT d[10] (2325:2325:2325) (2628:2628:2628))
+        (PORT d[11] (2253:2253:2253) (2562:2562:2562))
+        (PORT d[12] (2146:2146:2146) (2413:2413:2413))
+        (PORT clk (1028:1028:1028) (1048:1048:1048))
+        (PORT ena (2847:2847:2847) (2615:2615:2615))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1028:1028:1028) (1048:1048:1048))
+        (PORT d[0] (2847:2847:2847) (2615:2615:2615))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1029:1029:1029) (1049:1049:1049))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1029:1029:1029) (1049:1049:1049))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a5\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1029:1029:1029) (1049:1049:1049))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|mux3\|result_node\[5\]\~5\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (157:157:157) (216:216:216))
+        (PORT datac (754:754:754) (856:856:856))
+        (PORT datad (613:613:613) (688:688:688))
+        (IOPATH datab combout (188:188:188) (177:177:177))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_data\[6\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (382:382:382) (764:764:764))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1704:1704:1704) (1902:1902:1902))
+        (PORT clk (1071:1071:1071) (1088:1088:1088))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2382:2382:2382) (2704:2704:2704))
+        (PORT d[1] (2538:2538:2538) (2887:2887:2887))
+        (PORT d[2] (2524:2524:2524) (2848:2848:2848))
+        (PORT d[3] (2047:2047:2047) (2315:2315:2315))
+        (PORT d[4] (2604:2604:2604) (2980:2980:2980))
+        (PORT d[5] (2517:2517:2517) (2852:2852:2852))
+        (PORT d[6] (2190:2190:2190) (2484:2484:2484))
+        (PORT d[7] (2307:2307:2307) (2604:2604:2604))
+        (PORT d[8] (2300:2300:2300) (2588:2588:2588))
+        (PORT d[9] (2556:2556:2556) (2885:2885:2885))
+        (PORT d[10] (2260:2260:2260) (2565:2565:2565))
+        (PORT d[11] (2270:2270:2270) (2572:2572:2572))
+        (PORT d[12] (2573:2573:2573) (2915:2915:2915))
+        (PORT clk (1069:1069:1069) (1086:1086:1086))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (690:690:690) (734:734:734))
+        (PORT clk (1069:1069:1069) (1086:1086:1086))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1071:1071:1071) (1088:1088:1088))
+        (PORT d[0] (974:974:974) (1027:1027:1027))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1072:1072:1072) (1089:1089:1089))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1072:1072:1072) (1089:1089:1089))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1072:1072:1072) (1089:1089:1089))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1072:1072:1072) (1089:1089:1089))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2395:2395:2395) (2721:2721:2721))
+        (PORT d[1] (2551:2551:2551) (2905:2905:2905))
+        (PORT d[2] (2096:2096:2096) (2379:2379:2379))
+        (PORT d[3] (2048:2048:2048) (2315:2315:2315))
+        (PORT d[4] (2605:2605:2605) (2985:2985:2985))
+        (PORT d[5] (2518:2518:2518) (2852:2852:2852))
+        (PORT d[6] (2191:2191:2191) (2484:2484:2484))
+        (PORT d[7] (2308:2308:2308) (2604:2604:2604))
+        (PORT d[8] (2301:2301:2301) (2588:2588:2588))
+        (PORT d[9] (2557:2557:2557) (2885:2885:2885))
+        (PORT d[10] (2261:2261:2261) (2565:2565:2565))
+        (PORT d[11] (2271:2271:2271) (2572:2572:2572))
+        (PORT d[12] (2574:2574:2574) (2915:2915:2915))
+        (PORT clk (1028:1028:1028) (1047:1047:1047))
+        (PORT ena (3046:3046:3046) (2771:2771:2771))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1028:1028:1028) (1047:1047:1047))
+        (PORT d[0] (3046:3046:3046) (2771:2771:2771))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1029:1029:1029) (1048:1048:1048))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1029:1029:1029) (1048:1048:1048))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a14\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1029:1029:1029) (1048:1048:1048))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1749:1749:1749) (1960:1960:1960))
+        (PORT clk (1068:1068:1068) (1086:1086:1086))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2397:2397:2397) (2726:2726:2726))
+        (PORT d[1] (2543:2543:2543) (2903:2903:2903))
+        (PORT d[2] (2084:2084:2084) (2367:2367:2367))
+        (PORT d[3] (2057:2057:2057) (2338:2338:2338))
+        (PORT d[4] (2591:2591:2591) (2966:2966:2966))
+        (PORT d[5] (2424:2424:2424) (2759:2759:2759))
+        (PORT d[6] (2027:2027:2027) (2307:2307:2307))
+        (PORT d[7] (2299:2299:2299) (2598:2598:2598))
+        (PORT d[8] (2458:2458:2458) (2758:2758:2758))
+        (PORT d[9] (2423:2423:2423) (2728:2728:2728))
+        (PORT d[10] (2241:2241:2241) (2556:2556:2556))
+        (PORT d[11] (2258:2258:2258) (2566:2566:2566))
+        (PORT d[12] (2562:2562:2562) (2908:2908:2908))
+        (PORT clk (1066:1066:1066) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (761:761:761) (800:800:800))
+        (PORT clk (1066:1066:1066) (1084:1084:1084))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1068:1068:1068) (1086:1086:1086))
+        (PORT d[0] (1051:1051:1051) (1097:1097:1097))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1069:1069:1069) (1087:1087:1087))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2409:2409:2409) (2744:2744:2744))
+        (PORT d[1] (2540:2540:2540) (2882:2882:2882))
+        (PORT d[2] (2074:2074:2074) (2353:2353:2353))
+        (PORT d[3] (2058:2058:2058) (2338:2338:2338))
+        (PORT d[4] (2549:2549:2549) (2906:2906:2906))
+        (PORT d[5] (2425:2425:2425) (2759:2759:2759))
+        (PORT d[6] (2028:2028:2028) (2307:2307:2307))
+        (PORT d[7] (2300:2300:2300) (2598:2598:2598))
+        (PORT d[8] (2459:2459:2459) (2758:2758:2758))
+        (PORT d[9] (2424:2424:2424) (2728:2728:2728))
+        (PORT d[10] (2242:2242:2242) (2556:2556:2556))
+        (PORT d[11] (2259:2259:2259) (2566:2566:2566))
+        (PORT d[12] (2563:2563:2563) (2908:2908:2908))
+        (PORT clk (1025:1025:1025) (1045:1045:1045))
+        (PORT ena (3050:3050:3050) (2771:2771:2771))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1025:1025:1025) (1045:1045:1045))
+        (PORT d[0] (3050:3050:3050) (2771:2771:2771))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a6\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1026:1026:1026) (1046:1046:1046))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|mux3\|result_node\[6\]\~6\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (387:387:387) (447:447:447))
+        (PORT datab (473:473:473) (552:552:552))
+        (PORT datad (143:143:143) (191:191:191))
+        (IOPATH dataa combout (166:166:166) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_io_ibuf")
+    (INSTANCE \\i_RAM_data\[7\]\~input\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (362:362:362) (744:744:744))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1938:1938:1938) (2172:2172:2172))
+        (PORT clk (1077:1077:1077) (1095:1095:1095))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1984:1984:1984) (2235:2235:2235))
+        (PORT d[1] (2484:2484:2484) (2817:2817:2817))
+        (PORT d[2] (2068:2068:2068) (2322:2322:2322))
+        (PORT d[3] (2381:2381:2381) (2651:2651:2651))
+        (PORT d[4] (1646:1646:1646) (1837:1837:1837))
+        (PORT d[5] (1817:1817:1817) (2020:2020:2020))
+        (PORT d[6] (2293:2293:2293) (2576:2576:2576))
+        (PORT d[7] (2129:2129:2129) (2403:2403:2403))
+        (PORT d[8] (2473:2473:2473) (2813:2813:2813))
+        (PORT d[9] (2137:2137:2137) (2418:2418:2418))
+        (PORT d[10] (2468:2468:2468) (2790:2790:2790))
+        (PORT d[11] (2389:2389:2389) (2701:2701:2701))
+        (PORT d[12] (2278:2278:2278) (2559:2559:2559))
+        (PORT clk (1075:1075:1075) (1093:1093:1093))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (933:933:933) (986:986:986))
+        (PORT clk (1075:1075:1075) (1093:1093:1093))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1077:1077:1077) (1095:1095:1095))
+        (PORT d[0] (1217:1217:1217) (1279:1279:1279))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1078:1078:1078) (1096:1096:1096))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1078:1078:1078) (1096:1096:1096))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1078:1078:1078) (1096:1096:1096))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1078:1078:1078) (1096:1096:1096))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1997:1997:1997) (2248:2248:2248))
+        (PORT d[1] (2641:2641:2641) (3001:3001:3001))
+        (PORT d[2] (2058:2058:2058) (2308:2308:2308))
+        (PORT d[3] (2382:2382:2382) (2651:2651:2651))
+        (PORT d[4] (1658:1658:1658) (1851:1851:1851))
+        (PORT d[5] (1818:1818:1818) (2020:2020:2020))
+        (PORT d[6] (2294:2294:2294) (2576:2576:2576))
+        (PORT d[7] (2130:2130:2130) (2403:2403:2403))
+        (PORT d[8] (2474:2474:2474) (2813:2813:2813))
+        (PORT d[9] (2138:2138:2138) (2418:2418:2418))
+        (PORT d[10] (2469:2469:2469) (2790:2790:2790))
+        (PORT d[11] (2390:2390:2390) (2701:2701:2701))
+        (PORT d[12] (2279:2279:2279) (2559:2559:2559))
+        (PORT clk (1034:1034:1034) (1054:1054:1054))
+        (PORT ena (3016:3016:3016) (2766:2766:2766))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1034:1034:1034) (1054:1054:1054))
+        (PORT d[0] (3016:3016:3016) (2766:2766:2766))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1035:1035:1035) (1055:1055:1055))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1035:1035:1035) (1055:1055:1055))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a15\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1035:1035:1035) (1055:1055:1055))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.datain_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1787:1787:1787) (2003:2003:2003))
+        (PORT clk (1074:1074:1074) (1092:1092:1092))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.addr_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (2069:2069:2069) (2336:2336:2336))
+        (PORT d[1] (2177:2177:2177) (2474:2474:2474))
+        (PORT d[2] (2052:2052:2052) (2304:2304:2304))
+        (PORT d[3] (2368:2368:2368) (2645:2645:2645))
+        (PORT d[4] (2143:2143:2143) (2423:2423:2423))
+        (PORT d[5] (2162:2162:2162) (2429:2429:2429))
+        (PORT d[6] (2153:2153:2153) (2431:2431:2431))
+        (PORT d[7] (2020:2020:2020) (2287:2287:2287))
+        (PORT d[8] (2266:2266:2266) (2560:2560:2560))
+        (PORT d[9] (2142:2142:2142) (2431:2431:2431))
+        (PORT d[10] (2331:2331:2331) (2625:2625:2625))
+        (PORT d[11] (2239:2239:2239) (2544:2544:2544))
+        (PORT d[12] (2160:2160:2160) (2434:2434:2434))
+        (PORT clk (1072:1072:1072) (1090:1090:1090))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.we_a_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (869:869:869) (923:923:923))
+        (PORT clk (1072:1072:1072) (1090:1090:1090))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.active_core_port_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1074:1074:1074) (1092:1092:1092))
+        (PORT d[0] (1141:1141:1141) (1205:1205:1205))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.wpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1075:1075:1075) (1093:1093:1093))
+        (IOPATH (posedge clk) pulse (0:0:0) (987:987:987))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.rpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1075:1075:1075) (1093:1093:1093))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.ftpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1075:1075:1075) (1093:1093:1093))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.rwpgen_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1075:1075:1075) (1093:1093:1093))
+        (IOPATH (posedge clk) pulse (0:0:0) (1207:1207:1207))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.addr_b_register)
+    (DELAY
+      (ABSOLUTE
+        (PORT d[0] (1951:1951:1951) (2204:2204:2204))
+        (PORT d[1] (2178:2178:2178) (2474:2474:2474))
+        (PORT d[2] (2222:2222:2222) (2500:2500:2500))
+        (PORT d[3] (2369:2369:2369) (2645:2645:2645))
+        (PORT d[4] (2133:2133:2133) (2410:2410:2410))
+        (PORT d[5] (2163:2163:2163) (2429:2429:2429))
+        (PORT d[6] (2154:2154:2154) (2431:2431:2431))
+        (PORT d[7] (2021:2021:2021) (2287:2287:2287))
+        (PORT d[8] (2267:2267:2267) (2560:2560:2560))
+        (PORT d[9] (2143:2143:2143) (2431:2431:2431))
+        (PORT d[10] (2332:2332:2332) (2625:2625:2625))
+        (PORT d[11] (2240:2240:2240) (2544:2544:2544))
+        (PORT d[12] (2161:2161:2161) (2434:2434:2434))
+        (PORT clk (1031:1031:1031) (1051:1051:1051))
+        (PORT ena (3040:3040:3040) (2786:2786:2786))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (104:104:104))
+      (HOLD ena (posedge clk) (104:104:104))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_register")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.active_core_port_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1031:1031:1031) (1051:1051:1051))
+        (PORT d[0] (3040:3040:3040) (2786:2786:2786))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.rpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1032:1032:1032) (1052:1052:1052))
+        (IOPATH (posedge clk) pulse (0:0:0) (1145:1145:1145))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.ftpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1032:1032:1032) (1052:1052:1052))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_ram_pulse_generator")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|ram_block1a7\\.rwpgen_b)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1032:1032:1032) (1052:1052:1052))
+        (IOPATH (posedge clk) pulse (0:0:0) (1222:1222:1222))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneiii_lcell_comb")
+    (INSTANCE \\MEMORY_rtl_0\|auto_generated\|mux3\|result_node\[7\]\~7\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (757:757:757) (880:880:880))
+        (PORT datad (734:734:734) (820:820:820))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+)

@@ -1,0 +1,1130 @@
+TimeQuest Timing Analyzer report for register32x8
+Thu May 23 15:42:08 2019
+Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width: 'i_GPR_clk'
+ 13. Setup Times
+ 14. Hold Times
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Slow 1200mV 85C Model Metastability Report
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Minimum Pulse Width: 'i_GPR_clk'
+ 25. Setup Times
+ 26. Hold Times
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Slow 1200mV 0C Model Metastability Report
+ 30. Fast 1200mV 0C Model Setup Summary
+ 31. Fast 1200mV 0C Model Hold Summary
+ 32. Fast 1200mV 0C Model Recovery Summary
+ 33. Fast 1200mV 0C Model Removal Summary
+ 34. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 35. Fast 1200mV 0C Model Minimum Pulse Width: 'i_GPR_clk'
+ 36. Setup Times
+ 37. Hold Times
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Fast 1200mV 0C Model Metastability Report
+ 41. Multicorner Timing Analysis Summary
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Board Trace Model Assignments
+ 47. Input Transition Times
+ 48. Slow Corner Signal Integrity Metrics
+ 49. Fast Corner Signal Integrity Metrics
+ 50. Clock Transfers
+ 51. Report TCCS
+ 52. Report RSKM
+ 53. Unconstrained Paths
+ 54. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
+; Revision Name      ; register32x8                                       ;
+; Device Family      ; Cyclone III                                        ;
+; Device Name        ; EP3C16F484C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; i_GPR_clk  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_GPR_clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-----------+--------+------------------------------+
+; Clock     ; Slack  ; End Point TNS                ;
++-----------+--------+------------------------------+
+; i_GPR_clk ; -3.000 ; -20.392                      ;
++-----------+--------+------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'i_GPR_clk'                                                                                                                          ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                                                                                     ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; i_GPR_clk ; Rise       ; i_GPR_clk                                                                                  ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.079  ; 0.309        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.079  ; 0.309        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.079  ; 0.309        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.079  ; 0.309        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.079  ; 0.309        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.079  ; 0.309        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.092  ; 0.322        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.092  ; 0.322        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~input|o                                                                          ;
+; 0.347  ; 0.347        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk0                                          ;
+; 0.347  ; 0.347        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk1                                          ;
+; 0.347  ; 0.347        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk0                                          ;
+; 0.347  ; 0.347        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk1                                          ;
+; 0.356  ; 0.356        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|inclk[0]                                                            ;
+; 0.356  ; 0.356        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|outclk                                                              ;
+; 0.440  ; 0.670        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.440  ; 0.670        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.445  ; 0.675        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.445  ; 0.675        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.447  ; 0.677        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.447  ; 0.677        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.447  ; 0.677        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.447  ; 0.677        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~input|i                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~input|i                                                                          ;
+; 0.643  ; 0.643        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|inclk[0]                                                            ;
+; 0.643  ; 0.643        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|outclk                                                              ;
+; 0.652  ; 0.652        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk0                                          ;
+; 0.652  ; 0.652        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk1                                          ;
+; 0.652  ; 0.652        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk0                                          ;
+; 0.652  ; 0.652        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk1                                          ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~input|o                                                                          ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Times                                                                         ;
++-------------------------+------------+-------+-------+------------+-----------------+
+; Data Port               ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------------+------------+-------+-------+------------+-----------------+
+; i_GPR_address_A[*]      ; i_GPR_clk  ; 1.516 ; 1.938 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[0]     ; i_GPR_clk  ; 1.127 ; 1.558 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[1]     ; i_GPR_clk  ; 1.073 ; 1.500 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[2]     ; i_GPR_clk  ; 1.300 ; 1.723 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[3]     ; i_GPR_clk  ; 1.238 ; 1.687 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[4]     ; i_GPR_clk  ; 1.516 ; 1.938 ; Rise       ; i_GPR_clk       ;
+; i_GPR_address_B[*]      ; i_GPR_clk  ; 1.391 ; 1.871 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[0]     ; i_GPR_clk  ; 1.391 ; 1.871 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[1]     ; i_GPR_clk  ; 1.172 ; 1.597 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[2]     ; i_GPR_clk  ; 1.164 ; 1.594 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[3]     ; i_GPR_clk  ; 0.849 ; 1.273 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[4]     ; i_GPR_clk  ; 1.172 ; 1.590 ; Rise       ; i_GPR_clk       ;
+; i_GPR_data[*]           ; i_GPR_clk  ; 1.903 ; 2.342 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[0]          ; i_GPR_clk  ; 1.903 ; 2.342 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[1]          ; i_GPR_clk  ; 1.387 ; 1.821 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[2]          ; i_GPR_clk  ; 0.813 ; 1.235 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[3]          ; i_GPR_clk  ; 1.283 ; 1.693 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[4]          ; i_GPR_clk  ; 1.132 ; 1.577 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[5]          ; i_GPR_clk  ; 1.586 ; 2.015 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[6]          ; i_GPR_clk  ; 1.774 ; 2.161 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[7]          ; i_GPR_clk  ; 1.775 ; 2.180 ; Rise       ; i_GPR_clk       ;
+; i_GPR_enable            ; i_GPR_clk  ; 2.858 ; 3.282 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_address[*]  ; i_GPR_clk  ; 1.356 ; 1.848 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[0] ; i_GPR_clk  ; 1.356 ; 1.848 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[1] ; i_GPR_clk  ; 0.820 ; 1.244 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[2] ; i_GPR_clk  ; 1.059 ; 1.474 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[3] ; i_GPR_clk  ; 0.799 ; 1.225 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[4] ; i_GPR_clk  ; 1.104 ; 1.525 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_enable      ; i_GPR_clk  ; 2.975 ; 3.398 ; Rise       ; i_GPR_clk       ;
++-------------------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Hold Times                                                                            ;
++-------------------------+------------+--------+--------+------------+-----------------+
+; Data Port               ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------------+------------+--------+--------+------------+-----------------+
+; i_GPR_address_A[*]      ; i_GPR_clk  ; -0.726 ; -1.143 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[0]     ; i_GPR_clk  ; -0.777 ; -1.199 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[1]     ; i_GPR_clk  ; -0.726 ; -1.143 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[2]     ; i_GPR_clk  ; -0.945 ; -1.359 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[3]     ; i_GPR_clk  ; -0.885 ; -1.325 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[4]     ; i_GPR_clk  ; -1.151 ; -1.565 ; Rise       ; i_GPR_clk       ;
+; i_GPR_address_B[*]      ; i_GPR_clk  ; -0.511 ; -0.925 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[0]     ; i_GPR_clk  ; -1.031 ; -1.501 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[1]     ; i_GPR_clk  ; -0.821 ; -1.237 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[2]     ; i_GPR_clk  ; -0.819 ; -1.237 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[3]     ; i_GPR_clk  ; -0.511 ; -0.925 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[4]     ; i_GPR_clk  ; -0.821 ; -1.231 ; Rise       ; i_GPR_clk       ;
+; i_GPR_data[*]           ; i_GPR_clk  ; -0.441 ; -0.850 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[0]          ; i_GPR_clk  ; -1.097 ; -1.535 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[1]          ; i_GPR_clk  ; -1.015 ; -1.439 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[2]          ; i_GPR_clk  ; -0.441 ; -0.850 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[3]          ; i_GPR_clk  ; -0.733 ; -1.149 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[4]          ; i_GPR_clk  ; -0.736 ; -1.152 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[5]          ; i_GPR_clk  ; -0.985 ; -1.414 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[6]          ; i_GPR_clk  ; -0.953 ; -1.353 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[7]          ; i_GPR_clk  ; -0.949 ; -1.357 ; Rise       ; i_GPR_clk       ;
+; i_GPR_enable            ; i_GPR_clk  ; -1.336 ; -1.638 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_address[*]  ; i_GPR_clk  ; -0.437 ; -0.854 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[0] ; i_GPR_clk  ; -0.990 ; -1.454 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[1] ; i_GPR_clk  ; -0.437 ; -0.854 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[2] ; i_GPR_clk  ; -0.670 ; -1.082 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[3] ; i_GPR_clk  ; -0.445 ; -0.861 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[4] ; i_GPR_clk  ; -0.736 ; -1.145 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_enable      ; i_GPR_clk  ; -1.774 ; -2.126 ; Rise       ; i_GPR_clk       ;
++-------------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++----------------------+------------+-------+-------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------------+------------+-------+-------+------------+-----------------+
+; o_GPR_ALU_data_A[*]  ; i_GPR_clk  ; 8.497 ; 8.422 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[0] ; i_GPR_clk  ; 8.246 ; 8.177 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[1] ; i_GPR_clk  ; 8.191 ; 8.124 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[2] ; i_GPR_clk  ; 8.497 ; 8.422 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[3] ; i_GPR_clk  ; 8.137 ; 8.053 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[4] ; i_GPR_clk  ; 8.341 ; 8.249 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[5] ; i_GPR_clk  ; 8.391 ; 8.295 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[6] ; i_GPR_clk  ; 8.414 ; 8.330 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[7] ; i_GPR_clk  ; 8.219 ; 8.146 ; Rise       ; i_GPR_clk       ;
+; o_GPR_ALU_data_B[*]  ; i_GPR_clk  ; 8.765 ; 8.688 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[0] ; i_GPR_clk  ; 8.765 ; 8.688 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[1] ; i_GPR_clk  ; 8.267 ; 8.199 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[2] ; i_GPR_clk  ; 8.240 ; 8.179 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[3] ; i_GPR_clk  ; 8.229 ; 8.167 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[4] ; i_GPR_clk  ; 8.704 ; 8.650 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[5] ; i_GPR_clk  ; 8.627 ; 8.614 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[6] ; i_GPR_clk  ; 8.668 ; 8.668 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[7] ; i_GPR_clk  ; 7.982 ; 7.917 ; Rise       ; i_GPR_clk       ;
++----------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++----------------------+------------+-------+-------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------------+------------+-------+-------+------------+-----------------+
+; o_GPR_ALU_data_A[*]  ; i_GPR_clk  ; 7.926 ; 7.842 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[0] ; i_GPR_clk  ; 8.031 ; 7.962 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[1] ; i_GPR_clk  ; 7.977 ; 7.910 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[2] ; i_GPR_clk  ; 8.271 ; 8.197 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[3] ; i_GPR_clk  ; 7.926 ; 7.842 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[4] ; i_GPR_clk  ; 8.121 ; 8.031 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[5] ; i_GPR_clk  ; 8.169 ; 8.076 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[6] ; i_GPR_clk  ; 8.193 ; 8.110 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[7] ; i_GPR_clk  ; 8.004 ; 7.932 ; Rise       ; i_GPR_clk       ;
+; o_GPR_ALU_data_B[*]  ; i_GPR_clk  ; 7.777 ; 7.713 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[0] ; i_GPR_clk  ; 8.528 ; 8.452 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[1] ; i_GPR_clk  ; 8.050 ; 7.983 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[2] ; i_GPR_clk  ; 8.024 ; 7.963 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[3] ; i_GPR_clk  ; 8.013 ; 7.952 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[4] ; i_GPR_clk  ; 8.469 ; 8.415 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[5] ; i_GPR_clk  ; 8.396 ; 8.382 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[6] ; i_GPR_clk  ; 8.435 ; 8.434 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[7] ; i_GPR_clk  ; 7.777 ; 7.713 ; Rise       ; i_GPR_clk       ;
++----------------------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+--------+-----------------------------+
+; Clock     ; Slack  ; End Point TNS               ;
++-----------+--------+-----------------------------+
+; i_GPR_clk ; -3.000 ; -20.392                     ;
++-----------+--------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'i_GPR_clk'                                                                                                                           ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                                                                                     ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; i_GPR_clk ; Rise       ; i_GPR_clk                                                                                  ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -2.174 ; 1.000        ; 3.174          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.074  ; 0.304        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.074  ; 0.304        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.074  ; 0.304        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.074  ; 0.304        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.076  ; 0.306        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.076  ; 0.306        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.083  ; 0.313        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.083  ; 0.313        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~input|o                                                                          ;
+; 0.341  ; 0.341        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk0                                          ;
+; 0.341  ; 0.341        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk1                                          ;
+; 0.341  ; 0.341        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk0                                          ;
+; 0.341  ; 0.341        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk1                                          ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|inclk[0]                                                            ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|outclk                                                              ;
+; 0.454  ; 0.684        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.454  ; 0.684        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.460  ; 0.690        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.460  ; 0.690        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.462  ; 0.692        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.462  ; 0.692        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.462  ; 0.692        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.462  ; 0.692        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~input|i                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~input|i                                                                          ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|inclk[0]                                                            ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|outclk                                                              ;
+; 0.658  ; 0.658        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk0                                          ;
+; 0.658  ; 0.658        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk1                                          ;
+; 0.658  ; 0.658        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk0                                          ;
+; 0.658  ; 0.658        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk1                                          ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~input|o                                                                          ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Times                                                                         ;
++-------------------------+------------+-------+-------+------------+-----------------+
+; Data Port               ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------------+------------+-------+-------+------------+-----------------+
+; i_GPR_address_A[*]      ; i_GPR_clk  ; 1.304 ; 1.617 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[0]     ; i_GPR_clk  ; 0.941 ; 1.290 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[1]     ; i_GPR_clk  ; 0.891 ; 1.238 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[2]     ; i_GPR_clk  ; 1.104 ; 1.453 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[3]     ; i_GPR_clk  ; 1.048 ; 1.426 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[4]     ; i_GPR_clk  ; 1.304 ; 1.617 ; Rise       ; i_GPR_clk       ;
+; i_GPR_address_B[*]      ; i_GPR_clk  ; 1.190 ; 1.582 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[0]     ; i_GPR_clk  ; 1.190 ; 1.582 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[1]     ; i_GPR_clk  ; 0.988 ; 1.341 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[2]     ; i_GPR_clk  ; 0.982 ; 1.342 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[3]     ; i_GPR_clk  ; 0.684 ; 1.047 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[4]     ; i_GPR_clk  ; 0.985 ; 1.334 ; Rise       ; i_GPR_clk       ;
+; i_GPR_data[*]           ; i_GPR_clk  ; 1.664 ; 2.000 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[0]          ; i_GPR_clk  ; 1.664 ; 2.000 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[1]          ; i_GPR_clk  ; 1.189 ; 1.523 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[2]          ; i_GPR_clk  ; 0.655 ; 1.016 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[3]          ; i_GPR_clk  ; 1.093 ; 1.424 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[4]          ; i_GPR_clk  ; 0.946 ; 1.326 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[5]          ; i_GPR_clk  ; 1.373 ; 1.713 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[6]          ; i_GPR_clk  ; 1.542 ; 1.830 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[7]          ; i_GPR_clk  ; 1.562 ; 1.854 ; Rise       ; i_GPR_clk       ;
+; i_GPR_enable            ; i_GPR_clk  ; 2.513 ; 2.829 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_address[*]  ; i_GPR_clk  ; 1.156 ; 1.559 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[0] ; i_GPR_clk  ; 1.156 ; 1.559 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[1] ; i_GPR_clk  ; 0.660 ; 1.022 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[2] ; i_GPR_clk  ; 0.881 ; 1.229 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[3] ; i_GPR_clk  ; 0.639 ; 1.004 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[4] ; i_GPR_clk  ; 0.920 ; 1.269 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_enable      ; i_GPR_clk  ; 2.627 ; 2.925 ; Rise       ; i_GPR_clk       ;
++-------------------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Hold Times                                                                            ;
++-------------------------+------------+--------+--------+------------+-----------------+
+; Data Port               ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------------+------------+--------+--------+------------+-----------------+
+; i_GPR_address_A[*]      ; i_GPR_clk  ; -0.582 ; -0.921 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[0]     ; i_GPR_clk  ; -0.630 ; -0.970 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[1]     ; i_GPR_clk  ; -0.582 ; -0.921 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[2]     ; i_GPR_clk  ; -0.788 ; -1.128 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[3]     ; i_GPR_clk  ; -0.734 ; -1.103 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[4]     ; i_GPR_clk  ; -0.979 ; -1.285 ; Rise       ; i_GPR_clk       ;
+; i_GPR_address_B[*]      ; i_GPR_clk  ; -0.383 ; -0.737 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[0]     ; i_GPR_clk  ; -0.869 ; -1.251 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[1]     ; i_GPR_clk  ; -0.676 ; -1.020 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[2]     ; i_GPR_clk  ; -0.674 ; -1.024 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[3]     ; i_GPR_clk  ; -0.383 ; -0.737 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[4]     ; i_GPR_clk  ; -0.673 ; -1.013 ; Rise       ; i_GPR_clk       ;
+; i_GPR_data[*]           ; i_GPR_clk  ; -0.316 ; -0.666 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[0]          ; i_GPR_clk  ; -0.925 ; -1.288 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[1]          ; i_GPR_clk  ; -0.852 ; -1.181 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[2]          ; i_GPR_clk  ; -0.316 ; -0.666 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[3]          ; i_GPR_clk  ; -0.590 ; -0.932 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[4]          ; i_GPR_clk  ; -0.587 ; -0.951 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[5]          ; i_GPR_clk  ; -0.823 ; -1.173 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[6]          ; i_GPR_clk  ; -0.790 ; -1.106 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[7]          ; i_GPR_clk  ; -0.799 ; -1.117 ; Rise       ; i_GPR_clk       ;
+; i_GPR_enable            ; i_GPR_clk  ; -1.122 ; -1.380 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_address[*]  ; i_GPR_clk  ; -0.311 ; -0.669 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[0] ; i_GPR_clk  ; -0.824 ; -1.213 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[1] ; i_GPR_clk  ; -0.311 ; -0.669 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[2] ; i_GPR_clk  ; -0.530 ; -0.873 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[3] ; i_GPR_clk  ; -0.318 ; -0.674 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[4] ; i_GPR_clk  ; -0.590 ; -0.932 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_enable      ; i_GPR_clk  ; -1.546 ; -1.797 ; Rise       ; i_GPR_clk       ;
++-------------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++----------------------+------------+-------+-------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------------+------------+-------+-------+------------+-----------------+
+; o_GPR_ALU_data_A[*]  ; i_GPR_clk  ; 7.935 ; 7.814 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[0] ; i_GPR_clk  ; 7.697 ; 7.600 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[1] ; i_GPR_clk  ; 7.646 ; 7.547 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[2] ; i_GPR_clk  ; 7.935 ; 7.814 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[3] ; i_GPR_clk  ; 7.595 ; 7.484 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[4] ; i_GPR_clk  ; 7.785 ; 7.673 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[5] ; i_GPR_clk  ; 7.829 ; 7.706 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[6] ; i_GPR_clk  ; 7.853 ; 7.741 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[7] ; i_GPR_clk  ; 7.672 ; 7.572 ; Rise       ; i_GPR_clk       ;
+; o_GPR_ALU_data_B[*]  ; i_GPR_clk  ; 8.178 ; 8.066 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[0] ; i_GPR_clk  ; 8.178 ; 8.055 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[1] ; i_GPR_clk  ; 7.716 ; 7.621 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[2] ; i_GPR_clk  ; 7.688 ; 7.600 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[3] ; i_GPR_clk  ; 7.679 ; 7.588 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[4] ; i_GPR_clk  ; 8.123 ; 8.021 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[5] ; i_GPR_clk  ; 8.048 ; 7.980 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[6] ; i_GPR_clk  ; 8.086 ; 8.066 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[7] ; i_GPR_clk  ; 7.447 ; 7.366 ; Rise       ; i_GPR_clk       ;
++----------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++----------------------+------------+-------+-------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------------+------------+-------+-------+------------+-----------------+
+; o_GPR_ALU_data_A[*]  ; i_GPR_clk  ; 7.401 ; 7.292 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[0] ; i_GPR_clk  ; 7.500 ; 7.405 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[1] ; i_GPR_clk  ; 7.450 ; 7.353 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[2] ; i_GPR_clk  ; 7.728 ; 7.610 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[3] ; i_GPR_clk  ; 7.401 ; 7.292 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[4] ; i_GPR_clk  ; 7.583 ; 7.474 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[5] ; i_GPR_clk  ; 7.626 ; 7.506 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[6] ; i_GPR_clk  ; 7.651 ; 7.541 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[7] ; i_GPR_clk  ; 7.475 ; 7.377 ; Rise       ; i_GPR_clk       ;
+; o_GPR_ALU_data_B[*]  ; i_GPR_clk  ; 7.260 ; 7.180 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[0] ; i_GPR_clk  ; 7.961 ; 7.841 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[1] ; i_GPR_clk  ; 7.518 ; 7.425 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[2] ; i_GPR_clk  ; 7.490 ; 7.404 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[3] ; i_GPR_clk  ; 7.482 ; 7.393 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[4] ; i_GPR_clk  ; 7.907 ; 7.807 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[5] ; i_GPR_clk  ; 7.836 ; 7.769 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[6] ; i_GPR_clk  ; 7.873 ; 7.852 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[7] ; i_GPR_clk  ; 7.260 ; 7.180 ; Rise       ; i_GPR_clk       ;
++----------------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+--------+-----------------------------+
+; Clock     ; Slack  ; End Point TNS               ;
++-----------+--------+-----------------------------+
+; i_GPR_clk ; -3.000 ; -11.953                     ;
++-----------+--------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'i_GPR_clk'                                                                                                                           ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                                                                                     ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; i_GPR_clk ; Rise       ; i_GPR_clk                                                                                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -0.121 ; 0.109        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -0.121 ; 0.109        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -0.120 ; 0.110        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -0.120 ; 0.110        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -0.119 ; 0.111        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -0.118 ; 0.112        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -0.117 ; 0.113        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -0.117 ; 0.113        ; 0.230          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~input|o                                                                          ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk0                                          ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk1                                          ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk0                                          ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk1                                          ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|inclk[0]                                                            ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|outclk                                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~input|i                                                                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_GPR_clk ; Rise       ; i_GPR_clk~input|i                                                                          ;
+; 0.653  ; 0.883        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.654  ; 0.884        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; 0.656  ; 0.886        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.656  ; 0.886        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.656  ; 0.886        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_0|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.656  ; 0.886        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.656  ; 0.886        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.656  ; 0.886        ; 0.230          ; High Pulse Width ; i_GPR_clk ; Rise       ; altsyncram:r_REGISTER_rtl_1|altsyncram_v1j1:auto_generated|ram_block1a0~porta_we_reg       ;
+; 0.867  ; 0.867        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|inclk[0]                                                            ;
+; 0.867  ; 0.867        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~inputclkctrl|outclk                                                              ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk0                                          ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_0|auto_generated|ram_block1a0|clk1                                          ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk0                                          ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; r_REGISTER_rtl_1|auto_generated|ram_block1a0|clk1                                          ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; i_GPR_clk ; Rise       ; i_GPR_clk~input|o                                                                          ;
++--------+--------------+----------------+------------------+-----------+------------+--------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Times                                                                         ;
++-------------------------+------------+-------+-------+------------+-----------------+
+; Data Port               ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------------+------------+-------+-------+------------+-----------------+
+; i_GPR_address_A[*]      ; i_GPR_clk  ; 0.861 ; 1.452 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[0]     ; i_GPR_clk  ; 0.624 ; 1.210 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[1]     ; i_GPR_clk  ; 0.598 ; 1.173 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[2]     ; i_GPR_clk  ; 0.733 ; 1.321 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[3]     ; i_GPR_clk  ; 0.716 ; 1.315 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[4]     ; i_GPR_clk  ; 0.861 ; 1.452 ; Rise       ; i_GPR_clk       ;
+; i_GPR_address_B[*]      ; i_GPR_clk  ; 0.773 ; 1.416 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[0]     ; i_GPR_clk  ; 0.773 ; 1.416 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[1]     ; i_GPR_clk  ; 0.661 ; 1.253 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[2]     ; i_GPR_clk  ; 0.648 ; 1.228 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[3]     ; i_GPR_clk  ; 0.471 ; 1.039 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[4]     ; i_GPR_clk  ; 0.651 ; 1.257 ; Rise       ; i_GPR_clk       ;
+; i_GPR_data[*]           ; i_GPR_clk  ; 1.052 ; 1.710 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[0]          ; i_GPR_clk  ; 1.052 ; 1.710 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[1]          ; i_GPR_clk  ; 0.781 ; 1.392 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[2]          ; i_GPR_clk  ; 0.453 ; 1.025 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[3]          ; i_GPR_clk  ; 0.712 ; 1.314 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[4]          ; i_GPR_clk  ; 0.634 ; 1.245 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[5]          ; i_GPR_clk  ; 0.894 ; 1.520 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[6]          ; i_GPR_clk  ; 0.969 ; 1.582 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[7]          ; i_GPR_clk  ; 0.990 ; 1.621 ; Rise       ; i_GPR_clk       ;
+; i_GPR_enable            ; i_GPR_clk  ; 1.569 ; 2.202 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_address[*]  ; i_GPR_clk  ; 0.773 ; 1.408 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[0] ; i_GPR_clk  ; 0.773 ; 1.408 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[1] ; i_GPR_clk  ; 0.458 ; 1.033 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[2] ; i_GPR_clk  ; 0.585 ; 1.184 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[3] ; i_GPR_clk  ; 0.450 ; 1.019 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[4] ; i_GPR_clk  ; 0.619 ; 1.210 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_enable      ; i_GPR_clk  ; 1.631 ; 2.278 ; Rise       ; i_GPR_clk       ;
++-------------------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Hold Times                                                                            ;
++-------------------------+------------+--------+--------+------------+-----------------+
+; Data Port               ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------------+------------+--------+--------+------------+-----------------+
+; i_GPR_address_A[*]      ; i_GPR_clk  ; -0.401 ; -0.967 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[0]     ; i_GPR_clk  ; -0.426 ; -1.002 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[1]     ; i_GPR_clk  ; -0.401 ; -0.967 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[2]     ; i_GPR_clk  ; -0.532 ; -1.110 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[3]     ; i_GPR_clk  ; -0.515 ; -1.105 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[4]     ; i_GPR_clk  ; -0.654 ; -1.236 ; Rise       ; i_GPR_clk       ;
+; i_GPR_address_B[*]      ; i_GPR_clk  ; -0.279 ; -0.840 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[0]     ; i_GPR_clk  ; -0.569 ; -1.202 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[1]     ; i_GPR_clk  ; -0.463 ; -1.046 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[2]     ; i_GPR_clk  ; -0.449 ; -1.023 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[3]     ; i_GPR_clk  ; -0.279 ; -0.840 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[4]     ; i_GPR_clk  ; -0.453 ; -1.049 ; Rise       ; i_GPR_clk       ;
+; i_GPR_data[*]           ; i_GPR_clk  ; -0.234 ; -0.794 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[0]          ; i_GPR_clk  ; -0.616 ; -1.239 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[1]          ; i_GPR_clk  ; -0.565 ; -1.168 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[2]          ; i_GPR_clk  ; -0.234 ; -0.794 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[3]          ; i_GPR_clk  ; -0.399 ; -0.988 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[4]          ; i_GPR_clk  ; -0.401 ; -0.994 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[5]          ; i_GPR_clk  ; -0.549 ; -1.158 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[6]          ; i_GPR_clk  ; -0.525 ; -1.109 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[7]          ; i_GPR_clk  ; -0.538 ; -1.122 ; Rise       ; i_GPR_clk       ;
+; i_GPR_enable            ; i_GPR_clk  ; -0.752 ; -1.262 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_address[*]  ; i_GPR_clk  ; -0.234 ; -0.794 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[0] ; i_GPR_clk  ; -0.556 ; -1.178 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[1] ; i_GPR_clk  ; -0.234 ; -0.794 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[2] ; i_GPR_clk  ; -0.365 ; -0.936 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[3] ; i_GPR_clk  ; -0.238 ; -0.800 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[4] ; i_GPR_clk  ; -0.405 ; -0.984 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_enable      ; i_GPR_clk  ; -0.962 ; -1.534 ; Rise       ; i_GPR_clk       ;
++-------------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++----------------------+------------+-------+-------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------------+------------+-------+-------+------------+-----------------+
+; o_GPR_ALU_data_A[*]  ; i_GPR_clk  ; 4.710 ; 4.763 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[0] ; i_GPR_clk  ; 4.577 ; 4.616 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[1] ; i_GPR_clk  ; 4.531 ; 4.570 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[2] ; i_GPR_clk  ; 4.710 ; 4.763 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[3] ; i_GPR_clk  ; 4.499 ; 4.519 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[4] ; i_GPR_clk  ; 4.620 ; 4.652 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[5] ; i_GPR_clk  ; 4.642 ; 4.676 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[6] ; i_GPR_clk  ; 4.672 ; 4.708 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[7] ; i_GPR_clk  ; 4.547 ; 4.587 ; Rise       ; i_GPR_clk       ;
+; o_GPR_ALU_data_B[*]  ; i_GPR_clk  ; 4.846 ; 4.939 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[0] ; i_GPR_clk  ; 4.846 ; 4.915 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[1] ; i_GPR_clk  ; 4.592 ; 4.630 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[2] ; i_GPR_clk  ; 4.571 ; 4.608 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[3] ; i_GPR_clk  ; 4.564 ; 4.606 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[4] ; i_GPR_clk  ; 4.823 ; 4.889 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[5] ; i_GPR_clk  ; 4.797 ; 4.878 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[6] ; i_GPR_clk  ; 4.843 ; 4.939 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[7] ; i_GPR_clk  ; 4.433 ; 4.449 ; Rise       ; i_GPR_clk       ;
++----------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++----------------------+------------+-------+-------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------------+------------+-------+-------+------------+-----------------+
+; o_GPR_ALU_data_A[*]  ; i_GPR_clk  ; 4.350 ; 4.368 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[0] ; i_GPR_clk  ; 4.425 ; 4.462 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[1] ; i_GPR_clk  ; 4.380 ; 4.417 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[2] ; i_GPR_clk  ; 4.552 ; 4.602 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[3] ; i_GPR_clk  ; 4.350 ; 4.368 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[4] ; i_GPR_clk  ; 4.465 ; 4.496 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[5] ; i_GPR_clk  ; 4.488 ; 4.520 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[6] ; i_GPR_clk  ; 4.517 ; 4.551 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[7] ; i_GPR_clk  ; 4.396 ; 4.434 ; Rise       ; i_GPR_clk       ;
+; o_GPR_ALU_data_B[*]  ; i_GPR_clk  ; 4.287 ; 4.303 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[0] ; i_GPR_clk  ; 4.684 ; 4.749 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[1] ; i_GPR_clk  ; 4.440 ; 4.476 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[2] ; i_GPR_clk  ; 4.419 ; 4.455 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[3] ; i_GPR_clk  ; 4.413 ; 4.453 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[4] ; i_GPR_clk  ; 4.661 ; 4.724 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[5] ; i_GPR_clk  ; 4.637 ; 4.715 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[6] ; i_GPR_clk  ; 4.681 ; 4.773 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[7] ; i_GPR_clk  ; 4.287 ; 4.303 ; Rise       ; i_GPR_clk       ;
++----------------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+;  i_GPR_clk       ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -20.392             ;
+;  i_GPR_clk       ; N/A   ; N/A  ; N/A      ; N/A     ; -20.392             ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Times                                                                         ;
++-------------------------+------------+-------+-------+------------+-----------------+
+; Data Port               ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------------+------------+-------+-------+------------+-----------------+
+; i_GPR_address_A[*]      ; i_GPR_clk  ; 1.516 ; 1.938 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[0]     ; i_GPR_clk  ; 1.127 ; 1.558 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[1]     ; i_GPR_clk  ; 1.073 ; 1.500 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[2]     ; i_GPR_clk  ; 1.300 ; 1.723 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[3]     ; i_GPR_clk  ; 1.238 ; 1.687 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[4]     ; i_GPR_clk  ; 1.516 ; 1.938 ; Rise       ; i_GPR_clk       ;
+; i_GPR_address_B[*]      ; i_GPR_clk  ; 1.391 ; 1.871 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[0]     ; i_GPR_clk  ; 1.391 ; 1.871 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[1]     ; i_GPR_clk  ; 1.172 ; 1.597 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[2]     ; i_GPR_clk  ; 1.164 ; 1.594 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[3]     ; i_GPR_clk  ; 0.849 ; 1.273 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[4]     ; i_GPR_clk  ; 1.172 ; 1.590 ; Rise       ; i_GPR_clk       ;
+; i_GPR_data[*]           ; i_GPR_clk  ; 1.903 ; 2.342 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[0]          ; i_GPR_clk  ; 1.903 ; 2.342 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[1]          ; i_GPR_clk  ; 1.387 ; 1.821 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[2]          ; i_GPR_clk  ; 0.813 ; 1.235 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[3]          ; i_GPR_clk  ; 1.283 ; 1.693 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[4]          ; i_GPR_clk  ; 1.132 ; 1.577 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[5]          ; i_GPR_clk  ; 1.586 ; 2.015 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[6]          ; i_GPR_clk  ; 1.774 ; 2.161 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[7]          ; i_GPR_clk  ; 1.775 ; 2.180 ; Rise       ; i_GPR_clk       ;
+; i_GPR_enable            ; i_GPR_clk  ; 2.858 ; 3.282 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_address[*]  ; i_GPR_clk  ; 1.356 ; 1.848 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[0] ; i_GPR_clk  ; 1.356 ; 1.848 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[1] ; i_GPR_clk  ; 0.820 ; 1.244 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[2] ; i_GPR_clk  ; 1.059 ; 1.474 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[3] ; i_GPR_clk  ; 0.799 ; 1.225 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[4] ; i_GPR_clk  ; 1.104 ; 1.525 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_enable      ; i_GPR_clk  ; 2.975 ; 3.398 ; Rise       ; i_GPR_clk       ;
++-------------------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------------+
+; Hold Times                                                                            ;
++-------------------------+------------+--------+--------+------------+-----------------+
+; Data Port               ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------------+------------+--------+--------+------------+-----------------+
+; i_GPR_address_A[*]      ; i_GPR_clk  ; -0.401 ; -0.921 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[0]     ; i_GPR_clk  ; -0.426 ; -0.970 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[1]     ; i_GPR_clk  ; -0.401 ; -0.921 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[2]     ; i_GPR_clk  ; -0.532 ; -1.110 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[3]     ; i_GPR_clk  ; -0.515 ; -1.103 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_A[4]     ; i_GPR_clk  ; -0.654 ; -1.236 ; Rise       ; i_GPR_clk       ;
+; i_GPR_address_B[*]      ; i_GPR_clk  ; -0.279 ; -0.737 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[0]     ; i_GPR_clk  ; -0.569 ; -1.202 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[1]     ; i_GPR_clk  ; -0.463 ; -1.020 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[2]     ; i_GPR_clk  ; -0.449 ; -1.023 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[3]     ; i_GPR_clk  ; -0.279 ; -0.737 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_address_B[4]     ; i_GPR_clk  ; -0.453 ; -1.013 ; Rise       ; i_GPR_clk       ;
+; i_GPR_data[*]           ; i_GPR_clk  ; -0.234 ; -0.666 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[0]          ; i_GPR_clk  ; -0.616 ; -1.239 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[1]          ; i_GPR_clk  ; -0.565 ; -1.168 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[2]          ; i_GPR_clk  ; -0.234 ; -0.666 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[3]          ; i_GPR_clk  ; -0.399 ; -0.932 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[4]          ; i_GPR_clk  ; -0.401 ; -0.951 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[5]          ; i_GPR_clk  ; -0.549 ; -1.158 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[6]          ; i_GPR_clk  ; -0.525 ; -1.106 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_data[7]          ; i_GPR_clk  ; -0.538 ; -1.117 ; Rise       ; i_GPR_clk       ;
+; i_GPR_enable            ; i_GPR_clk  ; -0.752 ; -1.262 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_address[*]  ; i_GPR_clk  ; -0.234 ; -0.669 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[0] ; i_GPR_clk  ; -0.556 ; -1.178 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[1] ; i_GPR_clk  ; -0.234 ; -0.669 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[2] ; i_GPR_clk  ; -0.365 ; -0.873 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[3] ; i_GPR_clk  ; -0.238 ; -0.674 ; Rise       ; i_GPR_clk       ;
+;  i_GPR_write_address[4] ; i_GPR_clk  ; -0.405 ; -0.932 ; Rise       ; i_GPR_clk       ;
+; i_GPR_write_enable      ; i_GPR_clk  ; -0.962 ; -1.534 ; Rise       ; i_GPR_clk       ;
++-------------------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++----------------------+------------+-------+-------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------------+------------+-------+-------+------------+-----------------+
+; o_GPR_ALU_data_A[*]  ; i_GPR_clk  ; 8.497 ; 8.422 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[0] ; i_GPR_clk  ; 8.246 ; 8.177 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[1] ; i_GPR_clk  ; 8.191 ; 8.124 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[2] ; i_GPR_clk  ; 8.497 ; 8.422 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[3] ; i_GPR_clk  ; 8.137 ; 8.053 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[4] ; i_GPR_clk  ; 8.341 ; 8.249 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[5] ; i_GPR_clk  ; 8.391 ; 8.295 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[6] ; i_GPR_clk  ; 8.414 ; 8.330 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[7] ; i_GPR_clk  ; 8.219 ; 8.146 ; Rise       ; i_GPR_clk       ;
+; o_GPR_ALU_data_B[*]  ; i_GPR_clk  ; 8.765 ; 8.688 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[0] ; i_GPR_clk  ; 8.765 ; 8.688 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[1] ; i_GPR_clk  ; 8.267 ; 8.199 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[2] ; i_GPR_clk  ; 8.240 ; 8.179 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[3] ; i_GPR_clk  ; 8.229 ; 8.167 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[4] ; i_GPR_clk  ; 8.704 ; 8.650 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[5] ; i_GPR_clk  ; 8.627 ; 8.614 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[6] ; i_GPR_clk  ; 8.668 ; 8.668 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[7] ; i_GPR_clk  ; 7.982 ; 7.917 ; Rise       ; i_GPR_clk       ;
++----------------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++----------------------+------------+-------+-------+------------+-----------------+
+; Data Port            ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------------+------------+-------+-------+------------+-----------------+
+; o_GPR_ALU_data_A[*]  ; i_GPR_clk  ; 4.350 ; 4.368 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[0] ; i_GPR_clk  ; 4.425 ; 4.462 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[1] ; i_GPR_clk  ; 4.380 ; 4.417 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[2] ; i_GPR_clk  ; 4.552 ; 4.602 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[3] ; i_GPR_clk  ; 4.350 ; 4.368 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[4] ; i_GPR_clk  ; 4.465 ; 4.496 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[5] ; i_GPR_clk  ; 4.488 ; 4.520 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[6] ; i_GPR_clk  ; 4.517 ; 4.551 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_A[7] ; i_GPR_clk  ; 4.396 ; 4.434 ; Rise       ; i_GPR_clk       ;
+; o_GPR_ALU_data_B[*]  ; i_GPR_clk  ; 4.287 ; 4.303 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[0] ; i_GPR_clk  ; 4.684 ; 4.749 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[1] ; i_GPR_clk  ; 4.440 ; 4.476 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[2] ; i_GPR_clk  ; 4.419 ; 4.455 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[3] ; i_GPR_clk  ; 4.413 ; 4.453 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[4] ; i_GPR_clk  ; 4.661 ; 4.724 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[5] ; i_GPR_clk  ; 4.637 ; 4.715 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[6] ; i_GPR_clk  ; 4.681 ; 4.773 ; Rise       ; i_GPR_clk       ;
+;  o_GPR_ALU_data_B[7] ; i_GPR_clk  ; 4.287 ; 4.303 ; Rise       ; i_GPR_clk       ;
++----------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin                 ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; o_GPR_ALU_data_A[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_A[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_A[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_A[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_A[4] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_A[5] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_A[6] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_A[7] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_B[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_B[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_B[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_B[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_B[4] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_B[5] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_B[6] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_GPR_ALU_data_B[7] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; i_GPR_enable            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_write_enable      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_clk               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_data[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_write_address[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_write_address[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_write_address[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_write_address[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_write_address[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_A[0]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_A[1]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_A[2]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_A[3]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_A[4]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_data[1]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_data[2]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_data[3]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_data[4]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_data[5]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_data[6]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_data[7]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_B[0]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_B[1]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_B[2]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_B[3]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_GPR_address_B[4]      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; o_GPR_ALU_data_A[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                 ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; o_GPR_ALU_data_A[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_A[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_GPR_ALU_data_B[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
++---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 25    ; 25   ;
+; Unconstrained Input Port Paths  ; 50    ; 50   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+    Info: Processing started: Thu May 23 15:42:07 2019
+Info: Command: quartus_sta register32x8 -c register32x8
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'register32x8.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name i_GPR_clk i_GPR_clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -20.392 i_GPR_clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -20.392 i_GPR_clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -11.953 i_GPR_clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4642 megabytes
+    Info: Processing ended: Thu May 23 15:42:08 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

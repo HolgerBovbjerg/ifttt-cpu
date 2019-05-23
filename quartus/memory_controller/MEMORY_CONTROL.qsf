@@ -42,8 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY MEMORY_CONTROL
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:16:25  APRIL 17, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
-set_global_assignment -name VHDL_FILE ../../test_benches/tb_MEMORY_CONTROL.vhd
-set_global_assignment -name VHDL_FILE ../../src/MEMORY_CONTROL.vhd
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -59,5 +57,9 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_MEMORY_CONTR
 set_global_assignment -name EDA_TEST_BENCH_NAME tb_MEMORY_CONTROL -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_MEMORY_CONTROL
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_MEMORY_CONTROL -section_id tb_MEMORY_CONTROL
+set_global_assignment -name VHDL_FILE ../../src/constants.vhd
+set_global_assignment -name VHDL_FILE ../../test_benches/tb_MEMORY_CONTROL.vhd
+set_global_assignment -name VHDL_FILE ../../src/MEMORY_CONTROL.vhd
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id tb_MEMORY_CONTROL
 set_global_assignment -name EDA_TEST_BENCH_FILE ../../test_benches/tb_MEMORY_CONTROL.vhd -section_id tb_MEMORY_CONTROL
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

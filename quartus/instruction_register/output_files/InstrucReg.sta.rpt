@@ -1,0 +1,1523 @@
+TimeQuest Timing Analyzer report for InstrucReg
+Thu May 23 17:06:55 2019
+Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width: 'i_IR_clk'
+ 13. Setup Times
+ 14. Hold Times
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Slow 1200mV 85C Model Metastability Report
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Minimum Pulse Width: 'i_IR_clk'
+ 25. Setup Times
+ 26. Hold Times
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Slow 1200mV 0C Model Metastability Report
+ 30. Fast 1200mV 0C Model Setup Summary
+ 31. Fast 1200mV 0C Model Hold Summary
+ 32. Fast 1200mV 0C Model Recovery Summary
+ 33. Fast 1200mV 0C Model Removal Summary
+ 34. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 35. Fast 1200mV 0C Model Minimum Pulse Width: 'i_IR_clk'
+ 36. Setup Times
+ 37. Hold Times
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Fast 1200mV 0C Model Metastability Report
+ 41. Multicorner Timing Analysis Summary
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Board Trace Model Assignments
+ 47. Input Transition Times
+ 48. Slow Corner Signal Integrity Metrics
+ 49. Fast Corner Signal Integrity Metrics
+ 50. Clock Transfers
+ 51. Report TCCS
+ 52. Report RSKM
+ 53. Unconstrained Paths
+ 54. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
+; Revision Name      ; InstrucReg                                         ;
+; Device Family      ; Cyclone III                                        ;
+; Device Name        ; EP3C16F484C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; i_IR_clk   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_IR_clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++----------+--------+-------------------------------+
+; Clock    ; Slack  ; End Point TNS                 ;
++----------+--------+-------------------------------+
+; i_IR_clk ; -3.000 ; -35.000                       ;
++----------+--------+-------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'i_IR_clk'                                                             ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock    ; Clock Edge ; Target                         ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; i_IR_clk ; Rise       ; i_IR_clk                       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[10]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[11]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[12]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[13]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[14]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[15]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[16]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[17]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[18]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[19]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[20]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[21]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[22]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[23]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[24]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[25]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[26]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[27]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[28]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[29]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[30]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[31]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[8]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[9]                  ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[0]                  ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[11]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[12]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[15]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[17]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[19]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[21]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[22]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[24]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[27]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[3]                  ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[4]                  ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[6]                  ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[7]                  ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[8]                  ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[9]                  ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[10]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[13]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[14]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[16]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[18]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[1]                  ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[20]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[23]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[25]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[26]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[28]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[29]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[2]                  ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[30]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[31]                 ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[5]                  ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~input|o               ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[0]|clk              ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[11]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[12]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[15]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[17]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[19]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[21]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[22]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[24]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[27]|clk             ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[3]|clk              ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[4]|clk              ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[6]|clk              ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[7]|clk              ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[8]|clk              ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[9]|clk              ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[10]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[13]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[14]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[16]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[18]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[1]|clk              ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[20]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[23]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[25]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[26]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[28]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[29]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[2]|clk              ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[30]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[31]|clk             ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[5]|clk              ;
+; 0.356  ; 0.356        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~inputclkctrl|inclk[0] ;
+; 0.356  ; 0.356        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~inputclkctrl|outclk   ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; i_IR_data[*]   ; i_IR_clk   ; 1.861 ; 2.284 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[0]  ; i_IR_clk   ; 0.293 ; 0.383 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[1]  ; i_IR_clk   ; 1.319 ; 1.748 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[2]  ; i_IR_clk   ; 1.207 ; 1.619 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[3]  ; i_IR_clk   ; 1.556 ; 1.982 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[4]  ; i_IR_clk   ; 1.441 ; 1.862 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[5]  ; i_IR_clk   ; 1.307 ; 1.732 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[6]  ; i_IR_clk   ; 1.752 ; 2.178 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[7]  ; i_IR_clk   ; 1.465 ; 1.865 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[8]  ; i_IR_clk   ; 1.628 ; 2.054 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[9]  ; i_IR_clk   ; 1.734 ; 2.157 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[10] ; i_IR_clk   ; 1.682 ; 2.099 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[11] ; i_IR_clk   ; 1.606 ; 2.013 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[12] ; i_IR_clk   ; 1.466 ; 1.889 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[13] ; i_IR_clk   ; 1.076 ; 1.486 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[14] ; i_IR_clk   ; 1.784 ; 2.235 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[15] ; i_IR_clk   ; 1.257 ; 1.673 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[16] ; i_IR_clk   ; 1.490 ; 1.931 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[17] ; i_IR_clk   ; 1.419 ; 1.839 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[18] ; i_IR_clk   ; 1.837 ; 2.284 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[19] ; i_IR_clk   ; 1.424 ; 1.843 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[20] ; i_IR_clk   ; 1.497 ; 1.914 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[21] ; i_IR_clk   ; 1.769 ; 2.205 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[22] ; i_IR_clk   ; 1.861 ; 2.282 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[23] ; i_IR_clk   ; 1.369 ; 1.792 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[24] ; i_IR_clk   ; 1.698 ; 2.111 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[25] ; i_IR_clk   ; 1.050 ; 1.460 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[26] ; i_IR_clk   ; 1.497 ; 1.933 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[27] ; i_IR_clk   ; 1.453 ; 1.860 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[28] ; i_IR_clk   ; 1.801 ; 2.259 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[29] ; i_IR_clk   ; 1.590 ; 2.021 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[30] ; i_IR_clk   ; 1.356 ; 1.783 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[31] ; i_IR_clk   ; 1.547 ; 1.980 ; Rise       ; i_IR_clk        ;
+; i_IR_enable    ; i_IR_clk   ; 0.657 ; 0.744 ; Rise       ; i_IR_clk        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; i_IR_data[*]   ; i_IR_clk   ; 0.008  ; -0.084 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[0]  ; i_IR_clk   ; 0.008  ; -0.084 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[1]  ; i_IR_clk   ; -0.958 ; -1.365 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[2]  ; i_IR_clk   ; -0.862 ; -1.262 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[3]  ; i_IR_clk   ; -1.181 ; -1.588 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[4]  ; i_IR_clk   ; -1.082 ; -1.494 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[5]  ; i_IR_clk   ; -0.946 ; -1.349 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[6]  ; i_IR_clk   ; -1.380 ; -1.797 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[7]  ; i_IR_clk   ; -1.093 ; -1.474 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[8]  ; i_IR_clk   ; -1.261 ; -1.678 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[9]  ; i_IR_clk   ; -1.352 ; -1.755 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[10] ; i_IR_clk   ; -1.318 ; -1.723 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[11] ; i_IR_clk   ; -1.241 ; -1.639 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[12] ; i_IR_clk   ; -1.094 ; -1.497 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[13] ; i_IR_clk   ; -0.725 ; -1.114 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[14] ; i_IR_clk   ; -1.417 ; -1.855 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[15] ; i_IR_clk   ; -0.893 ; -1.290 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[16] ; i_IR_clk   ; -1.134 ; -1.562 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[17] ; i_IR_clk   ; -1.061 ; -1.472 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[18] ; i_IR_clk   ; -1.467 ; -1.901 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[19] ; i_IR_clk   ; -1.066 ; -1.476 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[20] ; i_IR_clk   ; -1.141 ; -1.546 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[21] ; i_IR_clk   ; -1.399 ; -1.824 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[22] ; i_IR_clk   ; -1.485 ; -1.897 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[23] ; i_IR_clk   ; -1.006 ; -1.408 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[24] ; i_IR_clk   ; -1.317 ; -1.710 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[25] ; i_IR_clk   ; -0.699 ; -1.088 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[26] ; i_IR_clk   ; -1.140 ; -1.564 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[27] ; i_IR_clk   ; -1.082 ; -1.470 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[28] ; i_IR_clk   ; -1.433 ; -1.878 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[29] ; i_IR_clk   ; -1.217 ; -1.626 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[30] ; i_IR_clk   ; -0.994 ; -1.399 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[31] ; i_IR_clk   ; -1.177 ; -1.588 ; Rise       ; i_IR_clk        ;
+; i_IR_enable    ; i_IR_clk   ; 0.525  ; 0.381  ; Rise       ; i_IR_clk        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Clock to Output Times                                                             ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; o_IR_instruction[*]   ; i_IR_clk   ; 6.475 ; 6.571 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[0]  ; i_IR_clk   ; 5.748 ; 5.753 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[1]  ; i_IR_clk   ; 5.468 ; 5.500 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[2]  ; i_IR_clk   ; 5.502 ; 5.552 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[3]  ; i_IR_clk   ; 5.239 ; 5.210 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[4]  ; i_IR_clk   ; 5.519 ; 5.497 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[5]  ; i_IR_clk   ; 5.475 ; 5.508 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[6]  ; i_IR_clk   ; 5.629 ; 5.592 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[7]  ; i_IR_clk   ; 5.211 ; 5.187 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[8]  ; i_IR_clk   ; 5.685 ; 5.657 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[9]  ; i_IR_clk   ; 5.650 ; 5.597 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[10] ; i_IR_clk   ; 5.336 ; 5.361 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[11] ; i_IR_clk   ; 6.475 ; 6.571 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[12] ; i_IR_clk   ; 5.201 ; 5.180 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[13] ; i_IR_clk   ; 5.732 ; 5.748 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[14] ; i_IR_clk   ; 5.483 ; 5.514 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[15] ; i_IR_clk   ; 5.508 ; 5.492 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[16] ; i_IR_clk   ; 5.477 ; 5.535 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[17] ; i_IR_clk   ; 5.178 ; 5.154 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[18] ; i_IR_clk   ; 5.759 ; 5.816 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[19] ; i_IR_clk   ; 5.749 ; 5.712 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[20] ; i_IR_clk   ; 5.743 ; 5.799 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[21] ; i_IR_clk   ; 5.488 ; 5.475 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[22] ; i_IR_clk   ; 5.487 ; 5.466 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[23] ; i_IR_clk   ; 5.784 ; 5.842 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[24] ; i_IR_clk   ; 5.540 ; 5.526 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[25] ; i_IR_clk   ; 5.763 ; 5.810 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[26] ; i_IR_clk   ; 5.406 ; 5.426 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[27] ; i_IR_clk   ; 5.527 ; 5.513 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[28] ; i_IR_clk   ; 5.463 ; 5.499 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[29] ; i_IR_clk   ; 5.498 ; 5.530 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[30] ; i_IR_clk   ; 5.466 ; 5.484 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[31] ; i_IR_clk   ; 5.203 ; 5.230 ; Rise       ; i_IR_clk        ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                     ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; o_IR_instruction[*]   ; i_IR_clk   ; 5.075 ; 5.049 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[0]  ; i_IR_clk   ; 5.621 ; 5.624 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[1]  ; i_IR_clk   ; 5.360 ; 5.389 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[2]  ; i_IR_clk   ; 5.392 ; 5.439 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[3]  ; i_IR_clk   ; 5.134 ; 5.103 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[4]  ; i_IR_clk   ; 5.402 ; 5.379 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[5]  ; i_IR_clk   ; 5.365 ; 5.396 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[6]  ; i_IR_clk   ; 5.508 ; 5.470 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[7]  ; i_IR_clk   ; 5.106 ; 5.081 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[8]  ; i_IR_clk   ; 5.561 ; 5.532 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[9]  ; i_IR_clk   ; 5.528 ; 5.475 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[10] ; i_IR_clk   ; 5.232 ; 5.255 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[11] ; i_IR_clk   ; 6.370 ; 6.466 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[12] ; i_IR_clk   ; 5.097 ; 5.074 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[13] ; i_IR_clk   ; 5.610 ; 5.624 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[14] ; i_IR_clk   ; 5.373 ; 5.403 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[15] ; i_IR_clk   ; 5.392 ; 5.374 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[16] ; i_IR_clk   ; 5.368 ; 5.423 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[17] ; i_IR_clk   ; 5.075 ; 5.049 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[18] ; i_IR_clk   ; 5.639 ; 5.693 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[19] ; i_IR_clk   ; 5.624 ; 5.586 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[20] ; i_IR_clk   ; 5.623 ; 5.676 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[21] ; i_IR_clk   ; 5.372 ; 5.357 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[22] ; i_IR_clk   ; 5.372 ; 5.349 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[23] ; i_IR_clk   ; 5.663 ; 5.718 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[24] ; i_IR_clk   ; 5.423 ; 5.407 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[25] ; i_IR_clk   ; 5.643 ; 5.687 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[26] ; i_IR_clk   ; 5.296 ; 5.314 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[27] ; i_IR_clk   ; 5.410 ; 5.394 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[28] ; i_IR_clk   ; 5.353 ; 5.388 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[29] ; i_IR_clk   ; 5.388 ; 5.419 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[30] ; i_IR_clk   ; 5.358 ; 5.374 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[31] ; i_IR_clk   ; 5.104 ; 5.130 ; Rise       ; i_IR_clk        ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+--------+------------------------------+
+; Clock    ; Slack  ; End Point TNS                ;
++----------+--------+------------------------------+
+; i_IR_clk ; -3.000 ; -35.000                      ;
++----------+--------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'i_IR_clk'                                                              ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock    ; Clock Edge ; Target                         ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; i_IR_clk ; Rise       ; i_IR_clk                       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[10]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[11]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[12]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[13]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[14]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[15]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[16]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[17]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[18]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[19]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[20]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[21]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[22]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[23]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[24]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[25]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[26]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[27]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[28]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[29]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[30]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[31]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[8]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[9]                  ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[10]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[13]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[14]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[16]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[18]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[1]                  ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[20]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[23]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[25]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[26]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[28]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[29]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[2]                  ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[30]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[31]                 ;
+; 0.182  ; 0.366        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[5]                  ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[0]                  ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[11]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[12]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[15]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[17]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[19]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[21]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[22]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[24]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[27]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[3]                  ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[4]                  ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[6]                  ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[7]                  ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[8]                  ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[9]                  ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~input|o               ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[10]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[13]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[14]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[16]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[18]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[1]|clk              ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[20]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[23]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[25]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[26]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[28]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[29]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[2]|clk              ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[30]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[31]|clk             ;
+; 0.342  ; 0.342        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[5]|clk              ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[0]|clk              ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[11]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[12]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[15]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[17]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[19]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[21]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[22]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[24]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[27]|clk             ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[3]|clk              ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[4]|clk              ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[6]|clk              ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[7]|clk              ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[8]|clk              ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[9]|clk              ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~inputclkctrl|inclk[0] ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~inputclkctrl|outclk   ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; i_IR_data[*]   ; i_IR_clk   ; 1.598 ; 1.942 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[0]  ; i_IR_clk   ; 0.279 ; 0.423 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[1]  ; i_IR_clk   ; 1.101 ; 1.444 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[2]  ; i_IR_clk   ; 0.994 ; 1.339 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[3]  ; i_IR_clk   ; 1.311 ; 1.660 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[4]  ; i_IR_clk   ; 1.204 ; 1.556 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[5]  ; i_IR_clk   ; 1.090 ; 1.425 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[6]  ; i_IR_clk   ; 1.482 ; 1.842 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[7]  ; i_IR_clk   ; 1.230 ; 1.549 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[8]  ; i_IR_clk   ; 1.384 ; 1.720 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[9]  ; i_IR_clk   ; 1.481 ; 1.803 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[10] ; i_IR_clk   ; 1.429 ; 1.780 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[11] ; i_IR_clk   ; 1.353 ; 1.698 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[12] ; i_IR_clk   ; 1.235 ; 1.565 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[13] ; i_IR_clk   ; 0.876 ; 1.214 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[14] ; i_IR_clk   ; 1.520 ; 1.890 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[15] ; i_IR_clk   ; 1.039 ; 1.378 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[16] ; i_IR_clk   ; 1.261 ; 1.616 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[17] ; i_IR_clk   ; 1.185 ; 1.534 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[18] ; i_IR_clk   ; 1.569 ; 1.926 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[19] ; i_IR_clk   ; 1.191 ; 1.538 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[20] ; i_IR_clk   ; 1.269 ; 1.622 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[21] ; i_IR_clk   ; 1.505 ; 1.864 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[22] ; i_IR_clk   ; 1.598 ; 1.942 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[23] ; i_IR_clk   ; 1.143 ; 1.488 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[24] ; i_IR_clk   ; 1.453 ; 1.777 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[25] ; i_IR_clk   ; 0.849 ; 1.187 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[26] ; i_IR_clk   ; 1.254 ; 1.624 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[27] ; i_IR_clk   ; 1.226 ; 1.551 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[28] ; i_IR_clk   ; 1.544 ; 1.909 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[29] ; i_IR_clk   ; 1.349 ; 1.697 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[30] ; i_IR_clk   ; 1.130 ; 1.480 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[31] ; i_IR_clk   ; 1.307 ; 1.649 ; Rise       ; i_IR_clk        ;
+; i_IR_enable    ; i_IR_clk   ; 0.614 ; 0.767 ; Rise       ; i_IR_clk        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; i_IR_data[*]   ; i_IR_clk   ; -0.009 ; -0.153 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[0]  ; i_IR_clk   ; -0.009 ; -0.153 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[1]  ; i_IR_clk   ; -0.782 ; -1.110 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[2]  ; i_IR_clk   ; -0.690 ; -1.026 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[3]  ; i_IR_clk   ; -0.980 ; -1.316 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[4]  ; i_IR_clk   ; -0.889 ; -1.232 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[5]  ; i_IR_clk   ; -0.772 ; -1.092 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[6]  ; i_IR_clk   ; -1.156 ; -1.507 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[7]  ; i_IR_clk   ; -0.902 ; -1.209 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[8]  ; i_IR_clk   ; -1.061 ; -1.390 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[9]  ; i_IR_clk   ; -1.144 ; -1.454 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[10] ; i_IR_clk   ; -1.108 ; -1.449 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[11] ; i_IR_clk   ; -1.032 ; -1.369 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[12] ; i_IR_clk   ; -0.907 ; -1.224 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[13] ; i_IR_clk   ; -0.567 ; -0.890 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[14] ; i_IR_clk   ; -1.197 ; -1.556 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[15] ; i_IR_clk   ; -0.719 ; -1.045 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[16] ; i_IR_clk   ; -0.947 ; -1.292 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[17] ; i_IR_clk   ; -0.870 ; -1.211 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[18] ; i_IR_clk   ; -1.243 ; -1.590 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[19] ; i_IR_clk   ; -0.876 ; -1.216 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[20] ; i_IR_clk   ; -0.955 ; -1.298 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[21] ; i_IR_clk   ; -1.179 ; -1.530 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[22] ; i_IR_clk   ; -1.267 ; -1.603 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[23] ; i_IR_clk   ; -0.823 ; -1.153 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[24] ; i_IR_clk   ; -1.116 ; -1.428 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[25] ; i_IR_clk   ; -0.539 ; -0.863 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[26] ; i_IR_clk   ; -0.940 ; -1.299 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[27] ; i_IR_clk   ; -0.898 ; -1.210 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[28] ; i_IR_clk   ; -1.220 ; -1.574 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[29] ; i_IR_clk   ; -1.020 ; -1.353 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[30] ; i_IR_clk   ; -0.811 ; -1.146 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[31] ; i_IR_clk   ; -0.980 ; -1.308 ; Rise       ; i_IR_clk        ;
+; i_IR_enable    ; i_IR_clk   ; 0.455  ; 0.282  ; Rise       ; i_IR_clk        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Clock to Output Times                                                             ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; o_IR_instruction[*]   ; i_IR_clk   ; 6.225 ; 6.299 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[0]  ; i_IR_clk   ; 5.460 ; 5.420 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[1]  ; i_IR_clk   ; 5.208 ; 5.218 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[2]  ; i_IR_clk   ; 5.242 ; 5.262 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[3]  ; i_IR_clk   ; 4.992 ; 4.938 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[4]  ; i_IR_clk   ; 5.251 ; 5.196 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[5]  ; i_IR_clk   ; 5.213 ; 5.235 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[6]  ; i_IR_clk   ; 5.352 ; 5.282 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[7]  ; i_IR_clk   ; 4.964 ; 4.916 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[8]  ; i_IR_clk   ; 5.407 ; 5.335 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[9]  ; i_IR_clk   ; 5.371 ; 5.304 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[10] ; i_IR_clk   ; 5.087 ; 5.088 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[11] ; i_IR_clk   ; 6.225 ; 6.299 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[12] ; i_IR_clk   ; 4.950 ; 4.906 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[13] ; i_IR_clk   ; 5.447 ; 5.441 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[14] ; i_IR_clk   ; 5.220 ; 5.231 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[15] ; i_IR_clk   ; 5.240 ; 5.191 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[16] ; i_IR_clk   ; 5.217 ; 5.247 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[17] ; i_IR_clk   ; 4.933 ; 4.886 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[18] ; i_IR_clk   ; 5.477 ; 5.494 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[19] ; i_IR_clk   ; 5.474 ; 5.392 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[20] ; i_IR_clk   ; 5.462 ; 5.492 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[21] ; i_IR_clk   ; 5.221 ; 5.174 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[22] ; i_IR_clk   ; 5.226 ; 5.172 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[23] ; i_IR_clk   ; 5.501 ; 5.513 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[24] ; i_IR_clk   ; 5.268 ; 5.221 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[25] ; i_IR_clk   ; 5.481 ; 5.502 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[26] ; i_IR_clk   ; 5.146 ; 5.136 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[27] ; i_IR_clk   ; 5.258 ; 5.209 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[28] ; i_IR_clk   ; 5.204 ; 5.226 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[29] ; i_IR_clk   ; 5.237 ; 5.256 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[30] ; i_IR_clk   ; 5.206 ; 5.203 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[31] ; i_IR_clk   ; 4.964 ; 4.974 ; Rise       ; i_IR_clk        ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                     ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; o_IR_instruction[*]   ; i_IR_clk   ; 4.840 ; 4.794 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[0]  ; i_IR_clk   ; 5.347 ; 5.306 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[1]  ; i_IR_clk   ; 5.111 ; 5.120 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[2]  ; i_IR_clk   ; 5.144 ; 5.163 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[3]  ; i_IR_clk   ; 4.898 ; 4.845 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[4]  ; i_IR_clk   ; 5.147 ; 5.091 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[5]  ; i_IR_clk   ; 5.115 ; 5.137 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[6]  ; i_IR_clk   ; 5.243 ; 5.175 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[7]  ; i_IR_clk   ; 4.870 ; 4.823 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[8]  ; i_IR_clk   ; 5.296 ; 5.225 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[9]  ; i_IR_clk   ; 5.261 ; 5.195 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[10] ; i_IR_clk   ; 4.994 ; 4.994 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[11] ; i_IR_clk   ; 6.133 ; 6.206 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[12] ; i_IR_clk   ; 4.857 ; 4.813 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[13] ; i_IR_clk   ; 5.338 ; 5.330 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[14] ; i_IR_clk   ; 5.123 ; 5.133 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[15] ; i_IR_clk   ; 5.136 ; 5.087 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[16] ; i_IR_clk   ; 5.120 ; 5.147 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[17] ; i_IR_clk   ; 4.840 ; 4.794 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[18] ; i_IR_clk   ; 5.370 ; 5.385 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[19] ; i_IR_clk   ; 5.362 ; 5.281 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[20] ; i_IR_clk   ; 5.355 ; 5.383 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[21] ; i_IR_clk   ; 5.117 ; 5.070 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[22] ; i_IR_clk   ; 5.123 ; 5.068 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[23] ; i_IR_clk   ; 5.393 ; 5.404 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[24] ; i_IR_clk   ; 5.163 ; 5.116 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[25] ; i_IR_clk   ; 5.374 ; 5.393 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[26] ; i_IR_clk   ; 5.048 ; 5.037 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[27] ; i_IR_clk   ; 5.153 ; 5.104 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[28] ; i_IR_clk   ; 5.106 ; 5.128 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[29] ; i_IR_clk   ; 5.139 ; 5.157 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[30] ; i_IR_clk   ; 5.110 ; 5.106 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[31] ; i_IR_clk   ; 4.877 ; 4.886 ; Rise       ; i_IR_clk        ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+--------+------------------------------+
+; Clock    ; Slack  ; End Point TNS                ;
++----------+--------+------------------------------+
+; i_IR_clk ; -3.000 ; -36.792                      ;
++----------+--------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'i_IR_clk'                                                              ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock    ; Clock Edge ; Target                         ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; i_IR_clk ; Rise       ; i_IR_clk                       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[0]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[10]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[11]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[12]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[13]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[14]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[15]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[16]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[17]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[18]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[19]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[1]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[20]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[21]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[22]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[23]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[24]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[25]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[26]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[27]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[28]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[29]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[2]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[30]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[31]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[3]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[4]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[5]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[6]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[7]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[8]                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; i_IR_clk ; Rise       ; r_register[9]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[0]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[10]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[11]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[12]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[13]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[14]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[15]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[16]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[17]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[18]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[19]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[1]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[20]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[21]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[22]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[23]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[24]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[25]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[26]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[27]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[28]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[29]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[2]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[30]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[31]                 ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[3]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[4]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[5]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[6]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[7]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[8]                  ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[9]                  ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~input|o               ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[10]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[13]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[14]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[16]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[18]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[1]|clk              ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[20]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[23]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[25]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[26]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[28]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[29]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[2]|clk              ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[30]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[31]|clk             ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[5]|clk              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[0]|clk              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[11]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[12]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[15]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[17]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[19]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[21]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[22]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[24]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[27]|clk             ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[3]|clk              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[4]|clk              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[6]|clk              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[7]|clk              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[8]|clk              ;
+; 0.124  ; 0.124        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; r_register[9]|clk              ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~inputclkctrl|inclk[0] ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width ; i_IR_clk ; Rise       ; i_IR_clk~inputclkctrl|outclk   ;
++--------+--------------+----------------+-----------------+----------+------------+--------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; i_IR_data[*]   ; i_IR_clk   ; 1.020 ; 1.619 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[0]  ; i_IR_clk   ; 0.183 ; 0.452 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[1]  ; i_IR_clk   ; 0.724 ; 1.295 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[2]  ; i_IR_clk   ; 0.637 ; 1.184 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[3]  ; i_IR_clk   ; 0.870 ; 1.465 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[4]  ; i_IR_clk   ; 0.788 ; 1.355 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[5]  ; i_IR_clk   ; 0.713 ; 1.280 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[6]  ; i_IR_clk   ; 0.967 ; 1.568 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[7]  ; i_IR_clk   ; 0.788 ; 1.370 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[8]  ; i_IR_clk   ; 0.884 ; 1.468 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[9]  ; i_IR_clk   ; 0.954 ; 1.550 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[10] ; i_IR_clk   ; 0.909 ; 1.484 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[11] ; i_IR_clk   ; 0.872 ; 1.444 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[12] ; i_IR_clk   ; 0.796 ; 1.385 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[13] ; i_IR_clk   ; 0.575 ; 1.127 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[14] ; i_IR_clk   ; 0.996 ; 1.582 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[15] ; i_IR_clk   ; 0.689 ; 1.260 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[16] ; i_IR_clk   ; 0.818 ; 1.386 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[17] ; i_IR_clk   ; 0.771 ; 1.339 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[18] ; i_IR_clk   ; 1.015 ; 1.615 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[19] ; i_IR_clk   ; 0.778 ; 1.345 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[20] ; i_IR_clk   ; 0.831 ; 1.395 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[21] ; i_IR_clk   ; 0.996 ; 1.583 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[22] ; i_IR_clk   ; 1.020 ; 1.619 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[23] ; i_IR_clk   ; 0.753 ; 1.325 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[24] ; i_IR_clk   ; 0.925 ; 1.529 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[25] ; i_IR_clk   ; 0.548 ; 1.102 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[26] ; i_IR_clk   ; 0.817 ; 1.385 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[27] ; i_IR_clk   ; 0.790 ; 1.372 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[28] ; i_IR_clk   ; 1.018 ; 1.606 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[29] ; i_IR_clk   ; 0.881 ; 1.468 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[30] ; i_IR_clk   ; 0.743 ; 1.317 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[31] ; i_IR_clk   ; 0.844 ; 1.424 ; Rise       ; i_IR_clk        ;
+; i_IR_enable    ; i_IR_clk   ; 0.423 ; 0.656 ; Rise       ; i_IR_clk        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; i_IR_data[*]   ; i_IR_clk   ; -0.012 ; -0.286 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[0]  ; i_IR_clk   ; -0.012 ; -0.286 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[1]  ; i_IR_clk   ; -0.518 ; -1.076 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[2]  ; i_IR_clk   ; -0.440 ; -0.981 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[3]  ; i_IR_clk   ; -0.661 ; -1.241 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[4]  ; i_IR_clk   ; -0.588 ; -1.147 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[5]  ; i_IR_clk   ; -0.508 ; -1.062 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[6]  ; i_IR_clk   ; -0.760 ; -1.351 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[7]  ; i_IR_clk   ; -0.582 ; -1.148 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[8]  ; i_IR_clk   ; -0.679 ; -1.255 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[9]  ; i_IR_clk   ; -0.743 ; -1.323 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[10] ; i_IR_clk   ; -0.701 ; -1.270 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[11] ; i_IR_clk   ; -0.668 ; -1.232 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[12] ; i_IR_clk   ; -0.590 ; -1.164 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[13] ; i_IR_clk   ; -0.376 ; -0.916 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[14] ; i_IR_clk   ; -0.786 ; -1.365 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[15] ; i_IR_clk   ; -0.488 ; -1.044 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[16] ; i_IR_clk   ; -0.614 ; -1.176 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[17] ; i_IR_clk   ; -0.571 ; -1.131 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[18] ; i_IR_clk   ; -0.803 ; -1.396 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[19] ; i_IR_clk   ; -0.578 ; -1.137 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[20] ; i_IR_clk   ; -0.627 ; -1.185 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[21] ; i_IR_clk   ; -0.789 ; -1.367 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[22] ; i_IR_clk   ; -0.810 ; -1.401 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[23] ; i_IR_clk   ; -0.547 ; -1.106 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[24] ; i_IR_clk   ; -0.713 ; -1.302 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[25] ; i_IR_clk   ; -0.349 ; -0.890 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[26] ; i_IR_clk   ; -0.613 ; -1.175 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[27] ; i_IR_clk   ; -0.584 ; -1.151 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[28] ; i_IR_clk   ; -0.807 ; -1.389 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[29] ; i_IR_clk   ; -0.668 ; -1.242 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[30] ; i_IR_clk   ; -0.537 ; -1.098 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[31] ; i_IR_clk   ; -0.634 ; -1.201 ; Rise       ; i_IR_clk        ;
+; i_IR_enable    ; i_IR_clk   ; 0.330  ; -0.014 ; Rise       ; i_IR_clk        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Clock to Output Times                                                             ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; o_IR_instruction[*]   ; i_IR_clk   ; 4.012 ; 4.143 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[0]  ; i_IR_clk   ; 3.395 ; 3.474 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[1]  ; i_IR_clk   ; 3.320 ; 3.360 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[2]  ; i_IR_clk   ; 3.351 ; 3.390 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[3]  ; i_IR_clk   ; 3.113 ; 3.146 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[4]  ; i_IR_clk   ; 3.275 ; 3.330 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[5]  ; i_IR_clk   ; 3.327 ; 3.366 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[6]  ; i_IR_clk   ; 3.331 ; 3.387 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[7]  ; i_IR_clk   ; 3.091 ; 3.124 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[8]  ; i_IR_clk   ; 3.369 ; 3.434 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[9]  ; i_IR_clk   ; 3.340 ; 3.400 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[10] ; i_IR_clk   ; 3.229 ; 3.253 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[11] ; i_IR_clk   ; 4.012 ; 4.143 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[12] ; i_IR_clk   ; 3.087 ; 3.120 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[13] ; i_IR_clk   ; 3.428 ; 3.520 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[14] ; i_IR_clk   ; 3.329 ; 3.369 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[15] ; i_IR_clk   ; 3.276 ; 3.332 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[16] ; i_IR_clk   ; 3.339 ; 3.378 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[17] ; i_IR_clk   ; 3.073 ; 3.105 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[18] ; i_IR_clk   ; 3.492 ; 3.560 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[19] ; i_IR_clk   ; 3.412 ; 3.478 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[20] ; i_IR_clk   ; 3.498 ; 3.556 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[21] ; i_IR_clk   ; 3.258 ; 3.316 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[22] ; i_IR_clk   ; 3.264 ; 3.319 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[23] ; i_IR_clk   ; 3.510 ; 3.578 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[24] ; i_IR_clk   ; 3.292 ; 3.354 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[25] ; i_IR_clk   ; 3.509 ; 3.562 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[26] ; i_IR_clk   ; 3.237 ; 3.304 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[27] ; i_IR_clk   ; 3.284 ; 3.344 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[28] ; i_IR_clk   ; 3.316 ; 3.357 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[29] ; i_IR_clk   ; 3.343 ; 3.384 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[30] ; i_IR_clk   ; 3.317 ; 3.349 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[31] ; i_IR_clk   ; 3.164 ; 3.183 ; Rise       ; i_IR_clk        ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                     ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; o_IR_instruction[*]   ; i_IR_clk   ; 3.014 ; 3.044 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[0]  ; i_IR_clk   ; 3.323 ; 3.398 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[1]  ; i_IR_clk   ; 3.256 ; 3.295 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[2]  ; i_IR_clk   ; 3.286 ; 3.323 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[3]  ; i_IR_clk   ; 3.053 ; 3.084 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[4]  ; i_IR_clk   ; 3.208 ; 3.261 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[5]  ; i_IR_clk   ; 3.263 ; 3.300 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[6]  ; i_IR_clk   ; 3.262 ; 3.316 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[7]  ; i_IR_clk   ; 3.031 ; 3.062 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[8]  ; i_IR_clk   ; 3.298 ; 3.361 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[9]  ; i_IR_clk   ; 3.270 ; 3.328 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[10] ; i_IR_clk   ; 3.168 ; 3.191 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[11] ; i_IR_clk   ; 3.953 ; 4.082 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[12] ; i_IR_clk   ; 3.027 ; 3.058 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[13] ; i_IR_clk   ; 3.357 ; 3.445 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[14] ; i_IR_clk   ; 3.265 ; 3.303 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[15] ; i_IR_clk   ; 3.210 ; 3.263 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[16] ; i_IR_clk   ; 3.275 ; 3.312 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[17] ; i_IR_clk   ; 3.014 ; 3.044 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[18] ; i_IR_clk   ; 3.422 ; 3.486 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[19] ; i_IR_clk   ; 3.341 ; 3.404 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[20] ; i_IR_clk   ; 3.427 ; 3.483 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[21] ; i_IR_clk   ; 3.191 ; 3.246 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[22] ; i_IR_clk   ; 3.198 ; 3.250 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[23] ; i_IR_clk   ; 3.439 ; 3.504 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[24] ; i_IR_clk   ; 3.224 ; 3.284 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[25] ; i_IR_clk   ; 3.438 ; 3.489 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[26] ; i_IR_clk   ; 3.172 ; 3.237 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[27] ; i_IR_clk   ; 3.217 ; 3.274 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[28] ; i_IR_clk   ; 3.252 ; 3.291 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[29] ; i_IR_clk   ; 3.279 ; 3.318 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[30] ; i_IR_clk   ; 3.254 ; 3.284 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[31] ; i_IR_clk   ; 3.106 ; 3.124 ; Rise       ; i_IR_clk        ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+;  i_IR_clk        ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -36.792             ;
+;  i_IR_clk        ; N/A   ; N/A  ; N/A      ; N/A     ; -36.792             ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; i_IR_data[*]   ; i_IR_clk   ; 1.861 ; 2.284 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[0]  ; i_IR_clk   ; 0.293 ; 0.452 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[1]  ; i_IR_clk   ; 1.319 ; 1.748 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[2]  ; i_IR_clk   ; 1.207 ; 1.619 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[3]  ; i_IR_clk   ; 1.556 ; 1.982 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[4]  ; i_IR_clk   ; 1.441 ; 1.862 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[5]  ; i_IR_clk   ; 1.307 ; 1.732 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[6]  ; i_IR_clk   ; 1.752 ; 2.178 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[7]  ; i_IR_clk   ; 1.465 ; 1.865 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[8]  ; i_IR_clk   ; 1.628 ; 2.054 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[9]  ; i_IR_clk   ; 1.734 ; 2.157 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[10] ; i_IR_clk   ; 1.682 ; 2.099 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[11] ; i_IR_clk   ; 1.606 ; 2.013 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[12] ; i_IR_clk   ; 1.466 ; 1.889 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[13] ; i_IR_clk   ; 1.076 ; 1.486 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[14] ; i_IR_clk   ; 1.784 ; 2.235 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[15] ; i_IR_clk   ; 1.257 ; 1.673 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[16] ; i_IR_clk   ; 1.490 ; 1.931 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[17] ; i_IR_clk   ; 1.419 ; 1.839 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[18] ; i_IR_clk   ; 1.837 ; 2.284 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[19] ; i_IR_clk   ; 1.424 ; 1.843 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[20] ; i_IR_clk   ; 1.497 ; 1.914 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[21] ; i_IR_clk   ; 1.769 ; 2.205 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[22] ; i_IR_clk   ; 1.861 ; 2.282 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[23] ; i_IR_clk   ; 1.369 ; 1.792 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[24] ; i_IR_clk   ; 1.698 ; 2.111 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[25] ; i_IR_clk   ; 1.050 ; 1.460 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[26] ; i_IR_clk   ; 1.497 ; 1.933 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[27] ; i_IR_clk   ; 1.453 ; 1.860 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[28] ; i_IR_clk   ; 1.801 ; 2.259 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[29] ; i_IR_clk   ; 1.590 ; 2.021 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[30] ; i_IR_clk   ; 1.356 ; 1.783 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[31] ; i_IR_clk   ; 1.547 ; 1.980 ; Rise       ; i_IR_clk        ;
+; i_IR_enable    ; i_IR_clk   ; 0.657 ; 0.767 ; Rise       ; i_IR_clk        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; i_IR_data[*]   ; i_IR_clk   ; 0.008  ; -0.084 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[0]  ; i_IR_clk   ; 0.008  ; -0.084 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[1]  ; i_IR_clk   ; -0.518 ; -1.076 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[2]  ; i_IR_clk   ; -0.440 ; -0.981 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[3]  ; i_IR_clk   ; -0.661 ; -1.241 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[4]  ; i_IR_clk   ; -0.588 ; -1.147 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[5]  ; i_IR_clk   ; -0.508 ; -1.062 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[6]  ; i_IR_clk   ; -0.760 ; -1.351 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[7]  ; i_IR_clk   ; -0.582 ; -1.148 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[8]  ; i_IR_clk   ; -0.679 ; -1.255 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[9]  ; i_IR_clk   ; -0.743 ; -1.323 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[10] ; i_IR_clk   ; -0.701 ; -1.270 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[11] ; i_IR_clk   ; -0.668 ; -1.232 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[12] ; i_IR_clk   ; -0.590 ; -1.164 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[13] ; i_IR_clk   ; -0.376 ; -0.890 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[14] ; i_IR_clk   ; -0.786 ; -1.365 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[15] ; i_IR_clk   ; -0.488 ; -1.044 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[16] ; i_IR_clk   ; -0.614 ; -1.176 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[17] ; i_IR_clk   ; -0.571 ; -1.131 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[18] ; i_IR_clk   ; -0.803 ; -1.396 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[19] ; i_IR_clk   ; -0.578 ; -1.137 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[20] ; i_IR_clk   ; -0.627 ; -1.185 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[21] ; i_IR_clk   ; -0.789 ; -1.367 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[22] ; i_IR_clk   ; -0.810 ; -1.401 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[23] ; i_IR_clk   ; -0.547 ; -1.106 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[24] ; i_IR_clk   ; -0.713 ; -1.302 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[25] ; i_IR_clk   ; -0.349 ; -0.863 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[26] ; i_IR_clk   ; -0.613 ; -1.175 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[27] ; i_IR_clk   ; -0.584 ; -1.151 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[28] ; i_IR_clk   ; -0.807 ; -1.389 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[29] ; i_IR_clk   ; -0.668 ; -1.242 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[30] ; i_IR_clk   ; -0.537 ; -1.098 ; Rise       ; i_IR_clk        ;
+;  i_IR_data[31] ; i_IR_clk   ; -0.634 ; -1.201 ; Rise       ; i_IR_clk        ;
+; i_IR_enable    ; i_IR_clk   ; 0.525  ; 0.381  ; Rise       ; i_IR_clk        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Clock to Output Times                                                             ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; o_IR_instruction[*]   ; i_IR_clk   ; 6.475 ; 6.571 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[0]  ; i_IR_clk   ; 5.748 ; 5.753 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[1]  ; i_IR_clk   ; 5.468 ; 5.500 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[2]  ; i_IR_clk   ; 5.502 ; 5.552 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[3]  ; i_IR_clk   ; 5.239 ; 5.210 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[4]  ; i_IR_clk   ; 5.519 ; 5.497 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[5]  ; i_IR_clk   ; 5.475 ; 5.508 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[6]  ; i_IR_clk   ; 5.629 ; 5.592 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[7]  ; i_IR_clk   ; 5.211 ; 5.187 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[8]  ; i_IR_clk   ; 5.685 ; 5.657 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[9]  ; i_IR_clk   ; 5.650 ; 5.597 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[10] ; i_IR_clk   ; 5.336 ; 5.361 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[11] ; i_IR_clk   ; 6.475 ; 6.571 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[12] ; i_IR_clk   ; 5.201 ; 5.180 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[13] ; i_IR_clk   ; 5.732 ; 5.748 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[14] ; i_IR_clk   ; 5.483 ; 5.514 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[15] ; i_IR_clk   ; 5.508 ; 5.492 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[16] ; i_IR_clk   ; 5.477 ; 5.535 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[17] ; i_IR_clk   ; 5.178 ; 5.154 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[18] ; i_IR_clk   ; 5.759 ; 5.816 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[19] ; i_IR_clk   ; 5.749 ; 5.712 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[20] ; i_IR_clk   ; 5.743 ; 5.799 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[21] ; i_IR_clk   ; 5.488 ; 5.475 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[22] ; i_IR_clk   ; 5.487 ; 5.466 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[23] ; i_IR_clk   ; 5.784 ; 5.842 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[24] ; i_IR_clk   ; 5.540 ; 5.526 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[25] ; i_IR_clk   ; 5.763 ; 5.810 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[26] ; i_IR_clk   ; 5.406 ; 5.426 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[27] ; i_IR_clk   ; 5.527 ; 5.513 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[28] ; i_IR_clk   ; 5.463 ; 5.499 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[29] ; i_IR_clk   ; 5.498 ; 5.530 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[30] ; i_IR_clk   ; 5.466 ; 5.484 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[31] ; i_IR_clk   ; 5.203 ; 5.230 ; Rise       ; i_IR_clk        ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                     ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; Data Port             ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------------+------------+-------+-------+------------+-----------------+
+; o_IR_instruction[*]   ; i_IR_clk   ; 3.014 ; 3.044 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[0]  ; i_IR_clk   ; 3.323 ; 3.398 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[1]  ; i_IR_clk   ; 3.256 ; 3.295 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[2]  ; i_IR_clk   ; 3.286 ; 3.323 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[3]  ; i_IR_clk   ; 3.053 ; 3.084 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[4]  ; i_IR_clk   ; 3.208 ; 3.261 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[5]  ; i_IR_clk   ; 3.263 ; 3.300 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[6]  ; i_IR_clk   ; 3.262 ; 3.316 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[7]  ; i_IR_clk   ; 3.031 ; 3.062 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[8]  ; i_IR_clk   ; 3.298 ; 3.361 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[9]  ; i_IR_clk   ; 3.270 ; 3.328 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[10] ; i_IR_clk   ; 3.168 ; 3.191 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[11] ; i_IR_clk   ; 3.953 ; 4.082 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[12] ; i_IR_clk   ; 3.027 ; 3.058 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[13] ; i_IR_clk   ; 3.357 ; 3.445 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[14] ; i_IR_clk   ; 3.265 ; 3.303 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[15] ; i_IR_clk   ; 3.210 ; 3.263 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[16] ; i_IR_clk   ; 3.275 ; 3.312 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[17] ; i_IR_clk   ; 3.014 ; 3.044 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[18] ; i_IR_clk   ; 3.422 ; 3.486 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[19] ; i_IR_clk   ; 3.341 ; 3.404 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[20] ; i_IR_clk   ; 3.427 ; 3.483 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[21] ; i_IR_clk   ; 3.191 ; 3.246 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[22] ; i_IR_clk   ; 3.198 ; 3.250 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[23] ; i_IR_clk   ; 3.439 ; 3.504 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[24] ; i_IR_clk   ; 3.224 ; 3.284 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[25] ; i_IR_clk   ; 3.438 ; 3.489 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[26] ; i_IR_clk   ; 3.172 ; 3.237 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[27] ; i_IR_clk   ; 3.217 ; 3.274 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[28] ; i_IR_clk   ; 3.252 ; 3.291 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[29] ; i_IR_clk   ; 3.279 ; 3.318 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[30] ; i_IR_clk   ; 3.254 ; 3.284 ; Rise       ; i_IR_clk        ;
+;  o_IR_instruction[31] ; i_IR_clk   ; 3.106 ; 3.124 ; Rise       ; i_IR_clk        ;
++-----------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                           ;
++----------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin                  ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++----------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; o_IR_instruction[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[7]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[8]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[9]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[10] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[11] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[12] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[13] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[14] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[15] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[16] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[17] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[18] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[19] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[20] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[21] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[22] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[23] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[24] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[25] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[26] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[27] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[28] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[29] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[30] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; o_IR_instruction[31] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++----------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; i_IR_data[0]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_clk                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_enable             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[1]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[2]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[3]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[4]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[5]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[6]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[7]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[8]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[9]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[10]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[11]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[12]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[13]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[14]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[15]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[16]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[17]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[18]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[19]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[20]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[21]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[22]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[23]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[24]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[25]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[26]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[27]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[28]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[29]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[30]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; i_IR_data[31]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++----------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                  ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; o_IR_instruction[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.33 V              ; -0.00341 V          ; 0.17 V                               ; 0.084 V                              ; 3.33e-09 s                  ; 3.24e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.33 V             ; -0.00341 V         ; 0.17 V                              ; 0.084 V                             ; 3.33e-09 s                 ; 3.24e-09 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.36 V              ; -0.00946 V          ; 0.111 V                              ; 0.027 V                              ; 6.46e-10 s                  ; 6.2e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.36 V             ; -0.00946 V         ; 0.111 V                             ; 0.027 V                             ; 6.46e-10 s                 ; 6.2e-10 s                  ; Yes                       ; Yes                       ;
+; o_IR_instruction[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[16] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[17] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[18] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[19] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[20] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[21] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[22] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[23] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[24] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[25] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[26] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.36 V              ; -0.00946 V          ; 0.111 V                              ; 0.027 V                              ; 6.46e-10 s                  ; 6.2e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.36 V             ; -0.00946 V         ; 0.111 V                             ; 0.027 V                             ; 6.46e-10 s                 ; 6.2e-10 s                  ; Yes                       ; Yes                       ;
+; o_IR_instruction[27] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[28] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[29] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[30] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[31] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.25e-07 V                   ; 2.35 V              ; -0.0111 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-10 s                  ; 8.04e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.25e-07 V                  ; 2.35 V             ; -0.0111 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-10 s                 ; 8.04e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
++----------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++----------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                  ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; o_IR_instruction[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.64 V              ; -0.011 V            ; 0.212 V                              ; 0.198 V                              ; 2.38e-09 s                  ; 2.29e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.64 V             ; -0.011 V           ; 0.212 V                             ; 0.198 V                             ; 2.38e-09 s                 ; 2.29e-09 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.72 V              ; -0.0408 V           ; 0.163 V                              ; 0.075 V                              ; 4.51e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.72 V             ; -0.0408 V          ; 0.163 V                             ; 0.075 V                             ; 4.51e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[16] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[17] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[18] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[19] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[20] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[21] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[22] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[23] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[24] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[25] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[26] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.72 V              ; -0.0408 V           ; 0.163 V                              ; 0.075 V                              ; 4.51e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.72 V             ; -0.0408 V          ; 0.163 V                             ; 0.075 V                             ; 4.51e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[27] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; o_IR_instruction[28] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[29] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[30] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; o_IR_instruction[31] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-08 V                   ; 2.71 V              ; -0.0349 V           ; 0.253 V                              ; 0.069 V                              ; 4.96e-10 s                  ; 5.19e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-08 V                  ; 2.71 V             ; -0.0349 V          ; 0.253 V                             ; 0.069 V                             ; 4.96e-10 s                 ; 5.19e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
++----------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 33    ; 33   ;
+; Unconstrained Input Port Paths  ; 64    ; 64   ;
+; Unconstrained Output Ports      ; 32    ; 32   ;
+; Unconstrained Output Port Paths ; 32    ; 32   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+    Info: Processing started: Thu May 23 17:06:53 2019
+Info: Command: quartus_sta InstrucReg -c InstrucReg
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'InstrucReg.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name i_IR_clk i_IR_clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -35.000 i_IR_clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -35.000 i_IR_clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -36.792 i_IR_clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4638 megabytes
+    Info: Processing ended: Thu May 23 17:06:55 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
