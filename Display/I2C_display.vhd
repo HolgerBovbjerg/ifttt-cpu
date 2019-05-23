@@ -31,7 +31,7 @@ end entity;
 
 architecture rtl of I2C_display is
 type init_array is array (0 to 27) of std_logic_vector(7 downto 0); -- Initialisation data.
-type char_array is array (0 to 159) of std_logic_vector(7 downto 0); -- Stores data that represents the 28 letters (uppercase only so far) in the alphabet + numbers 0-9.
+type char_array is array (0 to 163) of std_logic_vector(7 downto 0); -- Stores data that represents the 28 letters (uppercase only so far) in the alphabet + numbers 0-9.
 type data_array is array (0 to 32) of std_logic_vector(7 downto 0); -- Stores the input data that is to be printed.
 type machine is (ready, receive, init, CharSelect, transmit, reset); 
 
@@ -169,7 +169,6 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 					r_buffer(buffer_ptr) <= i_display_data;
 					buffer_ptr <= buffer_ptr+1;
 					read_cnt <= read_cnt+1;
-					--begin_receive <= '1';
 					state <= receive;
 				else
 					state <= ready;
@@ -177,8 +176,9 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 ----------------------------------Receive----------------------------------------			
 			when receive =>
 				if (i_display_write_enable = '1' and buffer_ptr < 34 and begin_init = '0' and read_cnt = 0) then
-				-- if write_enable is high, buffer isn’t full and driver hasn’t signaled to start sending 
-				-- initialisation data, load input data into input buffer
+				-- if write_enable is high, buffer isn’t full, driver hasn’t signaled to start sending 
+				-- initialisation data and it is the first clock cycle that write enable is high,
+				-- load input data into input buffer
 					r_buffer(buffer_ptr) <= i_display_data;
 					read_cnt <= read_cnt+1;
 					buffer_ptr <= buffer_ptr+1;
@@ -188,7 +188,8 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 					state <= init;
 					buffer_ptr <= buffer_ptr-1;
 				else
-				-- If write_enable is low but still receiving data, remain in "receive" state
+				-- if write enable is low but not done sending data, remain in receive state. 
+				-- or if write enable is high, reset if it's the third cycle. Else increment read
 					if (read_cnt = 2) then
 						read_cnt <= 0;
 					else
