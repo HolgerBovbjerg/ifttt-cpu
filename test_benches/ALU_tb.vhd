@@ -45,7 +45,7 @@ ARCHITECTURE behavior OF ALU_tb IS
    signal o_ALU_zero_flag : std_logic;
 
    -- Clock period definitions
-   constant i_ALU_clk_period : time := 10 ns;
+   constant c_ALU_clk_period : time := 10 ns;
  
 BEGIN
  
@@ -69,9 +69,9 @@ BEGIN
    i_ALU_clk_process :process
    begin
 		i_ALU_clk <= '0';
-		wait for i_ALU_clk_period/2;
+		wait for c_ALU_clk_period/2;
 		i_ALU_clk <= '1';
-		wait for i_ALU_clk_period/2;
+		wait for c_ALU_clk_period/2;
    end process;
  
 
@@ -85,64 +85,64 @@ BEGIN
 		i_ALU_B <= x"d1";
 		i_ALU_sel <= x"1";
 		i_ALU_signed <= '0';
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
 		i_ALU_signed <= '1';
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
 		i_ALU_signed <= '0';
 		i_ALU_carry <= '1';
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
 		i_ALU_carry <= '0';
 		i_ALU_sel <= x"2";
 		i_ALU_signed <= '0';
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
 		i_ALU_signed <= '1';
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
 		i_ALU_A <= x"00";
 		i_ALU_B <= x"00";
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
 		i_ALU_sel <= x"1";
 		i_ALU_A <= x"90";
 		i_ALU_B <= x"90";
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
 		i_ALU_signed <= '0';
 		i_ALU_A <= x"31";
 		i_ALU_B <= x"03";
 		i_ALU_sel <= x"0";
-		wait for i_ALU_clk_period;
+		wait for c_ALU_clk_period;
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*6;
+		wait for c_ALU_clk_period*6;
 		i_ALU_enable <= '1'; 
 		
 		for i in 0 to 15 loop
 			i_ALU_sel <= std_logic_vector(unsigned(i_ALU_sel) + 1);
-			wait for i_ALU_clk_period;
+			wait for c_ALU_clk_period;
 			i_ALU_enable <= '0';
-			wait for i_ALU_clk_period*6;
+			wait for c_ALU_clk_period*6;
 			i_ALU_enable <= '1'; 
 		end loop;
 		
@@ -150,11 +150,10 @@ BEGIN
 		i_ALU_B <= x"00";
 		-- hold reset state for 100 ns.
 		i_ALU_enable <= '0';
-		wait for i_ALU_clk_period*10;
+		wait for c_ALU_clk_period*10;
 		
 		wait;
 		
    end process;
 
 END;
-

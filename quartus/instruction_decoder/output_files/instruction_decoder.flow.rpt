@@ -1,5 +1,5 @@
 Flow report for instruction_decoder
-Mon Apr 15 09:58:39 2019
+Thu May 23 14:57:49 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Mon Apr 15 09:58:39 2019      ;
+; Flow Status                        ; Successful - Thu May 23 14:57:49 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; instruction_decoder                        ;
 ; Top-level Entity Name              ; instruction_decoder                        ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F256C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 60 / 15,408 ( < 1 % )                      ;
-;     Total combinational functions  ; 5 / 15,408 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 59 / 15,408 ( < 1 % )                      ;
-; Total registers                    ; 59                                         ;
-; Total pins                         ; 93 / 169 ( 55 % )                          ;
+; Total logic elements               ; 121 / 15,408 ( < 1 % )                     ;
+;     Total combinational functions  ; 81 / 15,408 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 81 / 15,408 ( < 1 % )                      ;
+; Total registers                    ; 81                                         ;
+; Total pins                         ; 99 / 169 ( 59 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
@@ -64,35 +64,35 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/15/2019 09:58:24 ;
+; Start date & time ; 05/23/2019 14:57:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; instruction_decoder ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                     ;
-+--------------------------------------+-----------------------------------------------+---------------+-------------+-----------------+
-; Assignment Name                      ; Value                                         ; Default Value ; Entity Name ; Section Id      ;
-+--------------------------------------+-----------------------------------------------+---------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 172309000256012.155531510402232               ; --            ; --          ; --              ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                            ; --            ; --          ; inst_decoder_tb ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; inst_decoder_tb                               ; --            ; --          ; eda_simulation  ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                          ; --            ; --          ; eda_simulation  ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                        ; <None>        ; --          ; --              ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                               ; --            ; --          ; eda_simulation  ;
-; EDA_TEST_BENCH_FILE                  ; ../../test_benches/instruction_decoder_tb.vhd ; --            ; --          ; inst_decoder_tb ;
-; EDA_TEST_BENCH_MODULE_NAME           ; inst_decoder_tb                               ; --            ; --          ; inst_decoder_tb ;
-; EDA_TEST_BENCH_NAME                  ; inst_decoder_tb                               ; --            ; --          ; eda_simulation  ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1 ms                                          ; --            ; --          ; inst_decoder_tb ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                            ; --            ; --          ; --              ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                             ; --            ; --          ; --              ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                          ; --            ; --          ; --              ;
-; PARTITION_COLOR                      ; 16764057                                      ; --            ; --          ; Top             ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                         ; --            ; --          ; Top             ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                        ; --            ; --          ; Top             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                                  ; --            ; --          ; --              ;
-+--------------------------------------+-----------------------------------------------+---------------+-------------+-----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                            ;
++--------------------------------------+-----------------------------------------------+---------------+-------------+------------------------+
+; Assignment Name                      ; Value                                         ; Default Value ; Entity Name ; Section Id             ;
++--------------------------------------+-----------------------------------------------+---------------+-------------+------------------------+
+; COMPILER_SIGNATURE_ID                ; 172309000256012.155861625312244               ; --            ; --          ; --                     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                            ; --            ; --          ; instruction_decoder_tb ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; instruction_decoder_tb                        ; --            ; --          ; eda_simulation         ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                          ; --            ; --          ; eda_simulation         ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                        ; <None>        ; --          ; --                     ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                               ; --            ; --          ; eda_simulation         ;
+; EDA_TEST_BENCH_FILE                  ; ../../test_benches/instruction_decoder_tb.vhd ; --            ; --          ; instruction_decoder_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; instruction_decoder_tb                        ; --            ; --          ; instruction_decoder_tb ;
+; EDA_TEST_BENCH_NAME                  ; instruction_decoder_tb                        ; --            ; --          ; eda_simulation         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 2 us                                          ; --            ; --          ; instruction_decoder_tb ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                            ; --            ; --          ; --                     ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                             ; --            ; --          ; --                     ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                          ; --            ; --          ; --                     ;
+; PARTITION_COLOR                      ; 16764057                                      ; --            ; --          ; Top                    ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                         ; --            ; --          ; Top                    ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                        ; --            ; --          ; Top                    ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                  ; --            ; --          ; --                     ;
++--------------------------------------+-----------------------------------------------+---------------+-------------+------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -100,12 +100,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4673 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:05     ; 1.0                     ; 4951 MB             ; 00:00:05                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4548 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4673 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 4985 MB             ; 00:00:06                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4600 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4552 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:11                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

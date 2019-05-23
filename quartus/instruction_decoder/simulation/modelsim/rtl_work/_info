@@ -3,32 +3,32 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\instruction_decoder\simulation\modelsim
-Einstruction_decoder
-Z1 w1555312529
-Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Pconstants
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 w1558594525
 Z4 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\instruction_decoder\simulation\modelsim
-Z5 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
-Z6 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
+Z5 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd
+Z6 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd
 l0
-L13
-VEKK;OfX@G00@@HWYomGME1
+L9
+V;A5^f4Jll=3aJe@=bd@GF2
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1555318643.778000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
-Z10 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
+Z8 !s108 1558617454.794000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd|
+Z10 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/constants.vhd|
 Z11 o-93 -work work -O0
 Z12 tExplicit 1
-!s100 e03d_2ODgQ9<6dMNJ11L=2
+!s100 nSXz]ho^eof4YR@a5L_nh0
 !i10b 1
-Abehavioral
+Bbody
+Z13 DPx4 work 9 constants 0 22 ;A5^f4Jll=3aJe@=bd@GF2
+R1
 R2
-R3
-DEx4 work 19 instruction_decoder 0 22 EKK;OfX@G00@@HWYomGME1
-l33
-L31
-V7jkmi34I4CPQVk<cm<QI<3
+l0
+L64
+V_d;4FMe?djMg5nTnmVbCk2
 R7
 31
 R8
@@ -36,16 +36,56 @@ R9
 R10
 R11
 R12
-!s100 93hbU2^PafGblg3hVnn=F0
+nbody
+!s100 Mdi_4WbdiZP[kaZ8kAIEH1
+!i10b 1
+Einstruction_decoder
+R3
+R13
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R1
+R2
+R4
+Z15 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
+Z16 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd
+l0
+L8
+V=_fcL^6970HdHZEfN@8:33
+R7
+31
+Z17 !s108 1558617454.886000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
+Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/instruction_decoder.vhd|
+R11
+R12
+!s100 aES4`8Q2C?Me0SN4?DQXT0
+!i10b 1
+Abehavioral
+R13
+R14
+R1
+R2
+DEx4 work 19 instruction_decoder 0 22 =_fcL^6970HdHZEfN@8:33
+l35
+L31
+V<Zh?i9`z6d0OPz]L=NfA93
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 HC7zXBYW=N`e4fPdDR9^12
 !i10b 1
 Einstruction_decoder_tb
-Z13 w1555316331
-R3
+Z20 w1558617445
 R2
-Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R1
+R14
 R4
-Z15 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd
-Z16 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd
+Z21 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd
+Z22 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd
 l0
 L5
 V[5F5gO8@H>VK_=i7MWZT20
@@ -53,25 +93,25 @@ V[5F5gO8@H>VK_=i7MWZT20
 R7
 31
 !i10b 1
-Z17 !s108 1555318643.863000
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd|
-Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd|
+Z23 !s108 1558617454.974000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd|
+Z25 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/instruction_decoder/../../test_benches/instruction_decoder_tb.vhd|
 R11
 R12
 Abehavior
-R3
 R2
+R1
 R14
 DEx4 work 22 instruction_decoder_tb 0 22 [5F5gO8@H>VK_=i7MWZT20
-l50
+l60
 L8
-VP2dXnEi[^;8Hf0`6H;Ji]2
-!s100 FhS:8ckUnP35kf[L2m4OA0
+VkY9C>6zgLkW`kkP06I6oX3
+!s100 BKTohf^f`A[[E1S=9cNA52
 R7
 31
 !i10b 1
-R17
-R18
-R19
+R23
+R24
+R25
 R11
 R12
