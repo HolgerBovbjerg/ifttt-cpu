@@ -41,32 +41,42 @@ ARCHITECTURE behavior OF branch_control_tb IS
  
     COMPONENT branch_control
     PORT(
-         i_CLK : IN  std_logic;
-         i_BRANCH_CONTROL : IN  std_logic_vector(2 downto 0);
-         i_ZERO_FLAG : IN  std_logic;
-         i_OVERFLOW_FLAG : IN  std_logic;
-         i_NEGATIVE_FLAG : IN  std_logic;
-         i_CARRY_FLAG : IN  std_logic;
-         i_ADDRESS : IN  std_logic_vector(15 downto 0);
-         o_ADDRESS : OUT  std_logic_vector(15 downto 0);
-         o_PC_LOAD : OUT  std_logic
+         i_CLK : in  STD_LOGIC;
+			i_PC_REG_ENABLE : in  STD_LOGIC;
+			i_BRANCH_CONTROL : in  STD_LOGIC_VECTOR (2 downto 0);
+			i_PC_INTERRUPT_set : in STD_LOGIC;
+			o_INTERRUPT_enable : out STD_LOGIC;
+			i_SAVE_PC : in STD_LOGIC;
+			i_PC_ADDRESS : in  STD_LOGIC_VECTOR (9 downto 0);
+			i_ZERO_FLAG : in  STD_LOGIC;
+			i_OVERFLOW_FLAG : in  STD_LOGIC;
+			i_NEGATIVE_FLAG : in  STD_LOGIC;
+			i_CARRY_FLAG : in  STD_LOGIC;
+			i_ADDRESS : in  STD_LOGIC_VECTOR (9 downto 0);
+			o_ADDRESS : out  STD_LOGIC_VECTOR (9 downto 0);
+			o_PC_LOAD : out  STD_LOGIC
         );
     END COMPONENT;
     
 
    --Inputs
    signal i_CLK : std_logic := '0';
+	signal i_PC_REG_ENABLE : STD_LOGIC := '0'; 
    signal i_BRANCH_CONTROL : std_logic_vector(2 downto 0) := (others => '0');
+	signal i_PC_INTERRUPT_set : STD_LOGIC := '0';
+	signal i_SAVE_PC : STD_LOGIC := '0';
+	signal i_PC_ADDRESS : STD_LOGIC_VECTOR (9 downto 0) := (others => '0');
    signal i_ZERO_FLAG : std_logic := '0';
    signal i_OVERFLOW_FLAG : std_logic := '0';
    signal i_NEGATIVE_FLAG : std_logic := '0';
    signal i_CARRY_FLAG : std_logic := '0';
-   signal i_ADDRESS : std_logic_vector(15 downto 0) := (others => '0');
+   signal i_ADDRESS : std_logic_vector(9 downto 0) := (others => '0');
 
  	--Outputs
-   signal o_ADDRESS : std_logic_vector(15 downto 0);
+   signal o_ADDRESS : std_logic_vector(9 downto 0);
    signal o_PC_LOAD : std_logic;
-
+	signal o_INTERRUPT_enable : STD_LOGIC;
+	
    -- Clock period definitions
    constant i_CLK_period : time := 10 ns;
  
@@ -75,14 +85,19 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: branch_control PORT MAP (
           i_CLK => i_CLK,
+			 i_PC_REG_ENABLE => i_PC_REG_ENABLE,
           i_BRANCH_CONTROL => i_BRANCH_CONTROL,
+			 i_PC_INTERRUPT_set => i_PC_INTERRUPT_set,
+			 i_SAVE_PC => i_SAVE_PC,
+			 i_PC_ADDRESS => i_PC_ADDRESS,
           i_ZERO_FLAG => i_ZERO_FLAG,
           i_OVERFLOW_FLAG => i_OVERFLOW_FLAG,
           i_NEGATIVE_FLAG => i_NEGATIVE_FLAG,
           i_CARRY_FLAG => i_CARRY_FLAG,
           i_ADDRESS => i_ADDRESS,
           o_ADDRESS => o_ADDRESS,
-          o_PC_LOAD => o_PC_LOAD
+          o_PC_LOAD => o_PC_LOAD,
+			 o_INTERRUPT_enable => o_INTERRUPT_enable
         );
 
    -- Clock process definitions
@@ -100,32 +115,31 @@ BEGIN
    begin		
       -- hold reset state for 100 ns.
       wait for 100 ns;
-
-      -- insert stimulus here 
 		
 		-- Test no action
-		i_ADDRESS <= x"f00f";
+		i_PC_ADDRESS <= "0000111100";
+		i_ADDRESS <= "0000100111";
 		i_BRANCH_CONTROL <= "000";
 		wait for i_CLK_period*10;
 		
 		-- Test jump 
-		i_ADDRESS <= x"000f";
+		i_ADDRESS <= "0000100000";
 		i_BRANCH_CONTROL <= "001";
 		wait for i_CLK_period*10;
 		i_BRANCH_CONTROL <= "000";
 		wait for i_CLK_period*10;
 		
-		-- Test zero branch
-		i_ADDRESS <= x"00f0";
+		-- Test carry branch
+		i_ADDRESS <= "0000110000";
 		i_BRANCH_CONTROL <= "010";
 		wait for i_CLK_period*10;
-		i_ZERO_FLAG <= '1';
+		i_CARRY_FLAG <= '1';
 		wait for i_CLK_period*10;
-		i_ZERO_FLAG <= '0';
+		i_CARRY_FLAG <= '0';
 		wait for i_CLK_period*10;
 		
 		-- Test overflow branch
-		i_ADDRESS <= x"0f00";
+		i_ADDRESS <= "1001100000";
 		i_BRANCH_CONTROL <= "011";
 		wait for i_CLK_period*10;
 		i_OVERFLOW_FLAG <= '1';
@@ -134,7 +148,7 @@ BEGIN
 		wait for i_CLK_period*10;
 		
 		-- Test negative branch
-		i_ADDRESS <= x"f000"; 
+		i_ADDRESS <= "0000100100"; 
 		i_BRANCH_CONTROL <= "100";
 		wait for i_CLK_period*10;
 		i_NEGATIVE_FLAG <= '1';
@@ -142,16 +156,36 @@ BEGIN
 		i_NEGATIVE_FLAG <= '0';
 		wait for i_CLK_period*10;
 		
-		-- Test carry branch
-		i_ADDRESS <= x"ffff";
+		-- Test zero branch
+		i_ADDRESS <= "0000000111";
 		i_BRANCH_CONTROL <= "101";
 		wait for i_CLK_period*10;
-		i_CARRY_FLAG <= '1';
+		i_ZERO_FLAG <= '1';
+		wait for i_CLK_period*10;
+		i_ZERO_FLAG <= '0';
+		wait for i_CLK_period*10;
+		
+		-- Test interrupt
+		i_SAVE_PC <= '1';
+		i_BRANCH_CONTROL <= "000";
+		wait for i_CLK_period*10;
+		i_SAVE_PC <= '0';
+		i_PC_INTERRUPT_set <= '1';
+		wait for i_CLK_period*5;
+      i_PC_INTERRUPT_set <= '0';		
+		wait for i_CLK_period*5;
+		
+		-- Test carry branch
+		i_ADDRESS <= "0000110110";
+		i_BRANCH_CONTROL <= "110";
 		wait for i_CLK_period*10;
 		i_CARRY_FLAG <= '0';
 		wait for i_CLK_period*10;
-
-      wait;
+		
+		i_BRANCH_CONTROL <= "000";
+		wait for i_CLK_period*10;
+		
+		wait;
    end process;
 
 END;

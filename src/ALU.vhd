@@ -156,7 +156,7 @@ begin
 			-- Overflow flag
 			case(i_ALU_sel) is 
 				when OPCODE_ADD =>
-					if(i_ALU_A(7) = i_ALU_B(7)) then -- Test for subtraction overflow
+					if(i_ALU_A(7) = i_ALU_B(7)) then -- Test for addition overflow
 						if(i_ALU_A(7) /= r_ALU_Result(7)) then
 							r_ALU_overflow_flag <= '1';
 						else 
@@ -166,7 +166,7 @@ begin
 						r_ALU_overflow_flag <= '0';	
 					end if;
 				when OPCODE_SUB =>
-					if(i_ALU_A(7) /= i_ALU_B(7)) then -- Test for addition overflow
+					if(i_ALU_A(7) /= i_ALU_B(7)) then -- Test for subtraction overflow
 						if(i_ALU_A(7) /= r_ALU_Result(7)) then
 							r_ALU_overflow_flag <= '1';
 						else 

@@ -48,6 +48,15 @@
 # Loading work.alu(behavioral)
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: holge  Hostname: HSB-XPS15  ProcessID: 1340
+# 
+#           Attempting to use alternate WLF file "./wlftc1bhi0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftc1bhi0
+# 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals

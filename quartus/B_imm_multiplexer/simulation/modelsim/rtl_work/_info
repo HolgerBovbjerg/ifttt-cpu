@@ -15,7 +15,7 @@ L4
 V]B2k4iFNfGh;4j4kW7MkD2
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1558595653.925000
+Z8 !s108 1558638479.524000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/B_imm_multiplexer.vhd|
 Z10 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/B_imm_multiplexer.vhd|
 Z11 o-93 -work work -O0
@@ -39,7 +39,7 @@ R12
 !s100 GOzbNcgLlXdQ2e5LOCMX70
 !i10b 1
 Eb_imm_multiplexer_tb
-Z13 w1558595645
+Z13 w1558633223
 Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R2
 R3
@@ -53,7 +53,7 @@ V1AEfE4e=89XALm;V2J@Xb3
 R7
 31
 !i10b 1
-Z17 !s108 1558595654.009000
+Z17 !s108 1558638479.672000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/B_imm_multiplexer/../../test_benches/B_imm_multiplexer_tb.vhd|
 Z19 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/B_imm_multiplexer/../../test_benches/B_imm_multiplexer_tb.vhd|
 R11
@@ -63,10 +63,10 @@ R14
 R2
 R3
 DEx4 work 20 b_imm_multiplexer_tb 0 22 1AEfE4e=89XALm;V2J@Xb3
-l31
+l30
 L9
-V[jGTeGXk>VcjNVU8dR9X[1
-!s100 flA5_a<5EJPolEd=fT9k`2
+VMka4=@[Ofj4f]nFaO2>:j3
+!s100 A?57nAi@:Q0N9UkeJ=7?Y3
 R7
 31
 !i10b 1
