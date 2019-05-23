@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu May 23 12:57:40 2019
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
+Revision Name : Display
+Top-level Entity Name : Display_driver
+Family : Cyclone III
+Device : EP3C16F484C6
+Timing Models : Final
+Total logic elements : 1,061 / 15,408 ( 7 % )
+    Total combinational functions : 1,000 / 15,408 ( 6 % )
+    Dedicated logic registers : 498 / 15,408 ( 3 % )
+Total registers : 498
+Total pins : 15 / 347 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
