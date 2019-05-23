@@ -43,6 +43,7 @@ constant Newline:		std_logic_vector(7 downto 0) := x"0A";
 constant Space:		std_logic_vector(7 downto 0) := x"20";
 constant Colon:		std_logic_vector(7 downto 0) := x"3A";
 constant Unknown:		std_logic_vector(7 downto 0) := x"3F";
+constant Exclamation:	std_logic_vector (7 downto) := x"21";
 
 end display_constants;
 package body display_constants is
