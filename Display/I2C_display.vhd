@@ -31,7 +31,7 @@ end entity;
 
 architecture rtl of I2C_display is
 type init_array is array (0 to 27) of std_logic_vector(7 downto 0); -- Initialisation data.
-type char_array is array (0 to 163) of std_logic_vector(7 downto 0); -- Stores data that represents the 28 letters (uppercase only so far) in the alphabet + numbers 0-9.
+type char_array is array (0 to 167) of std_logic_vector(7 downto 0); -- Stores data that represents the 28 letters (uppercase only so far) in the alphabet + numbers 0-9.
 type data_array is array (0 to 32) of std_logic_vector(7 downto 0); -- Stores the input data that is to be printed.
 type machine is (ready, receive, init, CharSelect, transmit, reset); 
 
@@ -82,7 +82,8 @@ signal r_chars : char_array :=(
 	x"2D", x"29", x"0D", x"09", -- Space 			148-151
 	x"3D", x"39", x"AD", x"A9", -- Colon			152-155
 	x"2D", x"29", x"1D", x"19", -- Exclamation 	156-159
-	x"3D", x"39", x"FD", x"F9", -- Unknown			160-163
+	x"DD", x"D9", x"FD", x"F9", -- Degree			160-163
+	x"3D", x"39", x"FD", x"F9", -- Unknown			164-167
 	others => x"00");
 
 constant divider					: integer := (input_clk/trigger_clk);
@@ -298,8 +299,10 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 						char_ptr <= 152;
 					when Exclamation =>
 						char_ptr <= 156;
-					when others =>
+					when Degree =>
 						char_ptr <= 160;
+					when others =>
+						char_ptr <= 164;
 				end case;
 -----------------------------------Transmit--------------------------------------	
 			when transmit =>
