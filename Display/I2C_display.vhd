@@ -31,7 +31,7 @@ end entity;
 
 architecture rtl of I2C_display is
 type init_array is array (0 to 27) of std_logic_vector(7 downto 0); -- Initialisation data.
-type char_array is array (0 to 159) of std_logic_vector(7 downto 0); -- Stores data that represents the 28 letters (uppercase only so far) in the alphabet + numbers 0-9.
+type char_array is array (0 to 163) of std_logic_vector(7 downto 0); -- Stores data that represents the 28 letters (uppercase only so far) in the alphabet + numbers 0-9.
 type data_array is array (0 to 32) of std_logic_vector(7 downto 0); -- Stores the input data that is to be printed.
 type machine is (ready, receive, init, CharSelect, transmit, reset); 
 
@@ -78,10 +78,11 @@ signal r_chars : char_array :=(
 	x"3D", x"39", x"7D", x"79", -- 7 132-135
 	x"3D", x"39", x"8D", x"89", -- 8 136-139
 	x"3D", x"39", x"9D", x"99", -- 9 140-143
-	x"CC", x"C8", x"0C", x"08", -- New line 	144-147		(hex 1 to 2), carriage return (hex 3 to 4)
-	x"2D", x"29", x"0D", x"09", -- Space 		148-151
-	x"3D", x"39", x"AD", x"A9", -- Colon		152-155
-	x"3D", x"39", x"FD", x"F9", -- Unknown		156-159
+	x"CC", x"C8", x"0C", x"08", -- New line 		144-147		(hex 1 to 2), carriage return (hex 3 to 4)
+	x"2D", x"29", x"0D", x"09", -- Space 			148-151
+	x"3D", x"39", x"AD", x"A9", -- Colon			152-155
+	x"2D", x"29", x"1D", x"19", -- Exclamation 	156-159
+	x"3D", x"39", x"FD", x"F9", -- Unknown			160-163
 	others => x"00");
 
 constant divider					: integer := (input_clk/trigger_clk);
@@ -96,6 +97,7 @@ signal char_ptr					: integer := 0;
 signal buffer_ptr					: integer := 0;
 signal print_ptr					: integer := 0;
 signal init_ptr					: integer := 0;
+signal read_cnt					: integer := 0;
 signal delay_cnt					: integer range 0 to divider;
 signal begin_receive				: std_logic := '0';
 signal begin_init					: std_logic := '0';
@@ -107,7 +109,7 @@ process(all)
 begin
 
 if (rising_edge(i_display_clock) and i_display_enable = '1') then
-	if (i_display_reset = '0') then
+	if (i_display_reset = '1') then
 		char_ptr <= 0;
 		buffer_ptr <= 0;
 		print_ptr <= 0;
@@ -166,6 +168,7 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 				if (i_display_write_enable = '1') then
 					r_buffer(buffer_ptr) <= i_display_data;
 					buffer_ptr <= buffer_ptr+1;
+					read_cnt <= read_cnt+1;
 					--begin_receive <= '1';
 					state <= receive;
 				else
@@ -173,10 +176,11 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 				end if;
 ----------------------------------Receive----------------------------------------			
 			when receive =>
-				if (i_display_write_enable = '1' and buffer_ptr < 34 and begin_init = '0') then
+				if (i_display_write_enable = '1' and buffer_ptr < 34 and begin_init = '0' and read_cnt = 0) then
 				-- if write_enable is high, buffer isn’t full and driver hasn’t signaled to start sending 
 				-- initialisation data, load input data into input buffer
 					r_buffer(buffer_ptr) <= i_display_data;
+					read_cnt <= read_cnt+1;
 					buffer_ptr <= buffer_ptr+1;
 				elsif (begin_init = '1' or buffer_ptr = 34) then 
 				-- if buffer is full or driver has signaled to start sending initialisation data, go to
@@ -185,16 +189,21 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 					buffer_ptr <= buffer_ptr-1;
 				else
 				-- If write_enable is low but still receiving data, remain in "receive" state
+					if (read_cnt = 2) then
+						read_cnt <= 0;
+					else
+						read_cnt <= read_cnt+1;
+					end if;
 					state <= receive;
 				end if;
 ---------------------------------Initialise--------------------------------------				
 			when init =>
 				init_flag <= '1'; -- Set init_flag high so the driver returns here after reset
 				transmit_flag <= '0'; -- Set transmit_flag low
-				if ((init_ptr < 28) and (i_display_busy = '1')) then
+				if ((init_ptr < 28) and (i_display_busy = '1')) then 
 				-- If handler is busy, do nothing
 					state <= init;
-				elsif ((init_ptr < 28) and (i_display_busy = '0')) then
+				elsif ((init_ptr < 28) and (i_display_busy = '0')) then 
 				-- If handler is ready, send data and increment init pointer
 					o_display_data <= r_init(init_ptr);
 					init_ptr <= init_ptr+1;
@@ -287,8 +296,10 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 						char_ptr <= 148;
 					when Colon =>
 						char_ptr <= 152;
-					when others =>
+					when Exclamation =>
 						char_ptr <= 156;
+					when others =>
+						char_ptr <= 160;
 				end case;
 -----------------------------------Transmit--------------------------------------	
 			when transmit =>
@@ -334,7 +345,7 @@ end process;
 
 process (all)
 begin
-	if (falling_edge(i_display_clock)) then -- On a falling edge of the clock
+	if (falling_edge(i_display_clock) and buffer_ptr>0) then -- On a falling edge of the clock
 		if (r_buffer(buffer_ptr-1) = x"03" and begin_init = '0') then
 		-- If the last entry is an End of Text byte and the driver hasn’t started sending init data
 			begin_init <= '1';
