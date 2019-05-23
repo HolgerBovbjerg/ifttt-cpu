@@ -1,0 +1,21 @@
+
+State Machine - |Display_driver|I2C_display:disp|state
+Name state.reset state.transmit state.CharSelect state.init state.receive state.ready 
+state.ready 0 0 0 0 0 0 
+state.receive 0 0 0 0 1 1 
+state.init 0 0 0 1 0 1 
+state.CharSelect 0 0 1 0 0 1 
+state.transmit 0 1 0 0 0 1 
+state.reset 1 0 0 0 0 1 
+
+State Machine - |Display_driver|Display_I2C_handler:inst|state
+Name state.stop state.error state.NAK state.slv_ack3 state.slv_ack2 state.slv_ack1 state.exe_cmd state.start state.ready 
+state.ready 0 0 0 0 0 0 0 0 0 
+state.start 0 0 0 0 0 0 0 1 1 
+state.exe_cmd 0 0 0 0 0 0 1 0 1 
+state.slv_ack1 0 0 0 0 0 1 0 0 1 
+state.slv_ack2 0 0 0 0 1 0 0 0 1 
+state.slv_ack3 0 0 0 1 0 0 0 0 1 
+state.NAK 0 0 1 0 0 0 0 0 1 
+state.error 0 1 0 0 0 0 0 0 1 
+state.stop 1 0 0 0 0 0 0 0 1 
