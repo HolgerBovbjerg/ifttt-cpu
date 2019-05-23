@@ -63,20 +63,20 @@ Example: 100 loaded into r1
     * LOAD r1, 100
 15. WRITE
 The WRITE instruction writes a register to a memory location indicated as a hex number. It needs a register name and a memory address in hex.\
-Example:  Write r1 to memory address 1
-    * WRITE r1, 1
+Example:  Write r1 to memory address 0001
+    * WRITE r1, 0001
 16. READ 
 The read instruction reads a value from a memory location and stores it in a register. It needs a register name and a memory address in hex. \
-Example: Read memory address f and store it in r1
-    * WRITE r1, f
+Example: Read memory address 0f0f and store it in r1
+    * WRITE r1, 0f0f
 17. BRANCH
 The BRANCH instruction has five subinstructions to specify a condition for branching. A hex address and a subinstruction is needed. Possible subinstructions are: JMP - unconditional jump, CAR - jump if carry flag is set, OVR - jump if overflow flag is set, NEG - jump if negative flag is set, ZER - Jump if zero flag is set.\
-Example: Jump to address f if overflow flag is set
-    * BRANCH f, OVR
+Example: Jump to address 00ff if overflow flag is set
+    * BRANCH 00ff, OVR
 18. JUMPEQ
 The JUMPEQ instruction is used to compare two registers and jump if they are equal. Two register names and a hex address are needed.\
-Example:  Jump to address f if r1 and r2 are equal
-    * JUMPEQ r1, r2, f
+Example:  Jump to address 000f if r1 and r2 are equal
+    * JUMPEQ r1, r2, 000f
 19. RETURN 
 The RETURN instruction is used to return to the last saved program address. No operands are needed.\
 Example: Return to last saved program address
