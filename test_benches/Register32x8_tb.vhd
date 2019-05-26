@@ -14,6 +14,7 @@ ARCHITECTURE Register32x8_tb_arch OF Register32x8_tb IS
 	PORT ( 
       i_GPR_write_address  : in std_logic_vector (4 downto 0) ; 
       i_GPR_write_enable  : in STD_LOGIC ; 
+		i_GPR_reset				: in STD_LOGIC;
       o_GPR_ALU_data_A  : out std_logic_vector (7 downto 0) ; 
       i_GPR_data  : in std_logic_vector (7 downto 0) ; 
       o_GPR_ALU_data_B  : out std_logic_vector (7 downto 0) ; 
@@ -25,7 +26,8 @@ ARCHITECTURE Register32x8_tb_arch OF Register32x8_tb IS
 
 	-- Inputs
 	SIGNAL i_GPR_write_address   :  std_logic_vector (4 downto 0) := "00000"; 
-	SIGNAL i_GPR_write_enable   :  STD_LOGIC := '0'; 
+	SIGNAL i_GPR_write_enable   :  STD_LOGIC := '0';
+	SIGNAL i_GPR_reset   :  STD_LOGIC := '0';
 	SIGNAL i_GPR_data   :  std_logic_vector (7 downto 0) := x"00"; 
 	SIGNAL i_GPR_address_A   :  std_logic_vector (4 downto 0) := "00000"; 
 	SIGNAL i_GPR_clk   :  STD_LOGIC := '0'; 
@@ -45,6 +47,7 @@ ARCHITECTURE Register32x8_tb_arch OF Register32x8_tb IS
 		i_GPR_enable => i_GPR_enable,
       i_GPR_write_address   => i_GPR_write_address,
       i_GPR_write_enable   => i_GPR_write_enable,
+		i_GPR_reset				=> i_GPR_reset,
       o_GPR_ALU_data_A   => o_GPR_ALU_data_A,
       i_GPR_data   => i_GPR_data,
       o_GPR_ALU_data_B   => o_GPR_ALU_data_B,
@@ -83,9 +86,14 @@ ARCHITECTURE Register32x8_tb_arch OF Register32x8_tb IS
 	for i in 0 to 31 loop
 		i_GPR_address_A <=  std_logic_vector(unsigned(i_GPR_address_A) + 1);
 		i_GPR_address_B <= std_logic_vector(unsigned(i_GPR_address_B) + 1);
-		i_GPR_data  <= std_logic_vector(unsigned(i_GPR_data) + 5);
 		wait for c_clk_period;
 	end loop;
+	
+	i_GPR_address_A <= "01000";
+	wait for c_clk_period;
+	i_GPR_address_B <= "00100";
+	wait for c_clk_period;
+	i_GPR_reset <= '1';
 	
 	wait;
 	

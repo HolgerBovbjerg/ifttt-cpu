@@ -167,9 +167,11 @@ BEGIN
 		
 		-- Test interrupt
 		i_SAVE_PC <= '1';
+		i_PC_REG_enable <= '1';
 		i_BRANCH_CONTROL <= "000";
 		wait for i_CLK_period*10;
 		i_SAVE_PC <= '0';
+		i_PC_REG_enable <= '0';
 		i_PC_INTERRUPT_set <= '1';
 		wait for i_CLK_period*5;
       i_PC_INTERRUPT_set <= '0';		

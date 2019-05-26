@@ -7,6 +7,7 @@ entity register32x8 is
 		-- Clock and enable
 		i_GPR_clk 				: in STD_LOGIC;
 		i_GPR_enable			: in STD_LOGIC;
+		i_GPR_reset				: in STD_LOGIC;
 		
 		--Address inputs
 		i_GPR_address_A 		: in STD_LOGIC_VECTOR (4 downto 0);
@@ -33,11 +34,13 @@ begin
 process(i_GPR_clk, i_GPR_enable)
 	begin
 		if(rising_edge(i_GPR_clk) and i_GPR_enable = '1') then
-			
-			if(i_GPR_write_enable = '1') then
-				r_REGISTER(to_integer(unsigned(i_GPR_write_address))) <= i_GPR_data;
+			if (i_GPR_reset = '1') then
+				r_REGISTER <= (others => x"00");
+			else
+				if(i_GPR_write_enable = '1') then
+					r_REGISTER(to_integer(unsigned(i_GPR_write_address))) <= i_GPR_data;
+				end if;
 			end if;
-			
 			o_GPR_ALU_data_A <= r_REGISTER(to_integer(unsigned(i_GPR_address_A)));
 			o_GPR_ALU_data_B <= r_REGISTER(to_integer(unsigned(i_GPR_address_B)));
 			

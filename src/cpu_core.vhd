@@ -104,6 +104,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	Port (	-- Clock input
 				i_GPR_clk 				: in STD_LOGIC;
 				i_GPR_enable			: in STD_LOGIC;
+				i_GPR_reset				: in STD_LOGIC;
 				
 				-- Address inputs
 				i_GPR_address_A 		: in STD_LOGIC_VECTOR (4 downto 0);
@@ -385,6 +386,7 @@ begin
 	INST_GPR : register32x8 PORT MAP (
 		i_GPR_clk 						=> i_CORE_CLK,
 		i_GPR_enable					=> r_register_enable,
+		i_GPR_reset						=> i_CORE_RESET,
 		i_GPR_address_A 				=> w_REGISTER_A,
 		i_GPR_address_B 				=> w_REGISTER_B,
 		i_GPR_data						=> w_BUS_register, 
