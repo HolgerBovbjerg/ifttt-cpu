@@ -102,7 +102,7 @@ signal read_cnt					: integer := 0;
 signal delay_cnt					: integer range 0 to divider;
 signal begin_receive				: std_logic := '0';
 signal begin_init					: std_logic := '0';
-
+signal end_init					: std_logic := '0';
 begin
 
 --process(i_display_enable, i_display_clock, i_display_data, o_display_data, o_display_reset, o_display_ready, o_transmit_flag, o_init_flag)	
@@ -111,14 +111,19 @@ begin
 
 if (rising_edge(i_display_clock) and i_display_enable = '1') then
 	if (i_display_reset = '1') then
+		r_buffer <= (others => x"00");
+		start <= '0';
+		init_flag <= '0';
+		transmit_flag <= '0';
+		trans_cnt <= 0;
 		char_ptr <= 0;
 		buffer_ptr <= 0;
 		print_ptr <= 0;
 		init_ptr <= 0;
-		trans_cnt <= 0;
-		init_flag <= '0';
-		transmit_flag <= '0';
-		r_buffer <= (others => x"00");
+		read_cnt <= 0;
+		delay_cnt <= 0;
+		begin_receive <= '0';
+		end_init <= '0';
 		state <= ready;
 	else
 		case state is
@@ -325,6 +330,7 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 							char_ptr <= 0;
 							start <= '0';
 							transmit_flag <= '0';
+							end_init <= '1';
 							state <= ready;
 						else
 						-- If there are still characters to send, go to next character
@@ -356,6 +362,9 @@ begin
 		-- If the driver has been reset, set begin_init low
 			begin_init <= '0';
 		end if;
+	end if;
+	if (falling_edge(i_display_clock) and end_init='1') then
+		begin_init <= '0';
 	end if;
 end process;
 end architecture rtl;
