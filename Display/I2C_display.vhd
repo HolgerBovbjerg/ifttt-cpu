@@ -123,7 +123,7 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 		read_cnt <= 0;
 		delay_cnt <= 0;
 		begin_receive <= '0';
-		end_init <= '0';
+		end_init <= '1';
 		state <= ready;
 	else
 		case state is
@@ -188,6 +188,7 @@ if (rising_edge(i_display_clock) and i_display_enable = '1') then
 					r_buffer(buffer_ptr) <= i_display_data;
 					read_cnt <= read_cnt+1;
 					buffer_ptr <= buffer_ptr+1;
+					end_init <= '0';
 				elsif (begin_init = '1' or buffer_ptr = 34) then 
 				-- if buffer is full or driver has signaled to start sending initialisation data, go to
 				-- "init" state and decrement buffer pointer
