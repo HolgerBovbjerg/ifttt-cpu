@@ -23,14 +23,8 @@ int write_mif(FILE *input)
     // Write config data to outputfile
     printf("Writing memory config...\n");
     // Request config data to outputfile
-    printf("Write memory depth:\n");
-    char depth[100];
-    gets(depth);
-    fprintf(mif, "DEPTH = %s;\n", depth);
-    printf("Write memory width:\n");
-    char width[100];
-    gets(width);
-    fprintf(mif, "WIDTH = %s;\n", width);
+    fprintf(mif, "DEPTH = 1024;\n");
+    fprintf(mif, "WIDTH = 32;\n");
     fprintf(mif, "ADDRESS_RADIX = UNS;\n");
     fprintf(mif, "DATA_RADIX = BIN;\n\n");
     fprintf(mif, "CONTENT\n");

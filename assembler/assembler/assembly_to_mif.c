@@ -134,7 +134,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         printf("Opcode type is: Register register operation\n");
         pch = strtok(NULL, " ,"); // Get first register name (Register C)
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++) // Loop through register names
+        for (int i = 0; i < 32; i++) // Loop through register names
         {
             if (strstr(pch,registerArray[i])) // If a match is found
             {
@@ -144,7 +144,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++; // When all registers have been looked through go to next index in output array
         pch = strtok(NULL, " ,"); // Get next register name (Register A)
         printf("%s\n", pch);
-        for (int i =0; i < 32 - 1; i++)
+        for (int i =0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
@@ -156,7 +156,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         {
         pch = strtok(NULL, " ,"); // Get next register name (Register A)
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
@@ -176,7 +176,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         printf("Opcode type is: Register load operation\n");
         pch = strtok(NULL, " ,"); // Get register address
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++) // Loop through register names
+        for (int i = 0; i < 32; i++) // Loop through register names
         {
             if (strstr(pch,registerArray[i])) // If a match is found
             {
@@ -202,7 +202,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         printf("Opcode type is: Register immediate operation\n");
         pch = strtok(NULL, " ,"); // Get first register name
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++) // Loop through register names
+        for (int i = 0; i < 32; i++) // Loop through register names
         {
             if (strstr(pch,registerArray[i])) // If match
             {
@@ -212,7 +212,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get register name
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++) // Loop through register names
+        for (int i = 0; i < 32; i++) // Loop through register names
         {
             if (strstr(pch,registerArray[i])) // If match
             {
@@ -239,7 +239,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         printf("Opcode type is: Register carry operation\n");
         pch = strtok(NULL, " ,"); // Get first register
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
@@ -249,7 +249,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get next register
         printf("%s\n", pch);
-        for (int i =0; i < 32 - 1; i++)
+        for (int i =0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
@@ -259,7 +259,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get third register
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
@@ -276,7 +276,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         {
             pch = strtok(NULL, " ,"); // Get register name
             printf("%s\n", pch);
-            for (int i = 0; i < 32 - 1; i++)
+            for (int i = 0; i < 32; i++)
             {
                 if (strstr(pch, registerArray[i]))
                 {
@@ -293,7 +293,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
             outputIndex++;
             pch = strtok(NULL, " ,");
             printf("%s\n", pch);
-            for (int i = 0; i < 32 - 1; i++)
+            for (int i = 0; i < 32; i++)
             {
                 if (strstr(pch,registerArray[i]))
                 {
@@ -342,7 +342,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get first register
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
@@ -352,7 +352,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get second register
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
@@ -389,7 +389,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         outputIndex++;
         pch = strtok(NULL, " ,"); // Get register
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
@@ -406,7 +406,7 @@ void assembleFromOpcode(FILE *outputFile, int number)
         printf("Opcode type is: Special opcode\n");
         pch = strtok(NULL, " ,"); // Get register
         printf("%s\n", pch);
-        for (int i = 0; i < 32 - 1; i++)
+        for (int i = 0; i < 32; i++)
         {
             if (strstr(pch,registerArray[i]))
             {
