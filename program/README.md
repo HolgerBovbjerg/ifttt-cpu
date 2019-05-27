@@ -2,11 +2,13 @@
 This assembler is made for use with the iftt-cpu
 
 ## Code guideline
-The assembler needs an input file with assembly code. One line can only contain one instruction to be performed. Possible register names are r1, r2, r3, ... , r32. Memory addresses are given in hex values equivalent to up to 16 bit (0000..ffff). Program memory addresses are given in hex values representable by 10 bit (0000..03ff). Immediate data is given in integer values between 0 and 255.\ 
-OBS: The current assembler does not support signed number operation. Neither does it support comments (although it will only read until it has found the data fields that it needs in each line which means that single line comments can be issued after each assembly line without interfering with the assembly).\ 
-The available instructions are currently as following:\ 
+The assembler needs an input file with assembly code. One line can only contain one instruction to be performed. Possible register names are r1, r2, r3, ... , r32. Memory addresses are given in hex values equivalent to up to 16 bit (0000..ffff). Program memory addresses are given in hex values representable by 10 bit (0000..03ff). Immediate data is given in integer values between 0 and 255. 
+
+OBS: The current assembler does not support signed number operation. Neither does it support comments (although it will only read until it has found the data fields that it needs in each line which means that single line comments can be issued after each assembly line without interfering with the assembly).
+
+The available instructions are as following:
 1. NOP 
-The NOP instruction does not need operands as nothing is done\
+The NOP instruction does not need operands as nothing is done. \
 Example: 
     * NOP 
 2. ADDR
