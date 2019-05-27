@@ -130,6 +130,4 @@ All GPIO pins are inputs initially. If a pin is configured as output it cannot b
 When the assembler code has been written assembler.exe is run in the same folder as the assembly program file. The next steps are then as follows:
 1. Assembler asks for the name of inputfile 
 2. Assembler asks for the name of outputfile (If the file does already exist it will be overwritten).
-3. Assembler asks for the depth of program memory - here 1024 is input
-4. Assembler asks for the width of program memory - here 32 is input
-5. The assembler will then generate a .mif file which will contain the machine code to load into the program memory. This will be placed in the same folder as the assembler is run in. 
+3. The assembler will then generate a .mif file which will contain the machine code to load into the program memory. This will be placed in the same folder as the assembler is run in. 
