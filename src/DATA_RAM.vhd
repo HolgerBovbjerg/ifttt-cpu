@@ -7,7 +7,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- 16384x8 RAM in VHDL
 entity DATA_RAM is
 port(
-	i_RAM_address: in std_logic_vector(13 downto 0); -- Address to write/read RAM
+	i_RAM_address: in std_logic_vector(9 downto 0); -- Address to write/read RAM
 	i_RAM_data: in std_logic_vector(7 downto 0); -- Data to write to the RAM
 	i_RAM_write_enable: in std_logic; -- Write enable 
 	i_RAM_clk: in std_logic; -- clock input for RAM
@@ -16,11 +16,11 @@ port(
 end DATA_RAM;
 
 architecture Behavioral of DATA_RAM is  
-	type MEM is array (16383 downto 0) of std_logic_vector (7 downto 0); 
+	type MEM is array (1023 downto 0) of std_logic_vector (7 downto 0); 
 	signal MEMORY : MEM :=(-- Instantiating memory
 	others => x"00" -- initial values in the RAM
 	);
-	signal ADDR : INTEGER RANGE 0 TO 16383;		-- The addresses are ordered from 0 to 16383
+	signal ADDR : INTEGER RANGE 0 TO 1023;		-- The addresses are ordered from 0 to 16383
 	begin
 		process (i_RAM_address, i_RAM_data, i_RAM_write_enable, i_RAM_clk)
 			begin

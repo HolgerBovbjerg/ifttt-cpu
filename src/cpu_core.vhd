@@ -171,7 +171,7 @@ ARCHITECTURE behavior OF cpu_core IS
 				
 				-- Peripheral device I/O
 				------------------RAM (DATA_MEMORY)---------------------------------
-				o_MC_RAM_address : out std_logic_vector (13 downto 0); -- Address output to RAM 
+				o_MC_RAM_address : out std_logic_vector (9 downto 0); -- Address output to RAM 
 				i_MC_RAM_data : in std_logic_vector (7 downto 0);
 				o_MC_RAM_data : out std_logic_vector (7 downto 0);
 				o_MC_RAM_write_enable : out std_logic;
@@ -221,7 +221,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	end COMPONENT;
 	
 	COMPONENT DATA_RAM 
-	Port(		i_RAM_address: in std_logic_vector(13 downto 0); -- Address to write/read RAM
+	Port(		i_RAM_address: in std_logic_vector(9 downto 0); -- Address to write/read RAM
 				i_RAM_data: in std_logic_vector(7 downto 0); -- Data to write to the RAM
 				i_RAM_write_enable: in std_logic; -- Write enable 
 				i_RAM_clk: in std_logic; -- clock input for RAM
@@ -282,7 +282,7 @@ ARCHITECTURE behavior OF cpu_core IS
 	signal w_BUS_register : std_logic_vector (7 downto 0); -- 8-bit output
 	
 	-- Memory controller outputs
-	signal w_MC_RAM_address : std_logic_vector (13 downto 0); 
+	signal w_MC_RAM_address : std_logic_vector (9 downto 0); 
 	signal w_MC_RAM_data : std_logic_vector (7 downto 0);
 	signal w_MC_RAM_write_enable : std_logic;
 	

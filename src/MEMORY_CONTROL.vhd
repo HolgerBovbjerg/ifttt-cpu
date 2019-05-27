@@ -20,7 +20,7 @@ entity MEMORY_CONTROL is
 				
 				-- Peripheral device I/O
 				------------------RAM (DATA_MEMORY)---------------------------------
-				o_MC_RAM_address : out std_logic_vector (13 downto 0); -- 16 bit output to RAM 
+				o_MC_RAM_address : out std_logic_vector (9 downto 0); -- 10 bit address output to RAM 
 				i_MC_RAM_data : in std_logic_vector (7 downto 0);
 				o_MC_RAM_data : out std_logic_vector (7 downto 0);
 				o_MC_RAM_write_enable : out std_logic;
@@ -28,12 +28,12 @@ entity MEMORY_CONTROL is
 				o_MC_DISPLAY_data : out std_logic_vector (7 downto 0);
 				o_MC_DISPLAY_write_enable : out std_logic;
 				------------------GPIO----------------------------------------------
-				o_MC_GPIO_address : out std_logic_vector (3 downto 0); -- 16 bit output to GPIO
+				o_MC_GPIO_address : out std_logic_vector (3 downto 0); -- 4 bit address output to GPIO
 				i_MC_GPIO_data : in std_logic_vector (7 downto 0);
 				o_MC_GPIO_data : out std_logic_vector (7 downto 0);
 				o_MC_GPIO_write_enable : out std_logic;
 				------------------I2C-----------------------------------------------
-				o_MC_I2C_address : out std_logic_vector (3 downto 0); -- 16 bit output to I2C
+				o_MC_I2C_address : out std_logic_vector (3 downto 0); -- 4 bit address output to I2C
 				i_MC_I2C_data : in std_logic_vector (7 downto 0);
 				i_MC_I2C_busy	: in std_logic;
 				o_MC_I2C_data : out std_logic_vector (7 downto 0);
@@ -65,11 +65,11 @@ begin
 						when RAM_address =>
 							if (i_MC_write_enable = '1') then
 								o_MC_RAM_write_enable <= '1';
-								o_MC_RAM_address <= i_MC_address(13 downto 0);
+								o_MC_RAM_address <= i_MC_address(9 downto 0);
 								o_MC_RAM_data <= i_MC_data;
 							elsif (i_MC_write_enable = '0') then
 								o_MC_RAM_write_enable <= '0';
-								o_MC_RAM_address <= i_MC_address(13 downto 0);
+								o_MC_RAM_address <= i_MC_address(9 downto 0);
 								o_MC_MUX_data <= i_MC_RAM_data;-- Output on MUX is there until a new one is put there, this can be changed if needed.
 							end if;
 							r_MEM_state <= MEM_DATA_READY;
