@@ -1,12 +1,14 @@
 # Assembler for ifttt-cpu 
 This assembler is made for use with the iftt-cpu
 
-## Guideline
-The assembler needs an input file with assembly code. One line can only contain one instruction to be performed. Possible register names are r1, r2, r3, ... , r32. Memory addresses are given in hex values equivalent to up to 16 bit (0000..ffff). Program memory addresses are given in hex values representable by 10 bit (0000..03ff). Immediate data is given in integer values between 0 and 255.\ 
-OBS: The current assembler does not support signed number operation.\ 
-The available instructions are currently as following:\ 
+## Code guideline
+The assembler needs an input file with assembly code. One line can only contain one instruction to be performed. Possible register names are r1, r2, r3, ... , r32. Memory addresses are given in hex values equivalent to up to 16 bit (0000..ffff). Program memory addresses are given in hex values representable by 10 bit (0000..03ff). Immediate data is given in integer values between 0 and 255. 
+
+OBS: The current assembler does not support signed number operation. Neither does it support comments (although it will only read until it has found the data fields that it needs in each line which means that single line comments can be issued after each assembly line without interfering with the assembly).
+
+The available instructions are as following:
 1. NOP 
-The NOP instruction does not need operands as nothing is done\
+The NOP instruction does not need operands as nothing is done. \
 Example: 
     * NOP 
 2. ADDR
@@ -93,9 +95,9 @@ Example: POP data from stack memory to r1
     
 ## Memory addresses
 ### Data memory
-Every hex address with 00 as the first bits are data memory. Data memory has 16384 adresses each storing 8 bit.\ 
+Every hex address with 00 as the first bits are data memory. Data memory has 1024 adresses each storing 8 bit.\ 
 Decimal address         Hex address\
-[0..16383]        =>    [0000..0FFF]\
+[0..1024]        =>    [0000..03FF]\
 
 ### Display driver
 Every hex address with 01 as the first bits are display driver.
@@ -123,3 +125,11 @@ PIN6     = 8006 \
 PIN7     = 8007 \
 CONFIG   = 8008 - [PIN7, PIN6, PIN5, PIN4, PIN3, PIN2, PI1, PIN0] (1 for output, 0 for input)\
 All GPIO pins are inputs initially. If a pin is configured as output it cannot be read and if it is configured as input it cannot be written to.
+
+## Running the assembler
+When the assembler code has been written assembler.exe is run in the same folder as the assembly program file. The next steps are then as follows:
+1. Assembler asks for the name of inputfile 
+2. Assembler asks for the name of outputfile (If the file does already exist it will be overwritten).
+3. Assembler asks for the depth of program memory - here 1024 is input
+4. Assembler asks for the width of program memory - here 32 is input
+5. The assembler will then generate a .mif file which will contain the machine code to load into the program memory. This will be placed in the same folder as the assembler is run in. 
