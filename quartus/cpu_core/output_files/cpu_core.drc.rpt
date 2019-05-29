@@ -1,5 +1,5 @@
 Design Assistant report for cpu_core
-Tue May 21 08:44:38 2019
+Tue May 28 10:08:47 2019
 Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Tue May 21 08:44:38 2019 ;
+; Design Assistant Status           ; Analyzed - Tue May 28 10:08:47 2019 ;
 ; Revision Name                     ; cpu_core                            ;
 ; Top-level Entity Name             ; cpu_core                            ;
 ; Family                            ; Cyclone III                         ;
 ; Total Critical Violations         ; 0                                   ;
-; Total High Violations             ; 40                                  ;
-; - Rule D101                       ; 40                                  ;
+; Total High Violations             ; 26                                  ;
+; - Rule D101                       ; 26                                  ;
 ; Total Medium Violations           ; 1                                   ;
 ; - Rule C104                       ; 1                                   ;
-; Total Information only Violations ; 57                                  ;
-; - Rule T101                       ; 7                                   ;
+; Total Information only Violations ; 74                                  ;
+; - Rule T101                       ; 24                                  ;
 ; - Rule T102                       ; 50                                  ;
 +-----------------------------------+-------------------------------------+
 
@@ -108,129 +108,93 @@ applicable agreement for further details.
 ;  Source node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                       ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "i_CORE_CLK"                                                                 ; branch_control:INST_branch_control|o_PC_LOAD                   ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 2  ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[0]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 3  ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[7]                                   ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 4  ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]       ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 5  ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 6  ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[7] ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 7  ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[6] ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 8  ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[5] ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 9  ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[4] ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 10 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[3] ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 11 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_IMM_enable      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 12 ;                                                                ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 3  ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[6]                                   ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 13 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[2]       ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 4  ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]       ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 14 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[3]       ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 15 ;                                                                ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 5  ;                                                                ;
 ;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]       ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 6  ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[3]       ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 7  ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_OPCODE[2]       ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 8  ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[0]                                   ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 9  ;                                                                ;
+;  Source node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                       ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+;  Destination node(s) from clock "i_CORE_CLK"                                                                 ; branch_control:INST_branch_control|o_PC_LOAD                   ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 10 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|tmp[8]                                            ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 11 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[6]                      ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 12 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_IMM_enable      ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 13 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_B[6]                      ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 14 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[8] ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 15 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_B[7]                      ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
 ; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 16 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_B[4]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 17 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[4]                                   ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 18 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_B[1]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 19 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[1]                                   ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 20 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[1]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 21 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_B[3]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 22 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[3]                                   ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 23 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[3]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 24 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_B[2]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 25 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[2]                                   ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 26 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[2]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 27 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[4]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 28 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[5]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 29 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[5]                                   ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 30 ;                                                                ;
-;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[7]                      ;
-;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|tmp[8]                                            ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
 ;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 31 ;                                                                ;
-;  Structure 31                                                                                                ; register32x8:INST_GPR|o_GPR_ALU_data_A[6]                      ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 32 ;                                                                ;
-;  Structure 32                                                                                                ; register32x8:INST_GPR|o_GPR_ALU_data_B[5]                      ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 33 ;                                                                ;
-;  Structure 33                                                                                                ; instruction_decoder:INST_instruction_decoder|o_Address_PROG[9] ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 34 ;                                                                ;
-;  Structure 34                                                                                                ; register32x8:INST_GPR|o_GPR_ALU_data_B[7]                      ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 35 ;                                                                ;
-;  Structure 35                                                                                                ; register32x8:INST_GPR|o_GPR_ALU_data_B[6]                      ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 36 ;                                                                ;
-;  Structure 36                                                                                                ; ALU:INST_ALU|r_ALU_Result[0]                                   ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 37 ;                                                                ;
-;  Structure 37                                                                                                ; ALU:INST_ALU|r_ALU_carry_flag                                  ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 38 ;                                                                ;
-;  Structure 38                                                                                                ; instruction_decoder:INST_instruction_decoder|o_Signed          ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 39 ;                                                                ;
-;  Structure 39                                                                                                ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
-; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 40 ;                                                                ;
-;  Structure 40                                                                                                ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 17 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[7]                      ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 18 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[1]                                   ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 19 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[3]                                   ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 20 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[2]                                   ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 21 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; register32x8:INST_GPR|o_GPR_ALU_data_A[5]                      ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 22 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[5]                                   ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 23 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; ALU:INST_ALU|r_ALU_Result[4]                                   ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 24 ;                                                                ;
+;  Source node(s) from clock "i_CORE_CLK"                                                                      ; instruction_decoder:INST_instruction_decoder|o_Signed          ;
+;  Destination node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                  ; ALU:INST_ALU|r_ALU_negative_flag                               ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 25 ;                                                                ;
+;  Source node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                       ; ALU:INST_ALU|r_ALU_overflow_flag                               ;
+;  Destination node(s) from clock "i_CORE_CLK"                                                                 ; branch_control:INST_branch_control|o_PC_LOAD                   ;
+; Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains - Structure 26 ;                                                                ;
+;  Source node(s) from clock "control_unit:INST_control_unit|r_state[3]"                                       ; ALU:INST_ALU|r_ALU_zero_flag                                   ;
+;  Destination node(s) from clock "i_CORE_CLK"                                                                 ; branch_control:INST_branch_control|o_PC_LOAD                   ;
 +--------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------+
 
 
@@ -242,15 +206,14 @@ applicable agreement for further details.
 ; Rule C104: Clock signal source should drive only clock input ports ; control_unit:INST_control_unit|r_state[3] ;
 ;  Clock ports destination node(s) list                              ; ALU:INST_ALU|r_ALU_negative_flag          ;
 ;  Clock ports destination node(s) list                              ; ALU:INST_ALU|r_ALU_carry_flag             ;
-;  Clock ports destination node(s) list                              ; ALU:INST_ALU|tmp[8]                       ;
-;  Clock ports destination node(s) list                              ; ALU:INST_ALU|r_ALU_zero_flag              ;
 ;  Clock ports destination node(s) list                              ; ALU:INST_ALU|r_ALU_overflow_flag          ;
+;  Clock ports destination node(s) list                              ; ALU:INST_ALU|r_ALU_zero_flag              ;
 ;  Non-clock ports destination node(s) list                          ; ALU:INST_ALU|r_ALU_Result[7]              ;
-;  Non-clock ports destination node(s) list                          ; ALU:INST_ALU|r_ALU_Result[4]              ;
+;  Non-clock ports destination node(s) list                          ; ALU:INST_ALU|r_ALU_Result[0]              ;
 ;  Non-clock ports destination node(s) list                          ; ALU:INST_ALU|r_ALU_Result[1]              ;
 ;  Non-clock ports destination node(s) list                          ; ALU:INST_ALU|r_ALU_Result[3]              ;
 ;  Non-clock ports destination node(s) list                          ; ALU:INST_ALU|r_ALU_Result[2]              ;
-;  Non-clock ports destination node(s) list                          ; ALU:INST_ALU|r_ALU_Result[0]              ;
+;  Non-clock ports destination node(s) list                          ; ALU:INST_ALU|r_ALU_Result[4]              ;
 +--------------------------------------------------------------------+-------------------------------------------+
 
 
@@ -259,63 +222,80 @@ applicable agreement for further details.
 +------------------------------------------------------------------+-------------------------------------------------------------------+---------+
 ; Rule name                                                        ; Name                                                              ; Fan-Out ;
 +------------------------------------------------------------------+-------------------------------------------------------------------+---------+
-; Rule T101: Nodes with more than the specified number of fan-outs ; control_unit:INST_control_unit|r_state[1]                         ; 67      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; i_CORE_CLK~inputclkctrl                                           ; 359     ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; control_unit:INST_control_unit|r_state[0]                         ; 40      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]          ; 61      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; InstrucReg:INST_InstrucReg|r_register[15]                         ; 37      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0              ; 33      ;
-; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]          ; 73      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; i_CORE_CLK~inputclkctrl                                           ; 359     ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]          ; 73      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[1]                         ; 67      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]          ; 61      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[0]                         ; 40      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; InstrucReg:INST_InstrucReg|r_register[15]                         ; 37      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0              ; 33      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~7              ; 28      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; control_unit:INST_control_unit|r_state[1]                         ; 61      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; control_unit:INST_control_unit|r_state[0]                         ; 39      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; i_CORE_CLK~inputclkctrl                                           ; 538     ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; control_unit:INST_control_unit|Mux7~2                             ; 49      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; InstrucReg:INST_InstrucReg|r_register[15]                         ; 36      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; register32x8:INST_GPR|r_REGISTER~39                               ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]          ; 57      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]          ; 71      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0              ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; register32x8:INST_GPR|r_REGISTER~1                                ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[2]      ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[3]      ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[0]      ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[1]      ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; register32x8:INST_GPR|r_REGISTER~37                               ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[0]      ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[1]      ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[3]      ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[2]      ; 60      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; register32x8:INST_GPR|r_REGISTER~36                               ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; register32x8:INST_GPR|r_REGISTER~42                               ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; register32x8:INST_GPR|r_REGISTER~40                               ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; register32x8:INST_GPR|r_REGISTER~41                               ; 32      ;
+; Rule T101: Nodes with more than the specified number of fan-outs ; register32x8:INST_GPR|r_REGISTER~38                               ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; i_CORE_CLK~inputclkctrl                                           ; 538     ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[1]          ; 71      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[1]                         ; 61      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[0]      ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[2]      ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[1]      ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[0]      ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[2]      ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[1]      ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_B[3]      ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_A[3]      ; 60      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[0]          ; 57      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|Mux7~2                             ; 49      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[0]                         ; 39      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; InstrucReg:INST_InstrucReg|r_register[15]                         ; 36      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER~39                               ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0              ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER~42                               ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER~37                               ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER~1                                ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER~36                               ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER~41                               ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER~40                               ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER~38                               ; 32      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~7              ; 27      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; branch_control:INST_branch_control|process_0~0                    ; 24      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]    ; 24      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[2]~6              ; 24      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_IMM_enable         ; 24      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[2]~6              ; 22      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[2]          ; 21      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[2]          ; 22      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[7]                         ; 19      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_OPCODE[3]          ; 19      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[3]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux71~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux76~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux78~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux75~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[1]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[7]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux81~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux70~2                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux80~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[2]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[5]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux72~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[11]           ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux73~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[10]           ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[8]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[0]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux77~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[4]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux82~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux74~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[6]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux79~0                        ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[9]            ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[12]           ; 18      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[7]                         ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|Mux7~2                             ; 17      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_BUS_select[0]      ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[0]                         ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[6]                         ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[3]                         ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux70~1                        ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[0]~0 ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_Address_MEM[14]    ; 18      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; control_unit:INST_control_unit|r_state[3]                         ; 17      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_C[1]      ; 16      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_BUS_select[1]      ; 16      ;
-; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]    ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER[6][7]~19                         ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_C[2]      ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_C[3]      ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|r_REGISTER[21][7]~2                         ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|r_STACK_POINTER[0]~2 ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[0]                         ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; instruction_decoder:INST_instruction_decoder|o_REGISTER_C[0]      ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; MEMORY_CONTROL:INST_MEMORY_CONTROL|r_MEM_state[1]                 ; 16      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[5]                         ; 15      ;
 ; Rule T102: Top nodes with the highest number of fan-outs         ; B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[3]~5              ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[2]                         ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[6]                         ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[1]                         ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs         ; register32x8:INST_GPR|o_GPR_ALU_data_A[3]                         ; 14      ;
 +------------------------------------------------------------------+-------------------------------------------------------------------+---------+
 
 
@@ -325,90 +305,102 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Design Assistant
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Tue May 21 08:44:37 2019
+    Info: Processing started: Tue May 28 10:08:46 2019
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off cpu_core -c cpu_core
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'cpu_core.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Critical Warning (308060): (High) Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains. (Value defined:2). Found 40 asynchronous clock domain interface structure(s) related to this rule.
+Critical Warning (308060): (High) Rule D101: Data bits are not synchronized when transferred between asynchronous clock domains. (Value defined:2). Found 26 asynchronous clock domain interface structure(s) related to this rule.
     Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_negative_flag"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[0]"
     Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[7]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[0]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Address_PROG[8]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Address_PROG[7]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Address_PROG[6]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Address_PROG[5]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Address_PROG[4]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Address_PROG[3]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_IMM_enable"
     Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[6]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[2]"
-    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[3]"
+    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[0]"
     Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[1]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_B[4]"
-    Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[4]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_B[1]"
+    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[3]"
+    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[2]"
+    Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[0]"
+    Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_carry_flag"
+    Critical Warning (308012): Node  "ALU:INST_ALU|tmp[8]"
+    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[6]"
+    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_IMM_enable"
+    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_B[6]"
+    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Address_PROG[8]"
+    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_B[7]"
+    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Address_PROG[9]"
+    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[7]"
     Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[1]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[1]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_B[3]"
     Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[3]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[3]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_B[2]"
     Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[2]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[2]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[4]"
     Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[5]"
     Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[5]"
-    Critical Warning (308012): Node  "register32x8:INST_GPR|o_GPR_ALU_data_A[7]"
-    Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
+    Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_Result[4]"
+    Critical Warning (308012): Node  "instruction_decoder:INST_instruction_decoder|o_Signed"
+    Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_overflow_flag"
+    Critical Warning (308012): Node  "ALU:INST_ALU|r_ALU_zero_flag"
 Warning (308040): (Medium) Rule C104: Clock signal source should drive only clock input ports. Found 1 nodes related to this rule.
     Warning (308010): Node  "control_unit:INST_control_unit|r_state[3]"
-Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 7 node(s) with highest fan-out.
+Info (308046): (Information) Rule T101: Nodes with more than the specified number of fan-outs. (Value defined:30). Found 24 node(s) with highest fan-out.
     Info (308011): Node  "control_unit:INST_control_unit|r_state[1]"
-    Info (308011): Node  "i_CORE_CLK~inputclkctrl"
     Info (308011): Node  "control_unit:INST_control_unit|r_state[0]"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[0]"
+    Info (308011): Node  "i_CORE_CLK~inputclkctrl"
+    Info (308011): Node  "control_unit:INST_control_unit|Mux7~2"
     Info (308011): Node  "InstrucReg:INST_InstrucReg|r_register[15]"
-    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~39"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[0]"
     Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[1]"
+    Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~1"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_A[2]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_A[3]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_A[0]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_A[1]"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~37"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_B[0]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_B[1]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_B[3]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_B[2]"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~36"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~42"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~40"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~41"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~38"
 Info (308044): (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 50 node(s) with highest fan-out.
     Info (308011): Node  "i_CORE_CLK~inputclkctrl"
     Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[1]"
     Info (308011): Node  "control_unit:INST_control_unit|r_state[1]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_B[0]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_A[2]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_A[1]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_A[0]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_B[2]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_B[1]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_B[3]"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_REGISTER_A[3]"
     Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[0]"
+    Info (308011): Node  "control_unit:INST_control_unit|Mux7~2"
     Info (308011): Node  "control_unit:INST_control_unit|r_state[0]"
     Info (308011): Node  "InstrucReg:INST_InstrucReg|r_register[15]"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~39"
     Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[0]~0"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~42"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~37"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~1"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~36"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~41"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~40"
+    Info (308011): Node  "register32x8:INST_GPR|r_REGISTER~38"
     Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[1]~7"
     Info (308011): Node  "branch_control:INST_branch_control|process_0~0"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_IMM_enable"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_Address_MEM[15]"
     Info (308011): Node  "B_imm_multiplexer:INST_B_imm_multiplexer|o_DATA[2]~6"
+    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_IMM_enable"
     Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[2]"
-    Info (308011): Node  "instruction_decoder:INST_instruction_decoder|o_OPCODE[3]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[3]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux71~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux76~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux78~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux75~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[1]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[7]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux81~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux70~2"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux80~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[2]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[5]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux72~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[11]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|Mux73~0"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[10]"
-    Info (308011): Node  "MEMORY_CONTROL:INST_MEMORY_CONTROL|o_MC_RAM_address[8]"
     Info (308002): Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
-Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 57 information messages and 41 warning messages
-Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4584 megabytes
-    Info: Processing ended: Tue May 21 08:44:38 2019
+Info (308007): Design Assistant information: finished post-fitting analysis of current design -- generated 74 information messages and 27 warning messages
+Info: Quartus II 64-Bit Design Assistant was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4574 megabytes
+    Info: Processing ended: Tue May 28 10:08:47 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

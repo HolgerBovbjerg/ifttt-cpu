@@ -76,17 +76,17 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8         :                
-i_GPR_data[6]                : A9        : input  : 2.5 V             :         : 8         : N              
-o_GPR_ALU_data_B[5]          : A10       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 8         :                
 GND+                         : A11       :        :                   :         : 8         :                
 GND+                         : A12       :        :                   :         : 7         :                
-o_GPR_ALU_data_B[1]          : A13       : output : 2.5 V             :         : 7         : N              
-i_GPR_write_address[4]       : A14       : input  : 2.5 V             :         : 7         : N              
-i_GPR_data[3]                : A15       : input  : 2.5 V             :         : 7         : N              
-o_GPR_ALU_data_A[5]          : A16       : output : 2.5 V             :         : 7         : N              
-i_GPR_data[0]                : A17       : input  : 2.5 V             :         : 7         : N              
-i_GPR_data[5]                : A18       : input  : 2.5 V             :         : 7         : N              
-i_GPR_address_A[2]           : A19       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
+i_GPR_write_address[2]       : A14       : input  : 2.5 V             :         : 7         : N              
+i_GPR_address_B[2]           : A15       : input  : 2.5 V             :         : 7         : N              
+o_GPR_ALU_data_B[7]          : A16       : output : 2.5 V             :         : 7         : N              
+i_GPR_data[1]                : A17       : input  : 2.5 V             :         : 7         : N              
+i_GPR_address_B[4]           : A18       : input  : 2.5 V             :         : 7         : N              
+i_GPR_address_A[1]           : A19       : input  : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A20       :        :                   :         : 7         :                
 VCCIO7                       : A21       : power  :                   : 2.5V    : 7         :                
 GND                          : A22       : gnd    :                   :         :           :                
@@ -141,21 +141,21 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
-i_GPR_address_A[4]           : B8        : input  : 2.5 V             :         : 8         : N              
-o_GPR_ALU_data_B[6]          : B9        : output : 2.5 V             :         : 8         : N              
-i_GPR_write_address[0]       : B10       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B9        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 8         :                
 GND+                         : B11       :        :                   :         : 8         :                
 GND+                         : B12       :        :                   :         : 7         :                
-o_GPR_ALU_data_A[0]          : B13       : output : 2.5 V             :         : 7         : N              
-i_GPR_data[2]                : B14       : input  : 2.5 V             :         : 7         : N              
-o_GPR_ALU_data_B[7]          : B15       : output : 2.5 V             :         : 7         : N              
-i_GPR_address_B[1]           : B16       : input  : 2.5 V             :         : 7         : N              
-i_GPR_address_A[3]           : B17       : input  : 2.5 V             :         : 7         : N              
-o_GPR_ALU_data_A[6]          : B18       : output : 2.5 V             :         : 7         : N              
-i_GPR_data[7]                : B19       : input  : 2.5 V             :         : 7         : N              
+o_GPR_ALU_data_A[1]          : B13       : output : 2.5 V             :         : 7         : N              
+i_GPR_write_address[3]       : B14       : input  : 2.5 V             :         : 7         : N              
+o_GPR_ALU_data_B[0]          : B15       : output : 2.5 V             :         : 7         : N              
+o_GPR_ALU_data_A[6]          : B16       : output : 2.5 V             :         : 7         : N              
+o_GPR_ALU_data_A[7]          : B17       : output : 2.5 V             :         : 7         : N              
+i_GPR_address_B[0]           : B18       : input  : 2.5 V             :         : 7         : N              
+i_GPR_write_address[4]       : B19       : input  : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B20       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :         : 6         :                
+i_GPR_data[5]                : B22       : input  : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
@@ -165,14 +165,14 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
 GND                          : C9        : gnd    :                   :         :           :                
-i_GPR_address_B[0]           : C10       : input  : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 8         :                
 GND                          : C11       : gnd    :                   :         :           :                
 GND                          : C12       : gnd    :                   :         :           :                
-o_GPR_ALU_data_B[3]          : C13       : output : 2.5 V             :         : 7         : N              
+i_GPR_write_address[1]       : C13       : input  : 2.5 V             :         : 7         : N              
 GND                          : C14       : gnd    :                   :         :           :                
-i_GPR_address_B[4]           : C15       : input  : 2.5 V             :         : 7         : N              
+i_GPR_address_B[3]           : C15       : input  : 2.5 V             :         : 7         : N              
 GND                          : C16       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
+o_GPR_ALU_data_A[3]          : C17       : output : 2.5 V             :         : 7         : N              
 GND                          : C18       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 6         :                
@@ -187,18 +187,18 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :      
 GND                          : D7        : gnd    :                   :         :           :                
 GND                          : D8        : gnd    :                   :         :           :                
 VCCIO8                       : D9        : power  :                   : 2.5V    : 8         :                
-o_GPR_ALU_data_B[0]          : D10       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
 VCCIO8                       : D11       : power  :                   : 2.5V    : 8         :                
 VCCIO7                       : D12       : power  :                   : 2.5V    : 7         :                
-o_GPR_ALU_data_A[7]          : D13       : output : 2.5 V             :         : 7         : N              
+o_GPR_ALU_data_B[4]          : D13       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : D14       : power  :                   : 2.5V    : 7         :                
-o_GPR_ALU_data_A[4]          : D15       : output : 2.5 V             :         : 7         : N              
+i_GPR_address_B[1]           : D15       : input  : 2.5 V             :         : 7         : N              
 VCCIO7                       : D16       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7         :                
 VCCIO7                       : D18       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 7         :                
-i_GPR_address_B[2]           : D20       : input  : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D20       :        :                   :         : 6         :                
+o_GPR_ALU_data_A[4]          : D21       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D22       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E1        :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : E2        : input  : 2.5 V             :         : 1         : N              
@@ -209,18 +209,18 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8         :                
 VCCIO8                       : E8        : power  :                   : 2.5V    : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8         :                
-o_GPR_ALU_data_A[2]          : E10       : output : 2.5 V             :         : 8         : N              
-i_GPR_address_A[0]           : E11       : input  : 2.5 V             :         : 7         : N              
-o_GPR_ALU_data_B[2]          : E12       : output : 2.5 V             :         : 7         : N              
-o_GPR_ALU_data_A[1]          : E13       : output : 2.5 V             :         : 7         : N              
-i_GPR_write_address[2]       : E14       : input  : 2.5 V             :         : 7         : N              
-i_GPR_write_enable           : E15       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8         :                
+i_GPR_data[4]                : E11       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
+i_GPR_enable                 : E13       : input  : 2.5 V             :         : 7         : N              
+i_GPR_address_A[0]           : E14       : input  : 2.5 V             :         : 7         : N              
+i_GPR_address_A[2]           : E15       : input  : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E16       :        :                   :         : 7         :                
 VCCD_PLL2                    : E17       : power  :                   : 1.2V    :           :                
 GNDA2                        : E18       : gnd    :                   :         :           :                
 VCCIO6                       : E19       : power  :                   : 2.5V    : 6         :                
 GND                          : E20       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E21       :        :                   :         : 6         :                
+i_GPR_address_A[4]           : E21       : input  : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
@@ -232,19 +232,19 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F10       :        :                   :         : 8         :                
-i_GPR_address_A[1]           : F11       : input  : 2.5 V             :         : 7         : N              
-o_GPR_ALU_data_A[3]          : F12       : output : 2.5 V             :         : 7         : N              
-i_GPR_address_B[3]           : F13       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F11       :        :                   :         : 7         :                
+o_GPR_ALU_data_A[5]          : F12       : output : 2.5 V             :         : 7         : N              
+o_GPR_ALU_data_B[6]          : F13       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F17       :        :                   :         : 6         :                
 VCCA2                        : F18       : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F19       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F20       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 6         :                
-GND+                         : G1        :        :                   :         : 1         :                
+i_GPR_reset                  : F20       : input  : 2.5 V             :         : 6         : N              
+o_GPR_ALU_data_B[2]          : F21       : output : 2.5 V             :         : 6         : N              
+o_GPR_ALU_data_A[0]          : F22       : output : 2.5 V             :         : 6         : N              
+i_GPR_data[7]                : G1        : input  : 2.5 V             :         : 1         : N              
 i_GPR_clk                    : G2        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1         :                
@@ -254,9 +254,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 8         :                
-o_GPR_ALU_data_B[4]          : G11       : output : 2.5 V             :         : 8         : N              
-i_GPR_write_address[1]       : G12       : input  : 2.5 V             :         : 7         : N              
-i_GPR_data[1]                : G13       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 8         :                
+o_GPR_ALU_data_B[5]          : G12       : output : 2.5 V             :         : 7         : N              
+i_GPR_data[2]                : G13       : input  : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 7         :                
@@ -276,16 +276,16 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :      
 GND                          : H8        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 8         :                
-i_GPR_data[4]                : H11       : input  : 2.5 V             :         : 8         : N              
-i_GPR_write_address[3]       : H12       : input  : 2.5 V             :         : 7         : N              
-i_GPR_enable                 : H13       : input  : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H11       :        :                   :         : 8         :                
+i_GPR_data[3]                : H12       : input  : 2.5 V             :         : 7         : N              
+i_GPR_address_A[3]           : H13       : input  : 2.5 V             :         : 7         : N              
+i_GPR_write_enable           : H14       : input  : 2.5 V             :         : 7         : N              
+o_GPR_ALU_data_B[1]          : H15       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H17       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H19       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H20       :        :                   :         : 6         :                
+o_GPR_ALU_data_A[2]          : H18       : output : 2.5 V             :         : 6         : N              
+i_GPR_data[6]                : H19       : input  : 2.5 V             :         : 6         : N              
+o_GPR_ALU_data_B[3]          : H20       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H21       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H22       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J1        :        :                   :         : 1         :                
@@ -304,7 +304,7 @@ VCCINT                       : J13       : power  :                   : 1.2V    
 VCCINT                       : J14       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J17       :        :                   :         : 6         :                
+i_GPR_data[0]                : J17       : input  : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J18       :        :                   :         : 6         :                
 GND                          : J19       : gnd    :                   :         :           :                
 VCCIO6                       : J20       : power  :                   : 2.5V    : 6         :                
@@ -475,7 +475,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : U9        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U11       :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U12       :        :                   :         : 4         :                
+i_GPR_write_address[0]       : U12       : input  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U13       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U14       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U15       :        :                   :         : 4         :                

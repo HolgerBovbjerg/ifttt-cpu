@@ -57,7 +57,7 @@ constant BRANCH_SAVE_STATE:std_logic_vector(2 downto 0) :=  "111";	-- Save PC an
 constant INTERRUPT_address:std_logic_vector(9 downto 0) := "1111110000";
 
 -- Stack constants 
-constant STACK_BEGIN:std_logic_vector(15 downto 0) := "0011111111111111";
+constant STACK_BEGIN:std_logic_vector(15 downto 0) := x"03ff";
 
 end constants;
 

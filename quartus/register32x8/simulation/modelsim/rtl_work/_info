@@ -2,35 +2,35 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\simulation\modelsim
+Z0 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\register32x8\simulation\modelsim
 Eregister32x8
-Z1 w1556093790
+Z1 w1558886290
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\simulation\modelsim
+Z5 dC:\Users\holge\OneDrive\AAU - Elektronik og IT\4. semester\P4\ifttt-cpu\quartus\register32x8\simulation\modelsim
 Z6 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd
 Z7 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd
 l0
 L5
-Vo1B]S]S@QV8BTX208;`WH1
+VA38Y0Y^6cAP>0@64=0T;I0
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1558621176.427000
+Z9 !s108 1558962373.636000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd|
 Z11 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/src/Register32x8.vhd|
 Z12 o-93 -work work -O0
 Z13 tExplicit 1
-!s100 LSS@T_EeB;FcHEmfVf3e43
+!s100 HmTIVZ_M]2Gcl6kzWb0202
 !i10b 1
 Abehaviour
 R2
 R3
 R4
-DEx4 work 12 register32x8 0 22 o1B]S]S@QV8BTX208;`WH1
-l31
-L27
-VcfjX:^gUW`nRc2C:a<XSD3
+DEx4 work 12 register32x8 0 22 A38Y0Y^6cAP>0@64=0T;I0
+l32
+L28
+V1_l;H3dniGYQiOZk]>GQR3
 R8
 31
 R9
@@ -38,10 +38,10 @@ R10
 R11
 R12
 R13
-!s100 jNG<?C<Q^_I48gmXM0QT[1
+!s100 W0Ec;9XW?^0fFocE7YoVH1
 !i10b 1
 Eregister32x8_tb
-Z14 w1558621136
+Z14 w1558962145
 Z15 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 Z16 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 Z17 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
@@ -49,8 +49,8 @@ R4
 R3
 R2
 R5
-Z18 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/../test_benches/Register32x8_tb.vhd
-Z19 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/../test_benches/Register32x8_tb.vhd
+Z18 8C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/register32x8/../../test_benches/Register32x8_tb.vhd
+Z19 FC:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/register32x8/../../test_benches/Register32x8_tb.vhd
 l0
 L8
 V3T3;9PK6GiPCNhehLJ9DY3
@@ -58,9 +58,9 @@ V3T3;9PK6GiPCNhehLJ9DY3
 R8
 31
 !i10b 1
-Z20 !s108 1558621176.516000
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/../test_benches/Register32x8_tb.vhd|
-Z22 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/../test_benches/Register32x8_tb.vhd|
+Z20 !s108 1558962373.729000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/register32x8/../../test_benches/Register32x8_tb.vhd|
+Z22 !s107 C:/Users/holge/OneDrive/AAU - Elektronik og IT/4. semester/P4/ifttt-cpu/quartus/register32x8/../../test_benches/Register32x8_tb.vhd|
 R12
 R13
 Aregister32x8_tb_arch
@@ -71,10 +71,10 @@ R4
 R3
 R2
 DEx4 work 15 register32x8_tb 0 22 3T3;9PK6GiPCNhehLJ9DY3
-l42
+l44
 L11
-V[gGaYam2aS6?W>LiFW=Q<2
-!s100 3l_K1z=n42A@LjM[R?8CO1
+V[>4AdM:?TTFPN1Db<lhQ42
+!s100 9YK2URBVJA30OYlBzSn6m0
 R8
 31
 !i10b 1

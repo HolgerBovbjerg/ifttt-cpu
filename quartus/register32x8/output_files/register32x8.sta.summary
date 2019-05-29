@@ -2,16 +2,40 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'i_GPR_clk'
+Slack : -2.119
+TNS   : -30.406
+
+Type  : Slow 1200mV 85C Model Hold 'i_GPR_clk'
+Slack : 0.843
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i_GPR_clk'
 Slack : -3.000
-TNS   : -20.392
+TNS   : -275.000
+
+Type  : Slow 1200mV 0C Model Setup 'i_GPR_clk'
+Slack : -1.808
+TNS   : -25.472
+
+Type  : Slow 1200mV 0C Model Hold 'i_GPR_clk'
+Slack : 0.774
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i_GPR_clk'
 Slack : -3.000
-TNS   : -20.392
+TNS   : -275.000
+
+Type  : Fast 1200mV 0C Model Setup 'i_GPR_clk'
+Slack : -0.822
+TNS   : -10.715
+
+Type  : Fast 1200mV 0C Model Hold 'i_GPR_clk'
+Slack : 0.436
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i_GPR_clk'
 Slack : -3.000
-TNS   : -11.953
+TNS   : -291.216
 
 ------------------------------------------------------------
